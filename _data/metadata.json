@@ -1,21 +1,21 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
-  "language": "en",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Bastien Calou",
+  "url": "https://bastiencalou.fr/",
+  "language": "fr",
+  "description": "Développeur front freelance, tendances mobile first, perfs et accessibilité.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Développeur front freelance, tendances mobile first, perfs et accessibilité.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://bastiencalou.fr/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://bastiencalou.fr/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "Bastien Calou",
+    "email": "bastien.calou@gmail.com",
+    "url": "https://bastiencalou.fr/about"
   }
 }
