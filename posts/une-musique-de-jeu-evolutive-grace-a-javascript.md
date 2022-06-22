@@ -54,7 +54,7 @@ Si je suis au cycle 2 et que je souhaite avancer au cycle 3, je peux calculer qu
 
 C'est exactement ce que fait cette première démo. À chaque fois que vous cliquerez sur le bouton "Sauter", vous serez emmené au début de la section suivante :
 
-{% codepen https://codepen.io/bcalou/pen/XWVZJKR %}
+{% codepen "https://codepen.io/bcalou/pen/XWVZJKR" %}
 
 ### Fludifier les sauts de cycles
 
@@ -104,7 +104,7 @@ Par exemple, si la musique a commencé depuis 5 secondes, nous pouvons sauter ju
 
 Essayez et comparez. Le résultat vous semble-t-il moins abrupt ?
 
-{% codepen https://codepen.io/bcalou/pen/JjMpGzm %}
+{% codepen "https://codepen.io/bcalou/pen/JjMpGzm" %}
 
 Alors, attention, j'ai dit que les transitions étaient moins abruptes, pas parfaites ! Selon le moment où vous avancez, l'arrivée de tel ou tel instrument peut tout de même sauter aux oreilles. Mais la structure rythmique et harmonique est sauve, et c'est déjà beaucoup.
 
@@ -116,7 +116,7 @@ Ce son, c'est ce que j'appelle le _hit_. En jouant le _hit_ au bon moment, ce de
 
 Voici le résultat.
 
-{% codepen https://codepen.io/bcalou/pen/JjMpKjd %}
+{% codepen "https://codepen.io/bcalou/pen/JjMpKjd" %}
 
 Ce n'est pas encore parfait, mais compte tenu du timing serré, c'est déjà pas mal !
 
@@ -134,7 +134,7 @@ Pour cela, j'ai exporté 4 _hits_ différents. Ensuite, il suffit de faire corre
 
 C'est parti !
 
-{% codepen https://codepen.io/bcalou/pen/gOovMez %}
+{% codepen "https://codepen.io/bcalou/pen/gOovMez" %}
 
 Cette amélioration passe sans doute inaperçue, c'est d'ailleurs son but, mais je pense qu'elle rajoute une petite couche de satisfaction auditive à l'ensemble.
 
@@ -142,7 +142,7 @@ Cette amélioration passe sans doute inaperçue, c'est d'ailleurs son but, mais 
 
 Voici un court extrait du jeu (le dernier saut est assez brusque, mais c'est comme ça !) :
 
-{% youtube https://www.youtube.com/watch?v=HlYkDBsUe14 %}
+{% youtube "https://www.youtube.com/watch?v=HlYkDBsUe14" %}
 
 C'est la première fois que je combine ma passion pour la musique et mes connaissances en programmation, et en seulement 48h j'ai pu voir à quel point les possibilités étaient grandes.
 
