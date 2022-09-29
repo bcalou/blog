@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.015em;
+  line-height: 1.4;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+main {
+  max-width: min(65ch, 90vw);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.6em;
+  margin: 1em 0 0.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+p {
+  max-width: 65ch;
+  margin: 1em 0;
+}
+
+figure {
+  margin: 2em 0;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+
+  blockquote ~& {
+    margin-left: 2.5em;
+
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+blockquote {
+  margin-left: 2em;
+}
+
+q, blockquote {
+  font-style: italic;
+}
+
+q::before, blockquote::before {
+  content: '«\00a0';
+}
+
+q::after, blockquote::after {
+  content: '\00a0»';
+}
+
+:is(h1, h2, h3, h4, h5, h6):not(:hover) .direct-link {
+  display: none;
+}

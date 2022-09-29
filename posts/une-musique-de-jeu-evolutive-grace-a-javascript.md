@@ -7,13 +7,13 @@ tags:
 layout: layouts/post.njk
 ---
 
-Le week-end dernier, j'ai eu le plaisir de composer la musique de <cite>Blobby Zombie</cite>, un jeu créé en 48h seulement par mon ami Simon et son camarade Pierre-Yves, lors d'une Game Jam organisée par [Hitbox Makers](http://www.hitboxmakers.fr/).
+Le week-end dernier, j'ai eu le plaisir de composer la musique de <cite>Blobby Zombie</cite>, un jeu créé en 48h seulement par mon ami Simon et son camarade Pierre-Yves, lors d'une Game Jam organisée par {% link "Hitbox Makers", "http://www.hitboxmakers.fr" %}.
 
 Concevoir et coder un jeu en 48h n'étant visiblement pas assez difficile, ils ont créé un jeu multijoueur en ligne fonctionnel. Bravo à eux !
 
-[Pour jouer, c'est par ici !](https://glop.legeay.dev/)
+{% link "Pour jouer, c'est par ici !", "https://glop.legeay.dev/" %}
 
-Il faut être plusieurs, chacun sur un ordinateur, et tout le monde partage la même partie. Les règles et commandes sont disponibles [ici](https://github.com/GJLOP/gjlop_front/blob/master/README.md#comment-jouer).
+Il faut être plusieurs, chacun sur un ordinateur, et tout le monde partage la même partie. Les règles et commandes sont disponibles {% link "ici", "https://github.com/GJLOP/gjlop_front/blob/master/README.md#comment-jouer" %}.
 
 De mon côté, ces deux jours se sont divisés ainsi :
 
@@ -26,14 +26,16 @@ Le jeu repose sur un mécanisme de dernier survivant. Il va donc falloir monter 
 
 Avec un brief aussi complet que les trois mots "arcade", "horreur" et "fun", je me lance.
 
+{% soundcloud "1243942870" %}
+
 Anticipant sur la programmation à venir, j'utilise une structure la plus simple possible : une boucle de 4 accords. À chaque nouveau cycle, un instrument se rajoute.
 
 Voici un schéma, c'est important pour la suite, et j'aime les schémas.
 
-<figure>
-![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6o2nm1xy9usa23wj9ri6.png)
-<figcaption>Les instruments s'empilent de cycle en cycle pour faire monter la pression.</figcaption>
-</figure>
+{% figure
+  "musique/schema.png",
+  "Les instruments s'empilent de cycle en cycle pour faire monter la pression"
+%}
 
 Mais comment accommoder cette montée en pression de plusieurs minutes à une partie qui pourrait se dérouler beaucoup plus vite ?
 
@@ -43,10 +45,10 @@ Commençons par une adaptation simple : j'avais choisi **130 BPM** pour la bande
 
 Bon, il nous faut un moyen de sauter de cycle en cycle, par exemple lorsqu'un nouveau joueur se transforme en zombie.
 
-<figure>
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0w2qxarjv6eubq1jsno2.png">
-  <figcaption>Passer d'une section à l'autre permet d'adapter la situation à l'évolution du jeu.</figcaption>
-</figure>
+{% figure
+  "musique/saut.png",
+  "Passer d'une section à l'autre permet d'adapter la situation à l'évolution du jeu"
+%}
 
 Puisque mes cycles font 15 secondes, c'est assez facile à calculer.
 
@@ -67,25 +69,26 @@ Il y a deux raison à cela :
 
 La progression d'accords, c'est simplement l'enchaînement des 4 accords qui donne sa structure au morceau. On entend cette progression à partir du deuxième cycle.
 
-<figure>
-![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1k3jjknfc3weeq0xm3e3.png)
-<figcaption>Voici un cycle au complet : 4 accords qui font peur s'enchaînent sur 8 mesures.</figure>
+{% figure
+  "musique/accords.png",
+  "Voici un cycle au complet : 4 accords qui font peur s'enchaînent sur 8 mesures"
+%}
 
 On va simplifier un peu (beaucoup) le nom des accords et les appeler C, G, C et F (do, sol, do et fa).
 
 On peut ainsi mettre à jour notre schéma, pour représenter cette progression à partir du deuxième cycle :
 
-<figure>
-![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ys1lgg0gpl4v3cmt3yqk.png)
-<figcaption>À l'exception de la note unique à la basse et de la batterie qui est uniquement rythmique, chaque nouveau cycle se base sur la même progression d'accords.</figcaption>
-</figure>
+{% figure
+  "musique/grille.png",
+  "À l'exception de la note unique à la basse et de la batterie qui est uniquement rythmique, chaque nouveau cycle se base sur la même progression d'accords."
+%}
 
 Le problème, donc, c'est que si nous passons du milieu du cycle 3 au début du cycle 4, par exemple, nous risquons de faire ça :
 
-<figure>
-![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yzcgjco3yu1btjifar91.png)
-<figcaption>On saute du deuxième accord de la section 3 vers le premier accord de la section 4.</figcaption>
-</figure>
+{% figure
+  "musique/rupture.png",
+  "On saute du deuxième accord de la section 3 vers le premier accord de la section 4"
+%}
 
 Patatra, la progression d'accords est cassée. Alors que nous nous préparions à entendre C puis F pour finir le cycle 3, nous reprenons la progression au départ : C, puis G à nouveau ! Et si on enchaîne vite les cycles, on entend quasiment que le premier accord en permanence.
 
@@ -93,10 +96,10 @@ Or le cerveau est très doué pour s'habituer à une progression d'accords bien 
 
 Pour remédier à cette violation rythmique et harmonique intolérable à l'oreille, le remède est simple : il ne faut pas aller au début du cycle suivant, mais à l'instant du cycle suivant qui correspond à l'instant actuellement joué.
 
-<figure>
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oiyn8e1h02s8oweugaaj.png)
-<figcaption>Cette fois, on part du deuxième accord du cycle pour arriver sur le deuxième accord du suivant.</figcaption>
-</figure>
+{% figure
+  "musique/fluide.png",
+  "Cette fois, on part du deuxième accord du cycle pour arriver sur le deuxième accord du suivant"
+%}
 
 Techniquement, c'est presque plus simple que la première version : au lieu de calculer le début de la section suivante, nous allons ajouter 15 secondes — la durée d'un cycle — à la position de lecture.
 

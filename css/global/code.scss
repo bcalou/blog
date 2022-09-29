@@ -1,0 +1,37 @@
+code {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+pre {
+  font-family: monospace;
+  color: white;
+  background-color: #222;
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+}
+
+.language-html {
+  .tag {
+    color: hotpink;
+  }
+}
+
+.language-css {
+  color: pink;
+
+  .selector {
+    color: palegreen;
+  }
+
+  .property {
+    color: skyblue;
+  }
+
+  .punctuation {
+    color: white;
+  }
+}
