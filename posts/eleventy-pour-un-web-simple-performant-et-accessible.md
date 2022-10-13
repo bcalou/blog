@@ -6,6 +6,7 @@ tags:
   - performance
   - accessibilité
 layout: layouts/post.njk
+series: À la découverte d'Eleventy
 ---
 
 Et si nous gardions Vue, React et ses compagnons pour les web app _vraiment_ complexes ? Et s'ils devenaient **l'exception à la règle**, plutôt que d'être notre modèle mental par défaut ?

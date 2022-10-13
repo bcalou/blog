@@ -14,6 +14,7 @@ const youtube = require("./11ty/shortcodes/youtube");
 
 const addNbsp = require("./11ty/filters/add-nbsp");
 const filterTagList = require("./11ty/filters/filter-tag-list");
+const getSeries = require("./11ty/filters/get-series");
 const head = require("./11ty/filters/head");
 const htmlDateString = require("./11ty/filters/html-date-string");
 const min = require("./11ty/filters/min");
@@ -48,6 +49,7 @@ module.exports = function(eleventyConfig) {
   // Add filters
   eleventyConfig.addFilter("addNbsp", addNbsp);
   eleventyConfig.addFilter("filterTagList", filterTagList)
+  eleventyConfig.addFilter("getSeries", getSeries);
   eleventyConfig.addFilter('head', head);
   eleventyConfig.addFilter('htmlDateString', htmlDateString);
   eleventyConfig.addFilter('min', min);

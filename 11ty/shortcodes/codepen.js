@@ -11,7 +11,7 @@ function codepen(url) {
 
   return `<p
     class="codepen"
-    data-height="300"
+    data-height="500"
     data-default-tab="result"
     data-slug-hash="${data_slug_hash}"
     data-user="${username}"
