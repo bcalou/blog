@@ -5,9 +5,9 @@ eleventyNavigation:
   order: 1
 ---
 
-{% set maxPosts = collections.posts.length | min(3) %}
+{% set maxPosts = collections.blog.length | min(3) %}
 <h1>Derniers articles</h1>
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
+{% set postslist = collections.blog | head(-3) %}
+{% set postslistCounter = collections.blog | length %}
 {% include "postslist.njk" %}
-<p><a href="{{ '/posts/' | url }}">Articles plus anciens</a></p>
+<p><a href="{{ '/blog/' | url }}">Articles plus anciens</a></p>

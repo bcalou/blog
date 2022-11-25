@@ -6,6 +6,7 @@ pagination:
   filter:
     - all
     - nav
+    - blog
     - post
     - posts
     - tagList
@@ -13,11 +14,11 @@ pagination:
 layout: layouts/home.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
-permalink: /tags/{{ tag | slug }}/
+permalink: /categories/{{ tag | slug }}/
 ---
 <h1>Catégorie « {{ tag }} »</h1>
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 
-<p>Voir <a href="{{ '/tags/' | url }}">toutes les catégories</a>.</p>
+<p>Voir <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>
