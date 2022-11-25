@@ -4,7 +4,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSass = require('eleventy-sass');
+const embedTwitter = require("eleventy-plugin-embed-twitter");
 
+const blockquote = require("./11ty/shortcodes/blockquote");
 const codepen = require("./11ty/shortcodes/codepen");
 const figure = require("./11ty/shortcodes/figure");
 const img = require("./11ty/shortcodes/img");
@@ -37,10 +39,12 @@ module.exports = function(eleventyConfig) {
       style: prod ? "compressed" : "expanded"
     }
   });
+  eleventyConfig.addPlugin(embedTwitter);
 
   // Add shortcodes
+  eleventyConfig.addShortcode("blockquote", blockquote);
   eleventyConfig.addShortcode("codepen", codepen);
-  eleventyConfig.addShortcode("figure", figure);
+  eleventyConfig.addNunjucksAsyncShortcode("figure", figure);
   eleventyConfig.addNunjucksAsyncShortcode("img", img);
   eleventyConfig.addShortcode("link", link);
   eleventyConfig.addShortcode("soundcloud", soundcloud);
@@ -60,6 +64,9 @@ module.exports = function(eleventyConfig) {
 
   // Add librairies
   eleventyConfig.setLibrary("md", getMarkdownLibrary(eleventyConfig));
+
+  // Add copies
+  eleventyConfig.addPassthroughCopy("assets");
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);

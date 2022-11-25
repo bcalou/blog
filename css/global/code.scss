@@ -1,7 +1,13 @@
-code {
+code, kbd {
   font-family: monospace;
-  font-weight: bold;
   font-size: 0.9em;
+
+  :not(pre) > & {
+    background-color: #DDD;
+    border-radius: .5rem;
+    outline: 0.25rem solid #DDD;
+    margin-inline: 0.25rem;
+  }
 }
 
 pre {
@@ -22,9 +28,17 @@ pre {
   .comment {
     color: lightgray;
   }
+
+  .attr-name {
+    color: palegreen;
+  }
+
+  .attr-value {
+    color: skyblue;
+  }
 }
 
-.language-css {
+.language-css, .language-scss {
   color: pink;
 
   .selector {
@@ -37,5 +51,49 @@ pre {
 
   .punctuation {
     color: white;
+  }
+
+  .comment {
+    color: lightgrey;
+  }
+}
+
+.language-js {
+  color: palegreen;
+
+  .keyword {
+    color: hotpink;
+  }
+
+  .operator {
+    color: white;
+  }
+
+  .constant {
+    color: skyblue;
+  }
+
+  .string {
+    color: orange;
+  }
+
+  .property {
+    color: lightpink;
+  }
+}
+
+.language-njk {
+  .tag {
+    color: palegreen;
+  }
+
+  .variable {
+    color: hotpink;
+  }
+}
+
+.language-yaml {
+  .atrule {
+    color: palegreen;
   }
 }

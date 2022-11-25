@@ -1,0 +1,12 @@
+{% if seriesPosts.length > 1 %}
+  <div class="series">
+    Cet article fait partie de la série "{{ series }}"
+    <ol>
+      {% for post in seriesPosts %}
+        <li {% if post.url === page.url %} aria-current="page" {% endif %}>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}

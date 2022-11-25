@@ -1,9 +1,22 @@
+@font-face {
+  font-family: test;
+  src: url("../../assets/font.otf");
+}
+
 body {
   font-family: Arial, sans-serif;
   letter-spacing: 0.015em;
+  // letter-spacing: 0.05em;
   line-height: 1.4;
-  color: #333;
+  // background-color: #111;
+  // color: #FFF;
   font-size: 1.25rem;
+}
+
+h1, h2, h3 {
+  font-family: test, Arial, sans-serif;
+  // letter-spacing: 0.015em;
+  // letter-spacing: 0.05em;
 }
 
 main {
@@ -73,11 +86,11 @@ q, blockquote {
   font-style: italic;
 }
 
-q::before, blockquote::before {
+q::before, blockquote p::before {
   content: '«\00a0';
 }
 
-q::after, blockquote::after {
+q::after, blockquote p::after {
   content: '\00a0»';
 }
 
@@ -85,16 +98,25 @@ q::after, blockquote::after {
   display: none;
 }
 
-ul {
+ul, ol {
   list-style-type: disc;
 }
 
 ol {
-  list-style-type: decimal;
-  margin-left: 3rem;
+  list-style-type: numeric;
 }
 
 aside {
   background-color: lightblue;
   padding: 1em;
+}
+
+table {
+  border: 1px solid grey;
+  
+}
+
+td, th {
+  padding: 0.5em;
+  border: 1px solid grey;
 }

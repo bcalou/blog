@@ -10,23 +10,13 @@ templateClass: tmpl-post
   {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
   <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
 {%- endfor %}
-{% if seriesPosts.length > 1 %}
-  <div class="series">
-    Cet article fait partie de la série "{{ series }}"
-    <ol>
-      {% for post in seriesPosts %}
-        <li {% if post.url === page.url %} aria-current="page" {% endif %}>
-          <a href="{{ post.url }}">{{ post.data.title }}</a>
-        </li>
-      {% endfor %}
-    </ol>
-  </div>
-{% endif %}
+{% include "../components/series.njk" %}
 {% if originalPost %}
   <p class="originalPost">Cet article a été initialement publié sur
     <a href="{{ originalPost }}" target="_blank" rel="noopenner noreferrer">dev.to</a>
   {% endif %}
   {{ content | addNbsp | safe }}
+  {% include "../components/series.njk" %}
   {%- if collections.posts %}
     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
@@ -34,12 +24,12 @@ templateClass: tmpl-post
       <hr>
         <ul>
           {%- if nextPost %}
-            <li>Next:
+            <li>Suivant :
               <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
             </li>
           {% endif %}
           {%- if previousPost %}
-            <li>Previous:
+            <li>Précédent :
               <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
             </li>
           {% endif %}

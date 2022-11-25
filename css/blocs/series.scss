@@ -2,4 +2,9 @@
   margin-block: 1rem;
   border: 2px solid orange;
   padding: 0.5em;
+
+  ol {
+    list-style-type: decimal;
+    margin-left: 3rem;
+  }
 }
