@@ -8,6 +8,7 @@ function addNbsp(text) {
     .replace(new RegExp(/\s\!/, 'g'), '&nbsp;!')
     .replace(new RegExp(/\s\?/, 'g'), '&nbsp;?')
     .replace(new RegExp(/\s\:/, 'g'), '&nbsp;:')
+    .replace(new RegExp(/\s\;/, 'g'), '&nbsp;;')
     .replace(new RegExp(/\«\s/, 'g'), '«&nbsp;')
     .replace(new RegExp(/\s\»/, 'g'), '&nbsp;»')
 }
