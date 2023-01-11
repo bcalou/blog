@@ -7,6 +7,8 @@ layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/the-era-of-no-hacks-css-287l
 ---
 
+{{ 'margin-inline: auto' | cssSupport }}
+
 Si vous avez appris CSS n'importe quand avant 2020, il y a fort à parier que vous avez collecté tout un tas d'astuces (ou <em>hacks</em>) en cours de route. Vous savez, ces choses comme le centrage vertical, les styles pour les éléments de formulaire, le dimensionnement des images, les retours à la ligne... De la magie noire. Des comportement incroyablement spécifiques que vous vous recherchez dans Google, espérant que quelqu'un a déjà écrit un article à ce propos, et qui ruineront votre journée dans le cas contraire.
 
 Beaucoup de mes collègues regardent CSS avec une grande méfiance, car ils ont dû s'y frotter il y a 10 ans, avant de se diriger vers le back-end, la gestion de projet, le design ou même le « front-end pur JS ».
@@ -64,7 +66,7 @@ Pendant des années (oserai-je dire des décennies ?), les développeurs CSS ont
 
 ## Laisser tomber les hacks est aussi votre responsabilité
 
-La propriété `accent-color` est également un bon exemple de cela. En effet, elle est nouvelle et n'est [pas supportée par tous les navigateurs](https://dev.to/bcalou/the-era-of-no-hacks-css-287l).
+La propriété {{ 'aspect-ratio' | cssSupport }} est également un bon exemple de cela. En effet, elle est nouvelle et n'est pas supportée par tous les navigateurs.
 
 Eh bien comme dirait l'autre, je n'en ai cure.
 

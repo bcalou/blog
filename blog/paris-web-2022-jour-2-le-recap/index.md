@@ -28,9 +28,9 @@ Sophie et Bart définissent ARIA comme un moyen permettant de modifier l'<i>acce
 
 Mais son utilisation est bien souvent maladroite : `aria-label` qui masque le contenu réel, `aria-live` sur un carrousel qui interrompt en permanence le flux normal de lecture...
 
-Jusqu'au paroxysme : un hopital belge dont le `body` possédait un attribut `aria-hidden`...
+Jusqu'au paroxysme : un hôpital belge dont le `body` possédait un attribut `aria-hidden`...
 
-{% blockquote "Dans les audits, on demande plus souvent d'effacer de l'aria que d'en ajouter." %}
+{% blockquote "Dans les audits, on demande plus souvent d'effacer de l'ARIA que d'en ajouter." %}
 
 Et donc un énième rappel : ARIA complète les informations du HTML, mais c'est bien la bonne écriture de ce dernier à la base qui garantit la bonne accessibilité.
 

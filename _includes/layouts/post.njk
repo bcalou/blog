@@ -19,7 +19,7 @@ templateClass: tmpl-post
   <p class="originalPost">Cet article a été initialement publié sur
     <a href="{{ originalPost }}" target="_blank" rel="noopenner noreferrer">dev.to</a>
   {% endif %}
-  {{ content | addNbsp | safe }}
+  {{ content | cssSupportPanels | addNbsp | safe }}
   {% include "../components/series.njk" %}
   {%- if collections.blog %}
     {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
