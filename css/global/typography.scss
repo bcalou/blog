@@ -1,12 +1,7 @@
 @font-face {
   font-family: euclid;
-  // src: url("../../assets/Euclid\ Circular\ B\ Trial/Web/EuclidCircularB-Semibold-WebTrial.woff");
-  src: url("../../assets/Euclid\ Circular\ B\ Trial/Web/EuclidCircularB-Medium-WebTrial.woff");
-}
-
-@font-face {
-  font-family: euclid;
-  src: url("../../assets/Euclid\ Circular\ B\ Trial/Web/EuclidCircularB-Semibold-WebTrial.woff");
+  src: url("../../assets/fonts/euclid-circular-semibold-complete.woff2"),
+    url("../../assets/fonts/euclid-circular-semibold-complete.woff");
   font-weight: bold;
 }
 
@@ -14,12 +9,30 @@ body {
   font-family: Arial, sans-serif;
   // letter-spacing: 0.015em;
   // letter-spacing: 0.05em;
-  line-height: 1.4;
+  line-height: 1.42;
   // background-color: #111;
   // color: #FFF;
   font-size: 1.25rem;
   color: #282828;
   background: #EEE;
+}
+::-webkit-scrollbar-track
+{
+	// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #EEE;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background: rgb(125, 204, 230);
 }
 
 h1, h2, h3 {
@@ -27,10 +40,15 @@ h1, h2, h3 {
   font-weight: bold;
   letter-spacing: 0.005em;
   line-height: 1.25;
+
+  em, i {
+    display: inline-block;
+    font-style: normal;
+    transform: skewX(-11deg);
+  }
 }
 
 h1 a {
-  color: #282828;
   text-decoration: none;
   text-align: center;
   color: #0288FF;
@@ -42,49 +60,130 @@ a {
   color: #0288FF;
 }
 
+p a {
+  color: #282828;
+  text-decoration-color: rgb(100, 196, 228);
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-skip-ink: none;
+  font-weight: bold;
+  font-family: euclid;
+  line-height: 0;
+  position: relative;
+  transition: text-decoration-color 0.3s;
+  white-space: pre;
+
+  // TODO : only full size
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 100% 0 0 0;
+    background-color: lightblue;
+    z-index: -1;
+    transition: inset 0.3s;
+  }
+
+  &:hover {
+    text-decoration-color: lightblue;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    inset: 0;
+  }
+}
+
 main {
-  max-width: min(65ch, 90vw);
-  margin: 0 auto;
+  margin: 5rem;
+
+  & > :not(h1) {
+    max-width: min(800px, 90vw);
+  }
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 1em;
+  // font-size: 2.5rem;
+  // font-size: 45px;
+  font-size: 90px;
+  margin-bottom: 0.8em;
+  max-width: 1300px;
 }
 
 h2 {
-  font-size: 1.6em;
-  margin: 1em 0 0.5em;
+  font-size: 2rem;
+  margin: 1.7em 0 0.5em;
   line-height: 1.4;
 }
 
 h3 {
-  font-size: 1.2em;
-  margin: 1em 0 0.5em;
+  font-size: 1.5rem;
+  margin: 1.5em 0 0.5em;
   line-height: 1.3;
 }
 
-p {
-  max-width: 65ch;
-  margin: 1em 0;
+p, ul, ol {
+  margin: 0.75em 0;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
 }
 
 figure {
-  margin: 2em 0;
+  max-width: 800px;
+  // background: #DDD;
+  // padding: 1rem 1rem 0.5rem;
+  // border-radius: 12px;
+  // width: 100%;
+  // padding: 0.25rem;
+  margin: 2.5rem 0;
+  background: #EEE;
 
   img {
+    // display: block;
+    // border: 3px solid rgb(133, 204, 227);
+    // background: rgb(204, 220, 225);
     display: block;
-    margin: 0 auto;
+    // margin: 0 auto;
+    // border: 3px solid #282828;
+    border-radius: 8px 8px 0 0;
+    // border-radius: 0 0 16px 0;
+    overflow: hidden;
+    // box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 255);
+    max-height: 500px;
+    object-fit: contain;
   }
 }
 
+// :not(figure) img {
+//   border: 0.25rem solid #548ecc;
+//   border-radius: 8px;
+//   display: inline-block;
+// }
+
+picture ~ figcaption {
+  background-color: #73bdd5;
+  margin-top: 0;
+  color: #EEE;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  text-align: left;
+  // border-radius: 0 0 8px 8px;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  // border-top: 2px solid black;
+}
+
 figcaption {
+  margin-top: 0.5rem;
   font-style: italic;
   font-size: 0.8em;
+  text-align: center;
+  color: #666;
 
   blockquote ~& {
-    margin-left: 2.5em;
-
     &::before {
       content: '— ';
     }
@@ -100,19 +199,61 @@ i, em {
 }
 
 blockquote {
-  margin-left: 2em;
+  position: relative;
+  left: -1rem;
 }
 
-q, blockquote {
+blockquote {
+  font-style: italic;
+  position: relative;
+  font-size: 18px;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: justify;
+  color: #666;
+  background: #DDD;
+  padding: 0.5rem 1.75rem;
+  border-radius: 8px;
+}
+
+blockquote p {
+  letter-spacing: 0.0125em;
+}
+
+q {
   font-style: italic;
 }
 
-q::before, blockquote p::before {
+q::before {
   content: '«\00a0';
+}
+
+blockquote p::before {
+  content: '«\00a0';
+  font-family: euclid;
+  position: absolute;
+  left: -70px;
+  top: -58px;
+  font-size: 100px;
+  font-style: normal;
+  color: #DDD;
 }
 
 q::after, blockquote p::after {
   content: '\00a0»';
+}
+
+blockquote ~ figcaption {
+  font-style: normal;
+  font-family: euclid;
+  // font-size: 16px;
+  color: #888;
+  position: relative;
+  left: -1rem;
+
+  a {
+    color: #888;
+  }
 }
 
 :is(h1, h2, h3, h4, h5, h6):not(:hover) .direct-link {
@@ -121,6 +262,9 @@ q::after, blockquote p::after {
 
 ul, ol {
   list-style-type: disc;
+  line-height: 1.7;
+  list-style-position: inside;
+  padding-left: 2rem;
 }
 
 ol {
@@ -134,10 +278,16 @@ aside {
 
 table {
   border: 1px solid grey;
-  
 }
 
 td, th {
   padding: 0.5em;
   border: 1px solid grey;
+}
+
+time {
+  font-family: euclid;
+  color: #888;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

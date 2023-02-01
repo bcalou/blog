@@ -1,10 +1,54 @@
 .series {
-  margin-block: 1rem;
-  border: 2px solid orange;
-  padding: 0.5em;
+  margin-block: 0rem 2.5rem;
+  padding: 1.75rem 2.25rem 1.75rem 7.25rem;
+  background-color: lightblue;
+  width: fit-content;
+  border-radius: 15px;
+  position: relative;
+  left: -7rem;
 
   ol {
-    list-style-type: decimal;
-    margin-left: 3rem;
+    list-style-type: none;
+    counter-reset: part;
+
+    li::before {
+      counter-increment: part;
+      content: counter(part);
+      font-family: euclid;
+      display: inline-block;
+      background: rgb(221, 231, 235);
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+    }
+
+    li[aria-current="page"]::before {
+      background: white;
+    }
   }
+
+  a {
+    color: #282828;
+    line-height: 2.5;
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    font-family: euclid;
+    font-size: 1.5rem;
+  }
+}
+
+.series__heading {
+  color: #EEE;
+  position: absolute;
+  top: -42px;
+  font-family: euclid;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }

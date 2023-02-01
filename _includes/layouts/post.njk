@@ -9,18 +9,25 @@ templateClass: tmpl-post
 
 {% set seriesPosts = collections.blog | getSeries(series) %}
 <h1>{{ title | addNbsp | safe }}</h1>
-{% if not noDate %}<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% endif %}
+
+
+{% include "../components/series.njk" %}
+<div class="postTags">
 {%- for tag in tags | filterTagList -%}
   {%- set tagUrl %}/categories/{{ tag | slug }}/{% endset -%}
-  <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+  <a href="{{ tagUrl | url }}" class="postTag">#{{ tag }}</a>
 {%- endfor %}
-{% include "../components/series.njk" %}
-{% if originalPost %}
+</div>
+
+
+{% if not noDate %}<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% endif %}
+
+  {{ content | cssSupportPanels | addNbsp | safe }}
+  {% include "../components/series.njk" %}
+  {% if originalPost %}
   <p class="originalPost">Cet article a été initialement publié sur
     <a href="{{ originalPost }}" target="_blank" rel="noopenner noreferrer">dev.to</a>
   {% endif %}
-  {{ content | cssSupportPanels | addNbsp | safe }}
-  {% include "../components/series.njk" %}
   {%- if collections.blog %}
     {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
     {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}

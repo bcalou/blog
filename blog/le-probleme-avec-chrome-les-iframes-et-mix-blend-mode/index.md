@@ -173,11 +173,11 @@ Analysons la situation :
 
 - le texte se mélange avec le `body` (valeur `white` dans le CSS)
 - le texte ne se mélange pas avec le `html` (valeur `white` dans le CSS volée par le canvas, donc transparent)
-- le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l`iframe` sous Chrome.
+- le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l'`iframe` sous Chrome.
 
 ## Pourquoi cela m'importe-t-il tant ?
 
-Il peut paraître exagéré de se pré-occuper de situations si extrêmes. Ce n'est pas le genre de problème que vous risque de rencontrer au quotidien. Pensez-y : pour reproduire ce que montre le gif ci-dessus par accident, il vous faudrait :
+Il peut paraître exagéré de se pré-occuper de situations si extrêmes. Ce n'est pas le genre de problème que vous risquez de rencontrer au quotidien. Pensez-y : pour reproduire ce que montre le gif ci-dessus par accident, il vous faudrait :
 
 - utiliser Chrome
 - utiliser une `iframe` (créée par CodePen, par exemple)

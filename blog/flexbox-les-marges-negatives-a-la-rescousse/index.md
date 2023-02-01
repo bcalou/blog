@@ -119,7 +119,7 @@ li:not(:first-flex-row-item) {
 
 Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Par exemple, je pourrais dire que le premier élément d'une ligne a une petite taille de font. Cela pourrait permettre à l'élément de retourner sur la ligne précédente (car il prendra moins de place). Il ne serait donc plus ciblé par le sélecteur, reprendrait sa taille originale, reviendrait sur la seconde ligne et... 🤯
 
-Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/"><i>container queries</i></a>. Mais c'est une autre histoire.
+Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
 
 <aside>Mise à jour 2022 : après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
 

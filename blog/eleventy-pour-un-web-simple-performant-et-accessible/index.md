@@ -17,7 +17,7 @@ Une des ces nombreuses alternatives s'appelle [Eleventy](https://www.11ty.dev/).
 
 ## Ça sert à quoi ?
 
-Pour découvrir la bête, j'ai réalisé un site tout simple présentant [mes 10 livres préférés de l'année](https://top-livres.netlify.app/) (entends-je une remarque sur mon sens inestimable du design&nbsp;?)
+Pour découvrir la bête, j'ai réalisé un site tout simple présentant [mes 10 livres préférés de l'année](https://top-livres.netlify.app/) (entends-je une remarque sur mon sens inestimable du design&nbsp;?).
 
 {% figure
   "screenshot.png",
@@ -73,6 +73,7 @@ Les trois tirets au début et à la fin permettent de définir une table. Le res
 
 Voici donc ma belle liste de livres :
 
+<!-- TODO : vraie image -->
 <img alt="La liste des 10 fichiers markdown" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4k75ypoh4i0xae8abmip.png">
 
 Si nous sommes très, très loin d'une base de données telle qu'on l'entend habituellement, cette simplicité vient avec ses avantages : il est ultra simple de mettre à jour le contenu.

@@ -1,26 +1,60 @@
 code, kbd {
   font-family: monospace;
   font-size: 0.9em;
+  letter-spacing: 0.01em;
+  white-space: pre;
 
   :not(pre) > & {
     background-color: #DDD;
-    border-radius: .5rem;
+    border-radius: 3px;
     outline: 0.25rem solid #DDD;
     margin-inline: 0.25rem;
+    padding-inline: 3px;
+  }
+
+  pre > & {
   }
 }
 
 pre {
   font-family: monospace;
   color: white;
-  background-color: #222;
+  // background: linear-gradient(302deg, #2a2d39 0%, #1a1d2c 100%);
+  background-color: #1a1d2c;
+  // #1d1235
   margin: 2em 0;
-  padding: 1em;
+  padding: 1.25em 1.5em;
   border-radius: 0.5em;
-  overflow: auto;
+  box-shadow: 3px 3px 10px #787b87;
 }
 
+pre {
+  position: relative;
+
+  &::before {
+    color: #EEE;
+    position: absolute;
+    background: linear-gradient(to bottom, #383f62, #1a1d2c);
+    text-transform: uppercase;
+    font-size: 16px;
+    bottom: 100%;
+    right: 3rem;
+    padding: 0.25rem 0.625rem 0.25rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    // border-bottom: 1px solid #434c79;
+    font-family: euclid;
+    box-shadow: 3px 3px 3px #787b87;
+    z-index: -1;
+  }
+}
+
+// TODO: arrondi sur les côtés
+// TODO: chaque langage
 .language-html {
+  &::before {
+    content: '</> html'
+  }
+
   .tag {
     color: hotpink;
   }
@@ -39,6 +73,10 @@ pre {
 }
 
 .language-css, .language-scss {
+  &::before {
+    content: '{ } css'
+  }
+
   color: pink;
 
   .selector {

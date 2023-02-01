@@ -1,7 +1,32 @@
+.postTags {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  gap: 1em;
+
+  &::before {
+    background-color: lightblue;
+    font-family: euclid;
+    display: inline-block;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -0.15rem;
+  }
+}
+
 .postTag {
-  border: 1px solid grey;
-  border-radius: 0.25em;
-  padding: 0.25em;
-  background: lightblue;
-  margin-inline: 1em;
+  color: #282828;
+  text-decoration-color: rgb(100, 196, 228);
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 0.2rem;
+  text-decoration-skip-ink: none;
+  transition: text-decoration-thickness 0.2s;
+  font-family: euclid;
+
+  &:hover {
+  }
 }
