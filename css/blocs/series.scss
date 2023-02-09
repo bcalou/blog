@@ -10,6 +10,7 @@
   ol {
     list-style-type: none;
     counter-reset: part;
+    padding-left: 0;
 
     li::before {
       counter-increment: part;
@@ -51,4 +52,9 @@
   font-family: euclid;
   font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+p + .series {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
