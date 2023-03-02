@@ -113,10 +113,8 @@ Il y a quelques semaines, j'ai lu cet excellent article de Rachel Andrews : [Dig
 
 En lisant les informations à propos de `display: content`, j'avais deux pensées parallèles :
 
-<ol>
-  <li>Ça alors, c'est fort intéressant...</li>
-  <li>...mais je ne vais jamais m'en servir</li>
-</ol>
+* Ça alors, c'est fort intéressant...
+* ...mais je ne vais jamais m'en servir
 
 Mais en travaillant sur mon problème de layout, l'article me revint à l'esprit. En voici un extrait :
 
@@ -147,9 +145,9 @@ my-component {
 }
 ```
 
-<aside>En réalité, certaines propriétés CSS (`font-size`, `color`...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.</aside>
+<aside>En réalité, certaines propriétés CSS (<code>font-size</code>, <code>color</code>...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.</aside>
 
-Donc... Cela signifie-t-il que du point de vue de flexbox, `main` et `footer` sont de nouveau des enfants directs du `body` ? Oui ! `my-component` n'a plus besoin d'être un conteneur flex lui-même. La propriété `justify-content: space-between` appliquée au `body ` fonctionne de nouveau.
+Donc... Cela signifie-t-il que du point de vue de flexbox, `main` et `footer` sont de nouveau des enfants directs du `body` ? Oui ! `my-component` n'a plus besoin d'être un conteneur flex lui-même. La propriété `justify-content: space-between` appliquée au `body` fonctionne de nouveau.
 
 C'est la solution la plus courte présentée dans cet article : un sélecteur et une propriété. Presque magique.
 

@@ -1,11 +1,23 @@
 @import 'vendors/reset';
 
-@import 'global/layout.scss';
-@import 'global/typography.scss';
-@import 'global/code.scss';
+@import 'config/colors';
+@import 'config/fonts';
+@import 'config/layout';
+@import 'config/radiuses';
+@import 'config/shadows';
 
-@import 'blocs/header.scss';
-@import 'blocs/original-post.scss';
-@import 'blocs/post-tag.scss';
-@import 'blocs/prevnext.scss';
-@import 'blocs/series.scss';
+@import 'global/layout';
+@import 'global/scrollbar';
+@import 'global/typography';
+
+@import 'blocs/blockquote';
+@import 'blocs/code';
+@import 'blocs/figure';
+@import 'blocs/footer';
+@import 'blocs/header';
+@import 'blocs/original-post';
+@import 'blocs/post-content';
+@import 'blocs/post-tags';
+@import 'blocs/prevnext';
+@import 'blocs/series';
+@import 'blocs/table';

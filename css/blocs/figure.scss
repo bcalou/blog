@@ -1,0 +1,43 @@
+.figure {
+  max-width: var(--main-content-width);
+  margin: 2.5rem 0;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 0.125rem solid var(--blue-dark);
+  display: grid;
+  width: fit-content;
+  grid-template-columns: min-content;
+  flex-direction: column;
+
+  & > :first-child {
+    width: max-content;
+    max-width: var(--main-content-width);
+  }
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    background-color: var(--blue-dark);
+    margin-top: 0;
+    color: var(--grey-light);
+    padding: 0.25rem 0.75rem;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+ // Picture not inside a figure
+:not(.figure) > picture {
+  img {
+    margin-block: 1.25rem;
+    border-radius: var(--border-radius);
+    border: 0.125rem solid var(--blue-dark);
+    box-shadow: var(--shadow);
+    max-width: var(--main-content-width);
+  }
+}

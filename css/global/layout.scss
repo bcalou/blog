@@ -1,7 +1,7 @@
 body {
-  background-color: white;
+  background-color: var(--white);
   display: flex;
-  padding-left: 225px;
+  padding-left: 14rem;
 }
 
 * {
@@ -12,12 +12,10 @@ img {
   max-width: 100%;
 }
 
-header {
-  background-color: lightblue;
-  width: 225px;
-  flex-shrink: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+main {
+  margin: 5rem;
+}
+
+.cp_embed_wrapper {
+  margin-block: 2rem;
 }

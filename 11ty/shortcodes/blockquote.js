@@ -6,7 +6,7 @@ function blockquote(quote, author, source, href) {
   </blockquote>`;
 
   if (author || source) {
-    return `<figure>
+    return `<figure class="blockquote">
       ${blockquote}
       ${getFigCaptionTag(author, source, href)}
     </figure>`

@@ -32,7 +32,7 @@ async function getPictureTag(options) {
     .map((imageFormat) => getSourceTag(imageFormat, 1800, options.sizes))
     .join('\n');
 
-  return `<picture>
+  return `<picture class="picture">
     ${sources}
     <img
       src="${referenceImg.url}"

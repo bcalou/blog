@@ -1,0 +1,35 @@
+.blockquote {
+  max-width: 34rem;
+  margin: 2.5rem 0 3rem 4rem;
+
+  blockquote {
+    font-style: italic;
+    font-size: 1.125rem;
+    color: hsl(0, 0%, 30%);
+    background: var(--grey-light);
+    margin: 0;
+    padding: 0.25rem 1.25rem 0.25rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0.1875rem 0.1875rem 0.625rem hsl(226, 11%, 76%, 75%);
+  }
+
+  figcaption {
+    font-style: normal;
+    font-family: euclid;
+    font-size: 1rem;
+    margin: 1rem 1.5rem 0;
+
+    &, a {
+      color: hsl(0, 0%, 42%);
+    }
+
+    a {
+      text-underline-offset: 0.2rem;
+      text-decoration-skip-ink: none;
+    }
+
+    &::before {
+      content: '— ';
+    }
+  }
+}

@@ -64,7 +64,7 @@ Le premier effet, c'est que lorsque rien n'est montré, car je suis en train de 
   "Un noir apaisant remplit l'écran pendant que le nouveau site se charge"
 %}
 
-Un utilisateur de Reddit a expliqué cette astuce dans un post intitulé « [Comment ne pas être aveuglé par la lumière à l'ouverture d'un nouveau site](https://www.reddit.com/r/firefox/comments/e89nmg/how_to_not_get_blinded_by_white_light_when/) ». C'est en effet une amélioration immédiate, mais l'histoire n'est pas si simple.
+Un utilisateur de Reddit a expliqué cette astuce dans un post intitulé « [Comment ne pas être aveuglé par la lumière à l'ouverture d'un nouveau site ?](https://www.reddit.com/r/firefox/comments/e89nmg/how_to_not_get_blinded_by_white_light_when/) » C'est en effet une amélioration immédiate, mais l'histoire n'est pas si simple.
 
 Un autre post dont j'adore le titre complète le tableau : « [J'ai changé la couleur d'arrière-plan pour du noir. Je ne vois plus rien.](https://support.mozilla.org/en-US/questions/1229066) »
 

@@ -5,7 +5,7 @@
   gap: 1em;
 
   &::before {
-    background-color: lightblue;
+    background-color: var(--blue-light);
     font-family: euclid;
     display: inline-block;
     width: 1.85rem;
@@ -19,14 +19,11 @@
 }
 
 .postTag {
-  color: #282828;
+  color: var(--black);
   text-decoration-color: rgb(100, 196, 228);
   text-underline-offset: 0.2rem;
   text-decoration-thickness: 0.2rem;
   text-decoration-skip-ink: none;
   transition: text-decoration-thickness 0.2s;
   font-family: euclid;
-
-  &:hover {
-  }
 }

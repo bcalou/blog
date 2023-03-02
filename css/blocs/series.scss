@@ -1,9 +1,9 @@
 .series {
   margin-block: 0rem 2.5rem;
   padding: 1.75rem 2.25rem 1.75rem 7.25rem;
-  background-color: lightblue;
+  background-color: var(--blue-light);
   width: fit-content;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   position: relative;
   left: -7rem;
 
@@ -33,7 +33,7 @@
   }
 
   a {
-    color: #282828;
+    color: var(--black);
     line-height: 2.5;
     text-decoration: none;
   }
@@ -43,18 +43,18 @@
     font-family: euclid;
     font-size: 1.5rem;
   }
+
+  // Series at the end of page
+  p ~ & {
+    margin-block: 5rem;
+  }
 }
 
 .series__heading {
-  color: #EEE;
+  color: var(--white);
   position: absolute;
-  top: -42px;
+  top: -2.625rem;
   font-family: euclid;
   font-size: 2.5rem;
   text-transform: uppercase;
-}
-
-p + .series {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
