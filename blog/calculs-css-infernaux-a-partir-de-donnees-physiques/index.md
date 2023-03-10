@@ -68,7 +68,7 @@ La variable `offset`, si elle est présente, permet d'ajouter une classe supplé
 
 Les 3 autres variables sont passées grâce à l'attribut `style`, et sont maintenant disponibles pour chaque élément `.book`.
 
-_Note : les variables CSS sont scopées. Chaque élément `.book` possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants._
+<aside>Note : les variables CSS sont scopées. Chaque élément <code>.book</code> possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants.</aside>
 
 {% figure
   "dom.png",
@@ -102,7 +102,7 @@ Notez comme je ne redéclare pas `--base-size-rem` dans la mixin `@medium`. En e
 
 On continue :
 
-```scss
+```css
 .book {
   --is-portrait: clamp(
     0,
@@ -120,7 +120,7 @@ Pas très clair ? On décompose.
 
 Par exemple :
 
-```scss
+```css
 clamp(0, 0.2, 1); /* 0.2, car c'est entre les bornes */
 clamp(0, -15, 1); /* 0, car le chiffre du milieu est trop petit */
 clamp(0, 4, 1); /* 1, car le chiffre du milieu est trop grand */
@@ -144,11 +144,11 @@ Je peux ensuite utiliser ce booléen pour obtenir d'autres valeurs.
 
 Quelle devrait être la hauteur d'un livre s'il est en portrait ? La hauteur du conteneur, soit `--base-size-rem`. S'il est en paysage, au contraire, cela devrait être dépendant de largeur, qui elle sera `--base-size-rem`.
 
-_Note : l'usage de `object-fit: contain` pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes._
+<aside>Note : l'usage de <code>object-fit: contain</code> pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes.</aside>
 
 Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 
-```scss
+```css
 .book {
   /* Height is base size if portrait, based on size ratio otherwise */
   --height-rem: clamp(
@@ -163,7 +163,7 @@ Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 
 Allez, on s'accroche une dernière fois, promis. `clamp`, on connaît déjà, alors regardons nos bornes. Que remarque t-on si le livre est en mode portrait ? La première borne :
 
-```scss
+```css
 var(--is-portrait) * var(--base-size-rem)
 ```
 
@@ -173,7 +173,7 @@ Et c'est que l'on souhaite. Pour les livres portrait, la hauteur est la taille d
 
 Au contraire, pour un livre paysage, la borne du bas deviendra `0` grâce à notre booléen. Et donc la valeur du milieu pourra entrer en action. La voici :
 
-```scss
+```css
 var(--base-size-rem) / (var(--width) / var(--height))
 ```
 

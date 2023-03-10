@@ -5,11 +5,12 @@
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
   overflow: hidden;
-  border: 0.125rem solid var(--blue-dark);
+  border: 0.125rem solid var(--blue-darkest);
   display: grid;
   width: fit-content;
   grid-template-columns: min-content;
   flex-direction: column;
+  background-color: var(--blue-darkest);
 
   & > :first-child {
     width: max-content;
@@ -21,7 +22,7 @@
   }
 
   figcaption {
-    background-color: var(--blue-dark);
+    background-color: var(--blue-darkest);
     margin-top: 0;
     color: var(--grey-light);
     padding: 0.25rem 0.75rem;
@@ -36,7 +37,7 @@
   img {
     margin-block: 1.25rem;
     border-radius: var(--border-radius);
-    border: 0.125rem solid var(--blue-dark);
+    border: 0.125rem solid var(--blue-darkest);
     box-shadow: var(--shadow);
     max-width: var(--main-content-width);
   }

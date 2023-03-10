@@ -63,7 +63,7 @@ pages: 896
 color: "#cf5441"
 publisher: Pocket
 link: https://www.lisez.com/livre-de-poche/dune/9782266320481
-description: Ce pavé a la réputation d'être un peu chiant, et oui, bon, peut-être, faut rentrer dedans comme on dit ...
+description: Ce pavé a la réputation d'être un peu chiant, et oui, bon, peut-être, faut rentrer dedans comme on dit...
 ---
 ```
 
@@ -73,8 +73,7 @@ Les trois tirets au début et à la fin permettent de définir une table. Le res
 
 Voici donc ma belle liste de livres :
 
-<!-- TODO : vraie image -->
-<img alt="La liste des 10 fichiers markdown" src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4k75ypoh4i0xae8abmip.png">
+{% img "liste.png", "La liste des 10 fichiers markdown" %}
 
 Si nous sommes très, très loin d'une base de données telle qu'on l'entend habituellement, cette simplicité vient avec ses avantages : il est ultra simple de mettre à jour le contenu.
 
@@ -188,8 +187,6 @@ En utilisant un service tel que [Netlify](https://app.netlify.com/) (pour qui tr
   "La configuration Netlify",
   "La commande build contient l'appel à eleventy"
 %}
-
----
 
 Le projet Netlify étant lié au projet Github, chaque push ou modification du code sur Github mettra à jour le site en une poignée de secondes.
 

@@ -1,32 +1,39 @@
 code, kbd {
   font-family: monospace;
-  font-size: 0.9em;
+  font-size: 0.85em;
   letter-spacing: 0.01em;
   white-space: pre;
 
-  :not(pre, aside, figcaption, blockquote p) > & {
+  :not(pre, blockquote p) > & {
     background-color: var(--grey-light);
     border-radius: 0.1875rem;
     outline: 0.25rem solid var(--grey-light);
     margin-inline: 0.25rem;
     padding-inline: 0.1875rem;
   }
+
+  aside > & {
+    // TODO remove !importants
+    background-color: hsl(195deg 17% 87%) !important;
+    outline-color: hsl(195deg 17% 87%) !important;
+  }
+
+  figcaption > & {
+    background-color: hsl(227deg 5% 35%) !important;
+    outline-color: hsl(227deg 5% 35%) !important;
+    outline-width: 0.125rem !important;
+  }
 }
 
 pre {
   position: relative;
-  font-family: monospace;
-  color: white;
-  background-color: var(--blue-dark);
-  margin: 2rem 0;
-  padding: 1.25em 1.5em;
-  border-radius: 0.5em;
-  box-shadow: var(--shadow);
+  margin: 2.5rem 0;
+  display: flex;
 
   &::before {
     color: var(--white);
     position: absolute;
-    background: linear-gradient(to bottom, #383f62, var(--blue-dark));
+    background: linear-gradient(to bottom, #383f62, var(--blue-darkest));
     text-transform: uppercase;
     font-size: 1rem;
     bottom: 100%;
@@ -40,8 +47,8 @@ pre {
 
   &::after {
     position: absolute;
-    background-color: var(--blue-dark);
-    background: linear-gradient(to bottom, #383f62, var(--blue-dark));
+    background-color: var(--blue-darkest);
+    background: linear-gradient(to bottom, #383f62, var(--blue-darkest));
     bottom: calc(100% - 1px);
     right: 3rem;
     font-family: euclid;
@@ -51,10 +58,44 @@ pre {
     text-transform: uppercase;
     clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0% 100%);
   }
+
+  code {
+    font-family: monospace;
+    color: white;
+    background-color: var(--blue-darkest);
+    padding: 1.25em 1.5em;
+    border-radius: 0.5em;
+    box-shadow: var(--shadow);
+    line-height: 1.5;
+    overflow-x: auto;
+    min-width: 100%;
+
+    &::after {
+      content: '';
+      display: block;
+      background: linear-gradient(to right, transparent, var(--blue-darkest));
+      position: absolute;
+      inset: 1rem 0 1rem auto;
+      width: 2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      height: 1rem;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background: #585f79;
+    }
+  }
 }
 
 // TODO: arrondi sur les côtés
-// TODO: chaque langage
 pre.language-html {
   &::before, &::after {
     content: '</> html'
@@ -77,11 +118,20 @@ pre.language-html {
   }
 }
 
-pre.language-css, .language-scss {
+pre.language-css {
   &::before, &::after {
     content: '{ } css'
   }
+}
 
+pre.language-scss {
+  &::before, &::after {
+    content: '{ } scss'
+  }
+}
+
+pre.language-css,
+pre.language-scss {
   color: pink;
 
   .selector {
@@ -102,6 +152,10 @@ pre.language-css, .language-scss {
 }
 
 pre.language-js {
+  &::before, &::after {
+    content: '( ) JS'
+  }
+
   color: palegreen;
 
   .keyword {
@@ -125,18 +179,22 @@ pre.language-js {
   }
 }
 
-pre.language-njk {
-  .tag {
-    color: palegreen;
-  }
-
-  .variable {
-    color: hotpink;
-  }
-}
-
 pre.language-yaml {
+  &::before, &::after {
+    content: '# MD'
+  }
+
   .atrule {
     color: palegreen;
   }
 }
+
+// pre.language-njk {
+//   .tag {
+//     color: palegreen;
+//   }
+
+//   .variable {
+//     color: hotpink;
+//   }
+// }

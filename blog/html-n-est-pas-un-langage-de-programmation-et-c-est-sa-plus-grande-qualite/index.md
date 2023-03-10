@@ -44,8 +44,8 @@ Prenons un autre exemple :
 ```html
 <details>
   <summary>HTML</summary>
-  HTML is an acronym for HyperText Markup Language. It was created by Tim
-  Berners-Lee in 1989.
+  HTML is an acronym for HyperText Markup Language.
+  It was created by Tim Berners-Lee in 1989.
 </details>
 ```
 

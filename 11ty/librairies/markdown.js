@@ -10,7 +10,7 @@ function getMarkdownLibrary(eleventyConfig) {
   }).use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
-      class: "direct-link",
+      class: "directLink",
       symbol: "#",
       level: [1,2,3,4],
     }),

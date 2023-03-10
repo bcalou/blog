@@ -11,6 +11,7 @@ h1, h2, h3 {
   font-weight: bold;
   letter-spacing: 0.005em;
   line-height: 1.25;
+  display: inline-block;
 
   em, i {
     display: inline-block;
@@ -22,43 +23,13 @@ h1, h2, h3 {
 h1 a {
   text-decoration: none;
   text-align: center;
-  color: var(--blue);
+  color: var(--blue-dark);
   letter-spacing: 0.005em;
 }
 
+// TODO : postTag ça marche pas et ça devrait pas être ici
 p a {
-  text-decoration: underline;
-  color: var(--black);
-  text-decoration-color: rgb(100, 196, 228);
-  text-underline-offset: 0.2rem;
-  text-decoration-thickness: 0.2rem;
-  text-decoration-skip-ink: none;
-  font-weight: bold;
-  font-family: euclid;
-  line-height: 0;
-  position: relative;
-  transition: text-decoration-color 0.3s;
-  white-space: pre;
-
-  // TODO : only full size
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    inset: 100% 0 0 0;
-    background-color: var(--blue-light);
-    z-index: -1;
-    transition: inset 0.3s;
-  }
-
-  &:hover {
-    text-decoration-color: var(--blue-light);
-  }
-
-  &:hover::before,
-  &:focus-visible::before {
-    inset: 0;
-  }
+  @extend .postTag !optional;
 }
 
 h1 {
@@ -87,14 +58,11 @@ p, ul, ol {
 
 strong {
   font-weight: bold;
+  letter-spacing: 0.005em;
 }
 
 i, em {
   font-style: italic;
-}
-
-:is(h1, h2, h3, h4, h5, h6):not(:hover) .direct-link {
-  display: none;
 }
 
 ul, ol {

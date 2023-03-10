@@ -152,8 +152,6 @@ Une autre façon de le dire, c'est que le template génère à la volée les ima
   "Le processus peut être désactivé en développement pour gagner du temps"
 %}
 
----
-
 ## CSS critique inline
 
 Actuellement, la cascade du site ressemble à ça :
@@ -163,8 +161,6 @@ Actuellement, la cascade du site ressemble à ça :
   "Trois étapes de chargement distinctes se suivent : d'abord le HTML, puis le CSS/JS, puis les images",
   "J'ai utilisé une simulation « slow 3G » pour forcer le trait"
 %}
-
----
 
 On voit nettement les deux ressources **bloquantes** que sont le CSS et le JavaScript.
 
@@ -202,8 +198,6 @@ C'est tout !
   "Le code source du HTML dans lequel on peut voir du CSS minifié",
   "Le CSS critique est extrait puis directement inclus dans l'index.html."
 %}
-
----
 
 En plus d'inclure le CSS critique, le plugin ajoute la ligne suivante :
 

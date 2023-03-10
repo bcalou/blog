@@ -2,15 +2,9 @@
   max-width: min(var(--main-content-width), 90vw);
 
   aside {
-    border-radius: var(--border-radius);
-    margin-block: 3rem;
-    font-size: 1.125rem;
-    background: var(--blue-light);
-    padding: 1.5rem 2rem 1.5rem 6rem;
-    position: relative;
-    line-height: 1.6;
-    letter-spacing: 0.04rem;
-    left: -6rem;
-    max-width: 40rem;
+    // TODO : ne pas hériter tous les styles de .series, le texte doit être cohérent avec le corps
+    @extend .series !optional;
+    margin-block: 2.5rem !important;
+    font-style: italic;
   }
 }

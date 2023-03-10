@@ -2,10 +2,11 @@
   margin-top: 2rem;
   margin-bottom: 4rem;
   display: flex;
+  align-items: baseline;
   gap: 1em;
 
   &::before {
-    background-color: var(--blue-light);
+    background-color: var(--blue-lightest);
     font-family: euclid;
     display: inline-block;
     width: 1.85rem;
@@ -19,11 +20,36 @@
 }
 
 .postTag {
+  // TODO : le hover est moche sur .postTag mais pas sur <a>
+  text-decoration: underline;
   color: var(--black);
-  text-decoration-color: rgb(100, 196, 228);
+  text-decoration-color: var(--blue-light);
   text-underline-offset: 0.2rem;
   text-decoration-thickness: 0.2rem;
   text-decoration-skip-ink: none;
-  transition: text-decoration-thickness 0.2s;
+  font-weight: bold;
   font-family: euclid;
+  position: relative;
+  transition: text-decoration-color 0.3s;
+  white-space: pre;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 100% 0 0 0;
+    background-color: var(--blue-lightest);
+    z-index: -1;
+    transition: inset 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration-color: var(--blue-lightest);
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    inset: 0;
+  }
 }
