@@ -3,6 +3,7 @@ title: Connaît-on vraiment CSS lorsqu'on utilise un framework CSS ?
 date: 2022-12-09
 tags:
   - css
+  - accessibilité
   - tailwind
   - bootstrap
 layout: layouts/post.njk
@@ -38,7 +39,7 @@ Bootsrap a déjà été utilisé par 81% des devs ayant répondu à ce sondage. 
 Définissons quelques catégories :
 
 | %      	| Opinion  	| Nom de code 	|
-|-------	|-------	|------	|------	|
+|-------	|-------	|------	
 | 51.7% 	| Ont utilisé, mais ne l'utiliseront plus	| Les ex |
 | 29% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
 | 16.3% | Connaissent mais ne souhaitent pas essayer | Les non merci |
@@ -120,7 +121,7 @@ Parlons maintenant du nouveau roi de la récré.
 D'abord, nos 5 profils :
 
 | %      	| Opinion  	| Nom de code 	|
-|-------	|-------	|------	|------	|
+|-------	|-------	|------	|
 | 36.4% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
 | 25% | Connaissent mais ne souhaitent pas essayer | Les non merci |
 | 25% | Connaissent et souhaitent essayer | Les pourquoi pas |
