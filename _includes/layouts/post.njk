@@ -20,7 +20,6 @@ templateClass: tmpl-post
   {%- endfor %}
   </div>
 
-
   {% if not noDate %}<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% endif %}
 
     {{ content | cssSupportPanels | addNbsp | safe }}

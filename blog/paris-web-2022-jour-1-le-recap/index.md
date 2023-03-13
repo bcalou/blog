@@ -28,7 +28,7 @@ J'ai mis des petites étoiles pour faire ressortir mes conférences préférées
 
 Au-delà des phrases (et du titre) chocs, Maïtané et Thomas ont créé toute une série de visualisations astucieuses pour créer le débat et comparer différentes formes d'activités : salariat, portage salarial, micro-entreprise, coopérative d'activité et d'emploi...
 
-Dans quelle structure peut-on parler d'argent sans tabou ? Dans laquelle choisit-on ses clients, ou ses collaborateurs ? Quelle structure participe le mieux au bien commun ? Et, pour répondre à cette notion de "sans capital", dans quelles structures les bénéfices nous reviennent-ils le plus directement possible ?
+Dans quelle structure peut-on parler d'argent sans tabou ? Dans laquelle choisit-on ses clients, ou ses collaborateurs ? Quelle structure participe le mieux au bien commun ? Et, pour répondre à cette notion de « sans capital », dans quelles structures les bénéfices nous reviennent-ils le plus directement possible ?
 
 Pour ma part, une confirmation que le salariat, ce n'est pas trop pour moi, mais aussi un rappel qu'il n'y a pas que le freelance en face !
 
@@ -54,12 +54,12 @@ C'était une forte promesse, et c'est un succès !
 
 Je ne connaissais pas la méthode FLIP, qui permet de réaliser des transitions visuelles complexes entre deux états, avec un état final difficile à prévoir (notamment la position exacte de l'élément relativement au point de départ, l'élément pouvant atterir dans un autre endroit du DOM).
 
-L'idée géniale est donc la suivante, en 4 étapes (F.L.I.P) :
+L'idée géniale est donc la suivante, en 4 étapes (FLIP) :
 
 <ol>
   <li>First : stocker la position et les dimensions de l'élément actuel</li>
   <li>Last : placer instantanément l'élément dans sa position finale dans le DOM </li>pour en trouver les dimensions et la position finale (ceci se passe dans la phase de layout, on ne sollicite pas la phase de paint et donc c'est invisible !)
-  <li>Flip : Inverser l'animation prévue à la base en calculant la différence entre </li>les états First et Last.
+  <li>Invert : Inverser l'animation prévue à la base en calculant la différence entre </li>les états First et Last.
   <li>Play : jouer l'animation finale.</li>
 </ol>
 

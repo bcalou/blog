@@ -46,10 +46,9 @@ Depuis 2021, l'équipe de DesignGouv est intervenu sur 112 projets, auprès de 1
 
 Et un rappel simple mais important :
 
-{% blockquote "Plus on créé de nouveaux outils, plus il y en a à maintenir.
-</blockquote>" %}
+{% blockquote "Plus on créé de nouveaux outils, plus il y en a à maintenir." %}
 
-Un passage à noter lors des questions-réponses : le gouvernement reccommande-t-il les outils de surcouche d'accessibilité (que certains spécialistes avait osé critiqué, avant d'être poursuivis par les éditeurs) ? La réponse est donnée : non. Applaudissements nourris.
+Un passage à noter lors des questions-réponses : le gouvernement recommande-t-il les outils de surcouche d'accessibilité (que certains spécialistes avait osé critiqué, avant d'être poursuivis par les éditeurs) ? La réponse est donnée : non. Applaudissements nourris.
 
 {% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=4314" %}
 
@@ -61,26 +60,25 @@ Plus de cent bénévoles, des centaines de critères ramenés au nombre final de
 
 Le format est très proche du RGAA (le référentiel pour l'accessibilité), et pour cause : les deux projets ont des intervenants communs.
 
-La [loi visant à réduire l'empreinte environnementale du numérique en France de 2021](https://www.vie-publique.fr/loi/278056-loi-15-novembre2021-reen-reduire-empreinte-environnementale-du-numerique) n'impose pas encore le respect de ce nouveau référentiel. Il n'y a encore aucune obligation légale à ce sujet.
+La [loi visant à réduire l'empreinte du numérique en France de 2021](https://www.vie-publique.fr/loi/278056-loi-15-novembre2021-reen-reduire-empreinte-environnementale-du-numerique) n'impose pas encore le respect de ce nouveau référentiel. Il n'y a encore aucune obligation légale à ce sujet.
 
-Et enfin, pour vous donner une idée, le nouveau site de l'ADEME (agence de la transition écologique) respecte ce référentiel à 70%.
+Et enfin, pour vous donner une idée, le nouveau site de l'ADEME (Agence de la transition écologique) respecte ce référentiel à 70%.
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=7824" %}
 
 ## 4. Designer l'urgence ⭐⭐⭐
 
-{% blockquote "Designer dans l'urgence en mode pompier VS designer l'urgence <em>avec</em> des pompiers" %}
+{% blockquote "Designer dans l'urgence en mode pompier VS designer l'urgence <em>avec</em> des pompiers." %}
 
 Une conférence drôle et passionnante pour répondre à une question très sérieuse : comment aborder le design lorsque des vies sont en jeu ?
 
 Pour reprendre en main le système d'information des pompiers, Julien s'est immergé dans le métier, et après son témoignage, vous ne pourrez plus dire que la recherche UX est trop difficile à mettre en œuvre dans votre secteur.
 
-Le monde de l'urgence est fait de contraintes physiques et mentales imprédictibles. Sous le choc d'un accident, même une interface applicative d'apparence simple ("êtes-vous témoin ou victime" ?) n'a plus rien d'évident.
+Le monde de l'urgence est fait de contraintes physiques et mentales imprédictibles. Sous le choc d'un accident, même une interface applicative d'apparence simple (« êtes-vous témoin ou victime ? ») n'a plus rien d'évident.
 
-L'occasion également de tordre le cou au mythe du "produit minimum viable" (MVP). Une méthode excellente dans nombre de cas, mais tout simplement inapplicable lors de la refonte d'un service aussi critique : quand on sauve des vies, on ne peut pas commencer par la "version simple".
+L'occasion également de tordre le cou au mythe du « produit minimum viable » (MVP). Une méthode excellente dans nombre de cas, mais tout simplement inapplicable lors de la refonte d'un service aussi critique : quand on sauve des vies, on ne peut pas commencer par la « version simple ».
 
-{% blockquote "Move fast and don't break things
-</blockquote>" %}
+{% blockquote "Move fast and don't break things" %}
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=10167" %}
 
 ## 5. Comment Canal+ travaille et intègre l’accessibilité numérique ? ⭐
@@ -95,15 +93,15 @@ Force et courage à Amélien, donc ;)
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=17964" %}
 
-## 6. Numérique et éthique : l'impossible équation&nbsp;? ⭐⭐
+## 6. Numérique et éthique : l'impossible équation&nbsp;?&nbsp;⭐⭐
 
-Même si Audrey et Agnès avouent prêcher un public déjà convaincu ("c'est la première fois qu'on m'applaudit parce que je critique Amazon"), le sinistre tour d'horizon offert ici est nécessaire et percutant.
+Même si Audrey et Agnès avouent prêcher un public déjà convaincu (« c'est la première fois qu'on m'applaudit parce que je critique Amazon »), le sinistre tour d'horizon offert ici est nécessaire et percutant.
 
 200 composants, 50 minerais et 75 kilos de matière première pour produire un téléphone (la production représente 75% des émissions), téléphone dont la durée de vie atteindra en moyenne 2 ou 3 ans et ne sera probablement pas recyclé... Sans parler du travail des enfants.
 
 Et ce n'est que la partie production : saviez-vous que même si vous n'avez pas de profil Facebook, vous possédez malgré tout un <i>shadow account</i> ? Que des drônes étaient capable de suivre des manifestants jusqu'à leur domicile, en France ? Que Facebook, encore lui, a joué un rôle déterminant dans le génocide des Rohingya ? Et la liste semble sans fin.
 
-L'invervention se clôture avec quelques conseils élémentaires : gardez votre téléphone (au moins 7 ans, idéalement). Utilisez le nouvel [indice de réparabilité](https://www.ecologie.gouv.fr/indice-reparabilite) lors d'un achat. Réparez, et, si vraiment vous devez vous séparer de votre appareil encore en fonctionnement, ne le laissez pas trainer dans un tiroir : vendez ou donnez-le.
+L'invervention se clôture avec quelques conseils élémentaires : gardez votre téléphone (au moins 7 ans, idéalement). Utilisez le nouvel [indice de réparabilité](https://www.ecologie.gouv.fr/indice-reparabilite) lors d'un achat. Réparez, et, si vraiment vous devez vous séparer de votre appareil encore en fonctionnement, ne le laissez pas traîner dans un tiroir : vendez ou donnez-le.
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=20357" %}
 
@@ -121,7 +119,7 @@ Matthieu a ainsi théorisé un modèle pour les noms de variables :
 --usage-location-state-impact-property
 ```
 
-Une idée m'a particulièrement parlé : un design system est une "rationalisation" du design, et devient ainsi un outil objectif pour challenger toute nouvelle modification des designers ou managers. Pas pour stagner, mais pour assurer au projet de ne pas partir dans tous les sens, ce qui est essentiel à cette échelle.
+Une idée m'a particulièrement parlé : un design system est une « rationalisation » du design, et devient ainsi un outil objectif pour challenger toute nouvelle modification des designers ou managers. Pas pour stagner, mais pour assurer au projet de ne pas partir dans tous les sens, ce qui est essentiel à cette échelle.
 
 {% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=25385" %}
 
@@ -145,7 +143,7 @@ On réfléchit rarement aux URLs, qu'on prend pour acquises, mais elles constitu
 - Une accessibilité remarquable, en cohérence avec le contenu : traduction LSF, vélotypie, traduction de l'anglais vers le français... Et cela a effectivement permis à de nombreuses personnes en situation de handicap d'être présentes ;
 - Le prix est plutôt accessible pour un événement de ce type (surtout si vous demandez à votre boîte de participer) ;
 - Pardonnez-moi d'être terre à terre, mais l'on y mange très bien, même en tant que végétarien, et ce n'est pas négligeable pour mobiliser toute cette concentration ;
-- Vous serez en immersion parmis tout un tas de gens qui veulent bien faire comme vous, et ça fait du bien ;
+- Vous serez en immersion parmi tout un tas de gens qui veulent bien faire comme vous, et ça fait du bien ;
 - On pourra se dire bonjour :)
 
 À l'année prochaine !

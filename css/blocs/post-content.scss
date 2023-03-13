@@ -2,9 +2,12 @@
   max-width: min(var(--main-content-width), 90vw);
 
   aside {
-    // TODO : ne pas hériter tous les styles de .series, le texte doit être cohérent avec le corps
-    @extend .series !optional;
-    margin-block: 2.5rem !important;
+    @extend .aside !optional;
+    margin-block: 2.5rem;
     font-style: italic;
+  }
+
+  li + li {
+    margin-top: 1em;
   }
 }

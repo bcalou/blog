@@ -1,76 +1,39 @@
 .series {
-  margin-block: 0rem 2.5rem;
-  padding: 1.75rem 2.25rem 1.75rem 5rem;
-  background-color: var(--blue-lightest);
-  width: fit-content;
-  border-radius: 0 0.9375rem 0.9375rem 0;
-  left: -5rem;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
-    background-color: var(--blue-lightest);
-    width: var(--border-radius);
-    height: var(--border-radius);
-    display: block;
-    position: absolute;
-    left: 0;
-  }
-
-  &::before {
-    top: calc(-1 * var(--border-radius));
-    clip-path: path("M0,0 S0,8 8,8 L0,8 L0,0")
-  }
-
-  &::after {
-    bottom: calc(-1 * var(--border-radius));
-    clip-path: path("M0,0 L8,0 S0,0 0,8 L0,0")
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    background-color: var(--blue-lightest);
-    width: var(--border-radius);
-    height: var(--border-radius);
-    display: block;
-    position: absolute;
-    left: 0;
-  }
-
-  &::before {
-    top: calc(-1 * var(--border-radius));
-    clip-path: path("M0,0 S0,8 8,8 L0,8 L0,0")
-  }
-
-  &::after {
-    bottom: calc(-1 * var(--border-radius));
-    clip-path: path("M0,0 L8,0 S0,0 0,8 L0,0")
-  }
+  @extend .aside !optional;
 
   ol {
     list-style-type: none;
     counter-reset: part;
     padding-left: 0;
+    margin-bottom: 0;
 
-    li::before {
-      counter-increment: part;
-      content: counter(part);
-      font-family: euclid;
-      display: inline-block;
-      background: rgb(221, 231, 235);
-      width: 1.85rem;
-      height: 1.85rem;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.5rem;
-    }
+    li {
+      margin-top: 0;
 
-    li[aria-current="page"]::before {
-      background: white;
+      &::before {
+        counter-increment: part;
+        content: counter(part);
+        font-family: euclid;
+        display: inline-block;
+        background: hsl(194, 64%, 87%);
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+      }
+
+      &[aria-current="page"] {
+        &::before {
+          background: white;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -78,6 +41,14 @@
     color: var(--black);
     line-height: 2.5;
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-underline-offset: 0.25rem;
+      text-decoration-thickness: 0.1rem;
+    }
   }
 
   p {

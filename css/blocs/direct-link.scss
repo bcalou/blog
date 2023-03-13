@@ -1,14 +1,22 @@
 .directLink {
   text-decoration: none;
-  color: var(--blue);
-  opacity: 1;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateX(-0.125em);
-  display: inline-block;
-  padding-inline: 0.25em;
+  color: var(--black);
 
-  :is(h1, h2, h3, h4, h5, h6):not(:hover) &:not(:focus) {
+  &::after {
+    content: "#";
+    text-decoration: none;
+    color: var(--blue);
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    display: inline-block;
+    padding-inline: 0.25em;
     opacity: 0;
-    transform: translateX(-0.375em);
+    transform: translateX(-0.25em);
+  }
+
+  :target &::after,
+  :is(h1, h2, h3, h4, h5, h6) > &:is(:hover, :focus)::after {
+    transform: translateX(0.25rem);
+    opacity: 1 !important;
   }
 }

@@ -1,3 +1,4 @@
+// Todo : guillemets automatiques
 // Add non breakable spaces where necessary
 function addNbsp(text) {
   if (!text) {

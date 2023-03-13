@@ -1,18 +1,22 @@
 const link = require("./link");
 
 function blockquote(quote, author, source, href) {
-  const blockquote = `<blockquote>
-    <p>${quote}</p>
-  </blockquote>`;
-
   if (author || source) {
     return `<figure class="blockquote">
-      ${blockquote}
+      <blockquote>
+        <p>${quote}</p>
+      </blockquote>
       ${getFigCaptionTag(author, source, href)}
     </figure>`
   }
 
-  return blockquote;
+  else {
+    return `<div class="blockquote">
+      <blockquote>
+        <p>${quote}</p>
+      </blockquote>
+    </div>`;
+  }
 }
 
 // Generate a <figcaption> tag for the given infos

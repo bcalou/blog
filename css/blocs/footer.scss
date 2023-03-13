@@ -40,7 +40,7 @@
   }
 }
 
-.footer a:hover {
+.footer a:is(:hover, :focus) {
   svg {
     transition: transform 0.5s cubic-bezier(.29,2.5,.47,.99), color 0.3s;
     transform: scale(1.2);
@@ -81,7 +81,7 @@
     transform: scale(0.75) translateX(1.5rem);
     transition: opacity 0.3s, transform 0.3s;
 
-    a:hover & {
+    a:is(:hover, :focus) & {
       transform: none;
       opacity: 1;
     }

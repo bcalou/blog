@@ -95,7 +95,6 @@ pre {
   }
 }
 
-// TODO: arrondi sur les côtés
 pre.language-html {
   &::before, &::after {
     content: '</> html'

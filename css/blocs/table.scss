@@ -1,5 +1,11 @@
 table {
   border: 1px solid var(--grey);
+  margin-block: 1.5em;
+}
+
+th {
+  text-align: left;
+  font-family: Euclid;
 }
 
 td, th {

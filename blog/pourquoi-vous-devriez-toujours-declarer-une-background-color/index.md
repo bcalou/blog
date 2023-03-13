@@ -136,7 +136,7 @@ Bien que cela ne soit pas représentatif du « web », j'ai testé les 100 sites
   "Une couleur de fond pas si bonne que ça pour la santé"
 %}
 
-Parmis eux : le Wall Street Journal, Paypal, Vimeo, AOL, la BBC...
+Parmi eux : le Wall Street Journal, Paypal, Vimeo, AOL, la BBC...
 
 Cela fait quelques jours que je garde cet horrible fond jaune comme arrière-plan, et ce chiffre de 14% me semble cohérent avec ma navigation quotidienne. Je peux vous assurer que lire du texte sur ce fond est une excellente motivation pour terminer cet article.
 
