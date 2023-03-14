@@ -4,31 +4,38 @@ code, kbd {
   letter-spacing: 0.01em;
   white-space: pre;
 
-  :not(pre, blockquote p) > & {
-    background-color: var(--grey-light);
+  :not(pre) > & {
+    --codeBackgroundColor: var(--grey-light);
+    background-color: var(--codeBackgroundColor);
+    outline: 0.25rem solid var(--codeBackgroundColor);
     border-radius: 0.1875rem;
-    outline: 0.25rem solid var(--grey-light);
     margin-inline: 0.25rem;
     padding-inline: 0.1875rem;
   }
 
   aside > & {
-    // TODO remove !importants
-    background-color: hsl(195deg 17% 87%) !important;
-    outline-color: hsl(195deg 17% 87%) !important;
+    --codeBackgroundColor: hsl(195deg 17% 87%);
   }
 
   figcaption > & {
-    background-color: hsl(227deg 5% 35%) !important;
-    outline-color: hsl(227deg 5% 35%) !important;
+    --codeBackgroundColor: hsl(227deg 5% 35%);
+    outline-width: 0.125rem !important;
+  }
+
+  blockquote p > & {
+    --codeBackgroundColor: hsl(0 0% 93%);
     outline-width: 0.125rem !important;
   }
 }
 
 pre {
   position: relative;
-  margin: 2.5rem 0;
+  margin-block: 2.5rem;
   display: flex;
+
+  & + & {
+    margin-block-start: 3.5rem;
+  }
 
   &::before {
     color: var(--white);

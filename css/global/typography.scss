@@ -27,8 +27,13 @@ h1 a {
   letter-spacing: 0.005em;
 }
 
-p a {
+p a,
+aside a {
   @extend .postTag !optional;
+}
+
+aside a {
+  font-style: normal;
 }
 
 h1 {

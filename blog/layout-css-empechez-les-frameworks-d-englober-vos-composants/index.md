@@ -157,11 +157,11 @@ Notez que la bordure bleue qui entouraient `my-component` a disparu : en effet, 
 
 Bien que j'aime la belle simplicité de cette solution, `display: contents` possède ses inconvénients.
 
-`display: contents` peut provoquer des **problèmes d'accessibilité**, car l'élément est caché de l'arbre d'accessibilité. Si vous l'utilisez sur un élément `ul`, le fait qu'il s'agisse d'une liste sera perdue dans de nombreux navigateurs.
+`display: contents` peut provoquer des **problèmes d'accessibilité**, car l'élément est caché de l'arbre d'accessibilité. Si vous l'utilisez sur un élément `ul`, l'information qu'il s'agit d'une liste sera perdue dans de nombreux navigateurs.
 
 Ce n'est pas un problème dans notre cas, cependant, puisque `my-component` ne véhicule pas de sens sémantique particulier. Mais l'on pourrait toutefois se méfier du **support navigateur**, qui dans cette zone grise que j'appelerai la zone <q>meh...</q>.
 
-<aside>Mise à jour 2022 : <code>display-content</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20content">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
+<aside>Mise à jour 2022 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents" target="_blank">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
 
 ## Une méthode encore plus propre
 
@@ -169,7 +169,7 @@ Voici donc la technique `margin: auto`.
 
 Ce n'est qu'en rédigeant cet article que je me suis souvenu d'un autre article, un des meilleurs que j'ai lu sur le sujet: [Flexbox's Best Kept Secret](https://hackernoon.com/flexbox-s-best-kept-secret-bd3d892826b6), de Sam Provenza. Il date de 2015 et j'ai utilisé ce « secret » un grand nombre de fois depuis.
 
-Quatre ans plus tard, je ne suis pas sûr qu'il bien connu. Mais vous pouvez utiliser `margin-left: auto`, pas exemple, pour « pousser » un élément flexbox aussi loin que possible vers la droite.
+Quatre ans plus tard, je ne suis pas sûr qu'il soit bien connu. Mais vous pouvez utiliser `margin-left: auto`, pas exemple, pour « pousser » un élément flexbox aussi loin que possible vers la droite.
 
 Voyez plutôt ce codepen. L'élément de prix possède la propriété `margin-left: auto`.
 

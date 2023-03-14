@@ -5,9 +5,18 @@
     @extend .aside !optional;
     margin-block: 2.5rem;
     font-style: italic;
+
+    a {
+      font-style: normal;
+      text-decoration-color: var(--blue-light) !important;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   li + li {
-    margin-top: 1em;
+    margin-top: 0.5em;
   }
 }
