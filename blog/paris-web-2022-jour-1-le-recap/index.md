@@ -18,7 +18,7 @@ En voici un récap à chaud, partiel et partial, qui j'espère vous donnera envi
 
 J'ai mis des petites étoiles pour faire ressortir mes conférences préférées, mais c'est tout à fait biaisé par mes propres intérêts : je suis impressionné par la qualité de l'ensemble.
 
-## 1. On se lève et on se casse : tour d’horizon d’un travail sans capital ⭐⭐
+## 1. On se lève et on se casse : tour d’horizon d’un travail sans capital&nbsp;⭐⭐
 
 Ça commence fort dès le matin avec la présentation politique de la journée.
 
@@ -34,7 +34,7 @@ Pour ma part, une confirmation que le salariat, ce n'est pas trop pour moi, mais
 
 {% youtube "https://www.youtube.com/watch?v=rI35dYvljZo&t=2705s" %}
 
-##  2. Concevoir des services éco-responsables en alliant Design de Services et Éco-conception Numérique ⭐
+##  2. Concevoir des services éco-responsables en alliant Design de Services et Éco-conception Numérique&nbsp;⭐
 
 {% blockquote "Cela fait 12 ans que je conçois des services, et 12 ans que je les conçois sans me poser la question de l'impact sur la planète." %}
 
@@ -48,7 +48,7 @@ Et pour convaincre les entreprises qui n'y verraient que des contraintes, un seu
 
 {% youtube "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=4926s" %}
 
-## 3. Animating the Impossible ⭐⭐ 
+## 3. Animating the Impossible&nbsp;⭐⭐ 
 
 C'était une forte promesse, et c'est un succès !
 
@@ -57,17 +57,17 @@ Je ne connaissais pas la méthode FLIP, qui permet de réaliser des transitions 
 L'idée géniale est donc la suivante, en 4 étapes (FLIP) :
 
 <ol>
-  <li>First : stocker la position et les dimensions de l'élément actuel</li>
-  <li>Last : placer instantanément l'élément dans sa position finale dans le DOM </li>pour en trouver les dimensions et la position finale (ceci se passe dans la phase de layout, on ne sollicite pas la phase de paint et donc c'est invisible !)
-  <li>Invert : Inverser l'animation prévue à la base en calculant la différence entre </li>les états First et Last.
-  <li>Play : jouer l'animation finale.</li>
+  <li><strong>First</strong> : stocker la position et les dimensions de l'élément actuel.</li>
+  <li><strong>Last</strong> : placer instantanément l'élément dans sa position finale dans le DOM </li>pour en trouver les dimensions et la position finale (ceci se passe dans la phase de layout, on ne sollicite pas la phase de paint et donc c'est invisible !).
+  <li><strong>Invert</strong> : Inverser l'animation prévue à la base en calculant la différence entre </li>les états First et Last.
+  <li><strong>Play</strong> : jouer l'animation finale.</li>
 </ol>
 
 Je ne sais pas si j'explique bien, mais c'est à ça que sert la vidéo, non ?
 
 {% youtube "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=8131s" %}
 
-## 4. L'industrialisation des designers du web ⭐⭐
+## 4. L'industrialisation des designers du web&nbsp;⭐⭐
 
 Salle comble, c'est manifestement un sujet qui parle à beaucoup.
 
@@ -75,13 +75,13 @@ Salle comble, c'est manifestement un sujet qui parle à beaucoup.
 
 Et c'est Figma qui va en prendre pour son grade. L'outil révolutionnaire pour les designers est aussi un outil de contrôle idéal pour les managers, assimilable à une ligne de montage surveillée.
 
-Les designers sont presques dépossédés de leur métier : c'est désormais tout le monde qui peut "chuchoter au curseur du designer" de déplacer ceci, d'agrandir cela.
+Les designers sont presques dépossédés de leur métier : c'est désormais tout le monde qui peut « chuchoter au curseur du designer » de déplacer ceci, d'agrandir cela.
 
-"Laissez-nous commiter !", demande Cécile, dans un excellent parallèle avec le processus de développement et ses phases de réflexion solitaires. Figma, c'est parfois un peu comme si les collègues de votre agence vous indiquaient que vous n'aviez pas fermé la parenthèse de votre fonction alors que vous êtes encore en train de coder...
+<q>Laissez-nous commiter !</q>, demande Cécile, dans un excellent parallèle avec le processus de développement et ses phases de réflexion solitaires. Figma, c'est parfois un peu comme si les collègues de votre agence vous indiquaient que vous n'aviez pas fermé la parenthèse de votre fonction alors que vous êtes encore en train de coder...
 
 {% youtube "https://www.youtube.com/watch?v=rI35dYvljZo?t=11467s" %}
 
-## 5. Illectronisme et numérisation des services publics ⭐
+## 5. Illectronisme et numérisation des services publics&nbsp;⭐
 
 L'administration française donne-t-elle les moyens aux citoyens d'accéder à leurs droits et de réaliser leurs démarches obligatoires ?
 
@@ -91,7 +91,7 @@ Selon Raphaël, il faut se méfier du tout-numérique, qui cache le fantasme d'u
 
 {% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=324s" %}
 
-## 6. Lost in translation ⭐⭐⭐
+## 6. Lost in translation&nbsp;⭐⭐⭐
 
 Manuel me prend par les sentiments avec un sujet cher à mon cœur : HTML, et plus précisément le mystère de l'incompétence globale pour utiliser correctement ce langage.
 
@@ -101,17 +101,17 @@ C'est précisément parce que la syntaxe de HTML est simple que ce langage est m
 
 {% blockquote "Some people just don't care." %}
 
-Certaines personnes s'en fichent-elles tout simplement ? J'ai bien peur qu'il ait raison, mais Manuel ne se veut pas fataliste pour autant. Une conférence très drôle sur le langage du web.
+Certaines personnes s'en fichent-elles tout simplement ? J'ai bien peur qu'il ait raison, mais Manuel ne se veut pas fataliste pour autant. Une conférence très drôle sur _le_ langage du web.
 
 {% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=2828s" %}
 
-##  7. Transferts de données : est-ce que je peux encore utiliser des fournisseurs américains ? ⭐⭐
+##  7. Transferts de données : est-ce que je peux encore utiliser des fournisseurs américains ?&nbsp;⭐⭐
 
 Non.
 
 Autant le contenu de la conférence est technique pour le profane, autant la conclusion est sans appel. Même si les entreprises naviguent dans un flou règlementaire, soupesant les bénéfices et les risques d'une petite entrave à la règle, la fête est finie.
 
-L'administration Bush a signé un mandat simple : il permet de faire usage aux USA comme bon leur semble de toute donnée présente (ou transmise) sur leur territoire, même celles récoltées par "hasard" (oui, c'est le mot utilisé).
+L'administration Bush a signé un mandat simple : il permet de faire usage aux USA comme bon leur semble de toute donnée présente (ou transmise) sur leur territoire, même celles récoltées par hasard (oui, c'est le mot utilisé).
 
 Alors, votre prestataire des USA (ou travaillant lui-même avec les USA) pourra vous fournir toutes les précautions contractuelles du monde, cela ne change pas grand chose : face aux contrats, c'est la loi qui gagne.
 
@@ -125,7 +125,7 @@ Comme dit le diction :
 
 {% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=7667s" %}
 
-## 8. Objectifs 2025 de l’accessibilité : quels défis nous attendent ? ⭐
+## 8. Objectifs 2025 de l’accessibilité : quels défis nous attendent ?&nbsp;⭐
 
 Fin de journée morose, pas à cause des intervenants mais du constat dressé : accessibilité, on n'y est pas, et loin de là.
 
@@ -133,7 +133,7 @@ Fin de journée morose, pas à cause des intervenants mais du constat dressé : 
 
 Avec une obligation récente (2021 pour le secteur public et très grosses entreprises privées) ou même future (2025 pour le reste du secteur privé) et peu ou pas d'amendes conséquentes pour le moment, le chemin pour un web accessible ne fait que commencer.
 
-{% blockquote "Seuls 20% des 250 démarches les plus utilisées par les français sont accessibles alors que c'est imposé depuis 2012." %}
+{% blockquote "Seules 20% des 250 démarches les plus utilisées par les français sont accessibles alors que c'est imposé depuis 2012." %}
 
 Le sujet est profond et culturel : est-on prêt, en tant que société, à investir là-dessus ? Les actes ne le prouvent pas actuellement.
 

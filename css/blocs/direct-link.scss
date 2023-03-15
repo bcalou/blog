@@ -1,8 +1,9 @@
 .directLink {
   text-decoration: none;
   color: var(--black);
-
+  
   &::after {
+    position: absolute;
     content: "#";
     text-decoration: none;
     color: var(--blue);

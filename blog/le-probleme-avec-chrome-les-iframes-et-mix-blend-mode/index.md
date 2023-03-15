@@ -10,7 +10,7 @@ series: Aventures CSS au pays du canvas
 
 Ceci est un bonus pour l'article [Quelle est la couleur d'une page blanche ?](https://bastiencalou.fr/posts/quelle-est-la-couleur-d-une-page-blanche/)
 
-Dans cet article, je vais décrire un bug très spécifique de Chrome, et explorer ce qu'il nous apprend sur le comportement du canvas, que j'ai décrit dans le article initial.
+Dans cet article, je vais décrire un bug très spécifique de Chrome, et explorer ce qu'il nous apprend sur le comportement du canvas, que j'ai décrit dans l'article initial.
 
 Si vous le pouvez, je vous recommande d'utiliser Chrome pour la lecture de cet article, afin de voir ce qu'il se passe.
 
@@ -33,7 +33,7 @@ h1 {
 }
 ```
 
-The CSS est valide et devrait produire un titre rose (rose étant la différence entre vert et blanc).
+Ce CSS est valide et devrait produire un titre rose (rose étant la différence entre vert et blanc).
 
 {% codepen "https://codepen.io/bcalou/pen/RwWdKXe" %}
 
@@ -104,7 +104,7 @@ Cela va à l'encontre des bonnes pratiques dictées par le W3C, mais si vous don
 Voici donc ce qui se passe :
 
 <ol>
-  <li>Le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au `html` prenant pour lui)</li>
+  <li>Le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au <code>html</code> faisant office de leurre)</li>
   <li>Le <code>html</code> est transparent (<code>white</code> spécifiée en CSS, mais volé par le canvas)</li>
   <li>Le canvas est blanc (valeur récupérée du <code>html</code>)
 </ol>
@@ -154,7 +154,7 @@ h1::after {
 }
 ```
 
-Comme vous pouvez le voir, le pseudo-élément va atterir en bas à droite de notre page, _en dehors_, des éléments `body` et `html`. Je ne pense pas que les dieux du CSS aient voulu cette situation, mais oups, je viens de la produire.
+Comme vous pouvez le voir, le pseudo-élément va atterir en bas à droite de notre page, _en dehors_ des éléments `body` et `html`. Je ne pense pas que les dieux du CSS aient voulu cette situation, mais oups, je viens de la produire.
 
 Quelle sera donc la couleur du pseudo-élément ?
 
@@ -206,7 +206,9 @@ Bien que le correctif de la couleur de fond sur l'élément `html` soit simple, 
 
 En réalité, il s'agissait même d'un bug qui se produisait en dehors des `iframes` ! Un [ticket Chromium a été ouvert en 2017](https://bugs.chromium.org/p/chromium/issues/detail?id=711955). Il a été marqué comme résolu en 2020.
 
-Réalisant que le bug se produisait toujours dans les `iframes`, je me suis permis de le signaler dans [un commentaire](https://bugs.chromium.org/p/chromium/issues/detail?id=711955#c16), ce qui a conduit à la création d'un ticket dédié.
+Réalisant que le bug se produisait toujours dans les `iframes`, je me suis permis de le signaler dans [un commentaire](https://bugs.chromium.org/p/chromium/issues/detail?id=711955#c16), ce qui a conduit à la création d'un [ticket dédié](https://bugs.chromium.org/p/chromium/issues/detail?id=711955).
+
+<aside>Mise à jour 2023 : le bug, qui il faut le dire ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.</aside>
 
 ## Méfiez-vous de vos habitudes de test
 
@@ -214,7 +216,7 @@ Je suis amoureux de CodePen. Je pense que je n'ai pas besoin d'expliquer pourquo
 
 Mais dans ce cas précis, CodePen m'a mis dans une situation qui n'était **pas** la même que celle que je tentais de débloquer. J'aidais un étudiant à créer une page qui ne contenait pas d'`iframe`. En utilisant un outil présentant mon code dans une `iframe`, j'ai changé les conditions initiales. Et comme nous l'avons vu, c'est un changement non néligeable lorsqu'on parle de Chrome et de `mix-blend-mode`.
 
-Notez que CodePen n'est pas à blâmer : c'est Chrome qui est en faut ici, et CodePen n'a pas d'autre choix que de présenter mon code dans une `iframe` — sauf si vous utilisez la vue _debug_ !
+Notez que CodePen n'est pas à blâmer : c'est Chrome qui est en faute ici, et CodePen n'a pas d'autre choix que de présenter mon code dans une `iframe` — sauf si vous utilisez la vue _debug_ !
 
 {% figure
   "debug.jpg",

@@ -50,7 +50,7 @@ Ce n'est pas une option secrète de développeur : toutes les options mentionné
   "Le panneau de configuration des couleurs sous Firefox"
 %}
 
-Tous les navigateurs ne gèrent pas cela de la même façon : Chrome, par exemple, vous encourage à utiliser des [extensions et des thèmes](https://support.google.com/chrome/answer/7040464?hl=en). Dans tous les cas, voici l'idée : l'utilisateur n'aura pas nécessairement arrière-plan de navigateur blanc. Comme toujours, nos pré-suppositions sont nos ennemies. Nous ne savons rien.
+Tous les navigateurs ne gèrent pas cela de la même façon : Chrome, par exemple, vous encourage à utiliser des [extensions et des thèmes](https://support.google.com/chrome/answer/7040464?hl=en). Dans tous les cas, voici l'idée : l'utilisateur n'aura pas nécessairement un arrière-plan de navigateur blanc. Comme toujours, nos pré-suppositions sont nos ennemies. Nous ne savons rien.
 
 ## Que se passe-t-il lorsque l'arrière-plan du navigateur n'est pas blanc ?
 
@@ -110,7 +110,7 @@ body {
 ```
 
 {% img
-  "black.jpeg",
+  "white.jpeg",
   "Le site de TechCrunch avec un arrière-plan blanc. Le texte noir est bien visible."
 %}
 
@@ -189,7 +189,7 @@ body {
 }
 ```
 
-Cela me semble rentrer dans la catégorie des situations « très spécifiques mais si simple à résoudre que ce serait bien dommage de ne pas le faire ». On ne sait jamais sur quelle étrange combinaison de caractéristiques navigateur notre site va tomber.
+Cela me semble rentrer dans la catégorie des situations « très spécifiques mais si simple à résoudre qu'il serait bien dommage de ne pas le faire ». On ne sait jamais sur quelle étrange combinaison de caractéristiques navigateur notre site va tomber.
 
 ## Alors quel est l'intérêt de changer les couleurs du navigateur ?
 
@@ -219,7 +219,7 @@ J'ai testé les 14 sites transparents du top 100, et chacun d'entre-eux s'affich
 {% figure
   "vimeo.png",
   "La page d'accueil de Vimeo. La plupart des contenus sont lisibles, blanc sur noir",
-  "La page d'accueil de Vimeo présente une bonne lisibilité... Avec des exceptions notables pour le logo et les liens en haut à droite"
+  "La page d'accueil de Vimeo présente une bonne lisibilité... Avec des exceptions notables pour le logo et les liens en haut à droite."
 %}
 
 Notez que lorsque vous utilisez le paramètre `document_color_use`, tous les sites sont impactés, pas seulement les transparents.
@@ -249,7 +249,7 @@ Wow, ça fait beaucoup de liens. Presque tout le texte se trouve dans une balise
 
 Quand les couleurs par défaut de Firefox sont imposées, on voit du pur noir pour le texte (au lieu du gris léger du design original) et du bleu pour les liens. C'est un peu brutal mais excellent pour l'accessibilité.
 
-En fait, c'est ce que fait automatiquement Windows si vous activez le mode « contraste elevé » du système d'exploiration. Aucune manipulation sur le navigateur n'est nécessaire.
+En fait, c'est ce que fait automatiquement Windows si vous activez le mode « contraste elevé » du système d'exploitation. Aucune manipulation sur le navigateur n'est nécessaire.
 
 Ceci étant dit, **cela ne peut pas remplacer un design pensé pour l'accessibilité**. On pourrait dire que c'est _parce que_ le web n'est pas très acccessible que de telles options sont nécessaires.
 

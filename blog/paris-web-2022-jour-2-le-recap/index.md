@@ -16,7 +16,7 @@ Suite et fin de mes aventures chez Paris Web, avec les 8 conférences du deuxiè
 
 Voir [le programme complet du jour 2](https://www.paris-web.fr/2022/07.php).
 
-## 1. Bien doser l'utilisation d'ARIA pour éviter les catastrophes ⭐⭐
+## 1. Bien doser l'utilisation d'ARIA pour éviter les catastrophes&nbsp;⭐⭐
 
 Une première présentation donnée par deux personnes : une voyante et une non-voyante (utilisant pour la présentation une barette braille).
 
@@ -36,7 +36,7 @@ Et donc un énième rappel : ARIA complète les informations du HTML, mais c'est
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=697" %}
 
-## 2. DesignGouv : insuffler une culture du design au sein de l'État ⭐
+## 2. DesignGouv : insuffler une culture du design au sein de l'État&nbsp;⭐
 
 L'occasion d'abord de découvrir le nouveau site présentant le [référentiel général d'amélioration de l'accessibilité](https://accessibilite.numerique.gouv.fr/), beaucoup plus sympathique que l'ancien.
 
@@ -52,7 +52,7 @@ Un passage à noter lors des questions-réponses : le gouvernement recommande-t-
 
 {% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=4314" %}
 
-## 3. Le making-of du RGESN : tout savoir sur le référentiel d’écoconception des services numériques ⭐⭐
+## 3. Le making-of du RGESN : tout savoir sur le référentiel d’écoconception des services numériques&nbsp;⭐⭐
 
 Une conférence très spécifique, non pas sur ce nouveau référentiel lui-même, mais sur les coulisses de sa conception.
 
@@ -66,7 +66,7 @@ Et enfin, pour vous donner une idée, le nouveau site de l'ADEME (Agence de la t
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=7824" %}
 
-## 4. Designer l'urgence ⭐⭐⭐
+## 4. Designer l'urgence&nbsp;⭐⭐⭐
 
 {% blockquote "Designer dans l'urgence en mode pompier VS designer l'urgence <em>avec</em> des pompiers." %}
 
@@ -81,7 +81,7 @@ L'occasion également de tordre le cou au mythe du « produit minimum viable » 
 {% blockquote "Move fast and don't break things" %}
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=10167" %}
 
-## 5. Comment Canal+ travaille et intègre l’accessibilité numérique ? ⭐
+## 5. Comment Canal+ travaille et intègre l’accessibilité numérique ?&nbsp;⭐
 
 Depuis un an, Amélien a eu la délicate tâche de sensibiliser les équipes de Canal+ aux enjeux et aux techniques de l'accessibilité.
 
@@ -105,7 +105,7 @@ L'invervention se clôture avec quelques conseils élémentaires : gardez votre 
 
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=20357" %}
 
-## 7. Thémiser un design system ⭐
+## 7. Thémiser un design system&nbsp;⭐
 
 Nous atteignons la fin d'après-midi de ce deuxième jour et je ne vous cache pas que mon cerveau commence à se transformer en compote. 16 conférences, c'est beaucoup.
 
@@ -123,7 +123,7 @@ Une idée m'a particulièrement parlé : un design system est une « rationalisa
 
 {% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=25385" %}
 
-## 8. URL ; reprenons les bases ⭐⭐
+## 8. URL ; reprenons les bases&nbsp;⭐⭐
 
 Là, il n'y a plus personne dans ma boîte crânienne, ou plutôt il y a trop de choses, mais cette dernière conférence va fournir son lot d'informations passionnantes.
 

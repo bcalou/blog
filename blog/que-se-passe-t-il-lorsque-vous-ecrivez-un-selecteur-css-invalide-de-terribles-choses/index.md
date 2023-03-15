@@ -32,7 +32,7 @@ Pour améliorer l'accessibilité, je veux appliquer le même effet lorsque le bo
 
 Cela est possible grâce à la nouvelle pseudo-classe `:focus-visible`. À l'heure où j'écris ces lignes, elle est supportée sans préfixe par [Chrome et Edge](https://caniuse.com/?search=focus-visible).
 
-<aside>Mise à jour 2022 : la pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉</aside>
+<aside>Mise à jour 2023 : la pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉</aside>
 
 ```css
 button:active,
@@ -144,12 +144,6 @@ Si un navigateur ne comprend pas `:is` et essaie de séparer notre premier exemp
   <li><code>h2</code> : ciblons tous les <code>h2</code>, même ceux qui n'ont pas la classe <code>.title</code> !</li>
   <li><code>h3)</code> : hein ?</li>
 </ol>
-
-{% figure
-  "texas.gif",
-  "Un homme attaque avec une tronçonneuse",
-  "Massacre CSS à la tronçonneuse"
-%}
 
 ## Astuce
 

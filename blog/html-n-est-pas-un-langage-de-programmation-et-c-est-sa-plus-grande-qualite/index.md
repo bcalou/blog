@@ -8,14 +8,14 @@ originalPost: https://dev.to/bcalou/html-is-not-a-programming-language-and-that-
 ---
 
 <aside>
-  <p>Mise à jour 2022 : mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impérative</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
+  <p>Mise à jour 2023 : mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impérative</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
   <p>Je ne souhaite pas modifier l'article car il correspond à mes vues de l'époque, mais gardez cette disctinction sémantique en tête : j'ai utilisé le terme « langage de programmation » incorrectement à la place de « langage de programmation <strong>impératif</strong> ».<p/>
   <p>Les autres points sont toujours d'actualité !</p>
 </aside>
 
 J'adore HTML. Plus j'en apprend à son sujet, plus je trouve que c'est un travail de génie. Par dessus tout, j'adore qu'il ne s'agisse pas d'un langage de programmation.
 
-**Les langages de programmation sont nuls**. Ils plantent en permanence (je vous jure, j'écris toujours mon JavaScript parfaitement du premier coup, et pourtant il persiste à planter 🤷).
+**Les langages de programmation sont nuls**. Ils plantent en permanence (je vous jure, j'écris toujours mon JavaScript parfaitement du premier coup, et pourtant il persiste à planter !?).
 
 Pire, quand ils plantent, la plupart du temps, l'ensemble du programme s'écrase ! Autant essayer d'empiler des cure-dents sur un viaduc par plein vent.
 
@@ -65,7 +65,7 @@ Mais quand je pense à l'utilisateur, je sais que la pire chose que je puisse fa
 
 À chaque fois que je programme, j'ai l'impression de signer une étrange décharge dans mon esprit :
 
-{% blockquote "Par la présente, je reconnais que j'introduis un comportement non-standard dans ce site web, déchargeant le navigateur de sa responsabilité d'assurer une expérience fiable pour chaque utilisateur. Je fais cela en ayant consience de ma connaissance partielle des technologies web, de l'existence de limites dans mes implémentations, temporelles et techniques, qui ne peuvent être estimées. Je réalise que ce que je fais échouera probablement à un certain moment ou dans certaines situations. Mais je n'ai pas le choix et je promet de ne pas merder." %}
+{% blockquote "Par la présente, je reconnais que j'introduis un comportement non-standard dans ce site web, déchargeant le navigateur de sa responsabilité d'assurer une expérience fiable pour chaque utilisateur. Je fais cela en ayant consience de ma connaissance partielle des technologies web, de l'existence de limites dans mes implémentations, temporelles et techniques, qui ne peuvent être estimées. Je réalise que ce que je fais échouera probablement à un certain moment ou dans certaines situations. Mais je n'ai pas le choix et je promets de ne pas merder." %}
 
 {% img
   "contract.gif",
@@ -126,7 +126,7 @@ La première fois que l'on écrit du JavaScript, cela semble être un sacré baz
 
 Ce n'est qu'avec le temps et les connaissances que l'on réalise que le génie, ce n'est pas soi : les concepteurs d'HTML sont les génies, et ils nous ont donné un superbe outil qui nécessite beaucoup de pratique et de patience pour s'en servir _vraiment_ correctement.
 
-La permissivité d'HTML a donné l'opportunité à beaucoup de personnes de contribuer au web et n'est sans doute pas pour rien dans l'expansion de l'invention de Tim Berners-Lee. Mais pour les développeurs professionnels, cette permissivité vient avec la responsabilité de ne pas de reposer sur cette simplicité apparente et de vraiment apprendre à maîtriser ce puissant langage.
+La permissivité d'HTML a donné l'opportunité à beaucoup de personnes de contribuer au web et n'est sans doute pas pour rien dans l'expansion de l'invention de Tim Berners-Lee. Mais pour les développeurs professionnels, cette permissivité vient avec la responsabilité de ne pas se reposer sur cette simplicité apparente et de vraiment apprendre à maîtriser ce puissant langage.
 
 ## La crise d'identité des langages web
 
@@ -139,11 +139,11 @@ Peut-être qu'appeler HTML un langage de programmation le rend plus digne d'atte
 "Michael Scott se frotte le crâne avec sa main, visiblement très ennuyé"
 %}
 
-D'un autre côté, je comprend que lire que HTML est un langage de programmation peut ennuyer certains, moi compris. Pas parce que je pense que les langages de progammation sont meilleurs. Par ce que **je ne veux pas qu'HTML soit un langage de programmation**.
+D'un autre côté, je comprend que lire que HTML est un langage de programmation peut ennuyer certains, moi compris. Pas parce que je pense que les langages de progammation sont meilleurs. Parce que **je ne veux pas qu'HTML soit un langage de programmation**.
 
 ## Nous construisons juste des choses
 
-Durant mes cours j'utilise souvent le terme _langage de développement_. Je ne le vois pas beaucoup utilisé en anglais, mais je trouve que c'est un très bon terme.
+Durant mes cours, j'utilise souvent le terme _langage de développement_. Je ne le vois pas beaucoup utilisé en anglais, mais je trouve que c'est un très bon terme.
 
 Avec cette appellation, on peut réunir HTML, CSS et JavaScript sans que tout le monde ne crie au scandale. D'après le dictionnaire :
 
@@ -162,6 +162,6 @@ Alors que le débat autour d'HTML/CSS étant ou non des langages de programmatio
   "Nous sommes toutes et tous des développeurs."
 %}
 
-Qui se soucie si vous programmez ou non ? La seule chose d'importance est la qualité de ce que vous construisez.
+Qui se soucie de si vous programmez ou non ? La seule chose d'importance est la qualité de ce que vous construisez.
 
 Il va falloir remettre la non-programmation à la mode.

@@ -135,13 +135,13 @@ Quelle est la couleur de la page maintenant ? Est-elle verte, est-elle jaune, es
 Que voyons-nous ?
 
 <ol>
-  <li>Le jaune est désormais limité au `body`.</li>
-  <li>L'élément `html` semble remplir l'ensemble du viewport.</li>
+  <li>Le jaune est désormais limité au <code>body</code>.</li>
+  <li>L'élément <code>html</code> semble remplir l'ensemble du viewport.</li>
 </ol>
 
 Faux ! Une fois de plus, nous sommes trompés par les apparences.
 
-{% blockquote "Mais si, il remplit le viewport , toute la page est verte !" %}
+{% blockquote "Mais si, il remplit le viewport, toute la page est verte !" %}
 
 Je sais. Mais ajoutons des bordures à l'élément `html` pour comprendre ce qui se passe :
 
@@ -171,7 +171,7 @@ On apprend également que l'élément racine peut être le `body` ou le `html` :
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
 %}
 
-Bienque le W3C recommande de ne pas utiliser l'élément `html` pour faire cela, c'est ce que l'on vient de faire, et c'est de là que le canvas tire sa couleur verte.
+Bien que le W3C recommande de ne pas utiliser l'élément `html` pour faire cela, c'est ce que l'on vient de faire, et c'est de là que le canvas tire sa couleur verte.
 
 Comme dans le premier exemple, l'élément `html` est traité come transparent : son vert est « volé » par le canvas.
 
@@ -203,7 +203,7 @@ Amusons-nous avec `mix-blend-mode`. Cette propriété CSS nous permet de défini
   "Quelques exemples d'utilisation de mix-blend-mode"
 %}
 
-Commençons avec un exemple simple : notre `h1` sera vert, et nous souhatons changer son apparence avec `mix-blend-mode: difference`.
+Commençons avec un exemple simple : notre `h1` sera vert, et nous souhaitons changer son apparence avec `mix-blend-mode: difference`.
 
 ```css
 h1 {
@@ -231,9 +231,9 @@ La différence entre vert est transparent est vert, et c'est pour cela que la co
 Récapitulons :
 
 <ol>
-  <li>Le `body` est transparent (valeur par défaut de `background-color`)</li>
-  <li>Le `html` est transparent (valeur par défaut de `background-color`)</li>
-  <li>Le canvas est transparent (aucune valeur fournie par `html` ou `body`)</li>
+  <li>Le <code>body</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
+  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
+  <li>Le canvas est transparent (aucune valeur fournie par <code>html</code> ou <code>body</code>)</li>
 </ol>
 
 Notre pauvre titre n'a donc rien avec quoi se mélanger.
@@ -253,9 +253,9 @@ Et maintenant, ça fonctionne !
 Récapitulons à nouveau :
 
 <ol>
-  <li>Le `body` est transparent (`white` est défini dans le CSS, mais la valeur est « volée » par le canvas)</li>
-  <li>Le `html` est transparent (valeur par défaut de `background-color`)</li>
-  <li>Le canvas est blanc (la valeur est issue du `body`)</li>
+  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas)</li>
+  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
+  <li>Le canvas est blanc (la valeur est issue du <code>body</code>)</li>
 </ol>
 
 Et c'est ainsi que notre titre vert se mélange au canvas pour devenir rose. Ce titre pourrait bien sûr être une image, une vidéo, quoi que ce soit. Le `body` (ou n'importe quel élément contenant notre cible) _doit_ posséder un arrière-plan (on pourrait également donner une couleur de fond à l'élément `html` pour y parvenir, mais ce n'est pas standard).
@@ -357,15 +357,16 @@ Et voici donc notre modèle (final ?) de ce que nous voyons :
 <ol>
   <li>L'élément <code>body</code> (transparent par défaut)</li>
   <li>L'élément <code>html</code> (transparent par défaut)</li>
-  <li>Le canvas (dépend du <code>html</code> et du <code>body</code>, donc transparent par défaut</li>
+  <li>Le canvas (dépend du <code>html</code> et du <code>body</code>, donc transparent par défaut)</li>
   <li>Les fondations innaccessibles du logiciel (souvent un fond blanc)</li>
 </ol>
 
 Oh, et j'ai essayé d'en faire un dessin :
 
-{% img
+{% figure
   "schema.png",
-  "Les quatres couches du navigateur : body, html, canvas et fond du navigateur"
+  "Les quatres couches du navigateur : body, html, canvas et fond du navigateur",
+  "It's a small <em>Hello World</em> after all"
 %}
 
 C'était sympa, ce petit voyage. Et oui, j'ai une vie. Si vous avez plus d'informations à propos de tout cela, laissez un commentaire !

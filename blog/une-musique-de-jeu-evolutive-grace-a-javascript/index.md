@@ -24,7 +24,7 @@ De mon côté, ces deux jours se sont divisés ainsi :
 
 Le jeu repose sur un mécanisme de dernier survivant. Il va donc falloir monter en pression progressivement pour que ruissellent les gouttes de sueur des joueuses et joueurs.
 
-Avec un brief aussi complet que les trois mots "arcade", "horreur" et "fun", je me lance.
+Avec un brief aussi complet que les trois mots « arcade »,  « horreur » et  « fun », je me lance.
 
 {% soundcloud "1243942870" %}
 
@@ -34,10 +34,11 @@ Voici un schéma, c'est important pour la suite, et j'aime les schémas.
 
 {% figure
   "schema.png",
+  "Schéma de la structure du morceau",
   "Les instruments s'empilent de cycle en cycle pour faire monter la pression"
 %}
 
-Mais comment accommoder cette montée en pression de plusieurs minutes à une partie qui pourrait se dérouler beaucoup plus vite ?
+Mais comment adapter cette montée en pression de plusieurs minutes à une partie qui pourrait se dérouler beaucoup plus vite ?
 
 ## La programmation
 
@@ -47,6 +48,7 @@ Bon, il nous faut un moyen de sauter de cycle en cycle, par exemple lorsqu'un no
 
 {% figure
   "saut.png",
+  "Passage d'une section à une autre",
   "Passer d'une section à l'autre permet d'adapter la situation à l'évolution du jeu"
 %}
 
@@ -80,6 +82,7 @@ On peut ainsi mettre à jour notre schéma, pour représenter cette progression 
 
 {% figure
   "grille.png",
+  "Shéma de la structure du morceau et de la progression d'accords",
   "À l'exception de la note unique à la basse et de la batterie qui est uniquement rythmique, chaque nouveau cycle se base sur la même progression d'accords."
 %}
 
@@ -87,10 +90,11 @@ Le problème, donc, c'est que si nous passons du milieu du cycle 3 au début du 
 
 {% figure
   "rupture.png",
+  "Saut de sol vers do",
   "On saute du deuxième accord de la section 3 vers le premier accord de la section 4"
 %}
 
-Patatra, la progression d'accords est cassée. Alors que nous nous préparions à entendre C puis F pour finir le cycle 3, nous reprenons la progression au départ : C, puis G à nouveau ! Et si on enchaîne vite les cycles, on entend quasiment que le premier accord en permanence.
+Patatra, la progression d'accords est cassée. Alors que nous nous préparions à entendre C puis F pour finir le cycle 3, nous reprenons la progression au départ : C, puis G à nouveau ! Et si on enchaîne vite les cycles, on entend quasiment le premier accord en permanence.
 
 Or le cerveau est très doué pour s'habituer à une progression d'accords bien spécifique, et toute déviation est troublante pour l'auditeur (ce que certains compositeurs peuvent utiliser à leur avantage, mais c'est une autre histoire).
 
@@ -98,12 +102,13 @@ Pour remédier à cette violation rythmique et harmonique intolérable à l'orei
 
 {% figure
   "fluide.png",
+  "Saut de sol vers sol",
   "Cette fois, on part du deuxième accord du cycle pour arriver sur le deuxième accord du suivant"
 %}
 
 Techniquement, c'est presque plus simple que la première version : au lieu de calculer le début de la section suivante, nous allons ajouter 15 secondes — la durée d'un cycle — à la position de lecture.
 
-Par exemple, si la musique a commencé depuis 5 secondes, nous pouvons sauter jusqu'à 5 + 15 = 20 secondes (alors que le début du cycle 2 est à 15 secondes).
+Par exemple, si la musique a commencé depuis 5 secondes, nous pouvons sauter jusqu'à `5 + 15 = 20` secondes (alors que le début du cycle 2 est à 15 secondes).
 
 Essayez et comparez. Le résultat vous semble-t-il moins abrupt ?
 
@@ -115,7 +120,7 @@ Alors, attention, j'ai dit que les transitions étaient moins abruptes, pas parf
 
 Pour améliorer encore l'effet, voici la botte secrète : un bon gros son bien énergique, qui va venir déguiser notre saut dans le morceau, en plus d'annoncer à tous les joueurs qu'il vient d'y avoir du grabuge.
 
-Ce son, c'est ce que j'appelle le _hit_. En jouant le _hit_ au bon moment, ce dernier occupe tout l'espace sonore et va permettre aux sauts de s'effectuer "discrètement". Tous les coups sont permis...
+Ce son, c'est ce que j'appelle le _hit_. En jouant le _hit_ au bon moment, ce dernier occupe tout l'espace sonore et va permettre aux sauts de s'effectuer « discrètement ». Tous les coups sont permis...
 
 Voici le résultat.
 
@@ -150,6 +155,8 @@ Voici un court extrait du jeu (le dernier saut est assez brusque, mais c'est com
 C'est la première fois que je combine ma passion pour la musique et mes connaissances en programmation, et en seulement 48h j'ai pu voir à quel point les possibilités étaient grandes.
 
 C'est l'occasion de recommander une excellente chaîne YouTube : [8-bit Music Theory](https://www.youtube.com/channel/UCeZLO2VgbZHeDcongKzzfOw). Je ne comprends pas la moitié de ce qu'il raconte, mais ses analyses de bande-sons vidéoludiques me fascinent et m'ont fortement influencé pour cette petite expérience.
+
+Quelques liens pour finir :
 
 - [Blobby Zombie](glop.legeay.dev/), le jeu
 - [Le code source](https://github.com/GJLOP/gjlop_front)

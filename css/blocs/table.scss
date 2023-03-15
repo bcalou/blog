@@ -12,3 +12,8 @@ td, th {
   padding: 0.5em;
   border: 1px solid var(--grey);
 }
+
+td:first-child {
+  font-weight: bold;
+  font-family: Euclid;
+}

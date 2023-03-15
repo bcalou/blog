@@ -23,7 +23,7 @@ C'est désormais d'une simplicité absolue en HTML :
 
 Ainsi, les images sont chargées au fil du scroll. HTML mon amour.
 
-![Les images sont chargées au fil du scroll](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t4x7q4sdmt89mvfszc9n.gif)
+{% img "lazy.gif", "Les images sont chargées au fil du scroll" %}
 
 Un autre attribut a récemment fait son apparition, que je m'empresse d'ajouter :
 
@@ -38,6 +38,8 @@ L'impact sera faible sur mes images de taille moyenne, mais ça ne mange pas de 
 ## Picture, source & srcset
 
 Pour les couvertures, trois formats d'image cohabitent : `avif`, actuellement supporté par [Chrome & Opera](https://caniuse.com/avif), `webp`, désormais [très bien supporté](https://caniuse.com/webp), et `jpeg`, pour les navigateurs un peu à la traîne.
+
+<aside>Mise à jour 2023 : Firefox a rejoint le mouvement sur <code>avif</code>, Safari partiellement, mais Edge ne semble pas décidé à faire un mouvement en ce sens.</aside>
 
 Le navigateur peut choisir son format préféré grâce au tag `picture`, qui contient un tag `source` pour chacun des trois formats d'image. Il contient également un tag `img` qui sera le seul interprété si le navigateur ne comprend pas `picture`. On tire ici parti de la solidité du HTML, qui va simplement ignorer ce qui n'a pas de sens pour lui.
 
@@ -60,7 +62,12 @@ Notez que les attributs `loading`, `decoding` et `alt` se trouvent sur la balise
     srcset="dist/smile_350.jpg 350w, dist/smile_700.jpg 700w"
     sizes="(min-width: 32em) 21.875rem, 15.625rem"
   />
-  <img loading="lazy" src="dist/smile_350.jpg" alt="Couverture de Smile" />
+  <img
+    loading="lazy"
+    decoding="async"
+    src="dist/smile_350.jpg"
+    alt="Couverture de Smile"
+  />
 </picture>
 ```
 
@@ -68,7 +75,7 @@ Chaque couverture est donc proposée en `avif`, `webp` et en `jpeg`, mais égale
 
 Enfin, l'attribut `sizes` permet au navigateur de connaître la taille d'affichage des images (il faut lui dire, car il ne peut pas le deviner à partir du CSS, pour des raisons d'implémentation).
 
-Le contenu de l'attribut s'interprète ainsi : au dessus de 32em de large pour le viewport, l'image fera 21.875rem de large. Sinon, elle fera seulement 15.625rem de large.
+Le contenu de l'attribut s'interprète ainsi : au dessus de `32em` de large pour le viewport, l'image fera `21.875rem` de large. Sinon, elle fera seulement `15.625rem` de large.
 
 Le navigateur connaît la taille du viewport et en déduit la taille de l'image affichée.
 
@@ -93,7 +100,7 @@ Non, je souhaite prendre l'image de la meilleure qualité possible, et laisser l
 
 Nous allons créer un helper `bookImage`, que nous appellerons pour chaque item :
 
-```njk
+```liquid
 {% raw %}{% bookImage item %}{% endraw %}
 ```
 
@@ -107,7 +114,7 @@ async function bookImage(book) {
 }
 ```
 
-Rappel important : Eleventy étant un **générateur de site statique**, ce JavaScript est exécuté une fois pour toutes lorsque le site est généré, et non pas au runtime côté client. Le but est toujours d'avoir un HTML statique au final.
+Rappel important : Eleventy étant un **générateur de site statique**, ce JavaScript est exécuté une fois pour toutes lorsque le site est généré, et non pas au _runtime_ côté client. Le but est toujours d'avoir un HTML statique au final.
 
 Dans notre helper, nous allons utiliser le plugin officiel [Image](https://www.11ty.dev/docs/plugins/image/). Ça se passe comme ça :
 
@@ -196,7 +203,7 @@ C'est tout !
 {% figure
   "critical.png",
   "Le code source du HTML dans lequel on peut voir du CSS minifié",
-  "Le CSS critique est extrait puis directement inclus dans l'index.html."
+  "Le CSS critique est extrait puis directement inclus dans l'index.html"
 %}
 
 En plus d'inclure le CSS critique, le plugin ajoute la ligne suivante :

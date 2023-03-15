@@ -33,7 +33,7 @@ Le site est totalement statique : à cette adresse se trouve un fichier HTML, ac
   "Les scores des divers outils en ligne ne se substituent pas à l'analyse humaine, mais permettent de vérifier que l'essentiel est là."
 %}
 
-Certes, le site est basique, mais j'aurais tout aussi bien pu le générer grâce à un appel GraphQL, une boucle React et autres joyeusetés. Sauf qu'on ne bat pas la simplicité. _Boring code is good code_, qu'ils disent.
+Certes, le site est basique, mais j'aurais tout aussi bien pu le générer grâce à un appel GraphQL, une boucle React et autres joyeusetés. Sauf qu'on ne bat pas la simplicité. <q>Boring code is good code</q>, qu'ils disent.
 
 Pour autant, je ne me suis pas amusé à écrire à la main les 770 lignes de ce fichier, très redondantes (10 répétitions du composant permettant d'afficher un livre et sa description).
 
@@ -109,20 +109,21 @@ De nombreux langages de templating sont compatibles. J'ai choisi `liquid` pour u
 
 Voici donc la boucle du fichier `index.liquid` qui va générer les livres :
 
-```html
-<main class="items">
-  {%- for item in collections.itemsAscending -%} {% include src/partials/item %}
+```liquid
+{% raw %}<main class="items">
+  {%- for item in collections.itemsAscending -%}
+    {% include src/partials/item %}
   {%- endfor -%}
-</main>
+</main>{% endraw %}
 ```
 
 Dans le fichier `item.liquid` dont voici un extrait, la syntaxe parle d'elle-même :
 
-```html
-<h2 class="item__title">{{ item.data.title }}</h2>
+```liquid
+{% raw %}<h2 class="item__title">{{ item.data.title }}</h2>
 {% if item.data.subtitle %}
-<h3 class="item__subtitle">{{ item.data.subtitle }}</h3>
-{% endif %}
+  <h3 class="item__subtitle">{{ item.data.subtitle }}</h3>
+{% endif %}{% endraw %}
 ```
 
 C'est simple, c'est bien 👌
@@ -185,7 +186,7 @@ En utilisant un service tel que [Netlify](https://app.netlify.com/) (pour qui tr
 {% figure
   "netlify.png",
   "La configuration Netlify",
-  "La commande build contient l'appel à eleventy"
+  "La commande <code>build</code> contient l'appel à eleventy"
 %}
 
 Le projet Netlify étant lié au projet Github, chaque push ou modification du code sur Github mettra à jour le site en une poignée de secondes.
@@ -219,10 +220,6 @@ Eleventy fait partie de l'approche [Jamstack](https://jamstack.org/), qui se dé
 
 J'aime particulièrement le fait qu'il ne soit pas lié à un langage ou un framework en particulier. Bref, Je le conserve précieusement dans ma boîte à outils.
 
-La prochaine fois, ne vous demandez pas :
+La prochaine fois, ne vous demandez pas : <q>Quel framework JS vais-je choisir ?</q>
 
-<blockquote><p>Quel framework JS vais-je choisir ?</p></blockquote>
-
-Mais bien :
-
-<blockquote><p>Suis-je dans l'absolue nécessité dans utiliser un ?</p></blockquote>
+Mais bien : <q>Suis-je dans l'absolue nécessité dans utiliser un ?</q>

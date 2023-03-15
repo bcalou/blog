@@ -58,14 +58,14 @@ Et ce n'est pas facile de trouver un client qui accepte pendant quelques mois, a
 
 Et donc des tests, j'en ai écrit des centaines. J'ai profité de ce contexte pour en faire une contrainte forte du projet. Pas un seul composant ne serait écrit sans être accompagné de sa batterie de test (il faut aussi savoir ne pas être dogmatique, en vertu de la [loi de Pareto](https://fr.wikipedia.org/wiki/Principe_de_Pareto), mais c'est une autre histoire).
 
-J'ai quitté le projet il y a un an, et son développement suit son cours, avec plus de 2 000 tests au compteur. Bien sûr je ne dis pas que les tests seuls font la qualité d'un projet, c'est un exemple. Mais dans ce cas précis, ils ont permis d'atteindre une vitesse de développement élevée une fois la mise en place effectuée, et surtout d'assurer la stabilité du produit.
+J'ai quitté le projet il y a un an, et son développement suit son cours, avec plus de 2000 tests au compteur. Bien sûr je ne dis pas que les tests seuls font la qualité d'un projet, c'est un exemple. Mais dans ce cas précis, ils ont permis d'atteindre une vitesse de développement élevée une fois la mise en place effectuée, et surtout d'assurer la stabilité du produit.
 
 Le projet n'a pas explosé quand je suis parti, même si j'ai fait quelques incantations sur le côté pour me rassurer, il est vrai. Il n'a rencontré, à ma connaissance, aucune régression majeure. Et les personnes qui l'ont repris ont le confort de savoir que, malgré l'ampleur du projet, si les tests passent, c'est qu'elles n'ont probablement rien cassé. Elles peuvent continuer à le faire évoluer dans les conditions les plus saines possibles.
 
 {% figure
   "dieu.jpg",
   "Un homme levant ses bras vers le ciel",
-  "Cette image vient d'un site sur Dieu, mais pour moi Dieu et 2 000 tests au vert c'est pareil, donc ça passe"
+  "Cette image vient d'un site sur Dieu, mais pour moi Dieu et 2000 tests au vert c'est pareil, donc ça passe"
 %}
 
 ## Des fois, ça se passe moins bien

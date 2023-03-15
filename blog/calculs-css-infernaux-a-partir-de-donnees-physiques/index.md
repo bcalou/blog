@@ -9,7 +9,7 @@ series: À la découverte d'Eleventy
 
 Côté CSS, je suis assez satisfait de l'effet **renversant** (j'exagère un peu) de survol que j'ai mis en place (voir sur [le site](https://top-livres.netlify.app/)).
 
-{% img "hover.gif", "Les livres pivotes au survol avec un effet 3D" %}
+{% img "hover.gif", "Les livres pivotent au survol avec un effet 3D" %}
 
 Il s'agit en fait d'une adaptation d'un projet open source, [3dbook.xyz](https://3dbook.xyz/).
 
@@ -42,7 +42,7 @@ Respectivement :
 
 Grâce au langage de templating `liquid`, je pourrais alors générer des styles inline à partir de ces variables :
 
-```html
+```liquid
 {% raw %}<img style="width: {{ item.data.width * 10 }}px" />{% endraw %}
 ```
 
@@ -52,7 +52,7 @@ On peut faire en réalité bien plus propre et flexible, en passant ces paramèt
 
 Voici ce que ça donne :
 
-```html
+```liquid
 {% raw %}<div
   class="book {% if item.data.offset %}book--offset{% endif %}"
   style="
@@ -112,7 +112,7 @@ On continue :
 }
 ```
 
-Cette syntaxe du démon permet de savoir si le livre est en format paysage ou portrait, et de stocker cette info dans la variable `--is-portrait`. (ça fait ça de moins à saisir dans la "base de données").
+Cette syntaxe du démon permet de savoir si le livre est en format paysage ou portrait, et de stocker cette info dans la variable `--is-portrait` (ça fait ça de moins à saisir dans la « base de données »).
 
 Pas très clair ? On décompose.
 
@@ -133,7 +133,7 @@ Si le livre est au format portrait, la hauteur est plus grande que la largeur, e
 À l'inverse, on obtiendra un nombre négatif si le livre est au format paysage, qui sera ramené à 0 par les bornes du `clamp`.
 
 Et voici comment on obtient un booléen en CSS 🙃 À manier avec précaution, nous sommes d'accord...
-
+  
 Je peux ensuite utiliser ce booléen pour obtenir d'autres valeurs.
 
 {% figure
@@ -167,7 +167,7 @@ Allez, on s'accroche une dernière fois, promis. `clamp`, on connaît déjà, al
 var(--is-portrait) * var(--base-size-rem)
 ```
 
-devient simplement `--base-size-rem`, puisque `is-portrait` vaut 1. Et c'est aussi la valeur de la seconde borne. Si les bornes sont identiques, peut importe la valeur du milieu, le résultat sera `--base-size-rem`.
+devient simplement `--base-size-rem`, puisque `is-portrait` vaut 1. Et c'est aussi la valeur de la seconde borne. Si les bornes sont identiques, peu importe la valeur du milieu, le résultat sera `--base-size-rem`.
 
 Et c'est que l'on souhaite. Pour les livres portrait, la hauteur est la taille du conteneur, tout bêtement.
 
@@ -217,6 +217,10 @@ Pour reprendre notre calcul du dessus, on l'utilise ainsi :
 ```
 
 Si `clamp` n'est pas supporté, le navigateur utilisera la première ligne et ignorera tout le reste. Pour quelques utilisateurs, le rendu sera un peu moins subtil, mais le contenu reste lisible et c'est l'essentiel.
+
+<aside>
+  Mise à jour 2023 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.
+</aside>
 
 ## Vers un CSS plus adapté aux calculs visuels ?
 

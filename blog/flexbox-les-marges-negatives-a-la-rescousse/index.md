@@ -7,7 +7,7 @@ layout: layouts/post.njk
 ---
 
 <aside>
-  Mise à jour 2022 : bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété <code>gap</code></a> par les navigateurs modernes.
+  Mise à jour 2023 : bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.
 </aside>
 
 La gestion des espaces avec flexbox n'est pas aussi simple qu'elle en a l'air. Voici une simple astuce que j'ai beaucoup utilisée ces derniers temps.
@@ -117,11 +117,11 @@ li:not(:first-flex-row-item) {
 }
 ```
 
-Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Par exemple, je pourrais dire que le premier élément d'une ligne a une petite taille de font. Cela pourrait permettre à l'élément de retourner sur la ligne précédente (car il prendra moins de place). Il ne serait donc plus ciblé par le sélecteur, reprendrait sa taille originale, reviendrait sur la seconde ligne et... 🤯
+Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Par exemple, je pourrais dire que le premier élément d'une ligne a une petite taille de font. Cela pourrait permettre à l'élément de retourner sur la ligne précédente (car il prendrait moins de place). Il ne serait donc plus ciblé par le sélecteur, reprendrait sa taille originale, reviendrait sur la seconde ligne et... 🤯
 
 Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
 
-<aside>Mise à jour 2022 : après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
+<aside>Mise à jour 2023 : après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
 
 ## L'astuce de la marge négative
 
@@ -214,7 +214,7 @@ Les articles tels que celui-ci deviendront obsolète lorsque la propriété CSS 
 Mais ce n'est pas encore le cas. À l'heure où j'écris ces lignes, le [support navigateur est de 70%](https://caniuse.com/flexbox-gap). Pas super, comparé au support à 99% de flexblox lui-même — Safari serait-il devenu le nouvel Internet Explorer ?
 
 <aside>
-  Mise à jour 2022 : après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.
+  Mise à jour 2023 : après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.
 </aside>
 
 Tous les autres navigateurs modernes devrait vous montrer le même résultat avec le code suivant, sans astuce !
@@ -312,7 +312,7 @@ Le pouvoir des variables CSS nous permet de définir des espaces différents pou
 
 Ainsi, nous n'avons besoin de changer les variables localement que si nous souhaitons une valeur différente.
 
-<aside>Mise à jour 2022 : plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <br/><code>margin-top: var(--row-gap, 1em);</code></aside>
+<aside>Mise à jour 2023 : plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <br/><code>margin-top: var(--row-gap, 1em);</code></aside>
 
 ## Mauvaises pratiques
 

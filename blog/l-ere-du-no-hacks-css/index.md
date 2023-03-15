@@ -7,7 +7,7 @@ layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/the-era-of-no-hacks-css-287l
 ---
 
-Si vous avez appris CSS n'importe quand avant 2020, il y a fort à parier que vous avez collecté tout un tas d'astuces (ou <em>hacks</em>) en cours de route. Vous savez, ces choses comme le centrage vertical, les styles pour les éléments de formulaire, le dimensionnement des images, les retours à la ligne... De la magie noire. Des comportement incroyablement spécifiques que vous vous recherchez dans Google, espérant que quelqu'un a déjà écrit un article à ce propos, et qui ruineront votre journée dans le cas contraire.
+Si vous avez appris CSS n'importe quand avant 2020, il y a fort à parier que vous avez collecté tout un tas d'astuces (ou <em>hacks</em>) en cours de route. Vous savez, ces choses comme le centrage vertical, les styles pour les éléments de formulaire, le dimensionnement des images, les retours à la ligne... De la magie noire. Des comportement incroyablement spécifiques que vous recherchez dans Google, espérant que quelqu'un a déjà écrit un article à ce propos, et qui ruineront votre journée dans le cas contraire.
 
 Beaucoup de mes collègues regardent CSS avec une grande méfiance, car ils ont dû s'y frotter il y a 10 ans, avant de se diriger vers le back-end, la gestion de projet, le design ou même le « front-end pur JS ».
 
@@ -17,7 +17,7 @@ Mais la réalité est la suivante :
 
 ## Nous n'aimons pas les hacks CSS
 
-Personnellement, je les déteste. Ils peuvent être amusants à montrer à un étudiant ou à un collègue qui se débat face à un étrange comportement de mise en page (tadaaaa !), mais je les méprise, car ce ne sont que des contournements, ou d'horribles façon non-standards d'utiliser des propriétés qui n'ont jamais été faites pour cela. Ces codes sont énigmatique, un cauchemar de maintenance, et, probablement le pire, ils créent une méfiance envers CSS qui au bout du compte fait du mal à l'ensemble de l'éco-système.
+Personnellement, je les déteste. Ils peuvent être amusants à montrer à un étudiant ou à un collègue qui se débat face à un étrange comportement de mise en page (tadaaaa !), mais je les méprise, car ce ne sont que des contournements, ou d'horribles façon non-standards d'utiliser des propriétés qui n'ont jamais été faites pour cela. Ces codes sont énigmatiques, un cauchemar de maintenance, et, probablement le pire, ils créent une méfiance envers CSS qui au bout du compte fait du mal à l'ensemble de l'écosystème.
 
 Et c'est ainsi que naissent les memes de Petter Griffin se battant contre le CSS, les blagues sur l'alignement vertical... Fichtre, j'ai même l'ironique mug <q>CSS is awesome</q> comme bannière Twitter.
 
@@ -36,7 +36,7 @@ Oui, il est temps que cette bannière Twitter s'en aille...
 
 ## 2022 sera-t-elle le début de l'ère du no-hacks CSS ?
 
-Beaucoup de choses se passent autour de CSS ces temps-ci, et je pense que 2022 pourrait être l'année où l'on se débarasse des hacks CSS, ou du moins ou l'on cesse de les considérer comme du « CSS normal ».
+Beaucoup de choses se passent autour de CSS ces temps-ci, et je pense que 2022 pourrait être l'année où l'on se débarasse des hacks CSS, ou du moins où l'on cesse de les considérer comme du « CSS normal ».
 
 Jetez un oeil à ce thread, par exemple :
 
@@ -64,11 +64,11 @@ Pendant des années (oserai-je dire des décennies ?), les développeurs CSS ont
 
 ## Laisser tomber les hacks est aussi votre responsabilité
 
-La propriété {{ 'aspect-ratio' | cssSupport }} est également un bon exemple de cela. En effet, elle est nouvelle et n'est pas supportée par tous les navigateurs.
+La propriété `accent-color` est également un bon exemple de cela. En effet, elle est nouvelle et n'est pas supportée par tous les navigateurs.
 
 Eh bien comme dirait l'autre, je n'en ai cure.
 
-CSS étant génial, il ignorera simplement `accent-color` sur les navigateurs plus vieux et utilisera les couleurs par défaut. Ce qui est tout à fait acceptable (faites simplement à tester le contraste si votre fond n'est pas blanc).
+CSS étant génial, il ignorera simplement `accent-color` sur les navigateurs plus vieux et utilisera les couleurs par défaut. Ce qui est tout à fait acceptable (faites simplement attention à tester le contraste si votre fond n'est pas blanc).
 
 Encore mieux, le temps passant, de plus en plus de gens utiliseront un navigateur supportant cette fonctionnalité et verront le design initialement voulu. Voici la magie de l'amélioration progressive : votre site web s'améliore alors que vous n'êtes même pas en train de travailler.
 
@@ -88,7 +88,7 @@ body {
 
 {% codepen "https://codepen.io/bcalou/pen/abEpMOx" %}
 
-Une fraction en diminution des navigateurs ne supportent pas cette fonctionnalité et ne montreront aucun espace entre les éléments. Que vous soyez prêt à utiliser un [hack de marges négatives](https://bastiencalou.fr/posts/flexbox-les-marges-negatives-a-la-rescousse/) ou non est un autre débat sur lequel il vous faudra trancher.
+Une fraction en diminution des navigateurs ne supporte pas cette fonctionnalité et ne montrera   aucun espace entre les éléments. Que vous soyez prêt à utiliser un [hack de marges négatives](https://bastiencalou.fr/posts/flexbox-les-marges-negatives-a-la-rescousse/) ou non est un autre débat sur lequel il vous faudra trancher.
 
 J'ai commencé à faire la paix avec le fait qu'une petite fraction (et encore une fois, en diminution) des utilisateurs n'aura pas les espaces. Tant que le contenu est parfaitement lisible, cela ne me dérange pas.
 

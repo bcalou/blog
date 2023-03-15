@@ -19,6 +19,7 @@
 
   img {
     display: block;
+    min-width: 15rem;
   }
 
   figcaption {
@@ -29,6 +30,11 @@
     font-style: normal;
     font-size: 1rem;
     letter-spacing: 0.02em;
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.125rem;
+    }
   }
 }
 

@@ -19,4 +19,8 @@
   li + li {
     margin-top: 0.5em;
   }
+
+  ul a {
+    @extend .postTag !optional;
+  }
 }
