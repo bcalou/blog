@@ -56,7 +56,7 @@ Puisque mes cycles font 15 secondes, c'est assez facile à calculer.
 
 Si je suis au cycle 2 et que je souhaite avancer au cycle 3, je peux calculer qu'il faut avancer à 30 secondes dans le morceau (le cycle 1 commençant à 0 seconde, et le cycle 2 à 15 secondes).
 
-C'est exactement ce que fait cette première démo. À chaque fois que vous cliquerez sur le bouton "Sauter", vous serez emmené au début de la section suivante :
+C'est exactement ce que fait cette première démo. À chaque fois que vous cliquerez sur le bouton « Sauter », vous serez emmené au début de la section suivante :
 
 {% codepen "https://codepen.io/bcalou/pen/XWVZJKR" %}
 
@@ -73,6 +73,7 @@ La progression d'accords, c'est simplement l'enchaînement des 4 accords qui don
 
 {% figure
   "accords.png",
+  "La progression d'accords du morceau",
   "Voici un cycle au complet : 4 accords qui font peur s'enchaînent sur 8 mesures"
 %}
 
@@ -128,7 +129,7 @@ Voici le résultat.
 
 Ce n'est pas encore parfait, mais compte tenu du timing serré, c'est déjà pas mal !
 
-### Harmoniser le _hit_
+### Harmoniser le hit
 
 Finissons avec une petite touche cosmétique.
 
@@ -146,7 +147,7 @@ C'est parti !
 
 Cette amélioration passe sans doute inaperçue, c'est d'ailleurs son but, mais je pense qu'elle rajoute une petite couche de satisfaction auditive à l'ensemble.
 
-## Musique + code = <3
+## Musique + code = ❤️
 
 Voici un court extrait du jeu (le dernier saut est assez brusque, mais c'est comme ça !) :
 

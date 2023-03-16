@@ -52,15 +52,15 @@ Et pour convaincre les entreprises qui n'y verraient que des contraintes, un seu
 
 C'était une forte promesse, et c'est un succès !
 
-Je ne connaissais pas la méthode FLIP, qui permet de réaliser des transitions visuelles complexes entre deux états, avec un état final difficile à prévoir (notamment la position exacte de l'élément relativement au point de départ, l'élément pouvant atterir dans un autre endroit du DOM).
+Je ne connaissais pas la méthode FLIP, qui permet de réaliser des transitions visuelles complexes entre deux états, avec un état final difficile à prévoir (notamment la position exacte de l'élément relativement au point de départ, l'élément pouvant atterrir dans un autre endroit du DOM).
 
 L'idée géniale est donc la suivante, en 4 étapes (FLIP) :
 
 <ol>
-  <li><strong>First</strong> : stocker la position et les dimensions de l'élément actuel.</li>
-  <li><strong>Last</strong> : placer instantanément l'élément dans sa position finale dans le DOM </li>pour en trouver les dimensions et la position finale (ceci se passe dans la phase de layout, on ne sollicite pas la phase de paint et donc c'est invisible !).
-  <li><strong>Invert</strong> : Inverser l'animation prévue à la base en calculant la différence entre </li>les états First et Last.
-  <li><strong>Play</strong> : jouer l'animation finale.</li>
+  <li><strong><i>First</i></strong> : stocker la position et les dimensions de l'élément actuel.</li>
+  <li><strong><i>Last</i></strong> : placer instantanément l'élément dans sa position finale dans le DOM pour en trouver les dimensions et la position finale (ceci se passe dans la phase de <i>layout</i>, on ne sollicite pas la phase de <i>paint</i> et donc c'est invisible !).
+  <li><strong><i>Invert</i></strong> : Inverser l'animation prévue à la base en calculant la différence entre les états <i>First</i> et <i>Last</i>.
+  <li><strong><i>Play</i></strong> : jouer l'animation finale.</li>
 </ol>
 
 Je ne sais pas si j'explique bien, mais c'est à ça que sert la vidéo, non ?
@@ -77,7 +77,7 @@ Et c'est Figma qui va en prendre pour son grade. L'outil révolutionnaire pour l
 
 Les designers sont presques dépossédés de leur métier : c'est désormais tout le monde qui peut « chuchoter au curseur du designer » de déplacer ceci, d'agrandir cela.
 
-<q>Laissez-nous commiter !</q>, demande Cécile, dans un excellent parallèle avec le processus de développement et ses phases de réflexion solitaires. Figma, c'est parfois un peu comme si les collègues de votre agence vous indiquaient que vous n'aviez pas fermé la parenthèse de votre fonction alors que vous êtes encore en train de coder...
+<q>Laissez-nous commiter !</q>, demande Cécile, dans un excellent parallèle avec le processus de développement et ses phases de réflexion solitaires. Figma, c'est parfois un peu comme si les collègues de votre agence vous indiquaient que vous n'avez pas fermé la parenthèse de votre fonction alors que vous êtes encore en train de coder...
 
 {% youtube "https://www.youtube.com/watch?v=rI35dYvljZo?t=11467s" %}
 
@@ -111,8 +111,7 @@ Non.
 
 Autant le contenu de la conférence est technique pour le profane, autant la conclusion est sans appel. Même si les entreprises naviguent dans un flou règlementaire, soupesant les bénéfices et les risques d'une petite entrave à la règle, la fête est finie.
 
-L'administration Bush a signé un mandat simple : il permet de faire usage aux USA comme bon leur semble de toute donnée présente (ou transmise) sur leur territoire, même celles récoltées par hasard (oui, c'est le mot utilisé).
-
+L'administration Bush a signé un mandat simple : il permet de faire usage aux USA comme bon leur semble de toute donnée présente (ou transmise) sur leur territoire, même celles récoltées par « hasard » (oui, c'est le mot utilisé). 
 Alors, votre prestataire des USA (ou travaillant lui-même avec les USA) pourra vous fournir toutes les précautions contractuelles du monde, cela ne change pas grand chose : face aux contrats, c'est la loi qui gagne.
 
 Et si une société hors USA a des liens quelconques avec le pays, ce dernier se réserve aussi l'exploitation des données qu'ils pourra récupérer. Les ramifications sont vertigineuses.

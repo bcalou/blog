@@ -28,7 +28,7 @@ Sophie et Bart définissent ARIA comme un moyen permettant de modifier l'<i>acce
 
 Mais son utilisation est bien souvent maladroite : `aria-label` qui masque le contenu réel, `aria-live` sur un carrousel qui interrompt en permanence le flux normal de lecture...
 
-Jusqu'au paroxysme : un hôpital belge dont le `body` possédait un attribut `aria-hidden`...
+Jusqu'au paroxysme : le site d'un hôpital belge dont le `body` possédait un attribut `aria-hidden`...
 
 {% blockquote "Dans les audits, on demande plus souvent d'effacer de l'ARIA que d'en ajouter." %}
 
@@ -99,7 +99,7 @@ Même si Audrey et Agnès avouent prêcher un public déjà convaincu (« c'est 
 
 200 composants, 50 minerais et 75 kilos de matière première pour produire un téléphone (la production représente 75% des émissions), téléphone dont la durée de vie atteindra en moyenne 2 ou 3 ans et ne sera probablement pas recyclé... Sans parler du travail des enfants.
 
-Et ce n'est que la partie production : saviez-vous que même si vous n'avez pas de profil Facebook, vous possédez malgré tout un <i>shadow account</i> ? Que des drônes étaient capable de suivre des manifestants jusqu'à leur domicile, en France ? Que Facebook, encore lui, a joué un rôle déterminant dans le génocide des Rohingya ? Et la liste semble sans fin.
+Et ce n'est que la partie production : saviez-vous que même si vous n'avez pas de profil Facebook, vous possédez malgré tout un <i>shadow account</i> ? Que des drônes étaient capables de suivre des manifestants jusqu'à leur domicile, en France ? Que Facebook, encore lui, a joué un rôle déterminant dans le génocide des Rohingya ? Et la liste semble sans fin.
 
 L'invervention se clôture avec quelques conseils élémentaires : gardez votre téléphone (au moins 7 ans, idéalement). Utilisez le nouvel [indice de réparabilité](https://www.ecologie.gouv.fr/indice-reparabilite) lors d'un achat. Réparez, et, si vraiment vous devez vous séparer de votre appareil encore en fonctionnement, ne le laissez pas traîner dans un tiroir : vendez ou donnez-le.
 
