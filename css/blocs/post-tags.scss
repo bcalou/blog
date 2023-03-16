@@ -31,7 +31,10 @@
   font-family: euclid;
   position: relative;
   transition: text-decoration-color 0.3s;
-  white-space: pre;
+
+  @media (min-width: 64em) {
+    white-space: pre;
+  }
 
   &::before {
     content: '';

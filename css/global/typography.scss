@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.42;
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 5vw, 1.25rem);
   color: var(--black);
   background: var(--white);
 }
@@ -33,7 +33,7 @@ aside a {
 }
 
 h1 {
-  font-size: 5.625rem;
+  font-size: clamp(2.8125rem, 6vw, 5.625rem);
   margin-bottom: 0.8em;
   max-width: 81.25rem;
 }

@@ -36,7 +36,7 @@ Bootsrap a déjà été utilisé par 81% des devs ayant répondu à ce sondage. 
 
 Définissons quelques catégories :
 
-| %      	| Opinion  	| Nom de code 	|
+|       	| Opinion  	| Nom de code 	|
 |-------	|-------	|------	
 | 51.7% 	| Ont utilisé, mais ne l'utiliseront plus	| Les exs |
 | 29% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
@@ -64,7 +64,7 @@ Voici donc ce que j'ai entrepris : dans un [horrible document](https://docs.goog
 
 Et voici nos 5 profils, du moins familier avec le CSS natif au plus familier :
 
-| Nom de code     | Variation de connaissance du CSS natif  	| 
+|     | Variation de connaissance du CSS natif  	| 
 |-------	|-------	|
 | Les késako | 🔴 -11 points |
 | Les « pourquoi pas » | 🔴 -9 points |
@@ -120,7 +120,7 @@ Parlons maintenant du nouveau roi de la récré.
 
 D'abord, nos 5 profils :
 
-| %      	| Opinion  	| Nom de code 	|
+|       	| Opinion  	| Nom de code 	|
 |-------	|-------	|------	|
 | 36.4% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
 | 25% | Connaissent mais ne souhaitent pas essayer | Les « non merci » |
@@ -136,7 +136,7 @@ L'ordre a changé ! En effet, les fans obtiennent maintenant un meilleur résult
 
 Et les résultats eux-même ont aussi fortement changé.
 
-| Nom de code     | Variation de connaissance du CSS natif  	| 
+|      | Variation de connaissance du CSS natif  	| 
 |-------	|-------	|
 | Les késako | 🔴 -9 points |
 | Les « pourquoi pas » | 🔴 -5 points |

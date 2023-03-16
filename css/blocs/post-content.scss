@@ -1,5 +1,6 @@
 .postContent {
   max-width: min(var(--main-content-width), 90vw);
+  container-type: inline-size;
 
   aside {
     @extend .aside !optional;
@@ -22,5 +23,20 @@
 
   ul a {
     @extend .postTag !optional;
+  }
+}
+
+@media (max-width: 32em) {
+  :not(.figure) > picture img,
+  .figure,
+  pre,
+  .cp_embed_wrapper {
+    margin-inline: -1.5rem;
+    border: none;
+    width: 100vw;
+
+    &, & > * {
+      border-radius: 0 !important;
+    }
   }
 }

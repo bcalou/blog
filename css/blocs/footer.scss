@@ -1,8 +1,11 @@
 .footer {
   margin-top: auto;
-  position: fixed;
-  right: 4rem;
-  bottom: 1.25rem;
+  
+  @media (min-width: 64em) {
+    position: fixed;
+    right: 4rem;
+    bottom: 1.25rem;
+  }
 
   ul {
     list-style: none;

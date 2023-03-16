@@ -85,7 +85,7 @@ Voici le poids des dix images en fonction du format et de la dimension :
 
 |       | avif   | webp | jpeg |
 | ----- | ------ | ---- | ---- |
-| 350px | 🌟147k | 252k | 321k |
+| 350px | 🌟&nbsp;147k | 252k | 321k |
 | 700px | 249k   | 459k | 624k |
 
 On varie donc du simple au quadruple ! Avec des images plus grandes, la différence sera encore plus importante.

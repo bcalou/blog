@@ -1,7 +1,10 @@
 body {
   background-color: var(--white);
-  display: flex;
-  padding-left: 14rem;
+  
+  @media (min-width: 64rem) {
+    display: flex;
+    padding-left: 14rem;
+  }
 }
 
 * {
@@ -14,7 +17,11 @@ img {
 }
 
 main {
-  margin: 5rem;
+  margin: 1.5rem;
+
+  @media (min-width: 32em) {
+    margin: clamp(1.5rem, 5vw, 5rem);
+  }
 }
 
 .cp_embed_wrapper {
