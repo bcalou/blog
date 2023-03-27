@@ -41,32 +41,32 @@ pre {
     margin-block-start: 3.5rem;
   }
 
-  &::before {
-    color: var(--white);
+  &::before,
+  &::after {
     position: absolute;
     background: linear-gradient(to bottom, #383f62, var(--blue-darkest));
     text-transform: uppercase;
     font-size: 1rem;
-    bottom: 100%;
-    right: 3rem;
+    right: 1.5rem;
     padding: 0.25rem 0.625rem 0.25rem;
-    border-radius: 0.5rem 0.5rem 0 0;
     font-family: euclid;
+
+    @media (min-width: 64em) {
+      right: 3rem;
+    }
+  }
+
+  &::before {
+    color: var(--white);
+    bottom: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
     box-shadow: var(--shadow);
     z-index: -1;
   }
 
   &::after {
-    position: absolute;
-    background-color: var(--blue-darkest);
-    background: linear-gradient(to bottom, #383f62, var(--blue-darkest));
     bottom: calc(100% - 1px);
-    right: 3rem;
-    font-family: euclid;
     color: transparent;
-    padding: 0.25rem 0.625rem 0.25rem;
-    font-size: 1rem;
-    text-transform: uppercase;
     clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0% 100%);
   }
 

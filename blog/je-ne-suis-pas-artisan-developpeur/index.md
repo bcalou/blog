@@ -2,7 +2,7 @@
 title: Je ne suis pas « artisan développeur »
 date: 2019-08-03
 tags:
-  - éco-système
+  - écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/je-ne-suis-pas-artisan-developpeur-2hc2
 ---

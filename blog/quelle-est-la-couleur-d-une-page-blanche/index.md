@@ -177,7 +177,7 @@ Comme dans le premier exemple, l'élément `html` est traité come transparent :
 
 Nous avons maintenant l'algorithme complet que le navigateur utilise pour choisir la couleur du canvas :
 
-```js
+```
 if (le html possède une background-color) {
   on l'utilise pour peindre le canvas
 }

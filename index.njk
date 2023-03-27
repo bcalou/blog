@@ -6,8 +6,21 @@ eleventyNavigation:
 ---
 
 {% set maxPosts = collections.blog.length | min(3) %}
-<h1>Derniers articles</h1>
+<h1>Bastien Calou</h1>
+<h2>Développeur front-end</h2>
+
+<p>Bienvenue ! Je développe des sites
+  <a href="/a-propos/#resilience">résilients</a>,
+  <a href="/a-propos/#accessibilite">accessibles</a>
+  et
+  <a href="/a-propos/#performance">performants</a>. J’aime structurer des
+  <a href="/a-propos/#architecture">architectures front-end</a>
+  et des
+  <a href="/a-propos/#designsystems">design systems</a>
+  adaptés à chaque projet.</p>
 {% set postslist = collections.blog | head(-3) %}
 {% set postslistCounter = collections.blog | length %}
 {% include "postslist.njk" %}
-<p><a href="{{ '/blog/' | url }}">Articles plus anciens</a></p>
+<p>
+  <a href="{{ '/blog/' | url }}">Tous les articles</a>
+</p>

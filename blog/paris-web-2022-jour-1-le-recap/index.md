@@ -6,7 +6,7 @@ tags:
   - css
   - accessibilité
   - design
-  - éco-système
+  - écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/paris-web-2022-jour-1-le-recap--5c82
 series: Paris Web 2022
@@ -38,7 +38,7 @@ Pour ma part, une confirmation que le salariat, ce n'est pas trop pour moi, mais
 
 {% blockquote "Cela fait 12 ans que je conçois des services, et 12 ans que je les conçois sans me poser la question de l'impact sur la planète." %}
 
-La conception centrée sur les utilisateurs est devenue une telle religion qu'il est difficile de le faire entendre : tout ce qui est bon pour les clients et le chiffre d'affaire ne l'est pas forcément pour notre éco-système.
+La conception centrée sur les utilisateurs est devenue une telle religion qu'il est difficile de le faire entendre : tout ce qui est bon pour les clients et le chiffre d'affaire ne l'est pas forcément pour notre écosystème.
 
 Une évidence ? Dans certains secteurs, oui, mais pas nécessairement dans le numérique et son illusion de dématérialisation.
 

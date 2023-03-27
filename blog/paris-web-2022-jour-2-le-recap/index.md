@@ -6,7 +6,7 @@ tags:
   - css
   - accessibilité
   - design
-  - éco-système
+  - écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/paris-web-2022-jour-2-le-recap--47nj
 series: Paris Web 2022

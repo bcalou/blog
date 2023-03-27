@@ -1,6 +1,9 @@
 .postTags {
-  margin-top: 2rem;
   margin-bottom: 4rem;
+
+  @media (min-width: 64em) {
+    margin-top: 2rem;
+  }
 
   & > * {
     margin-right: 1rem;

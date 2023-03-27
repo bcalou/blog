@@ -8,8 +8,7 @@ eleventyNavigation:
 noDate: true
 ---
 
-Bonjour !
-Je m’appelle Bastien et je développe des sites <a href="#resilience">résilients</a>, <a href="#accessibilite">accessibles</a> et <a href="#performance">performants</a>. J’aime structurer des <a href="#architecture">architectures front-end</a> et des <a href="#designsystem">design systems</a> adaptés à chaque projet.
+Je développe des sites <a href="#resilience">résilients</a>, <a href="#accessibilite">accessibles</a> et <a href="#performance">performants</a>. J’aime structurer des <a href="#architecture">architectures front-end</a> et des <a href="#designsystem">design systems</a> adaptés à chaque projet.
 
 <h2 id="resilience">Résilience</h2>
 <p>Le web est imprévisible. Un site résilient s’adapte à différents contextes : la taille des écrans bien sûr, mais aussi les capacités des appareils, des réseaux, des individus. Les standards du web, l’amélioration progressive et un certain goût pour la simplicité m’aident à créer des sites solides et adaptatifs.</p>
@@ -25,7 +24,7 @@ Je m’appelle Bastien et je développe des sites <a href="#resilience">résilie
 <p>Lire l'article « <a href="/blog/optimisation-agressive-des-performances-d-un-site-statique/">Optimisation agressive des performances d'un site statique</a> »</p>
 
 <h2 id="architecture">Au-delà des frameworks</h2>
-Les frameworks JavaScript modernes sont des outils puissants lorsque le contexte s’y prête, mais ne devraient pas être l’option par défaut. Server-side rendering, Web Components, générateurs statiques… J’aime comparer les options disponibles tout en me basant fortement sur les standards du web.
+<p>Les frameworks JavaScript modernes sont des outils puissants lorsque le contexte s’y prête, mais ne devraient pas être l’option par défaut. Server-side rendering, Web Components, générateurs statiques… J’aime comparer les options disponibles tout en me basant fortement sur les standards du web.</p>
 
 <p>Lire l'article « <a href="/blog/eleventy-pour-un-web-simple-performant-et-accessible/">Eleventy — Pour un web simple, performant et accessible</a> »</p>
 
