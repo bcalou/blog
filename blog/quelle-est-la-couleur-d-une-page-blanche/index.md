@@ -102,7 +102,7 @@ Il est inutile pour le navigateur de peindre le `body`, qui a la même couleur q
 
 En d'autres termes, lorsque vous donnez une couleur de fond au `body`, vous stylisez en réalité le canvas (qui ne peut pas être ciblé directement en CSS). Le canvas « vole » la valeur du `body`.
 
-## Au delà du `body`
+## Au delà du body
 
 Mode philosophe activé :
 

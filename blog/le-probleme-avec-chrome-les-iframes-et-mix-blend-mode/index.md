@@ -87,7 +87,7 @@ J'avais déjà utilisé ce correctif, mais je comprends seulement maintenant pou
 
 Vous rappelez-vous de notre petit algorithme ?
 
-```js
+```
 if (le html possède une background-color) {
   on l'utilise pour peindre le canvas
 }
