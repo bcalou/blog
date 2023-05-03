@@ -7,6 +7,7 @@ tags:
   - css
 layout: layouts/post.njk
 series: À la découverte d'Eleventy
+originalPost: https://dev.to/bcalou/optimisation-agressive-des-performances-d-un-site-statique-3jc9
 ---
 
 Grâce au _pre-rendering_ d'Eleventy, _Lighthouse_ donne déjà à [notre site](https://top-livres.netlify.app/) le vénérable score de 100 points en performance 💪. Mais si nous essayions d'aller plus loin ? Le simple calcul d'un outil n'est pas une excuse pour ne pas mieux faire !
@@ -23,7 +24,7 @@ C'est désormais d'une simplicité absolue en HTML :
 
 Ainsi, les images sont chargées au fil du scroll. HTML mon amour.
 
-{% img "lazy.gif", "Les images sont chargées au fil du scroll" %}
+{% img "lazy.gif", "Les images sont chargées au fil du scroll." %}
 
 Un autre attribut a récemment fait son apparition, que je m'empresse d'ajouter :
 
@@ -92,7 +93,7 @@ On varie donc du simple au quadruple ! Avec des images plus grandes, la différe
 
 ### Générer les images avec Eleventy
 
-Plutôt être forcé à regarder la saison 29 de Plus belle la vie que de produire à la main toutes les images nécessaires à cette optimisation.
+Plutôt être forcé à regarder la saison 29 de _Plus belle la vie_ que de produire à la main toutes les images nécessaires à cette optimisation.
 
 Pour rappel, on parle de 10 livres × 3 formats × 2 tailles, doit 60 images !
 
@@ -104,7 +105,7 @@ Nous allons créer un helper `bookImage`, que nous appellerons pour chaque item 
 {% raw %}{% bookImage item %}{% endraw %}
 ```
 
-Un helper est une fonction qui retourne un template. Elle se déclare ainsi, encore une fois dans le fichier `.eleventy.js`
+Un helper est une fonction qui retourne un template. Elle se déclare ainsi, encore une fois dans le fichier `.eleventy.js`.
 
 ```js
 eleventyConfig.addLiquidShortcode("bookImage", bookImage);
@@ -146,8 +147,8 @@ return `<picture class="book__cover">
 
 Peut-être l'avez vous remarqué, ce helper a de formidable qu'il fait deux choses très importantes à la fois :
 
-- il génère les images nécessaires
-- il renvoie le markup associé
+- il génère les images nécessaires ;
+- il renvoie le markup associé.
 
 La séparation de ces deux processus est fréquente. Qu'ils soient ici si intriqués facilitera certainement la maintenance.
 
@@ -155,8 +156,8 @@ Une autre façon de le dire, c'est que le template génère à la volée les ima
 
 {% figure
   "generation.gif",
-  "Dans un dossier, des dizaines d'images apparaissent au fur et à mesure",
-  "Le processus peut être désactivé en développement pour gagner du temps"
+  "Dans un dossier, des dizaines d'images apparaissent au fur et à mesure.",
+  "Le processus peut être désactivé en développement pour gagner du temps."
 %}
 
 ## CSS critique inline
@@ -165,8 +166,8 @@ Actuellement, la cascade du site ressemble à ça :
 
 {% figure
   "cascade.png",
-  "Trois étapes de chargement distinctes se suivent : d'abord le HTML, puis le CSS/JS, puis les images",
-  "J'ai utilisé une simulation « slow 3G » pour forcer le trait"
+  "Trois étapes de chargement distinctes se suivent : d'abord le HTML, puis le CSS/JS, puis les images.",
+  "J'ai utilisé une simulation « slow 3G » pour forcer le trait."
 %}
 
 On voit nettement les deux ressources **bloquantes** que sont le CSS et le JavaScript.
@@ -202,8 +203,8 @@ C'est tout !
 
 {% figure
   "critical.png",
-  "Le code source du HTML dans lequel on peut voir du CSS minifié",
-  "Le CSS critique est extrait puis directement inclus dans l'index.html"
+  "Le code source du HTML dans lequel on peut voir du CSS minifié.",
+  "Le CSS critique est extrait puis directement inclus dans l'index.html."
 %}
 
 En plus d'inclure le CSS critique, le plugin ajoute la ligne suivante :
@@ -233,10 +234,10 @@ Résultat, nous n'avons plus aucune ressource bloquante !
 
 {% img
   "after.png",
-  "Seules deux étapes sont visibles : d'abord le HTML, ensuite tout le reste en parallèle"
+  "Seules deux étapes sont visibles : d'abord le HTML, ensuite tout le reste en parallèle."
 %}
 
-Nous avons ainsi drastiquement amélioré le _chemin critique_, soit cet instant crucial entre la requête et l'affichage de la page.
+Nous avons ainsi drastiquement amélioré le **chemin critique**, soit cet instant crucial entre la requête et l'affichage de la page.
 
 En une seule requête, notre utilisateur verra un contenu.
 

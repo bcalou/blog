@@ -82,9 +82,9 @@ La notion de canvas est absente de la plupart des cours dédiés au CSS (y compr
 Avec cette nouvelle information, nous pouvons mettre à jour notre représentation mentale de la page, de haut en bas :
 
 <ol>
-  <li>L'élément <code>body</code></li>
-  <li>L'élément <code>html</code></li>
-  <li>Le canvas</li>
+  <li>L'élément <code>body</code>.</li>
+  <li>L'élément <code>html</code>.</li>
+  <li>Le canvas.</li>
 </ol>
 
 Pendant longtemps, j'ai pensé que le canvas était jaune parce que le `body` _était_ le canvas. Mais non : le canvas ne fait qu'utiliser une information provenant du `body` et peut être bien plus grand que le `body` lui-même.
@@ -102,7 +102,7 @@ Il est inutile pour le navigateur de peindre le `body`, qui a la même couleur q
 
 En d'autres termes, lorsque vous donnez une couleur de fond au `body`, vous stylisez en réalité le canvas (qui ne peut pas être ciblé directement en CSS). Le canvas « vole » la valeur du `body`.
 
-## Au delà du body
+## Au-delà du body
 
 Mode philosophe activé :
 
@@ -112,7 +112,7 @@ D'après le W3C, le `body` <q cite="https://html.spec.whatwg.org/multipage/secti
 
 Si le `body` est le contenu, il semble honnête de dire que ce qui est en dehors du `body` n'est pas le contenu.
 
-{% img "input.gif", "Merci pour le renseignement" %}
+{% img "input.gif", "Merci pour le renseignement." %}
 
 Dans ce cas, utiliser `background-color` sur l'élément `html` ne devrait pas avoir d'effet, puisqu'il ne fait pas partie du contenu ?
 
@@ -147,7 +147,7 @@ Je sais. Mais ajoutons des bordures à l'élément `html` pour comprendre ce qui
 
 {% codepen "https://codepen.io/bcalou/pen/zYvJJzY" %}
 
-Il est intéressant de noter que le navigateur n'a pas de problèmes pour appliquer des styles (tels que nos bordures) en dehors du `body`. Mais continuons.
+Il est intéressant de noter que le navigateur n'a pas de problème pour appliquer des styles (tels que nos bordures) en dehors du `body`. Mais continuons.
 
 Donc, en réalité, le `html` se comporte comme le `body` : il ne prend que la place nécessaire à la présentation de son contenu, c'est à dire le `body` et ses `8px` de marge, qui viennent des styles par défaut du navigateur.
 
@@ -156,7 +156,7 @@ Donc, en réalité, le `html` se comporte comme le `body` : il ne prend que la p
 Même réponse du W3C :
 
 {% blockquote
-  "Le fond de l'élément racine devient le fond du canvas",
+  "Le fond de l'élément racine devient le fond du canvas.",
   "WC3",
   "The Canvas Background and the Root Element",
   "https://www.w3.org/TR/css-backgrounds-3/#root-background"
@@ -165,7 +165,7 @@ Même réponse du W3C :
 On apprend également que l'élément racine peut être le `body` ou le `html` :
 
 {% blockquote
-  "Il est recommandé aux auteurs de documents HTML de spécifier le fond du canvas sur l'élément <code>body</code> plutôt que sur l'élement <code>html</code>",
+  "Il est recommandé aux auteurs de documents HTML de spécifier le fond du canvas sur l'élément <code>body</code> plutôt que sur l'élement <code>html</code>.",
   "W3C",
   "The Canvas Background and the HTML <body> Element",
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
@@ -199,8 +199,8 @@ Amusons-nous avec `mix-blend-mode`. Cette propriété CSS nous permet de défini
 
 {% figure
   "blend.jpg",
-  "Une série d'exemples d'utilisation de mix-blend-mode pour créer différents effets visuels",
-  "Quelques exemples d'utilisation de mix-blend-mode"
+  "Une série d'exemples d'utilisation de mix-blend-mode pour créer différents effets visuels.",
+  "Quelques exemples d'utilisation de mix-blend-mode."
 %}
 
 Commençons avec un exemple simple : notre `h1` sera vert, et nous souhaitons changer son apparence avec `mix-blend-mode: difference`.
@@ -231,9 +231,9 @@ La différence entre vert est transparent est vert, et c'est pour cela que la co
 Récapitulons :
 
 <ol>
-  <li>Le <code>body</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
-  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
-  <li>Le canvas est transparent (aucune valeur fournie par <code>html</code> ou <code>body</code>)</li>
+  <li>Le <code>body</code> est transparent (valeur par défaut de <code>background-color</code>).</li>
+  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>).</li>
+  <li>Le canvas est transparent (aucune valeur fournie par <code>html</code> ou <code>body</code>).</li>
 </ol>
 
 Notre pauvre titre n'a donc rien avec quoi se mélanger.
@@ -253,9 +253,9 @@ Et maintenant, ça fonctionne !
 Récapitulons à nouveau :
 
 <ol>
-  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas)</li>
-  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
-  <li>Le canvas est blanc (la valeur est issue du <code>body</code>)</li>
+  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas).</li>
+  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>).</li>
+  <li>Le canvas est blanc (la valeur est issue du <code>body</code>).</li>
 </ol>
 
 Et c'est ainsi que notre titre vert se mélange au canvas pour devenir rose. Ce titre pourrait bien sûr être une image, une vidéo, quoi que ce soit. Le `body` (ou n'importe quel élément contenant notre cible) _doit_ posséder un arrière-plan (on pourrait également donner une couleur de fond à l'élément `html` pour y parvenir, mais ce n'est pas standard).
@@ -267,9 +267,9 @@ Notre périple touche à sa fin, mais une question demeure...
 Notre modèle mental d'une page est ainsi :
 
 <ol>
-  <li>L'élément <code>body</code></li>
-  <li>L'élément <code>html</code></li>
-  <li>Le canvas</li>
+  <li>L'élément <code>body</code>.</li>
+  <li>L'élément <code>html</code>.</li>
+  <li>Le canvas.</li>
 </ol>
 
 D'après ce que nous venons d'apprendre, si le `body` et le `html` sont transparents, le canvas sera transparent aussi.
@@ -278,12 +278,12 @@ D'après ce que nous venons d'apprendre, si le `body` et le `html` sont transpar
 
 Laissez-moi vous expliquer. Et s'il y avait une _autre_ couche, réellement blanche, plus bas que le canvas ?
 
-{% img "theory.jpg", "Un homme explique frénétiquement une théorie farfelue" %}
+{% img "theory.jpg", "Un homme explique frénétiquement une théorie farfelue." %}
 
 Encore une fois, le W3C nous donne la réponse :
 
 {% blockquote
-  "Si l'arrière-plan du canvas n'est pas opaque, ce qui est visible en dessous dépendra de l'agent utilisateur",
+  "Si l'arrière-plan du canvas n'est pas opaque, ce qui est visible en dessous dépendra de l'agent utilisateur.",
   "W3C",
   "The Canvas Background and the HTML <body> Element",
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
@@ -293,7 +293,7 @@ Traduction humaine : il y a quelque chose _derrière_ le canvas. Vous pouvez voi
 
 Sur tous les navigateurs auxquels je peux penser, cette dernière couche est blanche. Mais théoriquement, elle pourrait aussi montrer l'image d'un cheval en train de manger une pizza à l'ananas. Quel web étrange cela serait.
 
-Bref, cela m'a conduit à me poser une question : y a-t-il un moyen de vraiment voir la différence entre un canvas blanc et un canvas transparent ? Peux-t-on obtenir la _preuve_ que le canvas est transparent par défaut ? Je demande pour un ami.
+Bref, cela m'a conduit à me poser une question : y a-t-il un moyen de vraiment voir la différence entre un canvas blanc et un canvas transparent ? Peut-on obtenir la _preuve_ que le canvas est transparent par défaut ? Je demande pour un ami.
 
 ## L'indice de l'iframe
 
@@ -320,7 +320,7 @@ Voici ce que l'on obtient :
 
 La question est donc : l'`iframe` possède-t-elle un canvas transparent ou blanc ?
 
-Nous pouvons obtenir la réponse en donnat un arrière-plan à la page parente :
+Nous pouvons obtenir la réponse en donnant un arrière-plan à la page parente :
 
 ```css
 body {
@@ -348,25 +348,25 @@ Si l'`iframe` n'avait pas de canvas, la zone en dehors de son élément `body` n
 
 Et c'est ainsi que l'on montre que sur n'importe quelle page, **le canvas par défaut n'est pas blanc mais transparent**.
 
-CE que vous voyez quand vous ouvrez une page vide n'est donc pas un canvas blanc. C'est juste le « fond » du navigateur, l'arrière-plan du logiciel, en dehors du monde du CSS, qui n'interagit aucunement avec quoi que ce soit.
+Ce que vous voyez quand vous ouvrez une page vide n'est donc pas un canvas blanc. C'est juste le « fond » du navigateur, l'arrière-plan du logiciel, en dehors du monde du CSS, qui n'interagit aucunement avec quoi que ce soit.
 
 {% img "deep.png", "C'est vraiment profond..." %}
 
 Et voici donc notre modèle (final ?) de ce que nous voyons :
 
 <ol>
-  <li>L'élément <code>body</code> (transparent par défaut)</li>
-  <li>L'élément <code>html</code> (transparent par défaut)</li>
-  <li>Le canvas (dépend du <code>html</code> et du <code>body</code>, donc transparent par défaut)</li>
-  <li>Les fondations innaccessibles du logiciel (souvent un fond blanc)</li>
+  <li>L'élément <code>body</code> (transparent par défaut).</li>
+  <li>L'élément <code>html</code> (transparent par défaut).</li>
+  <li>Le canvas (dépend du <code>html</code> et du <code>body</code>, donc transparent par défaut).</li>
+  <li>Les fondations innaccessibles du logiciel (souvent un fond blanc).</li>
 </ol>
 
 Oh, et j'ai essayé d'en faire un dessin :
 
 {% figure
   "schema.png",
-  "Les quatres couches du navigateur : body, html, canvas et fond du navigateur",
-  "It's a small <em>Hello World</em> after all"
+  "Les quatres couches du navigateur : body, html, canvas et fond du navigateur.",
+  "It's a small <em>Hello World</em> after all."
 %}
 
 C'était sympa, ce petit voyage. Et oui, j'ai une vie. Si vous avez plus d'informations à propos de tout cela, laissez un commentaire !

@@ -1,5 +1,10 @@
 :root {
   --main-content-width: 50rem;
+  --main-content-margin: 1.5rem;
+
+  @media (min-width: 64em) {
+    --main-content-margin: clamp(1.5rem, 5vw, 5rem);
+  }
 }
 
 html,

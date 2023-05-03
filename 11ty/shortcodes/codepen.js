@@ -11,12 +11,11 @@ function codepen(url) {
 
   return `<p
     class="codepen"
-    data-height="500"
+    data-height="350"
     data-default-tab="result"
     data-slug-hash="${data_slug_hash}"
     data-user="${username}"
     style="
-      height: 571px;
       box-sizing: border-box;
       display: flex;
       align-items: center;

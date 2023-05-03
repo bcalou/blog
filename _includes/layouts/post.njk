@@ -28,7 +28,7 @@ templateClass: tmpl-post
     <p class="originalPost">Cet article a été initialement publié sur
       <a href="{{ originalPost }}" target="_blank" rel="noopenner noreferrer">dev.to</a>
     {% endif %}
-    {# {%- if collections.blog %}
+    {%- if collections.blog %}
       {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
       {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
       {%- if nextPost or previousPost %}
@@ -46,5 +46,5 @@ templateClass: tmpl-post
             {% endif %}
           </ul>
         {%- endif %}
-      {%- endif %} #}
+      {%- endif %}
 </div>

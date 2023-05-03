@@ -8,12 +8,12 @@ originalPost: https://dev.to/bcalou/html-is-not-a-programming-language-and-that-
 ---
 
 <aside>
-  <p>Mise à jour 2023 : mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impérative</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
+  <p>Mise à jour 2023 : Mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impératif</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
   <p>Je ne souhaite pas modifier l'article car il correspond à mes vues de l'époque, mais gardez cette disctinction sémantique en tête : j'ai utilisé le terme « langage de programmation » incorrectement à la place de « langage de programmation <strong>impératif</strong> ».<p/>
   <p>Les autres points sont toujours d'actualité !</p>
 </aside>
 
-J'adore HTML. Plus j'en apprend à son sujet, plus je trouve que c'est un travail de génie. Par dessus tout, j'adore qu'il ne s'agisse pas d'un langage de programmation.
+J'adore HTML. Plus j'en apprends à son sujet, plus je trouve que c'est un travail de génie. Par dessus tout, j'adore qu'il ne s'agisse pas d'un langage de programmation.
 
 **Les langages de programmation sont nuls**. Ils plantent en permanence (je vous jure, j'écris toujours mon JavaScript parfaitement du premier coup, et pourtant il persiste à planter !?).
 
@@ -69,7 +69,7 @@ Mais quand je pense à l'utilisateur, je sais que la pire chose que je puisse fa
 
 {% img
   "contract.gif",
-  "La petite sirène signant un contrat diabolique en écrivant yolo en bas du document"
+  "La petite sirène signant un contrat diabolique en écrivant yolo en bas du document."
 %}
 
 À l'inverse, quand j'utilise HTML et les standards du web, je me repose sur la connaissance partagée de développeurs de navigateurs expérimentés et des décennies de débats ayant pour but de faire du web une plate-forme de qualité.
@@ -81,7 +81,7 @@ Et c'est pour cela qu'une connaissance profonde du HTML est infiniment précieus
 Dans une de mes meilleures lectures de cette année, Jeremy Keith nous raconte comment nous avons presque perdu l'un des aspects les plus puissants de HTML à cause de XHTML 2.0 :
 
 {% blockquote
-  "[XHTML 2.0] avait aussi pour but d'implémenter la draconienne gestion des erreurs de XML. S'il y a la moindre erreur dans un document XML — un attribut sans guillemets ou un slash de fermeture manquant — alors le <i>parser</i> doit s'arrêter immédiatement et refuser de rendre quoi que ce soit",
+  "[XHTML 2.0] avait aussi pour but d'implémenter la draconienne gestion des erreurs de XML. S'il y a la moindre erreur dans un document XML – un attribut sans guillemets ou un slash de fermeture manquant – alors le <i>parser</i> doit s'arrêter immédiatement et refuser de rendre quoi que ce soit.",
   "Jeremy Keith",
   "Resilient Web Design",
   "https://resilientwebdesign.com/chapter4/"
@@ -98,7 +98,7 @@ Dieu merci, nous sommes passés à côté de cela.
 
 {% figure
   "xhtml.jpg",
-  "Un vaisseau rebelle de Star Wars fait chuter un chasseur robot de l'empire",
+  "Un vaisseau rebelle de Star Wars fait chuter un chasseur robot de l'empire.",
   "https://speakerdeck.com/elkraneo/html5",
   "https://speakerdeck.com/elkraneo/html5"
 %}
@@ -111,7 +111,7 @@ La sémantique, l'accessibilité, le référencement, les compatibilités naviga
 
 Même sans parler des « soupes de balise » générées par certains frameworks, il y a une grande différence entre un bon code HTML et un code HTML excellent.
 
-Ce serait une erreur de considérer HTML (et CSS) comme la partie facile du développement web. Le problème et qu'il faut bien connaître ces langages pour réaliser cela.
+Ce serait une erreur de considérer HTML (et CSS) comme la partie facile du développement web. Le problème est qu'il faut bien connaître ces langages pour réaliser cela.
 
 JavaScript est difficile. Pourquoi tout le monde sait-il cela ? Parce qu'avant de réussir à faire fonctionner quoi que ce soit, vous devrez affrontez une avalanche d'erreurs rouges bloquant votre projet entier. Seul un pénible débuggage vous permettra d'avoir un code fonctionnel.
 
@@ -136,19 +136,19 @@ Peut-être qu'appeler HTML un langage de programmation le rend plus digne d'atte
 
 {% img
 "headhache.gif",
-"Michael Scott se frotte le crâne avec sa main, visiblement très ennuyé"
+"Michael Scott se frotte le crâne avec sa main, visiblement très ennuyé."
 %}
 
-D'un autre côté, je comprend que lire que HTML est un langage de programmation peut ennuyer certains, moi compris. Pas parce que je pense que les langages de progammation sont meilleurs. Parce que **je ne veux pas qu'HTML soit un langage de programmation**.
+D'un autre côté, je comprends que lire que HTML est un langage de programmation peut ennuyer certains, moi compris. Pas parce que je pense que les langages de progammation sont meilleurs. Parce que **je ne veux pas qu'HTML soit un langage de programmation**.
 
 ## Nous construisons juste des choses
 
-Durant mes cours, j'utilise souvent le terme _langage de développement_. Je ne le vois pas beaucoup utilisé en anglais, mais je trouve que c'est un très bon terme.
+Durant mes cours, j'utilise souvent le terme « langage de développement ». Je ne le vois pas beaucoup utilisé en anglais, mais je trouve que c'est un très bon terme.
 
 Avec cette appellation, on peut réunir HTML, CSS et JavaScript sans que tout le monde ne crie au scandale. D'après le dictionnaire :
 
 {% blockquote
-  "Développer : inventer quelque chose ou donner vie à quelque chose",
+  "Développer : inventer quelque chose ou donner vie à quelque chose.",
   "",
   "Cambridge dictionnary",
   "https://dictionary.cambridge.org/fr/dictionnaire/anglais/develop"
@@ -158,7 +158,7 @@ Alors que le débat autour d'HTML/CSS étant ou non des langages de programmatio
 
 {% figure
   "developers.gif",
-  "Un représentant de Microsoft scande le mot développeur et essaie de faire monter l'ambiance",
+  "Un représentant de Microsoft scande le mot développeur et essaie de faire monter l'ambiance.",
   "Nous sommes toutes et tous des développeurs."
 %}
 

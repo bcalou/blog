@@ -1,13 +1,16 @@
 .header {
-  padding: 5rem 1.5rem 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-shrink: 0;
-  background-color: var(--blue-lightest);
-  
+  display: flex;
+  height: 1.25rem;
+
   @media (min-width: 64em) {
+    padding: 5rem 1.5rem 0;
+    background-color: var(--blue-lightest);
     width: 14rem;
     position: fixed;
+    height: 100vh;
     top: 0;
     left: 0;
     bottom: 0;

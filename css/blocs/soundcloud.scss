@@ -1,12 +1,12 @@
-.youtube {
+.soundcloud {
   margin-block: 2.5rem;
+  margin-inline: -1.5rem;
   box-shadow: var(--shadow);
-  aspect-ratio: 16/9;
   background: var(--blue-darkest);
-  border: 0.125rem solid var(--blue-darkest);
   width: calc(100% + 3rem);
 
   @media (min-width: 64em) {
+    margin-inline: 0;
     width: 100%;
     border-radius: var(--border-radius);
   }

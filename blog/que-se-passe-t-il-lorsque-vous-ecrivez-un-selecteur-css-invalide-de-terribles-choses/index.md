@@ -32,7 +32,7 @@ Pour améliorer l'accessibilité, je veux appliquer le même effet lorsque le bo
 
 Cela est possible grâce à la nouvelle pseudo-classe `:focus-visible`. À l'heure où j'écris ces lignes, elle est supportée sans préfixe par [Chrome et Edge](https://caniuse.com/?search=focus-visible).
 
-<aside>Mise à jour 2023 : la pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉</aside>
+<aside>Mise à jour 2023 : La pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉.</aside>
 
 ```css
 button:active,
@@ -48,8 +48,8 @@ Si vous utilisez Chrome ou Edge, vous pouvez essayer de cibler le bouton avec la
 
 {% figure
   "focus.gif",
-  "Le bouton dont le texte est noir sur un fond gris clair inverse ses couleurs",
-  "Ceci est d'une grande aide si vous n'utilisez pas la souris"
+  "Le bouton dont le texte est noir sur un fond gris clair inverse ses couleurs.",
+  "Ceci est d'une grande aide si vous n'utilisez pas la souris."
 %}
 
 ## Mais il y a un problème
@@ -60,7 +60,7 @@ On perd aussi les styles de la pseudo-classe `:active` !
 
 {% figure
   "firefox.gif",
-  "Un bouton est pressé, mais il ne change pas de couleur",
+  "Un bouton est pressé, mais il ne change pas de couleur.",
   "Les styles associés à la pseudo-classe <code>:active</code> ne s'appliquent pas sur Firefox, bien que ce navigateur comprenne parfaitement ce sélecteur. Tristesse infinie."
 %}
 
@@ -72,12 +72,12 @@ Comment dire ?
 
 En d'autres termes, si un navigateur ne connaît pas le sélecteur `:focus-within`, il ignorera la totalité de votre règle, y compris la partie concernant le sélecteur `:active`.
 
-On pourrait dire que CSS est légèrement susceptible. S'il n'aime le type d'olive que vous avez mis sur la pizza, il n'envisegera même pas de la manger.
+On pourrait dire que CSS est légèrement susceptible. S'il n'aime pas le type d'olive que vous avez mis sur la pizza, il n'envisagera même pas de la manger.
 
 {% figure
   "trash.gif",
-  "Un camion-poubelle balance une poubelle dont tout le contenu est projeté sur le trottoir",
-  "CSS n'a pas de temps à perdre avec vos sélecteurs zinzins"
+  "Un camion-poubelle balance une poubelle dont tout le contenu est projeté sur le trottoir.",
+  "CSS n'a pas de temps à perdre avec vos sélecteurs zinzins."
 %}
 
 Voici la spécification du W3C :
@@ -116,7 +116,7 @@ Maintenant, le sélecteur `:focus-visible` pourrait être ignoré, mais ne déra
 Il se trouve qu'il y a en réalité une bonne raison pour cela, qui est expliquée dans un vieux document à propos de CSS 2 :
 
 {% blockquote
-  "CSS 2.2 donne un sens particulier à la virgule (,) dans les sélecteurs. Cependant, puisque nous ne savons pas si la virgule pourrait acquérir de nouveaux sens dans de futures versions de CSS, l'ensemble de l'instruction devrait être ignorée s'il y a une erreur où que ce soit dans le sélecteur, même si le reste du sélecteur semble acceptable en CSS 2.2",
+  "CSS 2.2 donne un sens particulier à la virgule (,) dans les sélecteurs. Cependant, puisque nous ne savons pas si la virgule pourrait acquérir de nouveaux sens dans de futures versions de CSS, l'ensemble de l'instruction devrait être ignorée s'il y a une erreur où que ce soit dans le sélecteur, même si le reste du sélecteur semble acceptable en CSS 2.2.",
   "W3C",
   "Rule sets, declaration blocks, and selectors",
   "https://www.w3.org/TR/CSS22/syndata.html#rule-sets"
@@ -135,12 +135,12 @@ Les concepteurs de CSS ont fait preuve d'une impressionnante capacité d'anticip
 section:has(img, figure) { }
 ```
 
-Ces sélecteurs contiennent des virgules, mais ces virgules ne séparent pas des sélecteur de premier niveau.
+Ces sélecteurs contiennent des virgules, mais ces virgules ne séparent pas des sélecteurs de premier niveau.
 
 Si un navigateur ne comprend pas `:is` et essaie de séparer notre premier exemple, cela pourrait donner quelque chose de ce genre :
 
 <ol>
-  <li><code>.title.is(h1</code> : c'est quoi ce truc ? Je passe à la suite</li>
+  <li><code>.title.is(h1</code> : c'est quoi ce truc ? Je passe à la suite.</li>
   <li><code>h2</code> : ciblons tous les <code>h2</code>, même ceux qui n'ont pas la classe <code>.title</code> !</li>
   <li><code>h3)</code> : hein ?</li>
 </ol>

@@ -4,11 +4,10 @@ date: 2020-11-02
 tags:
   - css
 layout: layouts/post.njk
+originalPost: https://dev.to/bcalou/flexbox-when-negative-margins-save-the-day-h4i
 ---
 
-<aside>
-  Mise à jour 2023 : bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.
-</aside>
+<aside>Mise à jour 2023 : Bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.</aside>
 
 La gestion des espaces avec flexbox n'est pas aussi simple qu'elle en a l'air. Voici une simple astuce que j'ai beaucoup utilisée ces derniers temps.
 
@@ -61,11 +60,11 @@ Il y a deux problèmes principaux. Pouvez-vous les repérer ?
 
 ## Le problème horizontal
 
-The premier problème est qu'à cause de sa marge à droite, le dernier élément passe à la ligne trop tôt.
+Le premier problème est qu'à cause de sa marge à droite, le dernier élément passe à la ligne trop tôt.
 
 {% figure
   "wrap.gif",
-  "L'article est redimensionné et le dernier élément passe à la ligne",
+  "L'article est redimensionné et le dernier élément passe à la ligne.",
   "Remarquez-vous comme le dernier élément aurait suffisamment d'espace pour aller plus loin à droite avant de revenir à la ligne ? Comparez cet espace à l'espace à gauche du premier élement."
 %}
 
@@ -83,11 +82,11 @@ Mais le problème est le même : tous les autres élément reviennent à la lign
 
 {% figure
 "autres.gif",
-"L'article est redimensionné et les éléments passent les uns après les autres à la ligne",
+"L'article est redimensionné et les éléments passent les uns après les autres à la ligne.",
 "Désormais, le dernier élement peut aller plus loin vers la droite, mais les autres provoquent un retour à la ligne prématuré."
 %}
 
-Bon, si `margin-right` ne convient pas, que dire de `margin-left` ? Essayons de l'utiliser sur chaque élément, à l'exeption du premier, qui ne devrait pas être précédé par un espace.
+Bon, si `margin-right` ne convient pas, que dire de `margin-left` ? Essayons de l'utiliser sur chaque élément, à l'exception du premier, qui ne devrait pas être précédé par un espace.
 
 ```css
 li:not(:first-child) {
@@ -97,14 +96,14 @@ li:not(:first-child) {
 
 {% codepen "https://codepen.io/bcalou/pen/BazrZQv" %}
 
-Est-ce mieux désormais ? Prenez un moment pour essayer de devenir quel pourrait être le problème.
+Est-ce mieux désormais ? Prenez un moment pour essayer de deviner quel pourrait être le problème.
 
 Puisqu'il n'y a plus de marge à droite, le retour à la ligne a lieu exactement quand il le faut. Mais maintenant, notre problème est ailleurs :
 
 {% figure
 "left.gif",
-"L'article est redimensionné et le dernier élément passe à la ligne, avec un décalage vers la droite par rapport au premier de la ligne du dessus",
-"La nouvelle ligne révèle la propriété <code>margin-left</code> de l'élément"
+"L'article est redimensionné et le dernier élément passe à la ligne, avec un décalage vers la droite par rapport au premier de la ligne du dessus.",
+"La nouvelle ligne révèle la propriété <code>margin-left</code> de l'élément."
 %}
 
 Nous ne sommes pas vraiment en position de nous plaindre. Nous avons demandé à CSS que tous les éléments sauf le premier aient une marge à gauche, et c'est ce qui se passe.
@@ -121,11 +120,11 @@ Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Pa
 
 Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
 
-<aside>Mise à jour 2023 : après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
+<aside>Mise à jour 2023 : Après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
 
 ## L'astuce de la marge négative
 
-Voici donc la solution: d'abord, tous les éléments recoivent un `margin-left`.
+Voici donc la solution : d'abord, tous les éléments reçoivent un `margin-left`.
 
 ```css
 li {
@@ -135,7 +134,7 @@ li {
 
 {% codepen "https://codepen.io/bcalou/pen/yLJKPXy" %}
 
-Nous devons maintenant nous débarasser de l'espace à gauche du premier élément, et nous pouvons faire cela à l'aide de marges négatives.
+Nous devons maintenant nous débarrasser de l'espace à gauche du premier élément, et nous pouvons faire cela à l'aide de marges négatives.
 
 Les marges négatives ne sont pas considérées comme faisant partie des bonnes pratiques, et je pense qu'il faut les éviter autant que possible, car elle peuvent rendre la logique de votre code plus difficile à comprendre.
 
@@ -147,7 +146,7 @@ Et dans notre cas, elles nous sauvent la mise :
 ul {
   display: flex;
   flex-wrap: wrap;
-  margin-left -2em;
+  margin-left: -2em;
 }
 
 li {
@@ -159,8 +158,8 @@ li {
 
 {% figure
   "borders.png",
-  "Des bordures bleues montrent que la liste des éléments est décalée vers la droite jusqu'en dehors de son parent, pour que le premier élément paraisse visuellement au bon endroit",
-  "Une bordure bleue sur l'élément <code>ul</code> révèle l'astuce"
+  "Des bordures bleues montrent que la liste des éléments est décalée vers la droite jusqu'en dehors de son parent, pour que le premier élément paraisse visuellement au bon endroit.",
+  "Une bordure bleue sur l'élément <code>ul</code> révèle l'astuce."
 %}
 
 ## Et l'axe vertical ?
@@ -186,7 +185,7 @@ Il serait possible de retirer la propriété `margin-bottom: 1em` du titre pour 
 
 {% figure
   "title.png",
-  "La marge entre le titre et les éléments est équivalente à la marge ajoutée au dessus des éléments",
+  "La marge entre le titre et les éléments est équivalente à la marge ajoutée au dessus des éléments.",
   "Retirer la marge sous le titre (zone jaune) compenserait le nouvel espace à l'intérieur de l'élement <code>ul</code> (bordures bleues)."
 %}
 
@@ -200,7 +199,7 @@ Nous devons donc utiliser la même astuce et appliquer une marge négative à no
 ul {
   display: flex;
   flex-wrap: wrap;
-  margin-left -2em;
+  margin-left: -2em;
   margin-top: -1em;
 }
 ```
@@ -211,13 +210,11 @@ Et voici notre version finale. Elle fonctionne sur tous les navigateurs qui supp
 
 Les articles tels que celui-ci deviendront obsolète lorsque la propriété CSS `gap` sera largement supportée.
 
-Mais ce n'est pas encore le cas. À l'heure où j'écris ces lignes, le [support navigateur est de 70%](https://caniuse.com/flexbox-gap). Pas super, comparé au support à 99% de flexblox lui-même — Safari serait-il devenu le nouvel Internet Explorer ?
+Mais ce n'est pas encore le cas. À l'heure où j'écris ces lignes, le [support navigateur est de 70%](https://caniuse.com/flexbox-gap). Pas super, comparé au support à 99% de flexblox lui-même – Safari serait-il devenu le nouvel Internet Explorer ?
 
-<aside>
-  Mise à jour 2023 : après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.
-</aside>
+<aside>Mise à jour 2023 : Après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.</aside>
 
-Tous les autres navigateurs modernes devrait vous montrer le même résultat avec le code suivant, sans astuce !
+Tous les autres navigateurs modernes devraient vous montrer le même résultat avec le code suivant, sans astuce !
 
 ```css
 ul {
@@ -258,7 +255,7 @@ Utilisons les variables CSS, qui sont très bien supportées (95%). En CSS, il e
 ```css
 div {
   --size: 2em;
-  width: calc(-1 * var(--size)); /* -2em /*
+  width: calc(-1 * var(--size)); /* -2em */
 }
 ```
 
@@ -278,7 +275,7 @@ Voici donc notre classe utilitaire :
 }
 ```
 
-J'aime utiliser le sélecteur d'enfant direct (`> *`) avec flexbox et grid. Il s'accord très bien avec la relation parent/enfant de ces fonctionnalités et fonctionnera à tous les coups.
+J'aime utiliser le sélecteur d'enfant direct (`> *`) avec flexbox et grid. Il s'accorde très bien avec la relation parent/enfant de ces fonctionnalités et fonctionnera à tous les coups.
 
 Et voici comment je l'utiliserai :
 
@@ -312,10 +309,10 @@ Le pouvoir des variables CSS nous permet de définir des espaces différents pou
 
 Ainsi, nous n'avons besoin de changer les variables localement que si nous souhaitons une valeur différente.
 
-<aside>Mise à jour 2023 : plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <br/><code>margin-top: var(--row-gap, 1em);</code></aside>
+<aside>Mise à jour 2023 : Plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <code>var(--row-gap, 1em);</code></aside>
 
 ## Mauvaises pratiques
 
-Nous connaissons toutes et tous un tas de mauvaises pratiques : `!important` est une autre qui me vient à l'esprit. Mais comme les marges négatives, même `!important` a des cas d'usage légitimes.
+Nous connaissons toutes et tous un tas de mauvaises pratiques : `!important` est une autre qui me vient à l'esprit. Mais comme les marges négatives, même `!important` a des cas d'usages légitimes.
 
 Cet astuce de la marge négative est un rappel pour moi : les choses que l'on apprend à éviter pourraient nous être bien utiles un jour ou l'autre. Tout dépend du contexte.

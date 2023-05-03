@@ -5,11 +5,12 @@ tags:
   - css
 layout: layouts/post.njk
 series: À la découverte d'Eleventy
+originalPost: https://dev.to/bcalou/calculs-css-infernaux-a-partir-de-donnees-physiques-4ah9
 ---
 
 Côté CSS, je suis assez satisfait de l'effet **renversant** (j'exagère un peu) de survol que j'ai mis en place (voir sur [le site](https://top-livres.netlify.app/)).
 
-{% img "hover.gif", "Les livres pivotent au survol avec un effet 3D" %}
+{% img "hover.gif", "Les livres pivotent au survol avec un effet 3D." %}
 
 Il s'agit en fait d'une adaptation d'un projet open source, [3dbook.xyz](https://3dbook.xyz/).
 
@@ -68,12 +69,12 @@ La variable `offset`, si elle est présente, permet d'ajouter une classe supplé
 
 Les 3 autres variables sont passées grâce à l'attribut `style`, et sont maintenant disponibles pour chaque élément `.book`.
 
-<aside>Note : les variables CSS sont scopées. Chaque élément <code>.book</code> possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants.</aside>
+<aside>Note : Les variables CSS sont scopées. Chaque élément <code>.book</code> possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants.</aside>
 
 {% figure
   "dom.png",
-  "L'inspecteur du DOM montre les trois variables associées à l'élement book",
-  "Les variables sont désormais disponibles dans le scope CSS de l'élément"
+  "L'inspecteur du DOM montre les trois variables associées à l'élement book.",
+  "Les variables sont désormais disponibles dans le scope CSS de l'élément."
 %}
 
 ## CSS : let's the fun begin
@@ -138,13 +139,13 @@ Je peux ensuite utiliser ce booléen pour obtenir d'autres valeurs.
 
 {% figure
   "paysage.jpeg",
-  "Les livres en format paysage sont trop gros",
+  "Les livres en format paysage sont trop gros.",
   "Si tous les livres font la même hauteur, ceux qui sont en paysage comme <cite>Panthère</cite> deviennent beaucoup trop gros. D'où l'intérêt du booléen <code>is-portrait</code> pour la suite."
 %}
 
 Quelle devrait être la hauteur d'un livre s'il est en portrait ? La hauteur du conteneur, soit `--base-size-rem`. S'il est en paysage, au contraire, cela devrait être dépendant de largeur, qui elle sera `--base-size-rem`.
 
-<aside>Note : l'usage de <code>object-fit: contain</code> pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes.</aside>
+<aside>Note : L'usage de <code>object-fit: contain</code> pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes.</aside>
 
 Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 
@@ -159,7 +160,7 @@ Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 }
 ```
 
-{% img "shocked.gif", "Expression de dégoût" %}
+{% img "shocked.gif", "Expression de dégoût." %}
 
 Allez, on s'accroche une dernière fois, promis. `clamp`, on connaît déjà, alors regardons nos bornes. Que remarque t-on si le livre est en mode portrait ? La première borne :
 
@@ -167,7 +168,7 @@ Allez, on s'accroche une dernière fois, promis. `clamp`, on connaît déjà, al
 var(--is-portrait) * var(--base-size-rem)
 ```
 
-devient simplement `--base-size-rem`, puisque `is-portrait` vaut 1. Et c'est aussi la valeur de la seconde borne. Si les bornes sont identiques, peu importe la valeur du milieu, le résultat sera `--base-size-rem`.
+Cette valeur devient simplement `--base-size-rem`, puisque `is-portrait` vaut 1. Et c'est aussi la valeur de la seconde borne. Si les bornes sont identiques, peu importe la valeur du milieu, le résultat sera `--base-size-rem`.
 
 Et c'est que l'on souhaite. Pour les livres portrait, la hauteur est la taille du conteneur, tout bêtement.
 
@@ -181,8 +182,8 @@ On prend la valeur de base (qui sera donc la largeur), on divise par le ratio en
 
 {% figure
   "smaller.jpeg",
-  "Le livre en paysage est plus petit qu'avant",
-  "Les livres en paysage font désormais une taille raisonnable, car leur dimension principale devient leur largeur"
+  "Le livre en paysage est plus petit qu'avant.",
+  "Les livres en paysage font désormais une taille raisonnable, car leur dimension principale devient leur largeur."
 %}
 
 ## Support navigateur
@@ -218,9 +219,7 @@ Pour reprendre notre calcul du dessus, on l'utilise ainsi :
 
 Si `clamp` n'est pas supporté, le navigateur utilisera la première ligne et ignorera tout le reste. Pour quelques utilisateurs, le rendu sera un peu moins subtil, mais le contenu reste lisible et c'est l'essentiel.
 
-<aside>
-  Mise à jour 2023 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.
-</aside>
+<aside>Mise à jour 2023 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.</aside>
 
 ## Vers un CSS plus adapté aux calculs visuels ?
 

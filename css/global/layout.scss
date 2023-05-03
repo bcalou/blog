@@ -1,6 +1,6 @@
 body {
   background-color: var(--white);
-  
+
   @media (min-width: 64rem) {
     display: flex;
     padding-left: 14rem;
@@ -17,11 +17,7 @@ img {
 }
 
 main {
-  margin: 1.5rem;
-
-  @media (min-width: 32em) {
-    margin: clamp(1.5rem, 5vw, 5rem);
-  }
+  margin: var(--main-content-margin);
 }
 
 .cp_embed_wrapper {

@@ -6,7 +6,7 @@
       {% for post in seriesPosts %}
         <li {% if post.url === page.url %} aria-current="page" {% endif %}>
           {% if post.url === page.url %}<strong>{% endif %}
-            <a href="{{ post.url }}">{{ post.data.title }}</a>
+            <a href="{{ post.url }}">{{ post.data.title | addNbsp | safe }}</a>
           {% if post.url === page.url %}</strong>{% endif %}
         </li>
       {% endfor %}

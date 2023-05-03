@@ -23,7 +23,7 @@ Et c'est ainsi que naissent les memes de Petter Griffin se battant contre le CSS
 
 {% img
   "awesome.jpeg",
-  "Un mug sur le quel est écrit CSS is awesome. Le texte déborde de son conteneur"
+  "Un mug sur le quel est écrit CSS is awesome. Le texte déborde de son conteneur."
 %}
 
 Ces blagues nous ont aidé à supporter la dure réalité de CSS pendant des années, mais le fait est qu'elles sont désormais périmées. En réalité, les utilser reviendrait presque à dire :

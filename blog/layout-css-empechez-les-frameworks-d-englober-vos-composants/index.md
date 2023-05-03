@@ -7,7 +7,7 @@ layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/css-layout-get-around-frameworks-wrapping-your-components-2hgm
 ---
 
-CSS est difficile, à ce qu'il paraît. Mais avez vous déjà essayé d'écrire du CSS en vous battant contre un framework qui modifie votre DOM ?
+CSS est difficile, à ce qu'il paraît. Mais avez-vous déjà essayé d'écrire du CSS en vous battant contre un framework qui modifie votre DOM ?
 
 ## Le problème
 
@@ -15,7 +15,7 @@ Je travaille sur une interface simple : header, contenu, footer. Le header et le
 
 {% blockquote
   "Ah, flexbox, mon vieil ami, ainsi nous nous retrouvons !",
-  "Moi-même (pas vraiment, c'est juste pour mettre dans l'ambiance)"
+  "Moi-même (pas vraiment, c'est juste pour l'ambiance)"
 %}
 
 Me voilà donc avec cette implémentation simple :
@@ -38,7 +38,7 @@ body {
 
 {% figure
   "base.png",
-  "Le main correctement placé au centre de l'espace vide",
+  "Le main correctement placé au centre de l'espace vide.",
   "Chacun des trois descendants directs du <code>body</code> a une bordure bleue. Jusqu'ici, tout va bien."
 %}
 
@@ -62,7 +62,7 @@ Hélas ! Flexbox ne s'intéresse à rien d'autre qu'à ses propres enfants direc
 
 {% figure
   "wrapped.png",
-  "Le header est placé en haut, le main et le footer sont ensembles, collés en bas",
+  "Le header est placé en haut, le main et le footer sont ensembles, collés en bas.",
   "Regardez les bordures bleues : le <code>body</code> n'a plus que deux enfants directs."
 %}
 
@@ -79,7 +79,7 @@ my-component {
 
 {% figure
   "fail.png",
-  "Le main est collé sous le header, avec un grand espace entre le main et le footer",
+  "Le main est collé sous le header, avec un grand espace entre le main et le footer.",
   "<code>my-component</code> est un conteneur flex lui-même... Mais cela ne centre pas le bloc <code>main</code> pour autant."
 %}
 
@@ -145,7 +145,7 @@ my-component {
 }
 ```
 
-<aside>En réalité, certaines propriétés CSS (<code>font-size</code>, <code>color</code>...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.</aside>
+<aside>Note : En réalité, certaines propriétés CSS (<code>font-size</code>, <code>color</code>...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.</aside>
 
 Donc... Cela signifie-t-il que du point de vue de flexbox, `main` et `footer` sont de nouveau des enfants directs du `body` ? Oui ! `my-component` n'a plus besoin d'être un conteneur flex lui-même. La propriété `justify-content: space-between` appliquée au `body` fonctionne de nouveau.
 
@@ -153,13 +153,13 @@ C'est la solution la plus courte présentée dans cet article : un sélecteur et
 
 {% codepen "https://codepen.io/bcalou/pen/xNJVWG" %}
 
-Notez que la bordure bleue qui entouraient `my-component` a disparu : en effet, la boîte n'est plus rendue, donc les propriétés correspondantes (<code>margin</code>, <code>padding</code>, <code>border</code>...) n'ont plus d'effet.
+Notez que la bordure bleue qui entourait `my-component` a disparu : en effet, la boîte n'est plus rendue, donc les propriétés correspondantes (<code>margin</code>, <code>padding</code>, <code>border</code>...) n'ont plus d'effet.
 
 Bien que j'aime la belle simplicité de cette solution, `display: contents` possède ses inconvénients.
 
 `display: contents` peut provoquer des **problèmes d'accessibilité**, car l'élément est caché de l'arbre d'accessibilité. Si vous l'utilisez sur un élément `ul`, l'information qu'il s'agit d'une liste sera perdue dans de nombreux navigateurs.
 
-Ce n'est pas un problème dans notre cas, cependant, puisque `my-component` ne véhicule pas de sens sémantique particulier. Mais l'on pourrait toutefois se méfier du **support navigateur**, qui dans cette zone grise que j'appelerai la zone <q>meh...</q>.
+Ce n'est pas un problème dans notre cas, cependant, puisque `my-component` ne véhicule pas de sens sémantique particulier. Mais l'on pourrait toutefois se méfier du **support navigateur**, qui est dans cette zone grise que j'appelerai la zone <q>meh...</q>.
 
 <aside>Mise à jour 2023 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents" target="_blank">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
 
@@ -171,7 +171,7 @@ Ce n'est qu'en rédigeant cet article que je me suis souvenu d'un autre article,
 
 Quatre ans plus tard, je ne suis pas sûr qu'il soit bien connu. Mais vous pouvez utiliser `margin-left: auto`, pas exemple, pour « pousser » un élément flexbox aussi loin que possible vers la droite.
 
-Voyez plutôt ce codepen. L'élément de prix possède la propriété `margin-left: auto`.
+Voyez plutôt ce Codepen. L'élément de prix possède la propriété `margin-left: auto`.
 
 {% codepen "https://codepen.io/samserif/pen/GpwyOg" %}
 
@@ -190,7 +190,7 @@ Ainsi, le « secret » fonctionne aussi avec plusieurs marges `auto`.
 
 Et la voici donc, cette merveilleuse solution à notre problème : faire de `my-component` un conteneur flex de nouveau, et utiliser `margin: auto 0` sur l'élément `main`.
 
-<aside>Mise à jour 2023 : utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...</aside>
+<aside>Mise à jour 2023 : Utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...</aside>
 
 ```css
 my-component {

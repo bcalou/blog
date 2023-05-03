@@ -14,7 +14,7 @@ Le sondage <i>State of CSS</i> de l'année 2022 propose un excellent outil appel
 
 Par exemple, voici un tableau croisant l'usage des propriétés <code>scroll-snap</code> avec l'usage de Bootstrap.
 
-{% img "scrollsnap.png", "Un tableau croisant l'usage des propriétés scroll-snap avec l'usage de Bootstrap" %}
+{% img "scrollsnap.png", "Un tableau croisant l'usage des propriétés scroll-snap avec l'usage de Bootstrap." %}
 
 Cela peut sembler un peu compliqué, mais je vais clarifier dans quelques instants. Nous avons toutes et tous des idées préconçues sur CSS :
 
@@ -23,7 +23,7 @@ Cela peut sembler un peu compliqué, mais je vais clarifier dans quelques instan
 
 Comme toujours, la réalité est plus complexe, et j'ai trouvé que cet outil était une bonne opportunité pour explorer les relations entre les frameworks CSS et le CSS natif.
 
-Peut-être pouvons nous commencer par nous mettre d'accord sur deux points :
+Peut-être pouvons nous commencer par nous mettre d'accord sur deux&nbsp;points :
 
 - Il n'est pas nécessaire de connaître chaque propriété CSS pour écrire un CSS de qualité. Ce qui compte est de construire un bon modèle mental du fonctionnement de CSS.
 - En même temps, il est utile de connaître une bonne quantité de propriétés CSS pour pouvoir s'en servir lorsque cela est nécessaire, comme une boîte à outils.
@@ -48,17 +48,11 @@ Qui selon vous aura la meilleure connaissance du CSS natif ?
 
 Regardons donc ce que le <i>Data Explorer</i> peut nous apprendre, avec l'exemple des propriétés <code>scroll-snap</code>. Voici un zoom sur une cellule spécifique :
 
-{% img "zoom.png", "Les utilisations croisées de Bootstrap et scroll-snap" %}
+{% img "zoom.png", "Les utilisations croisées de Bootstrap et scroll-snap." %}
 
-Voici comment lire cette cellule : dans l'ensemble, 34% des devs a répondu avoir déjà utilisé les propriétés <code>scroll-snap</code>. Cependant, si l'on regarde uniquement les fans de Bootstrap, seulement 26% utilisent <code>scroll-snap</code>, soit 8 points de moins.
+Voici comment lire cette cellule : dans l'ensemble, 34% des devs a répondu avoir déjà utilisé les propriétés <code>scroll-snap</code>. Cependant, si l'on regarde uniquement les fans de Bootstrap, seulement 26% utilisent <code>scroll-snap</code>, soit 8&nbsp;points de moins.
 
 Voici donc ce que j'ai entrepris : dans un [horrible document](https://docs.google.com/spreadsheets/d/1R_FNL93XDzFRNXLUYo4IYuCKu5lIYFWIBmVmeJ2ln9M/edit?usp=sharing) que vous n'avez pas besoin d'ouvrir, j'ai répertorié ces variations pour les 54 propriétés CSS présentées et pour nos 5 profils.
-
-{% figure
-  "sheet.png",
-  "Les variations pour la propriété scroll-snap et les 5 profils",
-  "Comme expliqué précédemment, les fans de Bootstrap utilisent moins les propriétés <code>scroll-snap</code> (-8 points). Mais les exs et les « non merci » l'utilisent plus que la moyenne."
-%}
 
 ## Bootstrap, les résultats
 
@@ -66,31 +60,29 @@ Et voici nos 5 profils, du moins familier avec le CSS natif au plus familier :
 
 |     | Variation de connaissance du CSS natif  	| 
 |-------	|-------	|
-| Les késako | 🔴 -11 points |
-| Les « pourquoi pas » | 🔴 -9 points |
-| Les fans | 🟠 -2 points |
+| Les késako | 🔴&nbsp;-11&nbsp;points |
+| Les « pourquoi pas » | 🔴&nbsp;-9&nbsp;points |
+| Les fans | 🟠 -2&nbsp;points |
 | Les « non merci » | Pas de variation |
-| Les exs | 🟢 +2 points |
+| Les exs | 🟢&nbsp; +2&nbsp;points |
 
 ### Les késako
 
-Le profil **késako** (qui ne sait pas ce qu'est Bootstrap) est corrélé avec une plus faible connaissance du CSS natif : 🔴 **-11 points**.
+Le profil **késako** (qui ne sait pas ce qu'est Bootstrap) est corrélé avec une plus faible connaissance du CSS natif : 🔴&nbsp;**-11&nbsp;points**.
 
 Théorie personnelle : Bootstrap est tant utilisé que si vous ne le connaissez pas (seulement 0,5% des réponses), vous êtes probablement en train de découvrir CSS. Il est donc logique que vous ayez encore une connaissance du CSS lacunaire.
 
-<aside>
-Note : Merci de garder à l'esprit que les théories personnelles sont des théories... et qu'elles sont personnelles.
-</aside>
+<aside>Note : Merci de garder à l'esprit que les théories personnelles sont des théories... et qu'elles sont personnelles.</aside>
 
 ### Les « pourquoi pas »
 
-Le profil « **pourquoi pas** » (qui est intéressé par la découverte de l'outil) est également corrélé avec une plus faible connaissance du CSS natif : 🔴 **-9 points**.
+Le profil « **pourquoi pas** » (qui est intéressé par la découverte de l'outil) est également corrélé avec une plus faible connaissance du CSS natif : 🔴&nbsp;**-9&nbsp;points**.
 
 Théorie personnelle : ces profils pourraient également être ceux de personnes débutantes n'ayant pas encore eu le temps de tester Bootstrap. Elles souhaiteraient l'essayer car c'est un outil très utilisé et qu'il est encore trop tôt pour elles pour décider ou non de s'en passer.
 
 ### Les fans
 
-Le profil des **fans** (qui ont utilisé Bootstrap et l'utiliseraient de nouveau) obtiennent un bien meilleur résultat, mais toujours 🟠 **-2 points** en-dessous de la moyenne.
+Le profil des **fans** (qui ont utilisé Bootstrap et l'utiliseraient de nouveau) obtiennent un bien meilleur résultat, mais toujours 🟠 **-2&nbsp;points** en-dessous de la moyenne.
 
 Théorie personnelle : ces personnes ont bien plus de connaissances que les késako et les « pourquoi pas » car elles ont peut être codé avec Bootstrap (entre autres outils) depuis des années et accumulé des savoirs en cours de route. Cela étant dit, l'usage de Bootstrap ne facilite pas la découverte de nouvelles fonctionnalités CSS, ou Bootstrap est suffisant pour ce qu'elles font et elles ne se préocuppent pas tant que ça des nouveautés (ou n'en ont pas le temps !)
 
@@ -102,17 +94,17 @@ Théorie personnelle : décider qu'un outil n'est pas pour vous requiert une com
 
 ### Les exs
 
-Les **exs** (qui ont utilisé Bootstrap mais ne souhaitent plus l'utiliser) font mieux que la moyenne : 🟢 **+2 points**.
+Les **exs** (qui ont utilisé Bootstrap mais ne souhaitent plus l'utiliser) font mieux que la moyenne : 🟢&nbsp;**+2&nbsp;points**.
 
 Théorie personnelle : apprendre à maîtriser un framework puis décider d'en arrêter l'utilisation est un processus long, ces personnes ont donc une expérience substantielle. Elles ont abandonné Bootstrap car leur approche du CSS a évolué (et CSS aussi, permettant ce départ pour certaines personnes). Elles ont peut être même été témointes de la longue transformation de CSS au cours des années. Elles ont décidé que Bootstrap n'était plus pour elles et d'utiliser le CSS natif davantage. Par ailleurs, on ne choisit pas toujours ses outils : elles ont peut être été contraintes d'utiliser Boostrap pour un employeur ou un client, tout en investissant dans le CSS natif en parallèle.
 
 Voici les détails groupés par catégories :
 
-{% img "bootstrap.png", "Détails des résultats groupés par catégories de fonctionnalités CSS" %}
+{% img "bootstrap.png", "Détails des résultats groupés par catégories de fonctionnalités CSS." %}
 
-Le plus grand écart (-8 points) entre les exs et les fans se situe au niveau des fonctionnalités d'interaction (`scroll-snap`, interactions tactiles, `overscroll-behavior`...).
+Le plus grand écart (-8&nbsp;points) entre les exs et les fans se situe au niveau des fonctionnalités d'interaction (`scroll-snap`, interactions tactiles, `overscroll-behavior`...).
 
-Je pense qu'il faut aussi noter que les catégorie des fans est correlée avec une moins bonne connaissance des fonctionnalités liées à l'accessibilité (-5 points par rapport aux exs).
+Je pense qu'il faut aussi noter que les catégorie des fans est correlée avec une moins bonne connaissance des fonctionnalités liées à l'accessibilité (-5&nbsp;points par rapport aux exs).
 
 ## Tailwind, la méthodologie
 
@@ -138,49 +130,49 @@ Et les résultats eux-même ont aussi fortement changé.
 
 |      | Variation de connaissance du CSS natif  	| 
 |-------	|-------	|
-| Les késako | 🔴 -9 points |
-| Les « pourquoi pas » | 🔴 -5 points |
-| Les « non merci » | 🟢 +1 point |
-| Les fans | 🟢 +2 points |
-| Les exs | 🔥 +6 points |
+| Les késako | 🔴&nbsp;-9&nbsp;points |
+| Les « pourquoi pas » | 🔴&nbsp;-5&nbsp;points |
+| Les « non merci » | 🟢&nbsp; +1&nbsp;point |
+| Les fans | 🟢&nbsp; +2&nbsp;points |
+| Les exs | 🔥&nbsp;+6&nbsp;points |
 
 ## Les késako
 
-Le profil **késako** (qui ne sait pas ce qu'est Tailwind) est correlé avec une faible connaissance du CSS natif : 🔴 **-9 points**.
+Le profil **késako** (qui ne sait pas ce qu'est Tailwind) est correlé avec une faible connaissance du CSS natif : 🔴&nbsp;**-9&nbsp;points**.
 
-Théorie personnelle : comme pour les personnes qui ne connaissent pas Bootstrap. Si vous ne connaissez pas Tailwind, vous êtes possiblement en train de découvrir l'écosystème CSS. Mais vous pourriez aussi avoir des années d'expérience et ne pas être au courant des dernières actualités CSS, ce qui pourrait expliquer pourquoi ce profil n'est « que » 9 points en dessous de la moyenne (tandis que pour Bootstrap, c'était 11).
+Théorie personnelle : comme pour les personnes qui ne connaissent pas Bootstrap. Si vous ne connaissez pas Tailwind, vous êtes possiblement en train de découvrir l'écosystème CSS. Mais vous pourriez aussi avoir des années d'expérience et ne pas être au courant des dernières actualités CSS, ce qui pourrait expliquer pourquoi ce profil n'est « que » 9&nbsp;points en dessous de la moyenne (tandis que pour Bootstrap, c'était 11).
 
 ## Les « pourquoi pas »
 
-Le profil « **pourquoi pas** » (qui aimerait découvrir Tailwind) est correlé avec une baisse de 🔴 **-5 points** par rapport à la moyenne.
+Le profil « **pourquoi pas** » (qui aimerait découvrir Tailwind) est correlé avec une baisse de 🔴&nbsp;**-5&nbsp;points** par rapport à la moyenne.
 
 Théorie personnelle : c'est une baisse moins importante que pour Bootstrap (-9&nbsp;points), mais la logique pourrait être la même. Si vous n'avez pas utilisé cet outil très répandu ou que vous n'avez pas encore le recul nécessaire pour décider de vous en passer, vous êtes peut-être en phase de découverte de CSS, il est donc logique que vous ne connaissiez pas le CSS natif parfaitement non plus. C'est tout de même un meilleur score qu'avec Bootstrap. Si vous avez entendu parler de Tailwind, cela signifie que vous vous intéressez aux évolutions récentes de CSS, tandis que vous pourriez avoir entendu parler de Bootstrap il y a longtemps de cela.
 
 ## Les « non merci »
 
-Le profil « **non merci** » (qui a entendu parler de Tailwind mais n'est pas intéressé) dépasse legèrement la moyenne : 🟢 **+1 point**.
+Le profil « **non merci** » (qui a entendu parler de Tailwind mais n'est pas intéressé) dépasse legèrement la moyenne : 🟢&nbsp;**+1&nbsp;point**.
 
 Théorie personnelle : comme pour Bootstrap. Ces personnes ont assez d'expérience pour juger qu'un outil leur correspond ou non. Cette expérience s'accompagne d'une bonne connaissance du CSS natif, juste au dessus de la moyenne. Mais...
 
 ## Les fans
 
-Les **fans** (qui ont utilisé Tailwind et l'utiliseront de nouveau) sont dans une position très différente. Avec Bootstrap, ces personnes connaissaient moins de CSS natif (-2&nbsp;points), mais avec Tailwind, elles en connaissent plus : 🟢 **+2 points** ! Encore mieux que les « non merci ».
+Les **fans** (qui ont utilisé Tailwind et l'utiliseront de nouveau) sont dans une position très différente. Avec Bootstrap, ces personnes connaissaient moins de CSS natif (-2&nbsp;points), mais avec Tailwind, elles en connaissent plus : 🟢&nbsp;**+2&nbsp;points** ! Encore mieux que les « non merci ».
 
 Théorie personnelle : contrairement à ce que l'on lit parfois, aimer Tailwind n'est pas corrélé avec une moindre connaissance du CSS natif. Tout d'abord, rappelons-nous qu'avec ses classes utilitaires, Tailwind utilise une approche plus proche du CSS natif que Bootstrap. Les devs Tailwind connaissent par exemple les concept tels que _flex_, là où les devs Bootstrap utiliseraient une classe <code>column</code> (qui utilise en réalité _flexbox_ en coulisse et n'a rien à voir avec les vraies colonnes CSS...) Enfin, il y a le fait que Tailwind soit un outil récent. Si vous lisez des articles sur Tailwind, il est presque impossible que vous ne lisiez pas aussi des articles sur les améliorations natives de CSS. Tailwind fait partie de l'écosystème moderne. Ceci étant dit...
 
 ## Les exs
 
-Le profil des **exs** (ayant utilisé Tailwind mais ne souhaitant plus l'utiliser) fait bien mieux que la moyenne : 🔥 **+6 points**.
+Le profil des **exs** (ayant utilisé Tailwind mais ne souhaitant plus l'utiliser) fait bien mieux que la moyenne : 🔥&nbsp;**+6&nbsp;points**.
 
 Théorie personnelle : bien que les devs utilisant Tailwind fassent partie de l'écosystème moderne et connaissent leur CSS, les devs ayant tourné leur dos à Tailwind semblent en savoir plus. Premièrement, Tailwind ne résoud pas (et ne prétend pas résoudre) et ne couvre pas tout. Certains fonctionnalités modernes, comme `:has`, les _container queries_, les _cascade layers_, les `@supports` _queries_... nécessitent de les connaître nativement pour les utiliser à leur plein potentiel. Cela ne signifie pas que les fans de Tailwind ne les connaissent pas et ne peuvent pas utiliser les deux, mais les personnes déçues par l'approche de Tailwind semblent simplement investir plus de temps dans la compréhension du CSS natif. Cela n'en fait pas de meilleures personnes, mais leur boîte à outil semble un peu plus étendue.
 
 Voici le détail des résultats par catégories de fonctionnalités :
 
-{% img "tailwind.png", "Détail des résultats pour Tailwind" %}
+{% img "tailwind.png", "Détail des résultats pour Tailwind." %}
 
-Ici, le plus gros écart entre les exs et les fans (-8 points) concerne la catégorie des sélecteurs, qui contient `::marker`, `:has` et `:where`. Les fans de Tailwind ne les utilisent pas beaucoup.
+Ici, le plus gros écart entre les exs et les fans (-8&nbsp;points) concerne la catégorie des sélecteurs, qui contient `::marker`, `:has` et `:where`. Les fans de Tailwind ne les utilisent pas beaucoup.
 
-Encore une fois, il y a un gros écart au rayon accessibilité : si les personnes utilisant Tailwind font mieux que la moyenne (+2 points), les exs font bien mieux avec +9&nbsp;points.
+Encore une fois, il y a un gros écart au rayon accessibilité : si les personnes utilisant Tailwind font mieux que la moyenne (+2&nbsp;points), les exs font bien mieux avec +9&nbsp;points.
 
 ## Conclusion
 
@@ -204,6 +196,6 @@ Cependant, elles devraient être conscientes que maîtriser Tailwind n'est pas e
 
 [2022 a été une excellente année pour CSS](https://bastiencalou.fr/blog/l-ere-du-no-hacks-css) et je pense que connaître ces capacités natives est un atout puissant. Bien sûr, cela ne remplace pas une compréhension profonde de la logique CSS, qui n'est pas juste une liste de propriétés, mais cela fournit une vaste boîte à outil dans laquelle piocher pour faire face à divers obstacles.
 
-Pour Bootstrap et Tailwind, les personnes connaissant le plus de CSS natif étaient celles qui avaient testé le framework. Alors ne rejetez pas forcément tous ces outils sur un principe de pureté : découvrir de nouvelles façons d'écrire du CSS — même pour réaliser qu'elles ne vous conviennent pas au final — est potentiellement précieux et pourrait donner un nouvel éclairage à la façon dont vous écrivez du CSS natif.
+Pour Bootstrap et Tailwind, les personnes connaissant le plus de CSS natif étaient celles qui avaient testé le framework. Alors ne rejetez pas forcément tous ces outils sur un principe de pureté : découvrir de nouvelles façons d'écrire du CSS – même pour réaliser qu'elles ne vous conviennent pas au final – est potentiellement précieux et pourrait donner un nouvel éclairage à la façon dont vous écrivez du CSS natif.
 
 Que pensez-vous de tout cela ? Si vous parvenez à des conclusions différentes, n'hésitez pas à les partager (en respectant tout le monde, ce n'est que du CSS !).

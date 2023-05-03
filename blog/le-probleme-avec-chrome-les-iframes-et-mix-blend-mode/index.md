@@ -8,8 +8,6 @@ originalPost: https://dev.to/bcalou/the-trouble-with-chrome-iframes-and-mix-blen
 series: Aventures CSS au pays du canvas
 ---
 
-Ceci est un bonus pour l'article [Quelle est la couleur d'une page blanche ?](https://bastiencalou.fr/posts/quelle-est-la-couleur-d-une-page-blanche/)
-
 Dans cet article, je vais décrire un bug très spécifique de Chrome, et explorer ce qu'il nous apprend sur le comportement du canvas, que j'ai décrit dans l'article initial.
 
 Si vous le pouvez, je vous recommande d'utiliser Chrome pour la lecture de cet article, afin de voir ce qu'il se passe.
@@ -41,14 +39,14 @@ Ce CSS est valide et devrait produire un titre rose (rose étant la différence 
 
 - Firefox passe le test (titre rose)
 - Safari passe le test (titre rose)
-- Chrome échoue (titre vert) — Je l'ai fait fonctionner dans le post original avec une astuce que j'expliquerai par la suite
+- Chrome échoue (titre vert) – Je l'ai fait fonctionner dans le post original avec une astuce que j'expliquerai par la suite
 
 D'après ce que nous avons appris dans l'article initial, voici ce qui se passe :
 
 <ol>
-  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas)</li>
-  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>)</li>
-  <li>Le canvas est blanc (la valeur est issue du <code>body</code>)</li>
+  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas).</li>
+  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>).</li>
+  <li>Le canvas est blanc (la valeur est issue du <code>body</code>).</li>
 </ol>
 
 Dans Firefox et Safari, le `h1` n'a aucun problème pour se mélanger au canvas blanc. Mais cela ne fonctionne pas sous Chrome.
@@ -104,17 +102,17 @@ Cela va à l'encontre des bonnes pratiques dictées par le W3C, mais si vous don
 Voici donc ce qui se passe :
 
 <ol>
-  <li>Le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au <code>html</code> faisant office de leurre)</li>
-  <li>Le <code>html</code> est transparent (<code>white</code> spécifiée en CSS, mais volé par le canvas)</li>
-  <li>Le canvas est blanc (valeur récupérée du <code>html</code>)
+  <li>Le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au <code>html</code> faisant office de leurre).</li>
+  <li>Le <code>html</code> est transparent (<code>white</code> spécifiée en CSS, mais volé par le canvas).</li>
+  <li>Le canvas est blanc (valeur récupérée du <code>html</code>).</li>
 </ol>
 
 En quelque sorte, nous posons un appât avec la couleur du fond du `html`, pour que le `body` puisse conserver son propre arrière-plan, et que le titre puisse se mélanger correctement.
 
 {% figure
   "hiding.gif",
-  "Un homme baisse le siège de sa voiture pour se cacher",
-  "<code>body</code> se cachant du canvas pour conserver son arrière-plan"
+  "Un homme baisse le siège de sa voiture pour se cacher.",
+  "<code>body</code> se cachant du canvas pour conserver son arrière-plan."
 %}
 
 Un point contre-intuitif est que n'importe quel fond fera l'affaire, même un fond quasiment invisible :
@@ -166,14 +164,14 @@ Et maintenant, la touche finale : vous pouvez clairement voir la distinction ent
 
 {% img
   "resize.gif",
-  "Lorsque le pseudo-élément ré-intègre le body, la fusion fonctionne et il devient rose comme prévu"
+  "Lorsque le pseudo-élément ré-intègre le body, la fusion fonctionne et il devient rose comme prévu."
 %}
 
 Analysons la situation :
 
-- le texte se mélange avec le `body` (valeur `white` dans le CSS)
-- le texte ne se mélange pas avec le `html` (valeur `white` dans le CSS volée par le canvas, donc transparent)
-- le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l'`iframe` sous Chrome.
+- Le texte se mélange avec le `body` (valeur `white` dans le CSS)
+- Le texte ne se mélange pas avec le `html` (valeur `white` dans le CSS volée par le canvas, donc transparent)
+- Le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l'`iframe` sous Chrome.
 
 ## Pourquoi cela m'importe-t-il tant ?
 
@@ -192,8 +190,8 @@ J'aidais un de mes étudiants à créer un effet avec `mix-blend-mode`. J'ai inn
 
 {% figure
   "worthy.gif",
-  "Un homme plein de désillusion retire ses lunettes",
-  "Je ne suis plus digne d'être ton professeur"
+  "Un homme plein de désillusion retire ses lunettes.",
+  "Je ne suis plus digne d'être ton professeur."
 %}
 
 Il m'a fallu pas mal de temps pour comprendre tout ce que j'ai expliqué dans ces deux articles. Pour être honnête, j'ai d'abord fonctionné en mode « corriger maintenant, comprendre plus tard ». J'ai ajouté une couleur d'arrière-plan à l'élément `html`, forcé la hauteur du `body` à `100vh`, et voilà !
@@ -208,20 +206,20 @@ En réalité, il s'agissait même d'un bug qui se produisait en dehors des `ifra
 
 Réalisant que le bug se produisait toujours dans les `iframes`, je me suis permis de le signaler dans [un commentaire](https://bugs.chromium.org/p/chromium/issues/detail?id=711955#c16), ce qui a conduit à la création d'un [ticket dédié](https://bugs.chromium.org/p/chromium/issues/detail?id=711955).
 
-<aside>Mise à jour 2023 : le bug, qui il faut le dire ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.</aside>
+<aside>Mise à jour 2023 : Le bug, qui ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.</aside>
 
 ## Méfiez-vous de vos habitudes de test
 
 Je suis amoureux de CodePen. Je pense que je n'ai pas besoin d'expliquer pourquoi. Je m'en sers presque tous les jours.
 
-Mais dans ce cas précis, CodePen m'a mis dans une situation qui n'était **pas** la même que celle que je tentais de débloquer. J'aidais un étudiant à créer une page qui ne contenait pas d'`iframe`. En utilisant un outil présentant mon code dans une `iframe`, j'ai changé les conditions initiales. Et comme nous l'avons vu, c'est un changement non néligeable lorsqu'on parle de Chrome et de `mix-blend-mode`.
+Mais dans ce cas précis, CodePen m'a mis dans une situation qui n'était **pas** la même que celle que je tentais de débloquer. J'aidais un étudiant à créer une page qui ne contenait pas d'`iframe`. En utilisant un outil présentant mon code dans une `iframe`, j'ai changé les conditions initiales. Et comme nous l'avons vu, c'est un changement non négligeable lorsqu'on parle de Chrome et de `mix-blend-mode`.
 
-Notez que CodePen n'est pas à blâmer : c'est Chrome qui est en faute ici, et CodePen n'a pas d'autre choix que de présenter mon code dans une `iframe` — sauf si vous utilisez la vue _debug_ !
+Notez que CodePen n'est pas à blâmer : c'est Chrome qui est en faute ici, et CodePen n'a pas d'autre choix que de présenter mon code dans une `iframe` – sauf si vous utilisez la vue _debug_ !
 
 {% figure
   "debug.jpg",
-  "Le menu de CodePen permettant d'accéder à la vue debug",
-  "Utilisez la vue debug pour éxécuter votre code dans une vraie page — sans <code>iframe</code> !"
+  "Le menu de CodePen permettant d'accéder à la vue debug.",
+  "Utilisez la vue <i>debug</i> pour éxécuter votre code dans une vraie page – sans <code>iframe</code> !"
 %}
 
 Je suis aussi à blâmer : j'avais une telle confiance aveugle en CodePen que j'ai inconsciemment écarté l'hypothèse que l'utiliser pouvait affecter mon résultat.

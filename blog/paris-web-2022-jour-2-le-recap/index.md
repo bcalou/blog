@@ -22,7 +22,7 @@ Une première présentation donnée par deux personnes : une voyante et une non-
 
 {% blockquote "Nous sommes collègues. Il nous arrive souvent de regarder le même site mais de ne pas voir la même chose." %}
 
-<aside>Note : les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.</aside>
+<aside>Note : Les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.</aside>
 
 Sophie et Bart définissent ARIA comme un moyen permettant de modifier l'<i>accessibility tree</i> (que vous pouvez voir dans le dev tools au même titre que le <i>DOM tree</i>).
 
@@ -78,14 +78,14 @@ Le monde de l'urgence est fait de contraintes physiques et mentales imprédictib
 
 L'occasion également de tordre le cou au mythe du « produit minimum viable » (MVP). Une méthode excellente dans nombre de cas, mais tout simplement inapplicable lors de la refonte d'un service aussi critique : quand on sauve des vies, on ne peut pas commencer par la « version simple ».
 
-{% blockquote "Move fast and don't break things" %}
+{% blockquote "Move fast and don't break things." %}
 {% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=10167" %}
 
 ## 5. Comment Canal+ travaille et intègre l’accessibilité numérique ?&nbsp;⭐
 
 Depuis un an, Amélien a eu la délicate tâche de sensibiliser les équipes de Canal+ aux enjeux et aux techniques de l'accessibilité.
 
-Les améliorations sont là, mais on ne peut s'empêcher de constater que même dans une si grosse entreprise, les bases ne sont pas acquises : comment peux-t-on encore être en charge de l'intégration d'un service massivement utilisé tel que myCanal sans se soucier des problèmes de focus, une des bases de l'accessibilité ? Le chemin est long et le recrutement (et donc les formations) doivent évoluer.
+Les améliorations sont là, mais on ne peut s'empêcher de constater que même dans une si grosse entreprise, les bases ne sont pas acquises : comment peut-on encore être en charge de l'intégration d'un service massivement utilisé tel que myCanal sans se soucier des problèmes de focus, une des bases de l'accessibilité ? Le chemin est long et le recrutement (et donc les formations) doivent évoluer.
 
 Enfin, je suis interpellé par ce rôle étrange chez Canal+ : <i>Legal Product Manager</i>, en charge de la vie privée, l'accessibilité et l'éco-conception. Une si grosse entreprise pense-t-elle que ces trois domaines, qui n'ont de commun que l'obligation légale et/ou l'image de l'entreprise, ne mérite pas au moins 3 emplois distincts ?
 

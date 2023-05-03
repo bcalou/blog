@@ -5,6 +5,7 @@ tags:
   - javascript
   - audio
 layout: layouts/post.njk
+originalPost: https://dev.to/bcalou/une-musique-de-jeu-evolutive-grace-a-javascript-4568
 ---
 
 Le week-end dernier, j'ai eu le plaisir de composer la musique de <cite>Blobby Zombie</cite>, un jeu créé en 48h seulement par mon ami Simon et son camarade Pierre-Yves, lors d'une Game Jam organisée par [Hitbox Makers](http://www.hitboxmakers.fr).
@@ -34,8 +35,8 @@ Voici un schéma, c'est important pour la suite, et j'aime les schémas.
 
 {% figure
   "schema.png",
-  "Schéma de la structure du morceau",
-  "Les instruments s'empilent de cycle en cycle pour faire monter la pression"
+  "Schéma de la structure du morceau.",
+  "Les instruments s'empilent de cycle en cycle pour faire monter la pression."
 %}
 
 Mais comment adapter cette montée en pression de plusieurs minutes à une partie qui pourrait se dérouler beaucoup plus vite ?
@@ -48,8 +49,8 @@ Bon, il nous faut un moyen de sauter de cycle en cycle, par exemple lorsqu'un no
 
 {% figure
   "saut.png",
-  "Passage d'une section à une autre",
-  "Passer d'une section à l'autre permet d'adapter la situation à l'évolution du jeu"
+  "Passage d'une section à une autre.",
+  "Passer d'une section à l'autre permet d'adapter la situation à l'évolution du jeu."
 %}
 
 Puisque mes cycles font 15 secondes, c'est assez facile à calculer.
@@ -64,17 +65,17 @@ C'est exactement ce que fait cette première démo. À chaque fois que vous cliq
 
 Si vous jouez un peu avec, vous pouvez probablement entendre que le résultat n'est pas très satisfaisant.
 
-Il y a deux raison à cela :
+Il y a deux raisons à cela :
 
-- sauter au début du cycle interrompt le rythme que vous pouvez entendre dès le début et tout au long du morceau (cette note unique et répétitive)
-- sauter au début du cycle suivant interrompt la **progression d'accords** et la fait recommencer au début, ce qui n'est pas du tout naturel
+- sauter au début du cycle interrompt le rythme que vous pouvez entendre dès le début et tout au long du morceau (cette note unique et répétitive) ;
+- sauter au début du cycle suivant interrompt la **progression d'accords** et la fait recommencer au début, ce qui n'est pas du tout naturel.
 
 La progression d'accords, c'est simplement l'enchaînement des 4 accords qui donne sa structure au morceau. On entend cette progression à partir du deuxième cycle.
 
 {% figure
   "accords.png",
-  "La progression d'accords du morceau",
-  "Voici un cycle au complet : 4 accords qui font peur s'enchaînent sur 8 mesures"
+  "La progression d'accords du morceau.",
+  "Voici un cycle au complet : 4 accords qui font peur s'enchaînent sur 8 mesures."
 %}
 
 On va simplifier un peu (beaucoup) le nom des accords et les appeler C, G, C et F (do, sol, do et fa).
@@ -83,7 +84,7 @@ On peut ainsi mettre à jour notre schéma, pour représenter cette progression 
 
 {% figure
   "grille.png",
-  "Shéma de la structure du morceau et de la progression d'accords",
+  "Shéma de la structure du morceau et de la progression d'accords.",
   "À l'exception de la note unique à la basse et de la batterie qui est uniquement rythmique, chaque nouveau cycle se base sur la même progression d'accords."
 %}
 
@@ -91,8 +92,8 @@ Le problème, donc, c'est que si nous passons du milieu du cycle 3 au début du 
 
 {% figure
   "rupture.png",
-  "Saut de sol vers do",
-  "On saute du deuxième accord de la section 3 vers le premier accord de la section 4"
+  "Saut de sol vers do.",
+  "On saute du deuxième accord de la section 3 vers le premier accord de la section 4."
 %}
 
 Patatra, la progression d'accords est cassée. Alors que nous nous préparions à entendre C puis F pour finir le cycle 3, nous reprenons la progression au départ : C, puis G à nouveau ! Et si on enchaîne vite les cycles, on entend quasiment le premier accord en permanence.
@@ -103,11 +104,11 @@ Pour remédier à cette violation rythmique et harmonique intolérable à l'orei
 
 {% figure
   "fluide.png",
-  "Saut de sol vers sol",
-  "Cette fois, on part du deuxième accord du cycle pour arriver sur le deuxième accord du suivant"
+  "Saut de sol vers sol.",
+  "Cette fois, on part du deuxième accord du cycle pour arriver sur le deuxième accord du suivant."
 %}
 
-Techniquement, c'est presque plus simple que la première version : au lieu de calculer le début de la section suivante, nous allons ajouter 15 secondes — la durée d'un cycle — à la position de lecture.
+Techniquement, c'est presque plus simple que la première version : au lieu de calculer le début de la section suivante, nous allons ajouter 15 secondes – la durée d'un cycle – à la position de lecture.
 
 Par exemple, si la musique a commencé depuis 5 secondes, nous pouvons sauter jusqu'à `5 + 15 = 20` secondes (alors que le début du cycle 2 est à 15 secondes).
 

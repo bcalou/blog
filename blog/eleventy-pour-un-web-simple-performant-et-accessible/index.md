@@ -7,6 +7,7 @@ tags:
   - accessibilité
 layout: layouts/post.njk
 series: À la découverte d'Eleventy
+originalPost: https://dev.to/bcalou/eleventy-pour-un-web-simple-performant-et-accessible-4m0p
 ---
 
 Et si nous gardions Vue, React et ses compagnons pour les web app _vraiment_ complexes ? Et s'ils devenaient **l'exception à la règle**, plutôt que d'être notre modèle mental par défaut ?
@@ -21,15 +22,15 @@ Pour découvrir la bête, j'ai réalisé un site tout simple présentant [mes 10
 
 {% figure
   "screenshot.png",
-  "Une capture d'écran du site montrant une liste de livres et leurs descriptions",
-  "C'est pas moche, c'est sobre"
+  "Une capture d'écran du site montrant une liste de livres et leurs descriptions.",
+  "C'est pas moche, c'est sobre."
 %}
 
 Le site est totalement statique : à cette adresse se trouve un fichier HTML, accompagné d'un peu de CSS et de JS. Pour la performance, on ne fait pas mieux.
 
 {% figure
   "lighthouse.png",
-  "L'outil lighthouse montre des scores de 100/100 dans les quatres catégories : performance, accessibilité, bonnes pratiques et référencement",
+  "L'outil lighthouse montre des scores de 100/100 dans les quatres catégories : performance, accessibilité, bonnes pratiques et référencement.",
   "Les scores des divers outils en ligne ne se substituent pas à l'analyse humaine, mais permettent de vérifier que l'essentiel est là."
 %}
 
@@ -47,7 +48,7 @@ Si on voulait résumer grossièrement, on pourrait présenter Eleventy ainsi :
 données + templates = ♡ HTML ♡
 ```
 
-### Markdown, la "base de données"
+### Markdown, la « base de données »
 
 Chaque livre représenté dans le site est un fichier `markdown` (d'autres formats, tels que `JSON` sont possibles). Voici par exemple celui pour le livre _Dune_ :
 
@@ -69,11 +70,11 @@ description: Ce pavé a la réputation d'être un peu chiant, et oui, bon, peut-
 
 Les trois tirets au début et à la fin permettent de définir une table. Le reste est assez direct.
 
-<aside>Note : il serait formidable de pouvoir typer les objets, avec chaque type de champ et des champs optionnels...</aside>
+<aside>Note : Il serait formidable de pouvoir typer les objets, avec chaque type de champ et des champs optionnels...</aside>
 
 Voici donc ma belle liste de livres :
 
-{% img "liste.png", "La liste des 10 fichiers markdown" %}
+{% img "liste.png", "La liste des 10 fichiers markdown." %}
 
 Si nous sommes très, très loin d'une base de données telle qu'on l'entend habituellement, cette simplicité vient avec ses avantages : il est ultra simple de mettre à jour le contenu.
 
@@ -83,7 +84,7 @@ On ne pourra certes pas faire du relationnel bien avancé, mais pour notre exemp
 
 ### Rendre disponible les données
 
-Par défault, il est déjà possible de boucler sur cette collection de livres, qui sera ordonnée par date de création des fichiers markdown.
+Par défaut, il est déjà possible de boucler sur cette collection de livres, qui sera ordonnée par date de création des fichiers markdown.
 
 C'est bien pratique pour les posts d'un blog, mais dans mon cas je souhaite avoir une collection ordonnée par ordre alphabétique. Il faut alors la déclarer dans un fichier dédié, `.eleventy.js` :
 
@@ -101,7 +102,7 @@ Un peu de travail manuel, certes, mais en contrepartie, une grande liberté.
 
 Je pourrais trier par année, par auteur, ou même créer une sous-collection contenant uniquement les livres de moins de 100 pages, pour les moins motivés. Après tout, ce n'est que du JavaScript : on fait exactement ce qu'on veut.
 
-<aside>Important : ce JavaScript n'est pas exécuté côté client, mais bien lors de la génération du HTML statique, que je détaille ensuite.</aside>
+<aside>Important : Ce JavaScript n'est pas exécuté côté client, mais bien lors de la génération du HTML statique, que je détaille ensuite.</aside>
 
 ### Templating
 
@@ -185,8 +186,8 @@ En utilisant un service tel que [Netlify](https://app.netlify.com/) (pour qui tr
 
 {% figure
   "netlify.png",
-  "La configuration Netlify",
-  "La commande <code>build</code> contient l'appel à eleventy"
+  "La configuration Netlify.",
+  "La commande <code>build</code> contient l'appel à Eleventy."
 %}
 
 Le projet Netlify étant lié au projet Github, chaque push ou modification du code sur Github mettra à jour le site en une poignée de secondes.
@@ -214,12 +215,10 @@ Retrouvez le code complet de ce projet sur [Github](https://github.com/bcalou/to
 
 Eleventy fait partie de l'approche [Jamstack](https://jamstack.org/), qui se définit par des termes souvent obscurs, mais dont le point le plus important est sans doute la génération en avance des sites côté back : le _pre-rendering_.
 
-{% img "jamstack.png", "Logo Jamstack" %}
+{% img "jamstack.png", "Logo Jamstack." %}
 
 [Beaucoup de générateurs](https://jamstack.org/generators/) sont d'ailleurs disponibles. Eleventy a la réputation de faire partie des plus simples, ce que j'ai largement pu vérifier par moi-même.
 
 J'aime particulièrement le fait qu'il ne soit pas lié à un langage ou un framework en particulier. Bref, Je le conserve précieusement dans ma boîte à outils.
 
-La prochaine fois, ne vous demandez pas : <q>Quel framework JS vais-je choisir ?</q>
-
-Mais bien : <q>Suis-je dans l'absolue nécessité dans utiliser un ?</q>
+La prochaine fois, ne vous demandez pas <q>Quel framework JS vais-je choisir ?</q>, mais bien <q>Suis-je dans l'absolue nécessité d'en utiliser un ?</q>.

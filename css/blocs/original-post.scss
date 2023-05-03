@@ -1,6 +1,10 @@
 .originalPost {
-  margin-top: 5rem;
+  margin-top: 3rem;
   color: var(--grey-dark);
+
+  @media (min-width: 64em) {
+    margin-top: 4rem;
+  }
 
   a {
     color: var(--grey-dark);

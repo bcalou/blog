@@ -1,5 +1,5 @@
 .postContent {
-  max-width: min(var(--main-content-width), 90vw);
+  max-width: var(--main-content-width);
   container-type: inline-size;
 
   aside {
@@ -8,8 +8,9 @@
     font-style: italic;
 
     a {
-      font-style: normal;
-      text-decoration-color: var(--blue-light) !important;
+        font-style: normal;
+        text-decoration-color: hsl(195, 60%, 50%) !important;
+        text-decoration-color: hsl(195, 100%, 42.5%) !important;
 
       &::before {
         display: none;

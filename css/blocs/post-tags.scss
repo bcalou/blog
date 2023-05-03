@@ -1,12 +1,11 @@
 .postTags {
   margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 
   @media (min-width: 64em) {
     margin-top: 2rem;
-  }
-
-  & > * {
-    margin-right: 1rem;
   }
 
   &::before {
@@ -43,10 +42,10 @@
     content: '';
     display: block;
     position: absolute;
-    inset: 100% 0 0 0;
+    inset: 100% 0 1px 0;
     background-color: var(--blue-lightest);
     z-index: -1;
-    transition: inset 0.3s;
+    transition: top 0.3s;
   }
 
   &:hover,
@@ -56,6 +55,6 @@
 
   &:hover::before,
   &:focus-visible::before {
-    inset: 0;
+    top: 0;
   }
 }
