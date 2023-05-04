@@ -1,5 +1,5 @@
 function readableDate(date) {
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString('fr-FR', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
