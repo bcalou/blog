@@ -3,7 +3,6 @@ const prod = process.env.ELEVENTY_ENV === 'prod';
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const cssBrowserSupport = require("@11tyrocks/eleventy-plugin-css-browser-support");
 const pluginSass = require('eleventy-sass');
 const embedTwitter = require("eleventy-plugin-embed-twitter");
 
@@ -41,7 +40,6 @@ module.exports = function(eleventyConfig) {
     }
   });
   eleventyConfig.addPlugin(embedTwitter);
-  eleventyConfig.addPlugin(cssBrowserSupport);
 
   // Add shortcodes
   eleventyConfig.addShortcode("blockquote", blockquote);
