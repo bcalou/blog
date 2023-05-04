@@ -198,12 +198,12 @@ Le projet Netlify étant lié au projet Github, chaque push ou modification du c
 
 En revanche, nous avons désormais un site :
 
-- **Léger**, car rien ne peut battre du HTML
-- **Performant**, le CPU n'étant pas sollicité par une montagne de JavaScript
-- **Accessible**, pour peu que le HTML soit écrit correctement bien sûr
-- **Explorable** par les moteurs de recherche
-- **Prédictif**, dans le sens où la complexité se situe côté serveur
-- Aisément **modifiable** et rapidement **déployable**
+- **léger**, car rien ne peut battre du HTML ;
+- **performant**, le CPU n'étant pas sollicité par une montagne de JavaScript ;
+- **accessible**, pour peu que le HTML soit écrit correctement bien sûr ;
+- **explorable** par les moteurs de recherche ;
+- **prédictif**, dans le sens où la complexité se situe côté serveur ;
+- aisément **modifiable** et rapidement **déployable**.
 
 Bref, des objectifs parfois mis à mal lorsqu'on utilise des outils inadaptés, mais des objectifs essentiels...
 

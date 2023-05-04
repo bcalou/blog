@@ -37,16 +37,16 @@ Ce CSS est valide et devrait produire un titre rose (rose étant la différence 
 
 À l'heure où j'écris ces lignes (mai 2020) :
 
-- Firefox passe le test (titre rose)
-- Safari passe le test (titre rose)
-- Chrome échoue (titre vert) – Je l'ai fait fonctionner dans le post original avec une astuce que j'expliquerai par la suite
+- Firefox passe le test (titre rose) ;
+- Safari passe le test (titre rose) ;
+- Chrome échoue (titre vert) – je l'ai fait fonctionner dans le post original avec une astuce que j'expliquerai par la suite.
 
 D'après ce que nous avons appris dans l'article initial, voici ce qui se passe :
 
 <ol>
-  <li>Le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas).</li>
-  <li>Le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>).</li>
-  <li>Le canvas est blanc (la valeur est issue du <code>body</code>).</li>
+  <li>le <code>body</code> est transparent (<code>white</code> est défini dans le CSS, mais la valeur est « volée » par le canvas) ;</li>
+  <li>le <code>html</code> est transparent (valeur par défaut de <code>background-color</code>) ;</li>
+  <li>le canvas est blanc (la valeur est issue du <code>body</code>).</li>
 </ol>
 
 Dans Firefox et Safari, le `h1` n'a aucun problème pour se mélanger au canvas blanc. Mais cela ne fonctionne pas sous Chrome.
@@ -102,9 +102,9 @@ Cela va à l'encontre des bonnes pratiques dictées par le W3C, mais si vous don
 Voici donc ce qui se passe :
 
 <ol>
-  <li>Le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au <code>html</code> faisant office de leurre).</li>
-  <li>Le <code>html</code> est transparent (<code>white</code> spécifiée en CSS, mais volé par le canvas).</li>
-  <li>Le canvas est blanc (valeur récupérée du <code>html</code>).</li>
+  <li>le <code>body</code> est blanc (valeur spécifiée en CSS. La valeur ne peut plus être volée, grâce au <code>html</code> faisant office de leurre) ;</li>
+  <li>le <code>html</code> est transparent (<code>white</code> spécifiée en CSS, mais volé par le canvas) ;</li>
+  <li>le canvas est blanc (valeur récupérée du <code>html</code>).</li>
 </ol>
 
 En quelque sorte, nous posons un appât avec la couleur du fond du `html`, pour que le `body` puisse conserver son propre arrière-plan, et que le titre puisse se mélanger correctement.
@@ -169,20 +169,20 @@ Et maintenant, la touche finale : vous pouvez clairement voir la distinction ent
 
 Analysons la situation :
 
-- Le texte se mélange avec le `body` (valeur `white` dans le CSS)
-- Le texte ne se mélange pas avec le `html` (valeur `white` dans le CSS volée par le canvas, donc transparent)
-- Le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l'`iframe` sous Chrome.
+- le texte se mélange avec le `body` (valeur `white` dans le CSS) ;
+- le texte ne se mélange pas avec le `html` (valeur `white` dans le CSS volée par le canvas, donc transparent) ;
+- le texte ne se mélange pas avec le canvas, bien qu'il soit blanc, à cause du bug de l'`iframe` sous Chrome.
 
 ## Pourquoi cela m'importe-t-il tant ?
 
 Il peut paraître exagéré de se pré-occuper de situations si extrêmes. Ce n'est pas le genre de problème que vous risquez de rencontrer au quotidien. Pensez-y : pour reproduire ce que montre le gif ci-dessus par accident, il vous faudrait :
 
-- utiliser Chrome
-- utiliser une `iframe` (créée par CodePen, par exemple)
-- utiliser `mix-blend-mode`
-- l'utiliser sur un élément dont tous les parents sont dépourvus d'arrière-plan
-- l'utiliser sur un élément en position `absolute`
-- travailler avec un `body` suffisamment petit pout que l'élément en position `absolute` passe en-dehors
+- utiliser Chrome ;
+- utiliser une `iframe` (créée par CodePen, par exemple) ;
+- utiliser `mix-blend-mode` ;
+- l'utiliser sur un élément dont tous les parents sont dépourvus d'arrière-plan ;
+- l'utiliser sur un élément en position `absolute` ;
+- travailler avec un `body` suffisamment petit pout que l'élément en position `absolute` passe en-dehors.
 
 Eh bien, croyez-le ou non, c'est exactement ce qui m'est arrivé il y a quelques temps.
 

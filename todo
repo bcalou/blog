@@ -4,14 +4,13 @@ PAGES
 -> Tag
 -> Tag list
 -> All posts
--> Date en anglais sur netlify
--> Couleurs de code
-
--> Harmoniser les listes typographiquement (minuscule + point virgule si phrases simples, SINON majuscule et points)
 
 AUTRES
 -> Partie enseignement
--> CanIUse support tables
+
+BUGS
+-> Date en anglais sur netlify
+-> Couleurs de code
 
 APRES LE DESIGN
 -> Optimisation des images

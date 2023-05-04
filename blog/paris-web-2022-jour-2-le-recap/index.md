@@ -137,13 +137,13 @@ On réfléchit rarement aux URLs, qu'on prend pour acquises, mais elles constitu
 
 ## 8 bonnes raisons de venir à Paris Web 2023
 
-- Les conférences (une trentaine !) sont de top qualité, j'ai appris beaucoup&nbsp;;
-- Le choix des conférences par les équipes est savamment équilibré entre design, accessibilité et technique pour vous tenir en haleine ;
-- Les orateurs et oratrices viennent de tout horizon, vous n'entendrez pas 10 patrons de start-ups à la suite ;
-- Une accessibilité remarquable, en cohérence avec le contenu : traduction LSF, vélotypie, traduction de l'anglais vers le français... Et cela a effectivement permis à de nombreuses personnes en situation de handicap d'être présentes ;
-- Le prix est plutôt accessible pour un événement de ce type (surtout si vous demandez à votre boîte de participer) ;
-- Pardonnez-moi d'être terre à terre, mais l'on y mange très bien, même en tant que végétarien, et ce n'est pas négligeable pour mobiliser toute cette concentration ;
-- Vous serez en immersion parmi tout un tas de gens qui veulent bien faire comme vous, et ça fait du bien ;
+- Les conférences (une trentaine !) sont de top qualité, j'ai appris beaucoup.
+- Le choix des conférences par les équipes est savamment équilibré entre design, accessibilité et technique pour vous tenir en haleine.
+- Les orateurs et oratrices viennent de tout horizon, vous n'entendrez pas 10 patrons de start-ups à la suite.
+- Une accessibilité remarquable, en cohérence avec le contenu : traduction LSF, vélotypie, traduction de l'anglais vers le français... Et cela a effectivement permis à de nombreuses personnes en situation de handicap d'être présentes.
+- Le prix est plutôt accessible pour un événement de ce type (surtout si vous demandez à votre boîte de participer).
+- Pardonnez-moi d'être terre à terre, mais l'on y mange très bien, même en tant que végétarien, et ce n'est pas négligeable pour mobiliser toute cette concentration.
+- Vous serez en immersion parmi tout un tas de gens qui veulent bien faire comme vous, et ça fait du bien.
 - On pourra se dire bonjour :)
 
 À l'année prochaine !

@@ -35,9 +35,9 @@ offset: true
 
 Respectivement :
 
-- La largeur et la hauteur du livre en centimètres
-- Le nombre de pages
-- `offset: true` pour préciser que les pages sont plus petites que la couverture elle-même, ce qui est parfois le cas pour les gros livres (voir le gif ci-dessus)
+- la largeur et la hauteur du livre en centimètres ;
+- le nombre de pages ;
+- `offset: true` pour préciser que les pages sont plus petites que la couverture elle-même, ce qui est parfois le cas pour les gros livres (voir le gif ci-dessus).
 
 ## Passer les données à l'élément
 

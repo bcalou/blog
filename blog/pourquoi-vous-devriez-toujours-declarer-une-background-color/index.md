@@ -37,9 +37,9 @@ Internet Explorer a donc pris une décision fondatrice pour le web tel que nous 
 Raphael a aussi expliqué que cette couleur pouvait être modifiée. Dans Firefox, c'est simple :
 
 <ol>
-  <li>Ouvrez la page <code>about:config</code>.</li>
-  <li>Cherchez le paramètre <code>browser.display.background_color</code>.</li>
-  <li>La valeur par défaut est <code>#ffffff</code>. Changez-la !</li>
+  <li>ouvrez la page <code>about:config</code> ;</li>
+  <li>cherchez le paramètre <code>browser.display.background_color</code> ;</li>
+  <li>la valeur par défaut est <code>#ffffff</code>. Changez-la !</li>
 </ol>
 
 Ce n'est pas une option secrète de développeur : toutes les options mentionnées dans cet article peuvent être configurée par n'importe qui, en utilisant [une interface plus sympathique](https://support.mozilla.org/en-US/kb/change-fonts-and-colors-websites-use).
@@ -177,8 +177,8 @@ Notez que vous pouvez également définir la couleur des liens, du texte recevan
 
 Nous avons donc deux solutions :
 
-- Ne rien spécifier et avoir un design extrêmement simple qui s'adaptera aux couleurs définies par le navigateur
-- Spécifier une couleur de fond **et** une couleur de texte.
+- ne rien spécifier et avoir un design extrêmement simple qui s'adaptera aux couleurs définies par le navigateur ;
+- spécifier une couleur de fond **et** une couleur de texte.
 
 C'est pourquoi vous pourriez vouloir ajouter les lignes suivantes à votre kit de base :
 
@@ -257,7 +257,7 @@ Ceci étant dit, **cela ne peut pas remplacer un design pensé pour l'accessibil
 
 Voici donc ce que nous avons appris :
 
-- Toujours spécifier une couleur de fond et une couleur de texte sur les pages car les « valeurs universelles » n'existent pas.
-- Si un utilisateur ou un appareil a besoin de les supplanter, ils le peuvent et c'est très bien !
+- toujours spécifier une couleur de fond et une couleur de texte sur les pages car les « valeurs universelles » n'existent pas ;
+- si un utilisateur ou un appareil a besoin de les supplanter, ils le peuvent et c'est très bien !
 
 Quant à moi, je jure que je ne regarderai plus le moindre pixel blanc de la même façon.

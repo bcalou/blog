@@ -18,8 +18,8 @@ Il faut être plusieurs, chacun sur un ordinateur, et tout le monde partage la m
 
 De mon côté, ces deux jours se sont divisés ainsi :
 
-- 7h le premier jour pour la composition de la bande-son
-- 7h le deuxième jour pour la "programmation musicale"
+- 7h le premier jour pour la composition de la bande-son ;
+- 7h le deuxième jour pour la "programmation musicale".
 
 ## La musique
 
