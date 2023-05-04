@@ -1,3 +1,5 @@
+@import "../config/medias.scss";
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.42;
@@ -36,6 +38,7 @@ h1 {
   margin-bottom: 0.8em;
   max-width: 81.25rem;
   padding-right: 1rem;
+  margin-inline: var(--main-content-margin);
 }
 
 h2, h3 {
@@ -47,7 +50,7 @@ h2 {
   margin: 1em 0 0.5em;
   line-height: 1.4;
 
-  @media (min-width: 64em) {
+  @include large {
     margin-top: 1.7em;
   }
 }
@@ -81,7 +84,7 @@ ul, ol {
   list-style-type: disc;
   list-style-position: inside;
 
-  @media (min-width: 64em) {
+  @include large {
     margin-left: 2rem;
   }
 }

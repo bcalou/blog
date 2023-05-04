@@ -1,5 +1,7 @@
+@import '../config/medias.scss';
+
 :root {
-  --figureMaxWidth: min(100vw, var(--main-content-width));
+  --figureMaxWidth: min(100%, var(--main-content-width));
 }
 
 .figure {
@@ -14,7 +16,7 @@
   flex-direction: column;
   background-color: var(--blue-darkest);
   
-  @media (min-width: 32em) {
+  @include medium {
     display: grid;
     grid-template-columns: min-content;
   }
@@ -22,7 +24,7 @@
   & > :first-child {
     max-width: var(--figureMaxWidth);
     
-    @media (min-width: 32em) {
+    @include medium {
       width: max-content;
     }
   }
@@ -30,9 +32,10 @@
   img {
     display: block;
     min-width: 15rem;
+    width: 100%;
 
-    @media (max-width: 31.99em) {
-      width: 100%;
+    @include medium {
+      width: auto;
     }
   }
 
@@ -45,7 +48,7 @@
     font-size: 1rem;
     letter-spacing: 0.02em;
 
-    @media (min-width: 64em) {
+    @include large {
       padding-inline: .25rem;
     }
 
@@ -64,6 +67,5 @@
     border-radius: var(--border-radius);
     border: 0.125rem solid var(--blue-darkest);
     box-shadow: var(--shadow);
-    max-width: var(--figureMaxWidth);
   }
 }

@@ -1,6 +1,12 @@
+@import '../config/medias.scss';
+
 .postContent {
   max-width: var(--main-content-width);
   container-type: inline-size;
+
+  & > * {
+    margin-inline: var(--main-content-margin);
+  }
 
   aside {
     @extend .aside !optional;
@@ -31,17 +37,15 @@
   }
 }
 
-@media (max-width: 32em) {
-  :not(.figure) > picture img,
-  .figure,
-  pre,
-  .cp_embed_wrapper {
-    margin-inline: -1.5rem;
-    border: none;
-    width: 100vw;
+.picture {
+  margin-inline: 0;
 
-    &, & > * {
-      border-radius: 0 !important;
+  @include medium {
+    margin-inline: var(--main-content-margin);
+    
+    img {
+      max-width: calc(100% - 2 * var(--main-content-margin));
     }
   }
 }
+

@@ -1,8 +1,10 @@
+@import '../config/medias.scss';
+
 .originalPost {
   margin-top: 3rem;
   color: var(--grey-dark);
 
-  @media (min-width: 64em) {
+  @include large {
     margin-top: 4rem;
   }
 

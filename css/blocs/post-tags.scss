@@ -1,10 +1,12 @@
+@import '../config/medias.scss';
+
 .postTags {
   margin-bottom: 4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
 
-  @media (min-width: 64em) {
+  @include large {
     margin-top: 2rem;
   }
 
@@ -34,7 +36,7 @@
   position: relative;
   transition: text-decoration-color 0.3s;
 
-  @media (min-width: 64em) {
+  @include large {
     white-space: pre;
   }
 

@@ -1,3 +1,5 @@
+@import '../config/medias.scss';
+
 code, kbd {
   font-family: monospace;
   font-size: 0.85em;
@@ -14,7 +16,7 @@ code, kbd {
     overflow-wrap: break-word;
     white-space: nowrap;
 
-    @media (min-width: 64em) {
+    @include large {
       margin-inline: 0.25rem;
     }
 
@@ -26,7 +28,7 @@ code, kbd {
       inset: -0.1875rem;
       z-index: -1;
 
-      @media (min-width: 64em) {
+      @include large {
         inset: -0.25rem;
       }
     }
@@ -69,7 +71,7 @@ pre {
     padding: 0.25rem 0.625rem 0.25rem;
     font-family: euclid;
 
-    @media (min-width: 64em) {
+    @include large {
       font-size: 1rem;
       right: 3rem;
     }

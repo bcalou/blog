@@ -1,10 +1,13 @@
+@import '../config/medias.scss';
+
 table {
   margin-block: 1.5em;
   overflow: auto;
   border-collapse: collapse;
+  width: 100%;
 
-  @media (max-width: 30em) {
-    width: 100%;
+  @media (min-width: 30em) {
+    width: auto;
   }
 }
 
@@ -21,9 +24,10 @@ th {
 td, th {
   padding: 0.5em; 
   border: 1px solid var(--grey);
+  font-size: 1rem;
 
-  @media (max-width: 32em) {
-    font-size: 1rem;
+  @include medium {
+    font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
   }
 }
 

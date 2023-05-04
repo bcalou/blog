@@ -1,3 +1,5 @@
+@import '../config/medias.scss';
+
 .youtube {
   margin-block: 2.5rem;
   box-shadow: var(--shadow);
@@ -6,7 +8,7 @@
   border: 0.125rem solid var(--blue-darkest);
   width: calc(100% + 3rem);
 
-  @media (min-width: 64em) {
+  @include large {
     width: 100%;
     border-radius: var(--border-radius);
   }

@@ -1,7 +1,9 @@
+@import '../config/medias.scss';
+
 .footer {
   margin-top: auto;
   
-  @media (min-width: 64em) {
+  @include large {
     position: fixed;
     right: 4rem;
     bottom: 1.25rem;

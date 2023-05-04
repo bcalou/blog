@@ -1,8 +1,10 @@
+@import '../config/medias.scss';
+
 .blockquote {
   margin: 1.5rem 0 2rem;
   max-width: 34rem;
 
-  @media (min-width: 32rem) {
+  @include medium {
     margin: 2.5rem 0 3rem min(4vw, 4rem);
   }
 
@@ -15,7 +17,7 @@
     border-radius: var(--border-radius);
     box-shadow: 0.1875rem 0.1875rem 0.625rem hsl(226, 0%, 76%, 75%);
 
-    @media (min-width: 32rem) {
+    @include medium {
       margin-left: 1.5rem;
       margin-right: 1.25rem;
     }

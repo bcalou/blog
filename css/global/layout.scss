@@ -1,7 +1,9 @@
+@import "../config/medias.scss";
+
 body {
   background-color: var(--white);
 
-  @media (min-width: 64rem) {
+  @include large {
     display: flex;
     padding-left: 14rem;
   }
@@ -17,7 +19,7 @@ img {
 }
 
 main {
-  margin: var(--main-content-margin);
+  margin-block: var(--main-content-margin);
 }
 
 .cp_embed_wrapper {
