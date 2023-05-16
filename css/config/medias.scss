@@ -1,0 +1,23 @@
+@mixin below-medium {
+  @media (max-width: 31.99em) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 32em) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 53em) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: 68em) {
+    @content;
+  }
+}

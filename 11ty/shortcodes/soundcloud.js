@@ -1,6 +1,6 @@
 function soundcloud(trackId) {
   return `<iframe
-    class="soundcloud"
+    class="soundcloud postElement"
     width="100%"
     height="166"
     scrolling="no"

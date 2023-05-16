@@ -1,11 +1,15 @@
 @import './medias.scss';
 
 :root {
-  --main-content-width: 50rem;
+  --main-content-width: 58.75rem;
   --main-content-margin: 1.5rem;
 
   @include large {
-    --main-content-margin: clamp(1.5rem, 5vw, 5rem);
+    --main-content-margin: 2.5rem;
+  }
+
+  @include wide {
+    --main-content-margin: 5rem;
   }
 }
 

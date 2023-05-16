@@ -1,5 +1,13 @@
 @import '../config/medias.scss';
 
+:root {
+  --header-width: 0rem;
+
+  @include large {
+    --header-width: 14rem;
+  }
+}
+
 .header {
   display: none;
   flex-direction: column;
@@ -10,7 +18,7 @@
   @include large {
     padding: 5rem 1.5rem 0;
     background-color: var(--blue-lightest);
-    width: 14rem;
+    width: var(--header-width);
     position: fixed;
     height: 100vh;
     top: 0;

@@ -14,9 +14,9 @@
     font-style: italic;
 
     a {
-        font-style: normal;
-        text-decoration-color: hsl(195, 60%, 50%) !important;
-        text-decoration-color: hsl(195, 100%, 42.5%) !important;
+      font-style: normal;
+      text-decoration-color: hsl(195, 60%, 50%) !important;
+      text-decoration-color: hsl(195, 100%, 42.5%) !important;
 
       &::before {
         display: none;
@@ -34,18 +34,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     display: inline-block;
+    width: 100%;
   }
 }
-
-.picture {
-  margin-inline: 0;
-
-  @include medium {
-    margin-inline: var(--main-content-margin);
-    
-    img {
-      max-width: calc(100% - 2 * var(--main-content-margin));
-    }
-  }
-}
-

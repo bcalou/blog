@@ -1,11 +1,12 @@
 @import '../config/medias.scss';
 
 .blockquote {
-  margin: 1.5rem 0 2rem;
-  max-width: 34rem;
+  margin-block: 1.5rem 2rem;
+  max-width: 37rem;
 
   @include medium {
-    margin: 2.5rem 0 3rem min(4vw, 4rem);
+    margin-block: 2.5rem 3rem;
+    padding-inline: clamp(0rem, 5vw, 3rem);
   }
 
   blockquote {
@@ -16,11 +17,6 @@
     padding: 0.25rem 1rem 0.25rem 1rem;
     border-radius: var(--border-radius);
     box-shadow: 0.1875rem 0.1875rem 0.625rem hsl(226, 0%, 76%, 75%);
-
-    @include medium {
-      margin-left: 1.5rem;
-      margin-right: 1.25rem;
-    }
   }
 
   figcaption {

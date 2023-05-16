@@ -38,25 +38,25 @@
 
   @include large {
     white-space: pre;
-  }
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    inset: 100% 0 1px 0;
-    background-color: var(--blue-lightest);
-    z-index: -1;
-    transition: top 0.3s;
-  }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 100% 0 1px 0;
+      background-color: var(--blue-lightest);
+      z-index: -1;
+      transition: top 0.3s;
+    }
 
-  &:hover,
-  &:focus {
-    text-decoration-color: var(--blue-lightest);
-  }
+    &:hover,
+    &:focus {
+      text-decoration-color: var(--blue-lightest);
+    }
 
-  &:hover::before,
-  &:focus-visible::before {
-    top: 0;
+    &:hover::before,
+    &:focus-visible::before {
+      top: 0;
+    }
   }
 }

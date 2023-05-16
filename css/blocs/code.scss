@@ -1,57 +1,8 @@
 @import '../config/medias.scss';
-
-code, kbd {
-  font-family: monospace;
-  font-size: 0.85em;
-  font-weight: normal;
-  letter-spacing: 0.01em;
-  isolation: isolate;
-  font-style: normal;
-
-  :not(pre) > & {
-    --codeBackgroundColor: var(--grey-light);
-    position: relative;
-    margin-inline: 0.1875rem;
-    padding-inline: 0.1875rem;
-    overflow-wrap: break-word;
-    white-space: nowrap;
-
-    @include large {
-      margin-inline: 0.25rem;
-    }
-
-    &::before {
-      content: '';
-      border-radius: .4375rem;
-      position: absolute;
-      background-color: var(--codeBackgroundColor);
-      inset: -0.1875rem;
-      z-index: -1;
-
-      @include large {
-        inset: -0.25rem;
-      }
-    }
-  }
-
-  aside > & {
-    --codeBackgroundColor: hsl(195deg 17% 87%);
-  }
-
-  figcaption > & {
-    --codeBackgroundColor: hsl(227deg 5% 35%);
-    outline-width: 0.125rem !important;
-    margin-inline: 0.125rem;
-  }
-
-  blockquote p > & {
-    --codeBackgroundColor: hsl(0 0% 93%);
-    outline-width: 0.125rem !important;
-    margin-inline: 0.125rem;
-  }
-}
+@import '../blocs/post-element.scss';
 
 pre {
+  @extend .postElement;
   position: relative;
   margin-block: 2.5rem;
   display: flex;
@@ -96,11 +47,14 @@ pre {
     color: white;
     background-color: var(--blue-darkest);
     padding: 1.25em 1.5em;
-    border-radius: 0.5em;
     box-shadow: var(--shadow);
     line-height: 1.5;
     overflow-x: auto;
     min-width: 100%;
+
+    @include medium {
+      border-radius: 0.5em;
+    }
 
     &::before {
       content: '';
@@ -245,12 +199,53 @@ pre.language-liquid {
   }
 }
 
-// pre.language-njk {
-//   .tag {
-//     color: palegreen;
-//   }
+code, kbd {
+  font-family: monospace;
+  font-size: 0.85em;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  isolation: isolate;
+  font-style: normal;
 
-//   .variable {
-//     color: hotpink;
-//   }
-// }
+  :not(pre) > & {
+    --codeBackgroundColor: var(--grey-light);
+    position: relative;
+    margin-inline: 0.1875rem;
+    padding-inline: 0.1875rem;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+
+    @include large {
+      margin-inline: 0.25rem;
+    }
+
+    &::before {
+      content: '';
+      border-radius: .4375rem;
+      position: absolute;
+      background-color: var(--codeBackgroundColor);
+      inset: -0.1875rem;
+      z-index: -1;
+
+      @include large {
+        inset: -0.25rem;
+      }
+    }
+  }
+
+  aside > & {
+    --codeBackgroundColor: hsl(195deg 17% 87%);
+  }
+
+  figcaption > & {
+    --codeBackgroundColor: hsl(227deg 5% 35%);
+    outline-width: 0.125rem !important;
+    margin-inline: 0.125rem;
+  }
+
+  blockquote p > & {
+    --codeBackgroundColor: hsl(0 0% 93%);
+    outline-width: 0.125rem !important;
+    margin-inline: 0.125rem;
+  }
+}

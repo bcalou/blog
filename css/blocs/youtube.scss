@@ -1,15 +1,15 @@
 @import '../config/medias.scss';
+@import '../blocs/post-element.scss';
 
 .youtube {
-  margin-block: 2.5rem;
+  @extend .postElement;
   box-shadow: var(--shadow);
   aspect-ratio: 16/9;
   background: var(--blue-darkest);
-  border: 0.125rem solid var(--blue-darkest);
-  width: calc(100% + 3rem);
+  width: 100%;
 
-  @include large {
-    width: 100%;
+  @include medium {
+    border: 0.125rem solid var(--blue-darkest);
     border-radius: var(--border-radius);
   }
 }

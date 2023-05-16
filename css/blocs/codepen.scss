@@ -1,9 +1,18 @@
+@import '../config/medias.scss';
+@import '../blocs/post-element.scss';
+
 .cp_embed_wrapper {
-  margin-block: 2.5rem;
+  @extend .postElement;
   box-shadow: var(--shadow);
-  width: 100%;
   background: var(--blue-darkest);
-  border-radius: var(--border-radius);
-  border: 0.125rem solid var(--blue-darkest);
   overflow: hidden;
+
+  @include medium {
+    border: 0.125rem solid var(--blue-darkest);
+    border-radius: var(--border-radius);
+  }
+}
+
+.codepen {
+  @extend .postElement;
 }

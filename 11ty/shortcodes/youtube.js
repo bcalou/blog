@@ -8,7 +8,7 @@ function youtube(url) {
   }
 
   return `<iframe
-    class="youtube"
+    class="youtube postElement"
     src="${src}"
     title="YouTube video player"
     frameborder="0"

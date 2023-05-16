@@ -1,41 +1,40 @@
 @import '../config/medias.scss';
-
-:root {
-  --figureMaxWidth: min(100%, var(--main-content-width));
-}
+@import '../blocs/post-element.scss';
 
 .figure {
-  max-width: var(--figureMaxWidth);
-  margin: 2.5rem 0;
+  --max-figure-width: min(
+    calc(100vw - 15px - var(--header-width) - 2 * var(--main-content-margin)),
+    calc(var(--main-content-width) - 2 * var(--main-content-margin))
+  );
+  @extend .postElement;
   background: var(--white);
   box-shadow: var(--shadow);
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  border: 0.125rem solid var(--blue-darkest);
-  width: fit-content;
-  flex-direction: column;
   background-color: var(--blue-darkest);
-  
+
   @include medium {
-    display: grid;
-    grid-template-columns: min-content;
+    border-radius: var(--border-radius);
+    border: 0.125rem solid var(--blue-darkest);
+    max-width: var(--max-figure-width);
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: column;
+    width: min-content;
   }
 
-  & > :first-child {
-    max-width: var(--figureMaxWidth);
-    
+  picture {
+    width: max-content;
+
     @include medium {
-      width: max-content;
+      max-width: var(--max-figure-width);
     }
   }
 
   img {
     display: block;
     min-width: 15rem;
-    width: 100%;
 
-    @include medium {
-      width: auto;
+    @include below-medium {
+      width: 100%;
     }
   }
 
@@ -62,10 +61,20 @@
 
  // Picture not inside a figure
 :not(.figure) > picture {
+  @extend .postElement;
+
   img {
     margin-block: 1.25rem;
-    border-radius: var(--border-radius);
-    border: 0.125rem solid var(--blue-darkest);
     box-shadow: var(--shadow);
+
+    @include below-medium {
+      width: 100%;
+    }
+
+    @include medium {
+      border: 0.125rem solid var(--blue-darkest);
+      border-radius: var(--border-radius);
+      max-width: calc(100% - 2 * var(--main-content-margin));
+    }
   }
 }

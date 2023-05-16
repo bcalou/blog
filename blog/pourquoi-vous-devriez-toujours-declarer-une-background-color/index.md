@@ -38,7 +38,7 @@ Raphael a aussi expliqué que cette couleur pouvait être modifiée. Dans Firefo
 
 <ol>
   <li>ouvrez la page <code>about:config</code> ;</li>
-  <li>cherchez le paramètre <code>browser.display.background_color</code> ;</li>
+  <li>cherchez le paramètre <code>browser.display.<wbr>background_color</code> ;</li>
   <li>la valeur par défaut est <code>#ffffff</code>. Changez-la !</li>
 </ol>
 

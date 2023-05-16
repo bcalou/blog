@@ -1,0 +1,11 @@
+@import '../config/medias.scss';
+
+.postElement {
+  margin-inline: 0 !important;
+  margin-block: 2.5rem;
+
+  @include medium {
+    margin-inline: var(--main-content-margin) !important;
+    max-width: calc(100% - 2 * var(--main-content-margin));
+  }
+}

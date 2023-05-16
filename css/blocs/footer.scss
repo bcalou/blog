@@ -1,6 +1,7 @@
 @import '../config/medias.scss';
 
 .footer {
+  display: none;
   margin-top: auto;
   
   @include large {
