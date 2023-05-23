@@ -26,7 +26,7 @@ templateClass: tmpl-post
     {% include "../components/series.njk" %}
     {% if originalPost %}
     <p class="originalPost">Cet article a été initialement publié sur
-      <a href="{{ originalPost }}" target="_blank" rel="noopenner noreferrer">dev.to</a>
+      <a href="{{ originalPost }}">dev.to</a>
     {% endif %}
     {%- if collections.blog %}
       {%- set nextPost = collections.blog | getNextCollectionItem(page) %}

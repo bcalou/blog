@@ -16,18 +16,20 @@ function getMarkdownLibrary(eleventyConfig) {
       level: [1,2,3,4],
     }),
     slugify: eleventyConfig.getFilter("slug")
-  }).use(iterator, 'url_new_win', 'link_open', function (tokens, idx) {
-    const aIndex = tokens[idx].attrIndex('target');
-    const href = tokens[idx].attrs.find(attr => attr[0] === "href")[1];
+  })
+  // .use(iterator, 'url_new_win', 'link_open', function (tokens, idx) {
+  //   const aIndex = tokens[idx].attrIndex('target');
+  //   const href = tokens[idx].attrs.find(attr => attr[0] === "href")[1];
 
-    if (!href.startsWith('https://bastiencalou.fr') && !href.startsWith('#')) {
-      if (aIndex < 0) {
-        tokens[idx].attrPush(['target', '_blank']);
-      } else {
-        tokens[idx].attrs[aIndex][1] = '_blank';
-      }
-    }
-  });
+  //   if (!href.startsWith('https://bastiencalou.fr') && !href.startsWith('#')) {
+  //     if (aIndex < 0) {
+  //       tokens[idx].attrPush(['target', '_blank']);
+  //     } else {
+  //       tokens[idx].attrs[aIndex][1] = '_blank';
+  //     }
+  //   }
+  // })
+  ;
 }
 
 module.exports = getMarkdownLibrary;

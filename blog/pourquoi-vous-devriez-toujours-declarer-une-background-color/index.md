@@ -170,7 +170,7 @@ Pour que cela fonctionne, il faudrait un site **sans couleur de fond ni couleur 
 {% figure
   "motherfucking.png",
   "Un site présentant un texte simple, blanc sur noir et lisible.",
-  "Il n'y a pas de CSS sur <a target=\"_blank\" href=\"http://motherfuckingwebsite.com/\">motherfuckingwebsite.com</a>, cela fonctionne donc très bien."
+  "Il n'y a pas de CSS sur <a href=\"http://motherfuckingwebsite.com/\">motherfuckingwebsite.com</a>, cela fonctionne donc très bien."
 %}
 
 Notez que vous pouvez également définir la couleur des liens, du texte recevant le focus, etc... Mais la même règle s'applique : cela ne fonctionnera que si aucun CSS ne s'applique, ce qui est improbable sur la plupart des sites. Un clash de couleur est inévitable.
