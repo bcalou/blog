@@ -7,7 +7,7 @@ layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/flexbox-when-negative-margins-save-the-day-h4i
 ---
 
-<aside>Mise à jour 2023 : Bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.</aside>
+<aside>Mise à jour 2023 : Bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a target="_blank" href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.</aside>
 
 La gestion des espaces avec flexbox n'est pas aussi simple qu'elle en a l'air. Voici une simple astuce que j'ai beaucoup utilisée ces derniers temps.
 
@@ -118,9 +118,9 @@ li:not(:first-flex-row-item) {
 
 Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Par exemple, je pourrais dire que le premier élément d'une ligne a une petite taille de font. Cela pourrait permettre à l'élément de retourner sur la ligne précédente (car il prendrait moins de place). Il ne serait donc plus ciblé par le sélecteur, reprendrait sa taille originale, reviendrait sur la seconde ligne et... 🤯
 
-Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
+Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a target="_blank" href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
 
-<aside>Mise à jour 2023 : Après des années d'effort, les <i>containers queries</i> seront bientôt <a href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
+<aside>Mise à jour 2023 : Après des années d'effort, les <i>containers queries</i> seront bientôt <a target="_blank" href="https://caniuse.com/?search=container%20queries">largement supportées !</a></aside>
 
 ## L'astuce de la marge négative
 

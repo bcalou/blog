@@ -15,11 +15,15 @@
 
     a {
       font-style: normal;
-      text-decoration-color: hsl(195, 60%, 50%) !important;
       text-decoration-color: hsl(195, 100%, 42.5%) !important;
+      isolation: isolate;
+
+      &:hover {
+        text-decoration-color: var(--blue-light) !important;
+      }
 
       &::before {
-        display: none;
+        background-color: var(--blue-light);
       }
     }
   }
@@ -34,6 +38,5 @@
 
   h1, h2, h3, h4, h5, h6 {
     display: inline-block;
-    width: 100%;
   }
 }

@@ -125,7 +125,7 @@ Il se trouve qu'il y a en réalité une bonne raison pour cela, qui est expliqu�
 Les concepteurs de CSS ont fait preuve d'une impressionnante capacité d'anticipation. En effet, voici quelques sélecteurs CSS que nous pourrons utiliser tôt ou tard (et pour certains, c'est déjà le cas) :
 
 ```css
-} /* h1.title, h2.title, h3.title */
+/* h1.title, h2.title, h3.title */
 .title:is(h1, h2, h3) { }
 
 /* exclusions multiples */

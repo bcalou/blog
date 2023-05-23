@@ -12,7 +12,7 @@
 
   &::before {
     background-color: var(--blue-lightest);
-    font-family: euclid;
+    font-family: euclid, sans-serif;
     display: inline-block;
     width: 1.85rem;
     height: 1.85rem;
@@ -28,22 +28,22 @@
   text-decoration: underline;
   color: var(--black);
   text-decoration-color: var(--blue-light);
-  text-underline-offset: 0.2rem;
-  text-decoration-thickness: 0.2rem;
+  text-underline-offset: .1875rem;
+  text-decoration-thickness: .1875rem;
   text-decoration-skip-ink: none;
   font-weight: bold;
-  font-family: euclid;
+  font-family: euclid, sans-serif;
   position: relative;
   transition: text-decoration-color 0.3s;
 
-  @include large {
+  @include wide {
     white-space: pre;
 
     &::before {
       content: '';
       display: block;
       position: absolute;
-      inset: 100% 0 1px 0;
+      inset: 100% 0 0 0;
       background-color: var(--blue-lightest);
       z-index: -1;
       transition: top 0.3s;

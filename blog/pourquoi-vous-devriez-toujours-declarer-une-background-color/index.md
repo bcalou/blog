@@ -64,9 +64,9 @@ Le premier effet, c'est que lorsque rien n'est montré, car je suis en train de 
   "Un noir apaisant remplit l'écran pendant que le nouveau site se charge."
 %}
 
-Un utilisateur de Reddit a expliqué cette astuce dans un post intitulé « [Comment ne pas être aveuglé par la lumière à l'ouverture d'un nouveau site ?](https://www.reddit.com/r/firefox/comments/e89nmg/how_to_not_get_blinded_by_white_light_when/) » C'est en effet une amélioration immédiate, mais l'histoire n'est pas si simple.
+Un utilisateur de Reddit a expliqué cette astuce dans un post intitulé « [Comment ne pas être aveuglé à l'ouverture d'un nouveau site ?](https://www.reddit.com/r/firefox/comments/e89nmg/how_to_not_get_blinded_by_white_light_when/) » C'est en effet une amélioration immédiate, mais l'histoire n'est pas si simple.
 
-Un autre post dont j'adore le titre complète le tableau : « [J'ai changé la couleur d'arrière-plan pour du noir. Je ne vois plus rien.](https://support.mozilla.org/en-US/questions/1229066) »
+Un autre post dont j'adore le titre complète le tableau : « [J'ai changé l'arrière-plan pour du noir. Je ne vois plus rien.](https://support.mozilla.org/en-US/questions/1229066) »
 
 Oups ! En utilisant du noir pour la couleur d'arrière-plan, cet utilisateur a rendu le web... invisible.
 
@@ -170,7 +170,7 @@ Pour que cela fonctionne, il faudrait un site **sans couleur de fond ni couleur 
 {% figure
   "motherfucking.png",
   "Un site présentant un texte simple, blanc sur noir et lisible.",
-  "Il n'y a pas de CSS sur <a href=\"http://motherfuckingwebsite.com/\">motherfuckingwebsite.com</a>, cela fonctionne donc très bien."
+  "Il n'y a pas de CSS sur <a target=\"_blank\" href=\"http://motherfuckingwebsite.com/\">motherfuckingwebsite.com</a>, cela fonctionne donc très bien."
 %}
 
 Notez que vous pouvez également définir la couleur des liens, du texte recevant le focus, etc... Mais la même règle s'applique : cela ne fonctionnera que si aucun CSS ne s'applique, ce qui est improbable sur la plupart des sites. Un clash de couleur est inévitable.

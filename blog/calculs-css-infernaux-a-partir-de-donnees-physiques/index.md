@@ -77,7 +77,7 @@ Les 3 autres variables sont passées grâce à l'attribut `style`, et sont maint
   "Les variables sont désormais disponibles dans le scope CSS de l'élément."
 %}
 
-## CSS : let's the fun begin
+## CSS : let the fun begin
 
 Maintenant, nous pouvons utiliser ces variables pour mettre en forme notre livre. Ici, ça se complique et il ne faut pas lésiner sur les commentaires.
 

@@ -12,7 +12,7 @@ table {
 
 th {
   text-align: left;
-  font-family: Euclid;
+  font-family: Euclid, sans-serif;
 
   &:first-child {
     border-top: none;
@@ -32,5 +32,5 @@ td, th {
 
 td:first-child {
   font-weight: bold;
-  font-family: Euclid;
+  font-family: Euclid, sans-serif;
 }

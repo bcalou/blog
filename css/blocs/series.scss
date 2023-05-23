@@ -28,7 +28,7 @@
         flex-shrink: 0;
         counter-increment: part;
         content: counter(part);
-        font-family: euclid;
+        font-family: euclid, sans-serif;
         display: inline-block;
         background: hsl(194, 64%, 87%);
         width: 1.85rem;
@@ -78,7 +78,7 @@
 .series__title {
   margin: 0.25rem 0 0.5rem;
   line-height: 1.3;
-  font-family: euclid;
+  font-family: euclid, sans-serif;
   font-size: 1.125rem;
   
   @include large {

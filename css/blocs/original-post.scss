@@ -10,5 +10,9 @@
 
   a {
     color: var(--grey-dark);
+
+    &::after {
+      opacity: 0.8;
+    }
   }
 }

@@ -1,17 +1,13 @@
 PAGES
 -> Home
--> About
 -> Tag
 -> Tag list
 -> All posts
 
 AUTRES
--> Partie enseignement ?
--> Couleurs de code
 
 APRES LE DESIGN
 -> Optimisation des images
--> Dark theme
 -> Faire une version épurée de la font
 -> Juger taille des GIF
 
@@ -20,3 +16,7 @@ SUR LE SERVEUR
 -> Analytics
 -> Flux RSS
 -> Webmentions
+
+ZE FUTURE
+-> Dark theme
+-> PWA

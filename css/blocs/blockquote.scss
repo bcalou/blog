@@ -21,7 +21,7 @@
 
   figcaption {
     font-style: normal;
-    font-family: euclid;
+    font-family: euclid, sans-serif;
     font-size: 1rem;
     margin: 1rem 1.5rem 0;
 
@@ -32,6 +32,13 @@
     a {
       text-underline-offset: 0.2rem;
       text-decoration-skip-ink: none;
+      position: relative;
+
+      &::after {
+        opacity: 0.8;
+        top: .125rem;
+        right: -1.25rem;
+      }
     }
 
     &::before {
