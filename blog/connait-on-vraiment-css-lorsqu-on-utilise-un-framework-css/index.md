@@ -1,5 +1,6 @@
 ---
 title: Connaît-on vraiment CSS lorsqu'on utilise un framework CSS ?
+intro: D'après ces données, celles et ceux ayant essayé puis abandonné Bootstrap ou Tailwind auraient la meilleure connaissance du CSS natif.
 date: 2022-12-09
 tags:
   - css
@@ -64,7 +65,7 @@ Et voici nos 5 profils, du moins familier avec le CSS natif au plus familier :
 | Les « pourquoi pas » | 🔴&nbsp;-9&nbsp;points |
 | Les fans | 🟠 -2&nbsp;points |
 | Les « non merci » | Pas de variation |
-| Les exs | 🟢&nbsp; +2&nbsp;points |
+| Les exs | 🟢&nbsp;+2&nbsp;points |
 
 ### Les késako
 
@@ -132,8 +133,8 @@ Et les résultats eux-même ont aussi fortement changé.
 |-------	|-------	|
 | Les késako | 🔴&nbsp;-9&nbsp;points |
 | Les « pourquoi pas » | 🔴&nbsp;-5&nbsp;points |
-| Les « non merci » | 🟢&nbsp; +1&nbsp;point |
-| Les fans | 🟢&nbsp; +2&nbsp;points |
+| Les « non merci » | 🟢&nbsp;+1&nbsp;point |
+| Les fans | 🟢&nbsp;+2&nbsp;points |
 | Les exs | 🔥&nbsp;+6&nbsp;points |
 
 ## Les késako

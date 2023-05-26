@@ -22,14 +22,19 @@
     justify-content: center;
     margin-right: -0.15rem;
   }
+
+  a {
+    // Dirty fix to force height and get a clean hover effect
+    height: 1.5906rem;
+  }
 }
 
 .postTag {
   text-decoration: underline;
   color: var(--black);
   text-decoration-color: var(--blue-light);
-  text-underline-offset: .1875rem;
-  text-decoration-thickness: .1875rem;
+  text-underline-offset: 3.2px;
+  text-decoration-thickness: 0.2rem;
   text-decoration-skip-ink: none;
   font-weight: bold;
   font-family: euclid, sans-serif;

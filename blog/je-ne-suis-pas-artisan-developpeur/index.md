@@ -1,5 +1,6 @@
 ---
 title: Je ne suis pas « artisan développeur »
+intro: Pourquoi cette approche tout à fait louable me semble un peu masquer la misère.
 date: 2019-08-03
 tags:
   - écosystème
