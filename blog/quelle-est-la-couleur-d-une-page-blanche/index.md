@@ -113,8 +113,6 @@ D'après le W3C, le `body` <q cite="https://html.spec.whatwg.org/multipage/secti
 
 Si le `body` est le contenu, il semble honnête de dire que ce qui est en dehors du `body` n'est pas le contenu.
 
-{% img "input.gif", "Merci pour le renseignement." %}
-
 Dans ce cas, utiliser `background-color` sur l'élément `html` ne devrait pas avoir d'effet, puisqu'il ne fait pas partie du contenu ?
 
 Pensez-y un instant : à quoi ressemblerait notre page avec ce CSS ?

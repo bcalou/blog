@@ -110,12 +110,6 @@ Voici donc ce qui se passe :
 
 En quelque sorte, nous posons un appât avec la couleur du fond du `html`, pour que le `body` puisse conserver son propre arrière-plan, et que le titre puisse se mélanger correctement.
 
-{% figure
-  "hiding.gif",
-  "Un homme baisse le siège de sa voiture pour se cacher.",
-  "<code>body</code> se cachant du canvas pour conserver son arrière-plan."
-%}
-
 Un point contre-intuitif est que n'importe quel fond fera l'affaire, même un fond quasiment invisible :
 
 ```css
@@ -190,7 +184,7 @@ Eh bien, croyez-le ou non, c'est exactement ce qui m'est arrivé il y a quelques
 J'aidais un de mes étudiants à créer un effet avec `mix-blend-mode`. J'ai innocemment créé une démo sur CodePen, en utilisant Firefox. Tout était parfait. Affaire classée. Jusqu'à ce que mon étudiant m'informe que cela ne fonctionnait pas sous Chrome.
 
 {% figure
-  "worthy.gif",
+  "worthy.jpeg",
   "Un homme plein de désillusion retire ses lunettes.",
   "Je ne suis plus digne d'être ton professeur."
 %}
