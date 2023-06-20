@@ -1,7 +1,20 @@
 .postList {
   list-style: none;
+  margin-inline: var(--main-content-margin);
+}
+
+.postList__year {
+  margin-block-start: 5rem;
+  font-size: 3.5rem;
+  font-family: Euclid;
+  color: hsl(0, 0%, 53%);
+}
+
+.postList__group {
+  margin-left: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   gap: 2em;
 
   .postTag {
@@ -32,35 +45,64 @@
 
     .postList__footer {
       flex-direction: row;
+      align-items: flex-end;
     }
   }
 
-  &:nth-child(5n-3) {
-    grid-column: 1 / 2;
+  &:nth-child(5n-3),
+  &:first-child:nth-last-child(4),
+  &:first-child:nth-last-child(2) {
+    grid-column: 1 / 5;
+
+    .postList__footer {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
-  &:nth-child(5n-2) {
-    grid-column: 2 / 6;
+  &:nth-child(5n-2),
+  &:nth-child(2):nth-last-child(3),
+  &:nth-child(2):last-child {
+    grid-column: 5 / 10;
   }
 
-  &:nth-child(5n-1) {
-    grid-column: 1 / 3;
+  &:nth-child(5n-1),
+  &:nth-child(3):nth-last-child(2) {
+    grid-column: 1 / 6;
   }
 
-  &:nth-child(5n) {
-    grid-column: 3 / 6;
+  &:nth-child(5n),
+  &:nth-child(4):last-child {
+    grid-column: 6 / 10;
   }
 }
 
 .postList__date {
+  margin-top: 0.25rem;
   display: inline;
   font-size: 1.1875rem;
   position: relative;
-  color: #AAA;
+  color: #aaa;
 }
 
 .postList__intro {
   margin: -0.5rem 0 auto;
+}
+
+.postList__link,
+.postList__read {
+  transition: box-shadow 0.2s, top 0.2s, left 0.2s, background-color 0.2s, color 0.2s;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--blue);
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    background-color: darken(hsl(195, 53%, 79%), 8%);
+    color: hsl(0, 0%, 12%);
+  }
 }
 
 .postList__link {
@@ -68,11 +110,21 @@
   text-decoration: none;
   color: var(--black);
   display: block;
-  font-size: 2rem;
+  font-size: 1.875rem;
   line-height: 1.25;
   background: var(--blue-lightest);
   padding: 1rem 1.5rem;
-  border-radius: .875rem;
+  border-radius: 0.5rem;
+  margin-right: 4px;
+  box-shadow: .5008px 1px 0 0 var(--blue),
+    1.5008px 2px 0 0 var(--blue), 2.5008px 3px 0 0 var(--blue),
+    3.5008px 4px 0 0 var(--blue), 4.5008px 5px 0 0 var(--blue), 5.5px 6px 0 0 var(--blue);
+
+  &:hover,
+  &:focus {
+    top: 5.5px;
+    left: 6px;
+  }
 }
 
 .postList__footer {
@@ -90,11 +142,21 @@
 
 .postList__read {
   background: var(--blue-lightest);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   width: fit-content;
   padding: 0.125rem 0.5rem;
   color: var(--black);
   font-family: Euclid;
   text-decoration: none;
   flex-shrink: 0;
+  box-shadow: 0.0313rem 0.0625rem 0 0 var(--blue),
+    0.0938rem 0.125rem 0 0 var(--blue), 0.1563rem 0.1875rem 0 0 var(--blue),
+    0.2188rem 0.25rem 0 0 var(--blue), 0.2813rem 0.3125rem 0 0 var(--blue);
+  margin-right: 3px;
+
+  &:hover,
+  &:focus {
+    top: 4.5px;
+    left: 5px;
+  }
 }

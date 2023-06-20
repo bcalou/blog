@@ -12,7 +12,7 @@ templateClass: tmpl-post
 
 {% include "../components/series.njk" %}
 
-<div class="postContent">
+<div class="page postContent">
   <div class="postTags">
   {%- for tag in tags | filterTagList -%}
     {%- set tagUrl %}/categories/{{ tag | slug }}/{% endset -%}
@@ -21,30 +21,55 @@ templateClass: tmpl-post
   </div>
 
   {% if not noDate %}<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% endif %}
-
-    {{ content | addNbsp | safe }}
-    {% include "../components/series.njk" %}
-    {% if originalPost %}
-    <p class="originalPost">Cet article a été initialement publié sur
-      <a href="{{ originalPost }}">dev.to</a>
-    {% endif %}
-    {%- if collections.blog %}
-      {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
-      {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
-      {%- if nextPost or previousPost %}
-        <hr>
-          <ul class="prevnext">
-            {%- if nextPost %}
-              <li><span>Suivant :</span>
-                <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
-              </li>
-            {% endif %}
-            {%- if previousPost %}
-              <li><span>Précédent :</span>
-                <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-              </li>
-            {% endif %}
-          </ul>
-        {%- endif %}
-      {%- endif %}
+  {{ content | addNbsp | safe }}
+  {% include "../components/series.njk" %}
+  {% if originalPost %}
+  <p class="originalPost">Cet article a été initialement publié sur
+    <a href="{{ originalPost }}">dev.to</a>
+  {% endif %}
 </div>
+
+{%- if collections.blog %}
+  {%- set nextPost = collections.blog | getNextCollectionItem(page) %}
+  {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+  {%- if nextPost or previousPost %}
+    <div class="prevnext">
+      <ul>
+        {%- if nextPost %}
+          <li class="postList__item{% if nextPost.url == url %} postList__item--active{% endif %}">
+            <a href="{{ nextPost.url | url }}" class="postList__link">{% if nextPost.data.title %}{{ nextPost.data.title | addNbsp | safe }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
+            <time class="postList__date" datetime="{{ nextPost.date | htmlDateString }}">{{ nextPost.date | readableDate }}</time>
+            <p class="postList__intro">{{ nextPost.data.intro | addNbsp | safe }}</p>
+            <div class="postList__footer">
+              <div class="postList__tags">
+                {% for tag in nextPost.data.tags | filterTagList %}
+                  {% set tagUrl %}/categories/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+              <a class="postList__read" href="{{ nextPost.url | url }}">Lire l'article</a>
+            </div>
+            <p class="prevnext__label"><span><span style="font-size: 4.5rem">➜</span> Article suivant</span></p>
+          </li>
+        {% endif %}
+        {%- if previousPost %}
+          <li class="postList__item{% if previousPost.url == url %} postList__item--active{% endif %}">
+            <a href="{{ previousPost.url | url }}" class="postList__link">{% if previousPost.data.title %}{{ previousPost.data.title | addNbsp | safe }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
+            <time class="postList__date" datetime="{{ previousPost.date | htmlDateString }}">{{ previousPost.date | readableDate }}</time>
+            <p class="postList__intro">{{ previousPost.data.intro | addNbsp | safe }}</p>
+            <div class="postList__footer">
+              <div class="postList__tags">
+                {% for tag in previousPost.data.tags | filterTagList %}
+                  {% set tagUrl %}/categories/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+              <a class="postList__read" href="{{ previousPost.url | url }}">Lire l'article</a>
+            </div>
+            <p class="prevnext__label">Article précédent</p>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  {%- endif %}
+{%- endif %}

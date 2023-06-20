@@ -1,9 +1,6 @@
 @import '../config/medias.scss';
 
 .postContent {
-  max-width: var(--main-content-width);
-  container-type: inline-size;
-
   & > * {
     margin-inline: var(--main-content-margin);
   }

@@ -1,5 +1,5 @@
 ---
-title: Flexbox — Les marges négatives à la rescousse
+title: HTML n'est pas un langage de programmation et c'est sa plus grande qualité
 intro: Habituellement évitées, les marges négatives permettent de résoudre le problème de l'espacement entre les enfants d'un conteneur flex.
 date: 2020-11-02
 tags:

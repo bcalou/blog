@@ -1,0 +1,26 @@
+<ul reversed class="postList">
+  {% for year in collections.postsByYear %}
+    <li>
+      <div class="postList__year">{{year[0].date.getFullYear()}}</div>
+
+      <ul class="postList__group">
+        {% for post in year %}
+          <li class="postList__item{% if post.url == url %} postList__item--active{% endif %}">
+            <a href="{{ post.url | url }}" class="postList__link">{% if post.data.title %}{{ post.data.title | addNbsp | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+            <time class="postList__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+            <p class="postList__intro">{{ post.data.intro | addNbsp | safe }}</p>
+            <div class="postList__footer">
+              <div class="postList__tags">
+                {% for tag in post.data.tags | filterTagList %}
+                  {% set tagUrl %}/categories/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+              <a class="postList__read" href="{{ post.url | url }}">Lire l'article</a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

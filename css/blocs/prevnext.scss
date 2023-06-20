@@ -1,10 +1,54 @@
 @import '../config/medias.scss';
 
 .prevnext {
-  padding-left: 0;
-  list-style: none;
+  max-width: var(--main-content-width);
+  margin-inline: var(--main-content-margin);
 
-  span {
-    font-family: euclid, sans-serif;
+  ul {
+    margin-left: 0;
+    max-width: calc(var(--main-content-width) - 2 * var(--main-content-margin));
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(9, 1fr);
+
+    & > * {
+      position: relative;
+    }
+
+    & > :first-child {
+      grid-column: 4 / 10 !important;
+    }
+
+    & > :last-child {
+      grid-column: 1 / 7 !important;
+      grid-row: 2;
+    }
   }
 }
+
+.prevnext__label {
+  position: absolute;
+  right: 95%;
+  z-index: -1;
+  width: 295px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  padding: 12px 40px;
+  bottom: -2.6rem;
+  top: -2.6rem;
+  color: var(--blue-light);
+  background-color: var(--blue-white);
+  font-family: Euclid;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  border: 2px solid var(--blue);
+  border-radius: 0.75rem 0 0 0.75rem;
+
+  :last-child > & {
+    left: calc(100% + 1.25rem);
+    top: -3.3125rem;
+  }
+}
+

@@ -1,9 +1,9 @@
-const prod = process.env.ELEVENTY_ENV === 'prod';
+const prod = process.env.ELEVENTY_ENV === "prod";
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginSass = require('eleventy-sass');
+const pluginSass = require("eleventy-sass");
 const embedTwitter = require("eleventy-plugin-embed-twitter");
 
 const blockquote = require("./11ty/shortcodes/blockquote");
@@ -22,22 +22,22 @@ const htmlDateString = require("./11ty/filters/html-date-string");
 const min = require("./11ty/filters/min");
 const readableDate = require("./11ty/filters/readable-date");
 
-const getTagListCollection = require('./11ty/collections/tag-list')
+const getTagListCollection = require("./11ty/collections/tag-list");
+const getPostsByYearCollection = require("./11ty/collections/posts-by-year");
 
-const getMarkdownLibrary = require('./11ty/librairies/markdown');
+const getMarkdownLibrary = require("./11ty/librairies/markdown");
 
-const browserConfig = require('./11ty/browser-config');
+const browserConfig = require("./11ty/browser-config");
 
-module.exports = function(eleventyConfig) {
-
+module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginSass, {
     sass: {
-      style: prod ? "compressed" : "expanded"
-    }
+      style: prod ? "compressed" : "expanded",
+    },
   });
   eleventyConfig.addPlugin(embedTwitter);
 
@@ -52,15 +52,16 @@ module.exports = function(eleventyConfig) {
 
   // Add filters
   eleventyConfig.addFilter("addNbsp", addNbsp);
-  eleventyConfig.addFilter("filterTagList", filterTagList)
+  eleventyConfig.addFilter("filterTagList", filterTagList);
   eleventyConfig.addFilter("getSeries", getSeries);
-  eleventyConfig.addFilter('head', head);
-  eleventyConfig.addFilter('htmlDateString', htmlDateString);
-  eleventyConfig.addFilter('min', min);
+  eleventyConfig.addFilter("head", head);
+  eleventyConfig.addFilter("htmlDateString", htmlDateString);
+  eleventyConfig.addFilter("min", min);
   eleventyConfig.addFilter("readableDate", readableDate);
 
   // Add collections
   eleventyConfig.addCollection("tagList", getTagListCollection(filterTagList));
+  eleventyConfig.addCollection("postsByYear", getPostsByYearCollection());
 
   // Add librairies
   eleventyConfig.setLibrary("md", getMarkdownLibrary(eleventyConfig));
@@ -74,12 +75,7 @@ module.exports = function(eleventyConfig) {
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "liquid"
-    ],
+    templateFormats: ["md", "njk", "html", "liquid"],
 
     // Pre-process *.md files with: (default: `liquid`)
     markdownTemplateEngine: "njk",
@@ -106,7 +102,7 @@ module.exports = function(eleventyConfig) {
       input: ".",
       includes: "_includes",
       data: "_data",
-      output: "_site"
-    }
+      output: "_site",
+    },
   };
 };
