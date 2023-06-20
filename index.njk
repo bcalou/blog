@@ -5,24 +5,26 @@ eleventyNavigation:
   order: 1
 ---
 
-{% set maxPosts = collections.blog.length | min(3) %}
 <h1>Bastien Calou</h1>
-<h2>Développeur front-end</h2>
 
-<p>Bienvenue ! Depuis 2014, je développe des sites :
-  <ul>
-    <li><a href="blog/eleventy-pour-un-web-simple-performant-et-accessible/">Résilients</a> grâce aux standards du web et à l'amélioration progressive ;</li>
-    <li><a href="blog/pourquoi-vous-devriez-toujours-declarer-une-background-color/">Accessibles</a> à toutes et à tous quel que soit le contexte de navigation ;</li>
-    <li><a href="blog/optimisation-agressive-des-performances-d-un-site-statique/">Performants</a> en trouvant les solutions les plus mesurées pour chaque projet.</li>
-  </ul>
-  <p>J'enseigne le développement web et l'algorithmique au <a href="https://enjmin.cnam.fr/formations/ingenieur-e-informatique-et-multimedia/">Cnam-Enjmin</a> et à <a href="https://iut-angouleme.univ-poitiers.fr/formations/b-u-t-mmi-metiers-du-multimedia-et-de-linternet/">l'IUT d'Angoulême</a>.</p>
-  <p>Je suis développeur bénévole au sein de l'association <a href="https://www.theshifters.org/">Les Shifters</a>.</p>
-</p>
-
-<h3>Mes derniers articles</h3>
-{% set postslist = collections.blog | head(-3) %}
-{% set postslistCounter = collections.blog | length %}
-{% include "postslist.njk" %}
-<p>
-  <a href="{{ '/blog/' | url }}">Tous les articles</a>
-</p>
+<div class="postContent">
+  <h2>Développeur front-end</h2>
+  <p>Bienvenue ! Depuis 2014, je développe des sites :
+    <ul>
+      <li><a href="blog/eleventy-pour-un-web-simple-performant-et-accessible/">Résilients</a> grâce aux standards du web et à l'amélioration progressive ;</li>
+      <li><a href="blog/pourquoi-vous-devriez-toujours-declarer-une-background-color/">Accessibles</a> à toutes et à tous quel que soit le contexte de navigation ;</li>
+      <li><a href="blog/optimisation-agressive-des-performances-d-un-site-statique/">Performants</a> en trouvant les solutions les plus mesurées pour chaque projet.</li>
+    </ul>
+    <p>J'enseigne le développement web et l'algorithmique au <a href="https://enjmin.cnam.fr/formations/ingenieur-e-informatique-et-multimedia/">Cnam-Enjmin</a> et à <a href="https://iut-angouleme.univ-poitiers.fr/formations/b-u-t-mmi-metiers-du-multimedia-et-de-linternet/">l'IUT d'Angoulême</a>.</p>
+    <p>Je suis développeur bénévole au sein de l'association <a href="https://www.theshifters.org/">Les Shifters</a>.</p>
+  </p>
+  <h3>Mes derniers articles</h3>
+</div>
+  {% set maxPosts = collections.blog.length | min(3) %}
+  {% set postslist = collections.blog | head(-3) %}
+  {% set postslistCounter = collections.blog | length %}
+  {% include "postslist.njk" %}
+  <p class="postContent">
+    <a href="{{ '/blog/' | url }}">Tous les articles</a>
+  </p>
+</div>

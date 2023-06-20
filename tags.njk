@@ -21,4 +21,6 @@ permalink: /categories/{{ tag | slug }}/
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 
-<p>Voir <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>
+<div class="postContent">
+  <p>Voir <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>
+</div>

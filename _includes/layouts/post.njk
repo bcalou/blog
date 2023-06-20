@@ -36,7 +36,7 @@ templateClass: tmpl-post
     <div class="prevnext">
       <ul>
         {%- if nextPost %}
-          <li class="postList__item{% if nextPost.url == url %} postList__item--active{% endif %}">
+          <li class="postList__item prevnext__next">
             <a href="{{ nextPost.url | url }}" class="postList__link">{% if nextPost.data.title %}{{ nextPost.data.title | addNbsp | safe }}{% else %}<code>{{ nextPost.url }}</code>{% endif %}</a>
             <time class="postList__date" datetime="{{ nextPost.date | htmlDateString }}">{{ nextPost.date | readableDate }}</time>
             <p class="postList__intro">{{ nextPost.data.intro | addNbsp | safe }}</p>
@@ -49,11 +49,11 @@ templateClass: tmpl-post
               </div>
               <a class="postList__read" href="{{ nextPost.url | url }}">Lire l'article</a>
             </div>
-            <p class="prevnext__label"><span><span style="font-size: 4.5rem">➜</span> Article suivant</span></p>
+            <p class="prevnext__label"><span><span class="prevnext__arrow">➜</span> Article suivant</span></p>
           </li>
         {% endif %}
         {%- if previousPost %}
-          <li class="postList__item{% if previousPost.url == url %} postList__item--active{% endif %}">
+          <li class="postList__item prevnext__prev">
             <a href="{{ previousPost.url | url }}" class="postList__link">{% if previousPost.data.title %}{{ previousPost.data.title | addNbsp | safe }}{% else %}<code>{{ previousPost.url }}</code>{% endif %}</a>
             <time class="postList__date" datetime="{{ previousPost.date | htmlDateString }}">{{ previousPost.date | readableDate }}</time>
             <p class="postList__intro">{{ previousPost.data.intro | addNbsp | safe }}</p>
@@ -66,7 +66,7 @@ templateClass: tmpl-post
               </div>
               <a class="postList__read" href="{{ previousPost.url | url }}">Lire l'article</a>
             </div>
-            <p class="prevnext__label">Article précédent</p>
+            <p class="prevnext__label"><span><span class="prevnext__arrow">➜</span><br/> Article précédent</span></p>
           </li>
         {% endif %}
       </ul>

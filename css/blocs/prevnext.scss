@@ -14,41 +14,54 @@
     & > * {
       position: relative;
     }
-
-    & > :first-child {
-      grid-column: 4 / 10 !important;
-    }
-
-    & > :last-child {
-      grid-column: 1 / 7 !important;
-      grid-row: 2;
-    }
   }
+}
+
+.prevnext__next {
+  grid-column: 4 / 10 !important;
+}
+
+.prevnext__prev {
+  grid-column: 1 / 7 !important;
+  grid-row: 2;
 }
 
 .prevnext__label {
+  margin: 0;
   position: absolute;
-  right: 95%;
   z-index: -1;
-  width: 295px;
+  width: 18.4375rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  text-align: right;
-  padding: 12px 40px;
-  bottom: -2.6rem;
-  top: -2.6rem;
+  padding: .75rem 2.5rem;
+  bottom: 0;
+  top: 0;
   color: var(--blue-light);
   background-color: var(--blue-white);
   font-family: Euclid;
-  font-size: 3.5rem;
+  font-size: 2.75rem;
   line-height: 1.1;
-  border: 2px solid var(--blue);
+  border: .125rem solid var(--blue);
   border-radius: 0.75rem 0 0 0.75rem;
 
-  :last-child > & {
-    left: calc(100% + 1.25rem);
-    top: -3.3125rem;
+  .prevnext__next > & {
+    text-align: right;
+    right: 95%;
+  }
+
+  .prevnext__prev > & {
+    left: 95%;
+    border-radius: 0 0.75rem 0.75rem 0;
+    padding-left: 3.5rem;
   }
 }
 
+.prevnext__arrow {
+  font-size: 3.5rem;
+  display: inline-block;
+
+  .prevnext__prev & {
+    transform: rotate(180deg);
+  }
+}
