@@ -1,8 +1,8 @@
-@import '../config/medias.scss';
+@import "../config/medias.scss";
 
 .footer {
   margin-top: auto;
-  
+
   @include large {
     position: fixed;
     right: 4rem;
@@ -22,7 +22,7 @@
     position: relative;
 
     &:first-child {
-      margin-bottom: 1.75rem;
+      margin-bottom: 0.25rem;
     }
   }
 
@@ -41,13 +41,13 @@
   a {
     display: flex;
     text-decoration: none;
-    padding-block: .5625rem;
+    padding-block: 0.5625rem;
   }
 }
 
 .footer a:is(:hover, :focus) {
   svg {
-    transition: transform 0.5s cubic-bezier(.29,2.5,.47,.99), color 0.3s;
+    transition: transform 0.5s cubic-bezier(0.29, 2.5, 0.47, 0.99), color 0.3s;
     transform: scale(1.2);
   }
 
