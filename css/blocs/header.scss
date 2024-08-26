@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@import "../config/medias.scss";
 
 :root {
   --header-width: 0rem;
@@ -37,5 +37,24 @@
     font-family: euclid, sans-serif;
     color: var(--blue-dark);
     font-size: 2rem;
+  }
+}
+
+.header__image {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--blue-lightest);
+    mix-blend-mode: color;
+    inset: 0;
+  }
+
+  img {
+    display: flex;
   }
 }
