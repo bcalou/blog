@@ -4,6 +4,9 @@ PAGES
 -> Tag list
 -> All posts
 
+TODO
+-> View transition?
+
 APRES LE DESIGN
 -> Optimisation des images
 -> Juger taille des GIF
@@ -19,3 +22,4 @@ SUR LE SERVEUR
 ZE FUTURE
 -> Dark theme
 -> PWA
+-> Edit on Github
