@@ -34,6 +34,8 @@ templateClass: tmpl-post
   {%- set previousPost = collections.blog | getPreviousCollectionItem(page) %}
   {%- if nextPost or previousPost %}
     <div class="prevnext">
+      <h3>Autres articles</h3>
+
       <ul>
         {%- if nextPost %}
           <li class="postList__item prevnext__next">

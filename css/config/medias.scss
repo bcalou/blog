@@ -17,7 +17,7 @@
 }
 
 @mixin wide {
-  @media (min-width: 68em) {
+  @media (min-width: 73em) {
     @content;
   }
 }

@@ -1,15 +1,22 @@
-@import '../config/medias.scss';
+@import "../config/medias.scss";
 
 .prevnext {
   max-width: var(--main-content-width);
   margin-inline: var(--main-content-margin);
+  margin-block-start: 2em;
 
   ul {
     margin-left: 0;
     max-width: calc(var(--main-content-width) - 2 * var(--main-content-margin));
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-    grid-template-columns: repeat(9, 1fr);
+    margin-block-start: 1em;
+
+    @include wide {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+    }
 
     & > * {
       position: relative;
@@ -27,14 +34,12 @@
 }
 
 .prevnext__label {
+  display: none;
   margin: 0;
-  position: absolute;
-  z-index: -1;
   width: 18.4375rem;
-  display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: .75rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   bottom: 0;
   top: 0;
   color: var(--blue-light);
@@ -42,8 +47,14 @@
   font-family: Euclid;
   font-size: 2.75rem;
   line-height: 1.1;
-  border: .125rem solid var(--blue);
+  border: 0.125rem solid var(--blue);
   border-radius: 0.75rem 0 0 0.75rem;
+
+  @include wide {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+  }
 
   .prevnext__next > & {
     text-align: right;

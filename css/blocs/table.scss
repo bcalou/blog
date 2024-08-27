@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@import "../config/medias.scss";
 
 table {
   margin-block: 1.5em;
@@ -20,13 +20,14 @@ th {
   }
 }
 
-td, th {
-  padding: 0.5em; 
+td,
+th {
+  padding: 0.5em;
   border: 1px solid var(--grey);
   font-size: 1rem;
 
-  @include medium {
-    font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
+  @include large {
+    font-size: 1.25rem;
   }
 }
 

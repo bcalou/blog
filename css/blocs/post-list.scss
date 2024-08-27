@@ -1,6 +1,7 @@
 .postList {
   list-style: none;
   margin-inline: var(--main-content-margin);
+  container-type: inline-size;
 }
 
 .postList__year {
@@ -13,9 +14,14 @@
 .postList__group {
   margin-left: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
   gap: 2em;
+  display: flex;
+  flex-direction: column;
+
+  @container (min-width: 35em) {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+  }
 
   .postTag {
     letter-spacing: 0.03em;

@@ -42,8 +42,6 @@
 
 .header__image {
   position: relative;
-  border-radius: 50%;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -56,5 +54,7 @@
 
   img {
     display: flex;
+    border-radius: 50%;
+    background: var(--blue-lightest);
   }
 }

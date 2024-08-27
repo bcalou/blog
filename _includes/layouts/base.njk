@@ -12,15 +12,12 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__image">
-        <img alt="Photo de Bastien Calou" src="/assets/img/photo.png"/>
-      </div>
-      <h1
-        class="home">{# <a href="{{ '/' | url }}">Accueil</a> #}
-      </h1>
+      {# <div class="header__image">
+              <img alt="Photo de Bastien Calou" src="/assets/img/photo.png"/>
+            </div> #}
+      {# <h1 class="home"><a href="{{ '/' | url }}">Accueil</a></h1> #}
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
+        <ul class="nav"> {%- for entry in collections.all | eleventyNavigation %}
           <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>
           </li>
