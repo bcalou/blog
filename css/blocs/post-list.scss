@@ -9,6 +9,10 @@
   font-size: 3.5rem;
   font-family: Euclid;
   color: hsl(0, 0%, 53%);
+
+  li:first-of-type & {
+    margin-block-start: 0;
+  }
 }
 
 .postList__group {
