@@ -1,4 +1,3 @@
-const fs = require("fs");
 const prod = process.env.ELEVENTY_ENV === "prod";
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -27,8 +26,6 @@ const getTagListCollection = require("./11ty/collections/tag-list");
 const getPostsByYearCollection = require("./11ty/collections/posts-by-year");
 
 const getMarkdownLibrary = require("./11ty/librairies/markdown");
-
-const EleventyPluginOgImage = require("eleventy-plugin-og-image");
 
 const browserConfig = require("./11ty/browser-config");
 
@@ -75,21 +72,6 @@ module.exports = function (eleventyConfig) {
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
-
-  eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    satoriOptions: {
-      fonts: [
-        {
-          name: "Pixeboy",
-          data: fs.readFileSync(
-            "./assets/fonts/euclid-circular-semibold-simple-subset.ttf"
-          ),
-          weight: 700,
-          style: "normal",
-        },
-      ],
-    },
-  });
 
   return {
     // Control which files Eleventy will process
