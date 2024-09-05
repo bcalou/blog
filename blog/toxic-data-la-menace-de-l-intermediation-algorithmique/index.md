@@ -1,9 +1,9 @@
 ---
 title: "« Toxic Data » : la menace de l'intermédiation algorithmique"
-intro: "Comment les diverses plateformes que nous utilisons ont entrepris de modeler nos relations à autrui, favorisant repli sur soi, polarisation et complotisme."
+description: "Comment les diverses plateformes que nous utilisons ont entrepris de modeler nos relations à autrui, favorisant repli sur soi, polarisation et complotisme."
 date: 2023-09-26
 tags:
-  - écosystème
+  - Écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/-toxic-data-la-menace-de-lintermediation-algorithmique-2gid
 ---

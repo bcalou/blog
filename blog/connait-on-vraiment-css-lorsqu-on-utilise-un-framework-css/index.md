@@ -1,12 +1,12 @@
 ---
 title: Connaît-on vraiment CSS lorsqu'on utilise un framework CSS ?
-intro: D'après ces données, celles et ceux ayant essayé puis abandonné Bootstrap ou Tailwind auraient la meilleure connaissance du CSS natif.
+description: D'après ces données, celles et ceux ayant essayé puis abandonné Bootstrap ou Tailwind auraient la meilleure connaissance du CSS natif.
 date: 2022-12-09
 tags:
-  - css
-  - accessibilité
-  - tailwind
-  - bootstrap
+  - CSS
+  - Accessibilité
+  - Tailwind
+  - Bootstrap
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/do-css-framework-users-actually-know-css-we-might-have-some-data-22o2
 ---

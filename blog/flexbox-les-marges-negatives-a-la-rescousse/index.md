@@ -1,9 +1,9 @@
 ---
 title: "Flexbox : les marges négatives à la rescousse"
-intro: Habituellement évitées, les marges négatives permettent de résoudre le problème de l'espacement entre les enfants d'un conteneur flex.
+description: Habituellement évitées, les marges négatives permettent de résoudre le problème de l'espacement entre les enfants d'un conteneur flex.
 date: 2020-11-02
 tags:
-  - css
+  - CSS
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/flexbox-when-negative-margins-save-the-day-h4i
 ---

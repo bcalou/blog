@@ -1,10 +1,10 @@
 ---
 title: "Pourquoi vous devriez toujours déclarer une background-color"
-intro: Le fond d'un par défaut site n'est pas blanc mais transparent, et cela peut impacter le rendu de la page dans certains contextes.
+description: Le fond d'un par défaut site n'est pas blanc mais transparent, et cela peut impacter le rendu de la page dans certains contextes.
 date: 2020-06-03
 tags:
-  - css
-  - accessibilité
+  - CSS
+  - Accessibilité
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/why-you-should-always-set-a-background-color-2gb1
 series: Aventures CSS au pays du canvas

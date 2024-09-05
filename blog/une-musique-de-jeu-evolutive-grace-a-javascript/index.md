@@ -1,10 +1,10 @@
 ---
 title: Une musique de jeu évolutive grâce à JavaScript
-intro: Comment JavaScript transforme une simple boucle de 4 accords en musique réactive aux événements d'une partie.
+description: Comment JavaScript transforme une simple boucle de 4 accords en musique réactive aux événements d'une partie.
 date: 2022-04-07
 tags:
-  - javascript
-  - audio
+  - JavaScript
+  - Audio
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/une-musique-de-jeu-evolutive-grace-a-javascript-4568
 ---

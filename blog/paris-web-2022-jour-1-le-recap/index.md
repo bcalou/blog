@@ -1,13 +1,13 @@
 ---
 title: "Paris Web 2022 — Jour 1, le récap !"
-intro: Retour sur les 8 conférences auxquelles j'ai pu assister lors la première journée de cet événement savamment orchestré.
+description: Retour sur les 8 conférences auxquelles j'ai pu assister lors la première journée de cet événement savamment orchestré.
 date: 2022-10-12
 tags:
-  - html
-  - css
-  - accessibilité
-  - design
-  - écosystème
+  - HTML
+  - CSS
+  - Accessibilité
+  - Design
+  - Écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/paris-web-2022-jour-1-le-recap--5c82
 series: Paris Web 2022

@@ -1,11 +1,12 @@
 ---
 title: Optimisation agressive des performances d'un site statique
-intro: "Gestion des tailles et formats d'images, <i>lazy-loading</i>, CSS critique inline… tout est bon pour une optimisation maximale."
+description: "Gestion des tailles et formats d'images, <i>lazy-loading</i>, CSS critique inline… tout est bon pour une optimisation maximale."
 date: 2021-06-16
 tags:
-  - performance
-  - html
-  - css
+  - Performance
+  - HTML
+  - CSS
+  - Eleventy
 layout: layouts/post.njk
 series: À la découverte d'Eleventy
 originalPost: https://dev.to/bcalou/optimisation-agressive-des-performances-d-un-site-statique-3jc9

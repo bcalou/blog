@@ -21,8 +21,6 @@ function getPostByYearCollection() {
         }
       });
 
-    console.log(years);
-
     return years;
   });
 }

@@ -1,9 +1,9 @@
 ---
 title: HTML n'est pas un langage de programmation et c'est sa plus grande qualité
-intro: La permissivité de ce langage déclaratif, beaucoup plus riche qu'il n'y paraît, masque une robustesse très précieuse pour nos pages web.
+description: La permissivité de ce langage déclaratif, beaucoup plus riche qu'il n'y paraît, masque une robustesse très précieuse pour nos pages web.
 date: 2020-10-21
 tags:
-  - html
+  - HTML
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/html-is-not-a-programming-language-and-that-s-the-best-thing-about-it-4202
 ---

@@ -1,9 +1,9 @@
 ---
 title: Que se passe-t-il lorsque vous écrivez un sélecteur CSS invalide ?
-intro: Pourquoi CSS ignore la totalité d'une règle dont seule une partie est invalide, et comment éviter ce piège.
+description: Pourquoi CSS ignore la totalité d'une règle dont seule une partie est invalide, et comment éviter ce piège.
 date: 2020-12-07
 tags:
-  - css
+  - CSS
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/what-happens-when-you-write-an-invalid-css-selector-bad-things-4734
 ---

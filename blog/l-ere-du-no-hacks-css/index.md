@@ -1,9 +1,9 @@
 ---
 title: "L'ère du no-hacks CSS"
-intro: "Propagez la nouvelle : en 2022, le CSS bricolé, c'est de l'histoire ancienne."
+description: "Propagez la nouvelle : en 2022, le CSS bricolé, c'est de l'histoire ancienne."
 date: 2022-03-28
 tags:
-  - css
+  - CSS
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/the-era-of-no-hacks-css-287l
 ---

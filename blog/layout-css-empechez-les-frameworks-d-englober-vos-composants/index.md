@@ -1,9 +1,9 @@
 ---
 title: "Layout CSS : empêchez les frameworks d'englober vos composants"
-intro: L'astuce des marges automatiques offre une grande flexibilité dans le cadre d'un composant flex.
+description: L'astuce des marges automatiques offre une grande flexibilité dans le cadre d'un composant flex.
 date: 2019-06-26
 tags:
-  - css
+  - CSS
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/css-layout-get-around-frameworks-wrapping-your-components-2hgm
 ---

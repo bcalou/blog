@@ -1,10 +1,10 @@
 {
-  "title": "Bastien Calou",
+  "title": "Bastien Calou - Développeur front-end freelance",
   "url": "https://bastiencalou.fr/",
   "language": "fr",
-  "description": "Développeur front freelance, tendances mobile first, perfs et accessibilité.",
+  "description": "Je développe des sites et design systems résilients, accessibles et performants.",
   "feed": {
-    "subtitle": "Développeur front freelance, tendances mobile first, perfs et accessibilité.",
+    "subtitle": "Je développe des sites et design systems résilients, accessibles et performants.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://bastiencalou.fr/"

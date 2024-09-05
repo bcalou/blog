@@ -1,9 +1,9 @@
 ---
 title: Calculs CSS infernaux à partir de données physiques
-intro: La puissance de CSS pour des effets adaptatifs... au prix d'une complexité peu digeste.
+description: La puissance de CSS pour des effets adaptatifs... au prix d'une complexité peu digeste.
 date: 2021-06-18
 tags:
-  - css
+  - CSS
 layout: layouts/post.njk
 series: À la découverte d'Eleventy
 originalPost: https://dev.to/bcalou/calculs-css-infernaux-a-partir-de-donnees-physiques-4ah9

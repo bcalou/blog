@@ -21,12 +21,12 @@
                     {% endif %}
                   </a>
                   <time class="postList__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                  <p class="postList__intro">{{ post.data.intro | addNbsp | safe }}</p>
+                  <p class="postList__intro">{{ post.data.description | addNbsp | safe }}</p>
                   <div class="postList__footer">
                     <div class="postList__tags">
                       {% for tag in post.data.tags | filterTagList %}
                         {% set tagUrl %}/categories/{{ tag | slug }}/{% endset %}
-                        <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+                        <a href="{{ tagUrl | url }}" class="postTag">{{ tag | lower }}</a>
                       {% endfor %}
                     </div>
                     <a class="postList__read" href="{{ post.url | url }}">Lire l'article</a>

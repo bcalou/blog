@@ -1,9 +1,9 @@
 ---
 title: Je ne suis pas « artisan développeur »
-intro: Pourquoi cette approche tout à fait louable me semble un peu masquer la misère.
+description: Pourquoi cette approche tout à fait louable me semble un peu masquer la misère.
 date: 2019-08-03
 tags:
-  - écosystème
+  - Écosystème
 layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/je-ne-suis-pas-artisan-developpeur-2hc2
 ---
