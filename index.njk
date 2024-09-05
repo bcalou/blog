@@ -27,5 +27,7 @@ eleventyNavigation:
       et au
       <a href={{ enjminUrl }}>Cnam-Enjmin</a>.</p>
   </div>
+  {% set tag = "all" %}
   {% set postslist = collections.blog %}
+  {% set postslistTitle = "Mes derniers articles" %}
   {% include "postslist_by_years.njk" %}
