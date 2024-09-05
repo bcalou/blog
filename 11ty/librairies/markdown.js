@@ -1,10 +1,10 @@
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const iterator = require('markdown-it-for-inline');
+const iterator = require("markdown-it-for-inline");
 
 // Customize Markdown library and settings:
 function getMarkdownLibrary(eleventyConfig) {
-  return markdown = markdownIt({
+  return (markdown = markdownIt({
     html: true,
     breaks: true,
     linkify: true,
@@ -13,10 +13,10 @@ function getMarkdownLibrary(eleventyConfig) {
       placement: "after",
       class: "directLink",
       symbol: "#",
-      level: [1,2,3,4],
+      level: [1, 2, 3, 4],
     }),
-    slugify: eleventyConfig.getFilter("slug")
-  })
+    slugify: eleventyConfig.getFilter("slug"),
+  }));
   // .use(iterator, 'url_new_win', 'link_open', function (tokens, idx) {
   //   const aIndex = tokens[idx].attrIndex('target');
   //   const href = tokens[idx].attrs.find(attr => attr[0] === "href")[1];
@@ -29,7 +29,6 @@ function getMarkdownLibrary(eleventyConfig) {
   //     }
   //   }
   // })
-  ;
 }
 
 module.exports = getMarkdownLibrary;

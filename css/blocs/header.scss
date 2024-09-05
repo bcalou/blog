@@ -9,16 +9,14 @@
 }
 
 .header {
-  display: none;
   flex-direction: column;
   flex-shrink: 0;
   display: flex;
-  height: 1.25rem;
   text-align: right;
+  background-color: var(--blue-lightest);
 
   @include large {
     padding: 5rem 1.75rem 0;
-    background-color: var(--blue-lightest);
     width: var(--header-width);
     position: fixed;
     height: 100vh;
@@ -37,83 +35,48 @@
   }
 }
 
-@keyframes emoji {
-  10% {
-    content: "👀";
-  }
-
-  20% {
-    content: "💋";
-  }
-
-  30% {
-    content: "🫀";
-  }
-
-  30% {
-    content: "👓";
-  }
-
-  40% {
-    content: "🐸";
-  }
-
-  50% {
-    content: "👑";
-  }
-
-  60% {
-    content: "🐰";
-  }
-
-  70% {
-    content: "🐼";
-  }
-
-  80% {
-    content: "👋";
-  }
-
-  90% {
-    content: "🐤";
-  }
-
-  100% {
-    content: "🐱";
-  }
-}
-
 .header__image {
   position: relative;
   margin-right: 0.375rem;
+  max-width: 50vw;
+
+  @include large {
+    max-width: none;
+  }
 
   &::before,
   &::after {
-    font-size: 1.5rem;
-    content: "";
+    font-size: 1.4375rem;
     z-index: 2;
     position: absolute;
-    animation: emoji 1s infinite 0.1s;
-  }
-
-  &::before {
-    top: 46%;
-    left: 27%;
+    content: var(--emoji, "");
     transform: translate(-50%, -50%) scale(0) rotate(5deg);
+    transition: transform 0.1s;
+
+    .header a:focus-visible & {
+      content: var(--emoji, "⭐️" / "");
+    }
   }
 
-  &::after {
-    top: 42%;
-    left: 49%;
-    transform: translate(-50%, -50%) scale(0) rotate(5deg);
-  }
-
+  &[data-force-emojis="true"]::before,
+  &[data-force-emojis="true"]::after,
+  .header a:focus-visible &::before,
+  .header a:focus-visible &::after,
   &:hover::before,
   &:hover::after {
     transition: transform 0.2s;
     transition-timing-function: cubic-bezier(0.21, 1.31, 0.58, 2.03);
     transform: translate(-50%, -50%) scale(1) rotate(-10deg);
-    animation-play-state: paused;
+  }
+
+  &::before {
+    top: 46.25%;
+    left: 27%;
+  }
+
+  &::after {
+    top: 42.25%;
+    left: 48.5%;
   }
 
   & > div::before {
@@ -140,13 +103,6 @@
     box-shadow: 0.5008px 1px 0 0 var(--blue), 1.5008px 2px 0 0 var(--blue),
       2.5008px 3px 0 0 var(--blue), 3.5008px 4px 0 0 var(--blue),
       4.5008px 5px 0 0 var(--blue), 5.5px 6px 0 0 var(--blue);
-
-    &:hover,
-    &:focus {
-      // top: 5.5px;
-      // left: 6px;
-      // box-shadow: none;
-    }
   }
 }
 
@@ -160,5 +116,7 @@
 
 .header__role {
   margin-top: 0.5rem;
-  font-size: 1.125rem;
+  margin-right: 0.125rem;
+  font-size: 1rem;
+  letter-spacing: 0.001em;
 }

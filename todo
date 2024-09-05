@@ -2,7 +2,6 @@ PAGES
 -> Home
 -> Tag
 -> Tag list
--> All posts
 
 TODO
 -> View transition?
@@ -11,7 +10,7 @@ APRES LE DESIGN
 -> Optimisation des images
 -> Juger taille des GIF
 -> Favicon
--> Typo Apple
+-> Accessibilité
 
 SUR LE SERVEUR
 -> Tags sociaux

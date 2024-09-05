@@ -1,14 +1,29 @@
+@import "../config/medias.scss";
+
 .postList {
-  list-style: none;
   margin-inline: var(--main-content-margin);
-  container-type: inline-size;
+
+  & > h3 {
+    margin-top: 4rem;
+  }
+
+  & > ul {
+    margin-inline: 0;
+    margin-block-start: 0;
+    list-style: none;
+    container-type: inline-size;
+  }
 }
 
 .postList__year {
-  margin-block-start: 5rem;
+  margin-block-start: 3rem;
   font-size: 3.5rem;
   font-family: Euclid;
   color: hsl(0, 0%, 53%);
+
+  @include large {
+    margin-block-start: 5rem;
+  }
 
   li:first-of-type & {
     margin-block-start: 0;
@@ -54,8 +69,10 @@
     grid-column: 1 / -1;
 
     .postList__footer {
-      flex-direction: row;
-      align-items: flex-end;
+      @include large {
+        flex-direction: row;
+        align-items: flex-end;
+      }
     }
   }
 
@@ -121,7 +138,7 @@
   text-decoration: none;
   color: var(--black);
   display: block;
-  font-size: 1.875rem;
+  font-size: 1.3125rem; // Same as h3
   line-height: 1.25;
   background: var(--blue-lightest);
   padding: 1rem 1.5rem;
@@ -130,6 +147,14 @@
   box-shadow: 0.5008px 1px 0 0 var(--blue), 1.5008px 2px 0 0 var(--blue),
     2.5008px 3px 0 0 var(--blue), 3.5008px 4px 0 0 var(--blue),
     4.5008px 5px 0 0 var(--blue), 5.5px 6px 0 0 var(--blue);
+
+  @include small {
+    font-size: 1.5rem; // Same as h3
+  }
+
+  @include large {
+    font-size: 1.9375rem; // Same as h2
+  }
 
   &:hover,
   &:focus {

@@ -68,6 +68,7 @@ module.exports = function (eleventyConfig) {
 
   // Add copies
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("js");
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);

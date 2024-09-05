@@ -26,13 +26,6 @@ eleventyNavigation:
       <a href={{ iutUrl }}>l'IUT d'Angoulême</a>
       et au
       <a href={{ enjminUrl }}>Cnam-Enjmin</a>.</p>
-  </p>
-  <h3>Mes derniers articles</h3>
-</div>
-{% set maxPosts = collections.blog.length | min(3) %}
-{% set postslist = collections.blog | head(-3) %}
-{% set postslistCounter = collections.blog | length %}
-{% include "postslist.njk" %}
-<p class="postContent">
-  <a href="{{ '/blog/' | url }}">Tous les articles</a>
-</p></div>
+  </div>
+  {% set postslist = collections.blog %}
+  {% include "postslist_by_years.njk" %}

@@ -16,11 +16,11 @@ eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /categories/{{ tag | slug }}/
 ---
-<h1>#{{ tag }}</h1>
 
+<h1>#{{ tag }}</h1>
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
-
 <div class="postContent">
-  <p>Voir <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>
+  <p>Voir
+    <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>
 </div>
