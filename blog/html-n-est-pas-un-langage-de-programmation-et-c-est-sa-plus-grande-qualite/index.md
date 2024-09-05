@@ -9,7 +9,7 @@ originalPost: https://dev.to/bcalou/html-is-not-a-programming-language-and-that-
 ---
 
 <aside>
-  <p>Mise à jour 2023 : Mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impératif</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
+  <p>Mise à jour 2024 : Mon avis sur la question a évolué. HTML n'est certes pas un langage de programmation <strong>impératif</strong>, mais <a href="https://briefs.video/videos/is-html-a-programming-language/" title="Vidéo: HTML est-il un langage de programmation ? (en anglais)">les arguments</a> pour le considérer comme un langage de programmation <strong>déclaratif</strong> me semblent tout à fait fondés.</p>
   <p>Je ne souhaite pas modifier l'article car il correspond à mes vues de l'époque, mais gardez cette disctinction sémantique en tête : j'ai utilisé le terme « langage de programmation » incorrectement à la place de « langage de programmation <strong>impératif</strong> ».<p/>
   <p>Les autres points sont toujours d'actualité !</p>
 </aside>

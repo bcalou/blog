@@ -201,7 +201,7 @@ En réalité, il s'agissait même d'un bug qui se produisait en dehors des `ifra
 
 Réalisant que le bug se produisait toujours dans les `iframes`, je me suis permis de le signaler dans [un commentaire](https://bugs.chromium.org/p/chromium/issues/detail?id=711955#c16), ce qui a conduit à la création d'un [ticket dédié](https://bugs.chromium.org/p/chromium/issues/detail?id=711955).
 
-<aside>Mise à jour 2023 : Le bug, qui ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.</aside>
+<aside>Mise à jour 2024 : Le bug, qui ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.</aside>
 
 ## Méfiez-vous de vos habitudes de test
 

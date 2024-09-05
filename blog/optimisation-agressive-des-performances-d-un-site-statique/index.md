@@ -42,7 +42,7 @@ L'impact sera faible sur mes images de taille moyenne, mais ça ne mange pas de 
 
 Pour les couvertures, trois formats d'image cohabitent : `avif`, actuellement supporté par [Chrome & Opera](https://caniuse.com/avif), `webp`, désormais [très bien supporté](https://caniuse.com/webp), et `jpeg`, pour les navigateurs un peu à la traîne.
 
-<aside>Mise à jour 2023 : Firefox a rejoint le mouvement sur <code>avif</code>, Safari partiellement, mais Edge ne semble pas décidé à faire un mouvement en ce sens.</aside>
+<aside>Mise à jour 2024 : Le format <code>avif</code> est désormais supporté par tous les navigateurs majeurs !</aside>
 
 Le navigateur peut choisir son format préféré grâce au tag `picture`, qui contient un tag `source` pour chacun des trois formats d'image. Il contient également un tag `img` qui sera le seul interprété si le navigateur ne comprend pas `picture`. On tire ici parti de la solidité du HTML, qui va simplement ignorer ce qui n'a pas de sens pour lui.
 

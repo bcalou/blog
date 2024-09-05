@@ -220,7 +220,7 @@ Pour reprendre notre calcul du dessus, on l'utilise ainsi :
 
 Si `clamp` n'est pas supporté, le navigateur utilisera la première ligne et ignorera tout le reste. Pour quelques utilisateurs, le rendu sera un peu moins subtil, mais le contenu reste lisible et c'est l'essentiel.
 
-<aside>Mise à jour 2023 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.</aside>
+<aside>Mise à jour 2024 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.</aside>
 
 ## Vers un CSS plus adapté aux calculs visuels ?
 

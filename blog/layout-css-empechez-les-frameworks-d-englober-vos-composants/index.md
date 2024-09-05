@@ -162,7 +162,7 @@ Bien que j'aime la belle simplicité de cette solution, `display: contents` poss
 
 Ce n'est pas un problème dans notre cas, cependant, puisque `my-component` ne véhicule pas de sens sémantique particulier. Mais l'on pourrait toutefois se méfier du **support navigateur**, qui est dans cette zone grise que j'appelerai la zone <q>meh...</q>.
 
-<aside>Mise à jour 2023 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
+<aside>Mise à jour 2024 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
 
 ## Une méthode encore plus propre
 
@@ -191,7 +191,7 @@ Ainsi, le « secret » fonctionne aussi avec plusieurs marges `auto`.
 
 Et la voici donc, cette merveilleuse solution à notre problème : faire de `my-component` un conteneur flex de nouveau, et utiliser `margin: auto 0` sur l'élément `main`.
 
-<aside>Mise à jour 2023 : Utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...</aside>
+<aside>Mise à jour 2024 : Utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...</aside>
 
 ```css
 my-component {
