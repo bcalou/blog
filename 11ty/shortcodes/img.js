@@ -28,10 +28,11 @@ async function getPictureTag(options) {
   });
 
   const referenceImg = options.animated
-    ? images.gif[0]
+    ? images.gif
     : prod
-    ? images.webp[0]
-    : images.jpeg[0];
+    ? images.webp
+    : images.jpeg;
+
   const sources = Object.values(images)
     .map((imageFormat) => getSourceTag(imageFormat, 1800, options.sizes))
     .join("\n");
@@ -39,9 +40,10 @@ async function getPictureTag(options) {
   return `<picture class="picture">
     ${sources}
     <img
-      src="${referenceImg.url}"
+      src="${referenceImg[0].url}"
       alt="${options.alt}"
       ${options.lazy ? 'loading="lazy" decoding="async"' : ""}
+      width="${referenceImg.at(-1).width}"
     />
   </picture>`;
 }
