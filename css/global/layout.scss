@@ -1,9 +1,22 @@
-@import "../config/medias.scss";
+@use "../config/medias.scss" as *;
 
 body {
   background-color: var(--white);
 
   @include large {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+
+    main {
+      grid-column: 2;
+    }
+
+    footer {
+      grid-column: 2;
+    }
+  }
+
+  @include footer-to-right {
     display: flex;
     padding-left: 14rem;
   }
@@ -19,8 +32,12 @@ img {
 }
 
 main {
-  margin-block: var(--main-content-margin);
+  margin-block: calc(2rem + var(--main-content-margin));
   width: 100%;
+
+  @include large {
+    margin-block: var(--main-content-margin);
+  }
 }
 
 .cp_embed_wrapper {

@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@use "../config/medias.scss" as *;
 
 .soundcloud {
   box-shadow: var(--shadow);

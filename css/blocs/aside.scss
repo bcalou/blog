@@ -1,5 +1,5 @@
-@import '../config/medias.scss';
-@import '../blocs/post-element.scss';
+@use "../config/medias.scss" as *;
+@use "../blocs/post-element.scss";
 
 .aside {
   @extend .postElement;
@@ -19,7 +19,7 @@
   @include large {
     &::before,
     &::after {
-      content: '';
+      content: "";
       background-color: var(--blue-lightest);
       position: absolute;
       right: 100%;
@@ -34,12 +34,12 @@
 
     &::before {
       top: calc(-1 * var(--border-radius));
-      clip-path: path("M0,0 S0,8 8,8 L0,8 L0,0")
+      clip-path: path("M0,0 S0,8 8,8 L0,8 L0,0");
     }
 
     &::after {
       top: 100%;
-      clip-path: path("M0,0 L8,0 S0,0 0,8 L0,0")
+      clip-path: path("M0,0 L8,0 S0,0 0,8 L0,0");
     }
   }
 }

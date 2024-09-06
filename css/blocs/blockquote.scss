@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@use "../config/medias.scss" as *;
 
 .blockquote {
   margin-block: 1.5rem 2rem;
@@ -25,7 +25,8 @@
     font-size: 1rem;
     margin: 1rem 1.5rem 0;
 
-    &, a {
+    &,
+    a {
       color: hsl(0, 0%, 42%);
     }
 
@@ -36,13 +37,13 @@
 
       &::after {
         opacity: 0.8;
-        top: .125rem;
+        top: 0.125rem;
         right: -1.25rem;
       }
     }
 
     &::before {
-      content: '— ';
+      content: "— ";
     }
 
     cite {

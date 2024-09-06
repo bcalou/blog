@@ -1,5 +1,5 @@
-@import '../config/medias.scss';
-@import '../blocs/post-element.scss';
+@use "../config/medias.scss" as *;
+@use "../blocs/post-element.scss";
 
 pre {
   @extend .postElement;
@@ -18,7 +18,7 @@ pre {
     background: linear-gradient(to bottom, #383f62, var(--blue-darkest));
     text-transform: uppercase;
     font-size: 0.875rem;
-    right: 1.5rem; 
+    right: 1.5rem;
     padding: 0.25rem 0.625rem 0.25rem;
     font-family: euclid, sans-serif;
 
@@ -57,7 +57,7 @@ pre {
     }
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       background: linear-gradient(to right, transparent, var(--blue-darkest));
       position: absolute;
@@ -94,15 +94,17 @@ pre {
 }
 
 pre.language-html {
-  &::before, &::after {
-    content: '</> html'
+  &::before,
+  &::after {
+    content: "</> html";
   }
 }
 
 pre.language-html,
 pre.language-liquid {
-  &::before, &::after {
-    content: '</> html'
+  &::before,
+  &::after {
+    content: "</> html";
   }
 }
 
@@ -159,36 +161,42 @@ pre.language-liquid {
 }
 
 pre.language-css {
-  &::before, &::after {
-    content: '{ } css'
+  &::before,
+  &::after {
+    content: "{ } css";
   }
 }
 
 pre.language-scss {
-  &::before, &::after {
-    content: '{ } scss'
+  &::before,
+  &::after {
+    content: "{ } scss";
   }
 }
 
 pre.language-js {
-  &::before, &::after {
-    content: '( ) JS'
+  &::before,
+  &::after {
+    content: "( ) JS";
   }
 }
 
 pre.language-yaml {
-  &::before, &::after {
-    content: '# MD'
+  &::before,
+  &::after {
+    content: "# MD";
   }
 }
 
 pre.language-liquid {
-  &::before, &::after {
-    content: '{%} liquid'
+  &::before,
+  &::after {
+    content: "{%} liquid";
   }
 }
 
-code, kbd {
+code,
+kbd {
   font-family: monospace;
   font-size: 0.85em;
   font-weight: normal;
@@ -209,8 +217,8 @@ code, kbd {
     }
 
     &::before {
-      content: '';
-      border-radius: .4375rem;
+      content: "";
+      border-radius: 0.4375rem;
       position: absolute;
       background-color: var(--codeBackgroundColor);
       inset: -0.1875rem;

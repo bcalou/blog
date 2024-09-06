@@ -1,5 +1,5 @@
-@import '../config/medias.scss';
-@import '../blocs/post-element.scss';
+@use "../config/medias.scss" as *;
+@use "../blocs/post-element.scss";
 
 .figure {
   --max-figure-width: min(
@@ -48,7 +48,7 @@
     letter-spacing: 0.02em;
 
     @include large {
-      padding-inline: .25rem;
+      padding-inline: 0.25rem;
     }
 
     a {
@@ -59,7 +59,7 @@
   }
 }
 
- // Picture not inside a figure
+// Picture not inside a figure
 :not(.figure) > picture {
   @extend .postElement;
 

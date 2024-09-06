@@ -72,7 +72,7 @@ templateClass: tmpl-post
                 <div class="postList__tags">
                   {% for tag in previousPost.data.tags | filterTagList %}
                     {% set tagUrl %}/categories/{{ tag | slug }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="postTag">{{ tag }}</a>
+                    <a href="{{ tagUrl | url }}" class="postTag">{{ tag | lower }}</a>
                   {% endfor %}
                 </div>
                 <a class="postList__read" href="{{ previousPost.url | url }}">Lire l'article</a>

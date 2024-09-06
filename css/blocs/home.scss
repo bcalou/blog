@@ -1,0 +1,28 @@
+@use "../config/medias.scss" as *;
+
+.tmpl-home {
+  @include below-large {
+    h1,
+    h2 {
+      border: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      -webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      position: absolute !important;
+      width: 1px !important;
+      white-space: nowrap !important;
+    }
+
+    .postContent > p:first-of-type {
+      font-family: euclid, Arial, sans-serif;
+      font-size: 1.75rem;
+      font-weight: bold;
+      letter-spacing: 0.005em;
+      line-height: 1.25;
+    }
+  }
+}

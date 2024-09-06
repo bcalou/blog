@@ -16,6 +16,12 @@
   }
 }
 
+@mixin below-large {
+  @media (max-width: 52.99em) {
+    @content;
+  }
+}
+
 @mixin large {
   @media (min-width: 53em) {
     @content;
@@ -24,6 +30,12 @@
 
 @mixin wide {
   @media (min-width: 73em) {
+    @content;
+  }
+}
+
+@mixin footer-to-right {
+  @media (min-width: 88em) {
     @content;
   }
 }

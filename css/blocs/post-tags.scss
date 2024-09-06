@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@use "../config/medias.scss" as *;
 
 .postTags {
   margin-bottom: 4rem;
@@ -45,7 +45,7 @@
     white-space: pre;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       inset: 100% 0 0 0;

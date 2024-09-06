@@ -150,5 +150,6 @@ if ($mail) {
   const $mailLink = document.createElement("a");
   $mailLink.innerHTML = $mail.innerHTML;
   $mailLink.setAttribute("href", "mailto:" + mail);
+  $mailLink.classList.add($mail.classList);
   $mail.parentNode.replaceChild($mailLink, $mail);
 }

@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@use "../config/medias.scss" as *;
 
 .originalPost {
   margin-top: 3rem;

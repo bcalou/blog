@@ -1,4 +1,4 @@
-@import "../config/medias.scss";
+@use "../config/medias.scss" as *;
 
 table {
   margin-block: 1.5em;

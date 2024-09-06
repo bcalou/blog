@@ -1,4 +1,4 @@
-@import './medias.scss';
+@use "./medias.scss" as *;
 
 :root {
   --main-content-width: 58.75rem;

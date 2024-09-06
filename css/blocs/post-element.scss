@@ -1,4 +1,4 @@
-@import '../config/medias.scss';
+@use "../config/medias.scss" as *;
 
 .postElement {
   margin-inline: 0 !important;
