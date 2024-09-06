@@ -43,7 +43,7 @@ async function getPictureTag(options) {
       src="${referenceImg[0].url}"
       alt="${options.alt}"
       ${options.lazy ? 'loading="lazy" decoding="async"' : ""}
-      width="${referenceImg.at(-1).width}"
+      width="${Math.min(referenceImg.at(-1).width, 780)}"
     />
   </picture>`;
 }
