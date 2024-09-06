@@ -16,6 +16,7 @@ const soundcloud = require("./11ty/shortcodes/soundcloud");
 const youtube = require("./11ty/shortcodes/youtube");
 
 const addNbsp = require("./11ty/filters/add-nbsp");
+const apostrophes = require("./11ty/filters/apostrophes");
 const filterTagList = require("./11ty/filters/filter-tag-list");
 const getSeries = require("./11ty/filters/get-series");
 const head = require("./11ty/filters/head");
@@ -37,12 +38,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(embedTwitter);
   eleventyConfig.addPlugin(pluginSass, {
     sass: {
       style: prod ? "compressed" : "expanded",
     },
   });
-  eleventyConfig.addPlugin(embedTwitter);
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: "Euclid",
+          data: fs.readFileSync(
+            "./assets/fonts/EuclidCircularB-Semibold-WebS.ttf"
+          ),
+        },
+      ],
+    },
+  });
 
   // Add shortcodes
   eleventyConfig.addShortcode("blockquote", blockquote);
@@ -55,6 +68,7 @@ module.exports = function (eleventyConfig) {
 
   // Add filters
   eleventyConfig.addFilter("addNbsp", addNbsp);
+  eleventyConfig.addFilter("apostrophes", apostrophes);
   eleventyConfig.addFilter("filterTagList", filterTagList);
   eleventyConfig.addFilter("getSeries", getSeries);
   eleventyConfig.addFilter("head", head);
@@ -75,21 +89,6 @@ module.exports = function (eleventyConfig) {
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
-
-  eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    satoriOptions: {
-      fonts: [
-        {
-          name: "Pixeboy",
-          data: fs.readFileSync(
-            "./assets/fonts/euclid-circular-semibold-simple-subset.ttf"
-          ),
-          weight: 700,
-          style: "normal",
-        },
-      ],
-    },
-  });
 
   return {
     // Control which files Eleventy will process

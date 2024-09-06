@@ -5,12 +5,12 @@ function addNbsp(text) {
   }
 
   return text
-    .replace(new RegExp(/\s\!/, 'g'), '&nbsp;!')
-    .replace(new RegExp(/\s\?/, 'g'), '&nbsp;?')
-    .replace(new RegExp(/\s\:/, 'g'), '&nbsp;:')
-    .replace(new RegExp(/\s\;/, 'g'), '&nbsp;;')
-    .replace(new RegExp(/\«\s/, 'g'), '«&nbsp;')
-    .replace(new RegExp(/\s\»/, 'g'), '&nbsp;»')
+    .replace(new RegExp(/\s\!/, "g"), "&nbsp;!")
+    .replace(new RegExp(/\s\?/, "g"), "&nbsp;?")
+    .replace(new RegExp(/\s\:/, "g"), "&nbsp;:")
+    .replace(new RegExp(/\s\;/, "g"), "&nbsp;;")
+    .replace(new RegExp(/\«\s/, "g"), "«&nbsp;")
+    .replace(new RegExp(/\s\»/, "g"), "&nbsp;»");
 }
 
 module.exports = addNbsp;

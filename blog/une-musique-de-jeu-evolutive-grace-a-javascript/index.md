@@ -161,6 +161,6 @@ C'est l'occasion de recommander une excellente chaîne YouTube : [8-bit Music Th
 
 Quelques liens pour finir :
 
-- [Blobby Zombie](glop.legeay.dev/), le jeu
+- [Blobby Zombie](https://glop.legeay.dev/), le jeu
 - [Le code source](https://github.com/GJLOP/gjlop_front)
 - [La bande-son](https://soundcloud.com/bastien-calou/blobby-zombie)

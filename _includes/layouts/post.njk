@@ -4,7 +4,7 @@ templateClass: tmpl-post
 ---
 
 {% set seriesPosts = collections.blog | getSeries(series) %}
-<h1>{{ title | addNbsp | safe }}</h1>
+<h1>{{ title | addNbsp | apostrophes | safe }}</h1>
 {% include "../components/series.njk" %}
 <div class="page postContent">
   <div class="postTags">
@@ -16,7 +16,7 @@ templateClass: tmpl-post
   {% if not noDate %}
     <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
   {% endif %}
-  {{ content | addNbsp | safe }}
+  {{ content | addNbsp | apostrophes | safe }}
   {% include "../components/series.njk" %}
   {% if originalPost %}
     <p class="originalPost">Cet article a été initialement publié sur
@@ -34,13 +34,13 @@ templateClass: tmpl-post
             <li class="postList__item prevnext__next">
               <a href="{{ nextPost.url | url }}" class="postList__link">
                 {% if nextPost.data.title %}
-                  {{ nextPost.data.title | addNbsp | safe }}
+                  {{ nextPost.data.title | addNbsp | apostrophes | safe }}
                 {% else %}
                   <code>{{ nextPost.url }}</code>
                 {% endif %}
               </a>
               <time class="postList__date" datetime="{{ nextPost.date | htmlDateString }}">{{ nextPost.date | readableDate }}</time>
-              <p class="postList__intro">{{ nextPost.data.intro | addNbsp | safe }}</p>
+              <p class="postList__intro">{{ nextPost.data.intro | addNbsp | apostrophes | safe }}</p>
               <div class="postList__footer">
                 <div class="postList__tags">
                   {% for tag in nextPost.data.tags | filterTagList %}
@@ -61,13 +61,13 @@ templateClass: tmpl-post
             <li class="postList__item prevnext__prev">
               <a href="{{ previousPost.url | url }}" class="postList__link">
                 {% if previousPost.data.title %}
-                  {{ previousPost.data.title | addNbsp | safe }}
+                  {{ previousPost.data.title | addNbsp | apostrophes | safe }}
                 {% else %}
                   <code>{{ previousPost.url }}</code>
                 {% endif %}
               </a>
               <time class="postList__date" datetime="{{ previousPost.date | htmlDateString }}">{{ previousPost.date | readableDate }}</time>
-              <p class="postList__intro">{{ previousPost.data.intro | addNbsp | safe }}</p>
+              <p class="postList__intro">{{ previousPost.data.intro | addNbsp | apostrophes | safe }}</p>
               <div class="postList__footer">
                 <div class="postList__tags">
                   {% for tag in previousPost.data.tags | filterTagList %}

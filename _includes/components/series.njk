@@ -1,13 +1,18 @@
 {% if seriesPosts.length > 1 %}
-  <div class="series">
+  <div
+    class="series">
     {# <span class="series__heading">Série</span> #}
     <p class="series__title">{{ series }}</p>
     <ol>
       {% for post in seriesPosts %}
         <li {% if post.url === page.url %} aria-current="page" {% endif %}>
-          {% if post.url === page.url %}<strong>{% endif %}
-            <a href="{{ post.url }}">{{ post.data.title | addNbsp | safe }}</a>
-          {% if post.url === page.url %}</strong>{% endif %}
+          {% if post.url === page.url %}
+            <strong>
+            {% endif %}
+            <a href="{{ post.url }}">{{ post.data.title | addNbsp | apostrophes | safe }}</a>
+            {% if post.url === page.url %}
+            </strong>
+          {% endif %}
         </li>
       {% endfor %}
     </ol>

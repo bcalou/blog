@@ -15,13 +15,13 @@
                 <li class="postList__item{% if post.url == url %} postList__item--active{% endif %}">
                   <a href="{{ post.url | url }}" class="postList__link">
                     {% if post.data.title %}
-                      {{ post.data.title | addNbsp | safe }}
+                      {{ post.data.title | addNbsp | apostrophes | safe }}
                     {% else %}
                       <code>{{ post.url }}</code>
                     {% endif %}
                   </a>
                   <time class="postList__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                  <p class="postList__intro">{{ post.data.description | addNbsp | safe }}</p>
+                  <p class="postList__intro">{{ post.data.description | addNbsp | apostrophes | safe }}</p>
                   <div class="postList__footer">
                     <div class="postList__tags">
                       {% for tag in post.data.tags | filterTagList %}
