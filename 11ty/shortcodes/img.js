@@ -9,7 +9,7 @@ async function img(src, alt, ctx) {
 
   return await getPictureTag({
     path,
-    dimensions: [390, 780, 1560],
+    dimensions: src.includes("gif") ? [390] : [390, 780, 1560],
     lazy: true,
     sizes: "(max-width: 48em) 100vw, 48rem",
     animated: src.includes("gif"),
