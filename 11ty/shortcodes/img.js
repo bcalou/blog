@@ -9,7 +9,7 @@ async function img(src, alt, ctx) {
 
   return await getPictureTag({
     path,
-    dimensions: src.includes("gif") ? [390] : [390, 780, 1560],
+    dimensions: src.includes("gif") ? [390, 780] : [390, 780, 1560],
     lazy: true,
     sizes: "(max-width: 48em) 100vw, 48rem",
     animated: src.includes("gif"),
@@ -50,7 +50,7 @@ async function getPictureTag(options) {
 
 function getFormats(isAnimated) {
   if (isAnimated) {
-    return prod ? ["webp", "gif"] : ["gif"];
+    return prod ? ["gif", "webp"] : ["gif"];
   } else {
     return prod ? ["avif", "webp"] : ["jpeg"];
   }

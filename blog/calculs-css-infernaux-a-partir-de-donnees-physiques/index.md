@@ -12,6 +12,7 @@ originalPost: https://dev.to/bcalou/calculs-css-infernaux-a-partir-de-donnees-ph
 Côté CSS, je suis assez satisfait de l'effet **renversant** (j'exagère un peu) de survol que j'ai mis en place (voir sur [le site](https://top-livres.netlify.app/)).
 
 {% img "hover.gif", "Les livres pivotent au survol avec un effet 3D." %}
+{% video "hover.webm" %}
 
 Il s'agit en fait d'une adaptation d'un projet open source, [3dbook.xyz](https://3dbook.xyz/).
 

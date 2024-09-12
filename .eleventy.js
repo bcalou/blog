@@ -13,6 +13,7 @@ const figure = require("./11ty/shortcodes/figure");
 const img = require("./11ty/shortcodes/img");
 const link = require("./11ty/shortcodes/link");
 const soundcloud = require("./11ty/shortcodes/soundcloud");
+const video = require("./11ty/shortcodes/video");
 const youtube = require("./11ty/shortcodes/youtube");
 
 const addNbsp = require("./11ty/filters/add-nbsp");
@@ -64,7 +65,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("img", img);
   eleventyConfig.addShortcode("link", link);
   eleventyConfig.addShortcode("soundcloud", soundcloud);
+  eleventyConfig.addShortcode("video", video);
   eleventyConfig.addShortcode("youtube", youtube);
+
+  eleventyConfig.addAsyncShortcode(`inlineImage`, async (path) => {
+    let extension = path.extname(path).slice(1);
+    let imgPath = path.join(config.dir.input, path);
+    let base64Image = await fs.readFile(imgPath, `base64`);
+
+    if (extension === `svg`) {
+      extension = `svg+xml`;
+    }
+
+    return `data:image/${extension};base64,${base64Image}`;
+  });
 
   // Add filters
   eleventyConfig.addFilter("addNbsp", addNbsp);
@@ -86,6 +100,8 @@ module.exports = function (eleventyConfig) {
   // Add copies
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("favicon.png");
+  eleventyConfig.addPassthroughCopy("blog/**/*.webm");
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);

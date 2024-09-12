@@ -60,10 +60,11 @@
 }
 
 // Picture not inside a figure
-:not(.figure) > picture {
+:not(.figure) > picture,
+video {
   @extend .postElement;
 
-  img {
+  img, &:where(video) {
     margin-block: 1.25rem;
     box-shadow: var(--shadow);
 
