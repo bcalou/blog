@@ -1,3 +1,25 @@
+//*********************//
+// VIDEO LAZY LOADING *//
+//*********************//
+
+const reducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+document.querySelectorAll("video").forEach(($video) => {
+  new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        if (!$video.hasAttribute("src")) {
+          $video.setAttribute("src", $video.getAttribute("data-src"));
+        }
+      }
+    },
+    {
+      rootMargin: "50%",
+    }
+  ).observe($video);
+});
+
 //**********************//
 // EMOJI BUSINESS LOGIC //
 //**********************//

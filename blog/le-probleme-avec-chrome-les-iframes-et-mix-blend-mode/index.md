@@ -157,9 +157,9 @@ Si vous utilisez Chrome, vous pouvez voir que l'élément est vert. Cela illustr
 
 Et maintenant, la touche finale : vous pouvez clairement voir la distinction entre le `body` blanc et le canvas blanc en redimensionnant le viewport pour amener le pseudo-élément au dessus du `body`.
 
-{% img
-  "resize.gif",
-  "Lorsque le pseudo-élément ré-intègre le body, la fusion fonctionne et il devient rose comme prévu."
+{% video
+  "resize.webm",
+  "Lorsque l'élément flotte en dehors du body, la fusion n'est pas appliquée et il reste vert. Lorsque la hauteur de la fenêtre est réduite et que l'élément ré-intègre le body, la fusion fonctionne et il devient rose comme prévu."
 %}
 
 Analysons la situation :

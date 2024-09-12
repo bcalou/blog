@@ -11,8 +11,7 @@ originalPost: https://dev.to/bcalou/calculs-css-infernaux-a-partir-de-donnees-ph
 
 Côté CSS, je suis assez satisfait de l'effet **renversant** (j'exagère un peu) de survol que j'ai mis en place (voir sur [le site](https://top-livres.netlify.app/)).
 
-{% img "hover.gif", "Les livres pivotent au survol avec un effet 3D." %}
-{% video "hover.webm" %}
+{% video "hover.webm", "Lorsque le curseur survole un livre, ce dernier pivote avec un effet 3D." %}
 
 Il s'agit en fait d'une adaptation d'un projet open source, [3dbook.xyz](https://3dbook.xyz/).
 
@@ -162,7 +161,7 @@ Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 }
 ```
 
-{% img "shocked.gif", "Expression de dégoût." %}
+{% img "shocked.jpg", "Expression de dégoût." %}
 
 Allez, on s'accroche une dernière fois, promis. `clamp`, on connaît déjà, alors regardons nos bornes. Que remarque t-on si le livre est en mode portrait ? La première borne :
 

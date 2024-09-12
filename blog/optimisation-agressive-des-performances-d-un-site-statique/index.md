@@ -26,7 +26,10 @@ C'est désormais d'une simplicité absolue en HTML :
 
 Ainsi, les images sont chargées au fil du scroll. HTML mon amour.
 
-{% img "lazy.gif", "Les images sont chargées au fil du scroll." %}
+{% video
+  "lazy.webm",
+  "Un scroll vertical de la page, au fur et à mesure duquel les images sont chargées progressivement."
+%}
 
 Un autre attribut a récemment fait son apparition, que je m'empresse d'ajouter :
 
@@ -156,10 +159,9 @@ La séparation de ces deux processus est fréquente. Qu'ils soient ici si intriq
 
 Une autre façon de le dire, c'est que le template génère à la volée les images dont il a besoin !
 
-{% figure
-  "generation.gif",
-  "Dans un dossier, des dizaines d'images apparaissent au fur et à mesure.",
-  "Le processus peut être désactivé en développement pour gagner du temps."
+{% video
+  "generation.webm",
+  "Les images sont générées dans un dossier. Le processus peut être désactivé en développement pour gagner du temps."
 %}
 
 ## CSS critique inline

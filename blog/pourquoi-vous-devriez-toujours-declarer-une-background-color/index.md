@@ -27,12 +27,6 @@ Raphael Schweikert a commenté le premier article de cette série avec quelques 
 
 Internet Explorer a donc pris une décision fondatrice pour le web tel que nous le connaissons aujourd'hui : le blanc.
 
-{% figure
-  "gandalf.gif",
-  "Gandalf le gris devient Gandalf le blanc.",
-  "Théorie de fan : Gandalf est en réalité Internet Explorer. L'anneau de la tentation est JavaScript. Revoyez les films."
-%}
-
 ## Et aujourd'hui ?
 
 Raphael a aussi expliqué que cette couleur pouvait être modifiée. Dans Firefox, c'est simple :
@@ -59,10 +53,9 @@ Imaginons que je sois fan des modes sombres et que je définisse la couleur de l
 
 Le premier effet, c'est que lorsque rien n'est montré, car je suis en train de passer d'un site vers un autre en cours de chargement, mon écran est noir.
 
-{% figure
-  "switch.gif",
-  "Le passage d'un site à un autre. Pendant le temps de chargement du second site, l'écran est noir.",
-  "Un noir apaisant remplit l'écran pendant que le nouveau site se charge."
+{% video
+  "switch.webm",
+  "Le passage d'un site à un autre. Pendant le temps de chargement du second site, l'écran est noir."
 %}
 
 Un utilisateur de Reddit a expliqué cette astuce dans un post intitulé « [Comment ne pas être aveuglé à l'ouverture d'un nouveau site ?](https://www.reddit.com/r/firefox/comments/e89nmg/how_to_not_get_blinded_by_white_light_when/) » C'est en effet une amélioration immédiate, mais l'histoire n'est pas si simple.
@@ -72,8 +65,8 @@ Un autre post dont j'adore le titre complète le tableau : « [J'ai changé l'ar
 Oups ! En utilisant du noir pour la couleur d'arrière-plan, cet utilisateur a rendu le web... invisible.
 
 {% img
-  "racoon.gif",
-  "Un raton-laveur tente de laver un morceau de sucre dans l'eau. Il fond et le raton-laveur ne comprend pas pourquoi il a disparu."
+  "invisible.jpg",
+  "Un ordinateur dont l'écran est complètement invisible, laissant apparaître le mur derrière lui."
 %}
 
 Rappelons-nous de ce qu'explique le W3C :

@@ -21,7 +21,7 @@
     width: min-content;
   }
 
-  picture {
+  picture, video {
     width: max-content;
 
     @include medium {
@@ -60,8 +60,7 @@
 }
 
 // Picture not inside a figure
-:not(.figure) > picture,
-video {
+:not(.figure) > :where(picture, video) {
   @extend .postElement;
 
   img, &:where(video) {

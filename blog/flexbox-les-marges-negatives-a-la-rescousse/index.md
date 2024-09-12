@@ -63,11 +63,12 @@ Il y a deux problèmes principaux. Pouvez-vous les repérer ?
 
 Le premier problème est qu'à cause de sa marge à droite, le dernier élément passe à la ligne trop tôt.
 
-{% figure
-  "wrap.gif",
-  "L'article est redimensionné et le dernier élément passe à la ligne.",
-  "Remarquez-vous comme le dernier élément aurait suffisamment d'espace pour aller plus loin à droite avant de revenir à la ligne ? Comparez cet espace à l'espace à gauche du premier élement."
+{% video
+  "wrap.webm",
+  "L'article est réduit en largeur jusqu'à ce que le dernier tag de la liste passe à la ligne."
 %}
+
+Remarquez-vous comme le dernier élément aurait suffisamment d'espace pour aller plus loin à droite avant de revenir à la ligne ? Comparez cet espace à l'espace à gauche du premier élement.
 
 Il serait possible de corriger ce problème en excluant le dernier élément de cette règle :
 
@@ -81,11 +82,12 @@ li:not(:last-child) {
 
 Mais le problème est le même : tous les autres élément reviennent à la ligne trop tôt.
 
-{% figure
-"autres.gif",
-"L'article est redimensionné et les éléments passent les uns après les autres à la ligne.",
-"Désormais, le dernier élement peut aller plus loin vers la droite, mais les autres provoquent un retour à la ligne prématuré."
+{% video
+  "autres.webm",
+  "L'article est réduit en largeur et les tags passent les uns après les autres à la ligne."
 %}
+
+Désormais, le dernier élement peut aller plus loin vers la droite, mais les autres provoquent un retour à la ligne prématuré.
 
 Bon, si `margin-right` ne convient pas, que dire de `margin-left` ? Essayons de l'utiliser sur chaque élément, à l'exception du premier, qui ne devrait pas être précédé par un espace.
 
@@ -101,10 +103,9 @@ Est-ce mieux désormais ? Prenez un moment pour essayer de deviner quel pourrait
 
 Puisqu'il n'y a plus de marge à droite, le retour à la ligne a lieu exactement quand il le faut. Mais maintenant, notre problème est ailleurs :
 
-{% figure
-"left.gif",
-"L'article est redimensionné et le dernier élément passe à la ligne, avec un décalage vers la droite par rapport au premier de la ligne du dessus.",
-"La nouvelle ligne révèle la propriété <code>margin-left</code> de l'élément."
+{% video
+  "left.webm",
+  "L'article est réduit en largeur et le dernier élément passe à la ligne, avec un décalage vers la droite par rapport au premier de la ligne du dessus."
 %}
 
 Nous ne sommes pas vraiment en position de nous plaindre. Nous avons demandé à CSS que tous les éléments sauf le premier aient une marge à gauche, et c'est ce qui se passe.

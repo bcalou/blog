@@ -69,8 +69,8 @@ Mais quand je pense à l'utilisateur, je sais que la pire chose que je puisse fa
 {% blockquote "Par la présente, je reconnais que j'introduis un comportement non-standard dans ce site web, déchargeant le navigateur de sa responsabilité d'assurer une expérience fiable pour chaque utilisateur. Je fais cela en ayant consience de ma connaissance partielle des technologies web, de l'existence de limites dans mes implémentations, temporelles et techniques, qui ne peuvent être estimées. Je réalise que ce que je fais échouera probablement à un certain moment ou dans certaines situations. Mais je n'ai pas le choix et je promets de ne pas merder." %}
 
 {% img
-  "contract.gif",
-  "La petite sirène signant un contrat diabolique en écrivant yolo en bas du document."
+  "contract.jpg",
+  "La petite sirène signant un contrat diabolique."
 %}
 
 À l'inverse, quand j'utilise HTML et les standards du web, je me repose sur la connaissance partagée de développeurs de navigateurs expérimentés et des décennies de débats ayant pour but de faire du web une plate-forme de qualité.
@@ -136,7 +136,7 @@ La manière dont nous nommons les choses est importante. Il est très frustrant 
 Peut-être qu'appeler HTML un langage de programmation le rend plus digne d'attention pour certaines personnes ? Il serait naïf d'ignorer les biais salariaux et même le sexisme lié à cette affaire. Car oui, HTML/CSS est la partie présentation et cela est plus... féminin ?
 
 {% img
-"headhache.gif",
+"headhache.jpg",
 "Michael Scott se frotte le crâne avec sa main, visiblement très ennuyé."
 %}
 
@@ -156,12 +156,6 @@ Avec cette appellation, on peut réunir HTML, CSS et JavaScript sans que tout le
 %}
 
 Alors que le débat autour d'HTML/CSS étant ou non des langages de programmation semble pouvoir durer jusqu'à la fin des temps, le fait qu'ils sont utilisés, parfois aux côtés de JavaScript, pour <q>donner vie à quelque chose</q>, ne semble pas être matière à controverse.
-
-{% figure
-  "developers.gif",
-  "Un représentant de Microsoft scande le mot développeur et essaie de faire monter l'ambiance.",
-  "Nous sommes toutes et tous des développeurs."
-%}
 
 Qui se soucie de si vous programmez ou non ? La seule chose d'importance est la qualité de ce que vous construisez.
 

@@ -47,11 +47,12 @@ button:focus-visible {
 
 Si vous utilisez Chrome ou Edge, vous pouvez essayer de cibler le bouton avec la touche <kbd>Tab</kbd>. Vous devriez alors voir les styles appliqués par le sélecteur `:focus-visible`.
 
-{% figure
-  "focus.gif",
-  "Le bouton dont le texte est noir sur un fond gris clair inverse ses couleurs.",
-  "Ceci est d'une grande aide si vous n'utilisez pas la souris."
+{% video
+  "focus.webm",
+  "Un bouton obtient le focus du navigateur et ses couleurs s'inversent."
 %}
+
+Ceci est d'une grande aide si vous n'utilisez pas la souris.
 
 ## Mais il y a un problème
 
@@ -59,11 +60,12 @@ Pouvez-vous deviner ce qui se passera sur des navigateurs plus vieux ? Bien ente
 
 On perd aussi les styles de la pseudo-classe `:active` !
 
-{% figure
-  "firefox.gif",
-  "Un bouton est pressé, mais il ne change pas de couleur.",
-  "Les styles associés à la pseudo-classe <code>:active</code> ne s'appliquent pas sur Firefox, bien que ce navigateur comprenne parfaitement ce sélecteur. Tristesse infinie."
+{% video
+  "firefox.webm",
+  "Le bouton est préssé, mais il ne change pas de couleur."
 %}
+
+Les styles associés à la pseudo-classe <code>:active</code> ne s'appliquent pas sur Firefox, bien que ce navigateur comprenne parfaitement ce sélecteur. Tristesse infinie.
 
 Le problème vous paraît peut-être évident si vous le connaissez, mais lorsque j'ai du le débugger au sein d'un fichier CSS bien plus complexe, il m'a ennuyé pour quelques bonnes minutes. Et je ne pense pas que ce soit un fait très connu des débutants.
 
@@ -74,12 +76,6 @@ Comment dire ?
 En d'autres termes, si un navigateur ne connaît pas le sélecteur `:focus-within`, il ignorera la totalité de votre règle, y compris la partie concernant le sélecteur `:active`.
 
 On pourrait dire que CSS est légèrement susceptible. S'il n'aime pas le type d'olive que vous avez mis sur la pizza, il n'envisagera même pas de la manger.
-
-{% figure
-  "trash.gif",
-  "Un camion-poubelle balance une poubelle dont tout le contenu est projeté sur le trottoir.",
-  "CSS n'a pas de temps à perdre avec vos sélecteurs zinzins."
-%}
 
 Voici la spécification du W3C :
 
