@@ -5,7 +5,8 @@ body {
 
   @include large {
     display: grid;
-    grid-template-columns: 14rem 1fr;
+    // Don't know why, but 14rem 1fr does not work here
+    grid-template-columns: 14rem calc(100% - 14rem);
 
     main {
       grid-column: 2;
