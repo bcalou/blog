@@ -17,6 +17,8 @@ Tant de sites ne sont pas si complexes que ça ! Portfolios, sites vitrines, doc
 
 Une des ces nombreuses alternatives s'appelle [Eleventy](https://www.11ty.dev/). Il s'agit un générateur de site statique, dont je suis totalement tombé sous le charme pour sa simplicité et son efficacité.
 
+<aside>Le site sur lequel vous lisez cet article est fait lui aussi avec Eleventy !</aside>
+
 ## Ça sert à quoi ?
 
 Pour découvrir la bête, j'ai réalisé un site tout simple présentant [mes 10 livres préférés de l'année](https://top-livres.netlify.app/) (entends-je une remarque sur mon sens inestimable du design&nbsp;?).

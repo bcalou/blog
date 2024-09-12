@@ -28,7 +28,7 @@ Le jeu repose sur un mécanisme de dernier survivant. Il va donc falloir monter 
 
 Avec un brief aussi complet que les trois mots « arcade »,  « horreur » et  « fun », je me lance.
 
-{% soundcloud "1243942870" %}
+{% link "Écouter « Blobby Zombie » sur SoundCloud", "https://soundcloud.com/b-calou/blobby-zombie" %}
 
 Anticipant sur la programmation à venir, j'utilise une structure la plus simple possible : une boucle de 4 accords. À chaque nouveau cycle, un instrument se rajoute.
 

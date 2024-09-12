@@ -33,7 +33,10 @@ Dans quelle structure peut-on parler d'argent sans tabou ? Dans laquelle choisit
 
 Pour ma part, une confirmation que le salariat, ce n'est pas trop pour moi, mais aussi un rappel qu'il n'y a pas que le freelance en face !
 
-{% youtube "https://www.youtube.com/watch?v=rI35dYvljZo&t=2705s" %}
+{% link
+  "Voir la conférence sur YouTube",
+  "https://www.youtube.com/watch?v=rI35dYvljZo&t=2705s"
+%}
 
 ##  2. Concevoir des services éco-responsables en alliant Design de Services et Éco-conception Numérique&nbsp;⭐
 
@@ -47,7 +50,7 @@ Le design centré sur l'utilisateur est centré sur l'utilisateur... au dépend 
 
 Et pour convaincre les entreprises qui n'y verraient que des contraintes, un seul axe : soit vous prenez le train, soit vous restez passifs face à une évolution inexorable.
 
-{% youtube "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=4926s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=4926s" %}
 
 ## 3. Animating the Impossible&nbsp;⭐⭐ 
 
@@ -66,7 +69,7 @@ L'idée géniale est donc la suivante, en 4 étapes (FLIP) :
 
 Je ne sais pas si j'explique bien, mais c'est à ça que sert la vidéo, non ?
 
-{% youtube "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=8131s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=pJuHsOi0q4Y&t=8131s" %}
 
 ## 4. L'industrialisation des designers du web&nbsp;⭐⭐
 
@@ -80,7 +83,7 @@ Les designers sont presques dépossédés de leur métier : c'est désormais tou
 
 <q>Laissez-nous commiter !</q>, demande Cécile, dans un excellent parallèle avec le processus de développement et ses phases de réflexion solitaires. Figma, c'est parfois un peu comme si les collègues de votre agence vous indiquaient que vous n'avez pas fermé la parenthèse de votre fonction alors que vous êtes encore en train de coder...
 
-{% youtube "https://www.youtube.com/watch?v=rI35dYvljZo?t=11467s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=rI35dYvljZo?t=11467s" %}
 
 ## 5. Illectronisme et numérisation des services publics&nbsp;⭐
 
@@ -90,7 +93,7 @@ Avec 9% de français n'ayant aucun équipement pour accéder à Internet et 7% d
 
 Selon Raphaël, il faut se méfier du tout-numérique, qui cache le fantasme d'un citoyen modèle, qui se fond dans le moule et remplit gentiment son formulaire en ligne. Vision laissant sur le carreau tous les cas particuliers (et ils sont nombreux) et pouvant être source d'une perte d'autonomie et d'humiliation.
 
-{% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=324s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=324s" %}
 
 ## 6. Lost in translation&nbsp;⭐⭐⭐
 
@@ -104,7 +107,7 @@ C'est précisément parce que la syntaxe de HTML est simple que ce langage est m
 
 Certaines personnes s'en fichent-elles tout simplement ? J'ai bien peur qu'il ait raison, mais Manuel ne se veut pas fataliste pour autant. Une conférence très drôle sur _le_ langage du web.
 
-{% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=2828s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=2828s" %}
 
 ##  7. Transferts de données : est-ce que je peux encore utiliser des fournisseurs américains ?&nbsp;⭐⭐
 
@@ -123,7 +126,7 @@ Comme dit le diction :
 
 {% blockquote "Il ne faut pas se demander si on va se faire hacker. Il faut se demander <em>quand</em> on va se faire hacker." %}
 
-{% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=7667s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=7667s" %}
 
 ## 8. Objectifs 2025 de l’accessibilité : quels défis nous attendent ?&nbsp;⭐
 
@@ -143,4 +146,4 @@ Oui, le sujet est de plus en plus abordé. Mais c'est encore beaucoup trop anecd
 
 {% blockquote "Toutes les grosses boîtes ont un budget sécurité énorme, et le budget accessibilité ?" %}
 
-{% youtube "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=11402s" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=TGnbXfyIbq8&t=11402s" %}

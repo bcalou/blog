@@ -35,7 +35,7 @@ Jusqu'au paroxysme : le site d'un hôpital belge dont le `body` possédait un at
 
 Et donc un énième rappel : ARIA complète les informations du HTML, mais c'est bien la bonne écriture de ce dernier à la base qui garantit la bonne accessibilité.
 
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=697" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=697" %}
 
 ## 2. DesignGouv : insuffler une culture du design au sein de l'État&nbsp;⭐
 
@@ -51,7 +51,7 @@ Et un rappel simple mais important :
 
 Un passage à noter lors des questions-réponses : le gouvernement recommande-t-il les outils de surcouche d'accessibilité (que certains spécialistes avait osé critiqué, avant d'être poursuivis par les éditeurs) ? La réponse est donnée : non. Applaudissements nourris.
 
-{% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=4314" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=4314" %}
 
 ## 3. Le making-of du RGESN : tout savoir sur le référentiel d’écoconception des services numériques&nbsp;⭐⭐
 
@@ -65,7 +65,7 @@ La [loi visant à réduire l'empreinte du numérique en France de 2021](https://
 
 Et enfin, pour vous donner une idée, le nouveau site de l'ADEME (Agence de la transition écologique) respecte ce référentiel à 70%.
 
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=7824" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=7824" %}
 
 ## 4. Designer l'urgence&nbsp;⭐⭐⭐
 
@@ -80,7 +80,8 @@ Le monde de l'urgence est fait de contraintes physiques et mentales imprédictib
 L'occasion également de tordre le cou au mythe du « produit minimum viable » (MVP). Une méthode excellente dans nombre de cas, mais tout simplement inapplicable lors de la refonte d'un service aussi critique : quand on sauve des vies, on ne peut pas commencer par la « version simple ».
 
 {% blockquote "Move fast and don't break things." %}
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=10167" %}
+
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=10167" %}
 
 ## 5. Comment Canal+ travaille et intègre l’accessibilité numérique ?&nbsp;⭐
 
@@ -92,7 +93,7 @@ Enfin, je suis interpellé par ce rôle étrange chez Canal+ : <i>Legal Product 
 
 Force et courage à Amélien, donc ;)
 
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=17964" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=17964" %}
 
 ## 6. Numérique et éthique : l'impossible équation&nbsp;?&nbsp;⭐⭐
 
@@ -104,7 +105,7 @@ Et ce n'est que la partie production : saviez-vous que même si vous n'avez pas 
 
 L'invervention se clôture avec quelques conseils élémentaires : gardez votre téléphone (au moins 7 ans, idéalement). Utilisez le nouvel [indice de réparabilité](https://www.ecologie.gouv.fr/indice-reparabilite) lors d'un achat. Réparez, et, si vraiment vous devez vous séparer de votre appareil encore en fonctionnement, ne le laissez pas traîner dans un tiroir : vendez ou donnez-le.
 
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=20357" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=20357" %}
 
 ## 7. Thémiser un design system&nbsp;⭐
 
@@ -122,7 +123,7 @@ Matthieu a ainsi théorisé un modèle pour les noms de variables :
 
 Une idée m'a particulièrement parlé : un design system est une « rationalisation » du design, et devient ainsi un outil objectif pour challenger toute nouvelle modification des designers ou managers. Pas pour stagner, mais pour assurer au projet de ne pas partir dans tous les sens, ce qui est essentiel à cette échelle.
 
-{% youtube "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=25385" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=ym2sI8Jlu6A&t=25385" %}
 
 ## 8. URL ; reprenons les bases&nbsp;⭐⭐
 
@@ -134,7 +135,7 @@ Quels sont les pièges tendus aux utilisateurs grâce aux homoglyphes ? Pourquoi
 
 On réfléchit rarement aux URLs, qu'on prend pour acquises, mais elles constituent la base du web et on a tendance à minimiser leurs capacités.
 
-{% youtube "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=28739" %}
+{% link "Voir la conférence sur YouTube", "https://www.youtube.com/watch?v=gq_y9PDQgLw&t=28739" %}
 
 ## 8 bonnes raisons de venir à Paris Web 2023
 
