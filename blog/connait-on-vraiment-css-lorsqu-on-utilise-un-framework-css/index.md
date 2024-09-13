@@ -53,7 +53,7 @@ Regardons donc ce que le <i>Data Explorer</i> peut nous apprendre, avec l'exempl
 
 Voici comment lire cette cellule : dans l'ensemble, 34% des devs a répondu avoir déjà utilisé les propriétés <code>scroll-snap</code>. Cependant, si l'on regarde uniquement les fans de Bootstrap, seulement 26% utilisent <code>scroll-snap</code>, soit 8&nbsp;points de moins.
 
-Voici donc ce que j'ai entrepris : dans un [horrible document](https://docs.google.com/spreadsheets/d/1R_FNL93XDzFRNXLUYo4IYuCKu5lIYFWIBmVmeJ2ln9M/edit?usp=sharing) que vous n'avez pas besoin d'ouvrir, j'ai répertorié ces variations pour les 54 propriétés CSS présentées et pour nos 5 profils.
+Voici donc ce que j'ai entrepris : dans un horrible document, j'ai répertorié ces variations pour les 54 propriétés CSS présentées et pour nos 5 profils.
 
 ## Bootstrap, les résultats
 
