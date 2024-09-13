@@ -31,7 +31,6 @@
 
   img {
     display: block;
-    min-width: 15rem;
 
     @include below-medium {
       width: 100%;
