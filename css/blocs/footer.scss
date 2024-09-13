@@ -2,7 +2,7 @@
 @use "../blocs/post-list.scss";
 
 .footer {
-  margin-block-end: 2rem;
+  margin-block-end: 1.5rem;
   margin-inline: var(--main-content-margin);
 
   @include large {
@@ -17,7 +17,7 @@
     width: fit-content;
     left: auto;
     right: 3rem;
-    bottom: 2.25rem;
+    bottom: 1.75rem;
     padding-inline: 0;
   }
 }
@@ -152,7 +152,6 @@
 .footer__links {
   font-size: 12px;
   letter-spacing: -0em;
-  line-height: 1.5;
   text-align: center;
 
   @include footer-to-right {
@@ -162,6 +161,10 @@
   a {
     color: var(--black);
     text-decoration: none;
+    display: inline-flex;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: center;
 
     &:is(:hover, :focus) {
       text-decoration: underline;
