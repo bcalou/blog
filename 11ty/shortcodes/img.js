@@ -41,14 +41,17 @@ async function getPictureTag(options) {
   const width = Math.min(referenceImg.at(-1).width / 2, 780)
   const height = Math.round(width / ratio);
 
+  // Setting an empty string instead of loading="" does not work
+  const lazy = options.lazy ? 'loading="lazy" decoding="async"' : 'loading=""';
+
   return `<picture class="picture">
     ${sources}
     <img
       src="${referenceImg[0].url}"
       alt="${options.alt}"
-      ${options.lazy ? 'loading="lazy" decoding="async"' : ""}
       width="${width}"
       height="${height}"
+      ${lazy}
     />
   </picture>`;
 }
