@@ -151,12 +151,7 @@ Cette amélioration passe sans doute inaperçue, c'est d'ailleurs son but, mais 
 
 ## Musique + code = ❤️
 
-Voici un court extrait du jeu (le dernier saut est assez brusque, mais c'est comme ça !) :
-
-{% video
-  "video.webm",
-  "Une partie de jeu. La musique évolue lorsqu'un adversaire est touché."
-%}
+{% link "Voir un extrait du jeu sur YouTube", "https://www.youtube.com/watch?v=HlYkDBsUe14" %}
 
 C'est la première fois que je combine ma passion pour la musique et mes connaissances en programmation, et en seulement 48h j'ai pu voir à quel point les possibilités étaient grandes.
 
