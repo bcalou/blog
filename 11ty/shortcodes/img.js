@@ -37,13 +37,18 @@ async function getPictureTag(options) {
     .map((imageFormat) => getSourceTag(imageFormat, 1800, options.sizes))
     .join("\n");
 
+  const ratio = referenceImg.at(-1).width / referenceImg.at(-1).height;
+  const width = Math.min(referenceImg.at(-1).width, 780)
+  const height = Math.round(width / ratio);
+
   return `<picture class="picture">
     ${sources}
     <img
       src="${referenceImg[0].url}"
       alt="${options.alt}"
       ${options.lazy ? 'loading="lazy" decoding="async"' : ""}
-      width="${Math.min(referenceImg.at(-1).width, 780)}"
+      width="${width}"
+      height="${height}"
     />
   </picture>`;
 }
