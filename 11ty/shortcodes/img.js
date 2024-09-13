@@ -1,7 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 const prod = process.env.ELEVENTY_ENV === "prod";
 
-async function img(src, alt, ctx) {
+async function img(src, alt, lazy, ctx) {
   const context = ctx || this.ctx;
   const filePathStem = context.page.filePathStem;
   const fileDirectory = filePathStem.substr(1, filePathStem.lastIndexOf("/"));
@@ -10,7 +10,7 @@ async function img(src, alt, ctx) {
   return await getPictureTag({
     path,
     dimensions: src.includes("gif") ? [390, 780] : [390, 780, 1560],
-    lazy: true,
+    lazy: lazy != false,
     sizes: "(max-width: 48em) 100vw, 48rem",
     animated: src.includes("gif"),
     alt,

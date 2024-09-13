@@ -10,7 +10,13 @@ originalPost: https://dev.to/bcalou/-toxic-data-la-menace-de-lintermediation-alg
 
 Je sors de la lecture de <a href="https://editions.flammarion.com/toxic-data/9782080419415">Toxic Data</a>, ouvrage passionant de David Chavalarias, chercheur au CNRS, sur le rôle toxique que joue une grande partie des réseaux sociaux sur nos sociétés.
 
-{% figure "cover.webp", "Les livres pivotent au survol avec un effet 3D.", "On aime ce jaune bien agressif." %}
+{% figure
+    "cover.webp",
+    "Les livres pivotent au survol avec un effet 3D.",
+    "On aime ce jaune bien agressif.",
+    false,
+    false
+%}
 
 Il met en mots simples un sentiment de malaise que nous sommes, j'en suis sûr, un grand nombre à partager. Pour ma part, ce sentiment est un moteur depuis quelques années pour adopter une attitude de grande méfiance à l'égard des réseaux en question, et en particulier à l'égard de ceux dont les contenus présentés sont régis par un algorithme opaque cherchant à maximiser les interactions sur la plateforme (c'est à dire beaucoup d'entre-eux).
 
