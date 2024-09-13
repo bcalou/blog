@@ -15,7 +15,11 @@ Le sondage <i>State of CSS</i> de l'année 2022 propose un excellent outil appel
 
 Par exemple, voici un tableau croisant l'usage des propriétés <code>scroll-snap</code> avec l'usage de Bootstrap.
 
-{% img "scrollsnap.png", "Un tableau croisant l'usage des propriétés scroll-snap avec l'usage de Bootstrap." %}
+{% img
+  "scrollsnap.png",
+  "Un tableau croisant l'usage des propriétés scroll-snap avec l'usage de Bootstrap.",
+  false
+%}
 
 Cela peut sembler un peu compliqué, mais je vais clarifier dans quelques instants. Nous avons toutes et tous des idées préconçues sur CSS :
 
