@@ -33,6 +33,10 @@ img {
   background-color: var(--blue-darkest);
 }
 
+video {
+  max-width: 100%;
+}
+
 main {
   margin-block: calc(2rem + var(--main-content-margin));
   width: 100%;
