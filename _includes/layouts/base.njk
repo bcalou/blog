@@ -12,11 +12,6 @@
       {% ogImage "_includes/layouts/og.njk" %}
     {% endif %}
     <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
-    {% if tags %}
-      <link rel="stylesheet" href="{{ '/css/post.css' | url }}">
-    {% else %}
-      <link rel="stylesheet" href="{{ '/css/page.css' | url }}">
-    {% endif %}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link
