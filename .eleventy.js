@@ -5,7 +5,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSass = require("eleventy-sass");
-const embedTwitter = require("eleventy-plugin-embed-twitter");
 
 const blockquote = require("./11ty/shortcodes/blockquote");
 const codepen = require("./11ty/shortcodes/codepen");
@@ -39,7 +38,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(embedTwitter);
   eleventyConfig.addPlugin(pluginSass, {
     sass: {
       style: prod ? "compressed" : "expanded",

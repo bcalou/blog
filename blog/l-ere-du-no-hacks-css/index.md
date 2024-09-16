@@ -39,9 +39,14 @@ Oui, il est temps que cette bannière Twitter s'en aille...
 
 Beaucoup de choses se passent autour de CSS ces temps-ci, et je pense que 2022 pourrait être l'année où l'on se débarasse des hacks CSS, ou du moins où l'on cesse de les considérer comme du « CSS normal ».
 
-Jetez un oeil à ce thread, par exemple :
+Jetez un oeil à ce tweet, par exemple :
 
-https://twitter.com/bramus/status/1475583226165055501
+{% figure
+  "bramus.png",
+  "Tweet de Bramus",
+  "X",
+  "https://x.com/bramus/status/11475583226165055501"
+%}
 
 Les choses avancent vite est CSS devient un langage mature. Même la communauté des navigateurs s'organise pour faire évoluer CSS de la meilleure façon possible, avec par exemple l'initative [Interop](https://wpt.fyi/interop-2022).
 
