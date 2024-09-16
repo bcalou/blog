@@ -1,7 +1,7 @@
 @use "../config/medias.scss" as *;
 
 .postContent {
-  & > *:not(:has(video)) {
+  & > * {
     margin-inline: var(--main-content-margin);
   }
 
