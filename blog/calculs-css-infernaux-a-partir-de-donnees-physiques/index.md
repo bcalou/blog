@@ -58,10 +58,10 @@ Voici ce que ça donne :
 {% raw %}<div
   class="book {% if item.data.offset %}book--offset{% endif %}"
   style="
-      --width: {{ item.data.width }};
-      --height: {{ item.data.height }};
-      --pages: {{ item.data.pages }};
-    "
+    --width: {{ item.data.width }};
+    --height: {{ item.data.height }};
+    --pages: {{ item.data.pages }};
+  "
 ></div>
 {% endraw %}
 ```
