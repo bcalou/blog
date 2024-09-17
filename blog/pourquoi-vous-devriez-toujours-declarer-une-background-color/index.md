@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi vous devriez toujours déclarer une background-color"
-permalink: pourquoi-vous-devriez-toujours-declarer-une-background-color
+slug: pourquoi-vous-devriez-toujours-declarer-une-background-color
 description: Le fond d'un par défaut site n'est pas blanc mais transparent, et cela peut impacter le rendu de la page dans certains contextes.
 date: 2020-06-03
 tags:

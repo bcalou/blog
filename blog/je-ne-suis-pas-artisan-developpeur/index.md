@@ -1,6 +1,6 @@
 ---
 title: Je ne suis pas « artisan développeur »
-permalink: je-ne-suis-pas-artisan-developpeur
+slug: je-ne-suis-pas-artisan-developpeur
 description: Pourquoi cette approche tout à fait louable me semble un peu masquer la misère.
 date: 2019-08-03
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "Le problème avec Chrome, les iframes et mix-blend-mode"
-permalink: le-probleme-avec-chrome-les-iframes-et-mix-blend-mode
+slug: le-probleme-avec-chrome-les-iframes-et-mix-blend-mode
 description: Enquête sur un bug obscur de Chrome, empêchant l'utilisation de la propriété de fusion de calques au sein d'une iframe.
 date: 2020-05-26
 tags:

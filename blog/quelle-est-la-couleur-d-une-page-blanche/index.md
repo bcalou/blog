@@ -1,6 +1,6 @@
 ---
 title: "Quelle est la couleur d'une page blanche ?"
-permalink: quelle-est-la-couleur-d-une-page-blanche
+slug: quelle-est-la-couleur-d-une-page-blanche
 description: Derrière le body et l'élément html se trouve le « canvas », composant élémentaire mais méconnu de nos chères pages web.
 date: 2020-05-22
 tags:

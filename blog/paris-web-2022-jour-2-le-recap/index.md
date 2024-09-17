@@ -1,6 +1,6 @@
 ---
 title: "Paris Web 2022 — Jour 2, le récap !"
-permalink: paris-web-2022-jour-2-le-recap
+slug: paris-web-2022-jour-2-le-recap
 description: Suite et fin de cette rétrospective, avec 8 autres conférences de grande qualité.
 date: 2022-10-14
 tags:
