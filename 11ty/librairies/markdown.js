@@ -4,7 +4,7 @@ const iterator = require("markdown-it-for-inline");
 
 // Customize Markdown library and settings:
 function getMarkdownLibrary(eleventyConfig) {
-  return (markdown = markdownIt({
+  const markdown = markdownIt({
     html: true,
     breaks: true,
     linkify: true,
@@ -16,7 +16,16 @@ function getMarkdownLibrary(eleventyConfig) {
       level: [1, 2, 3, 4],
     }),
     slugify: eleventyConfig.getFilter("slug"),
-  }));
+  });
+
+  const fenceRenderer = markdown.renderer.rules.fence;
+  markdown.renderer.rules.fence = (tokens, idx, options, env, self) => {
+    const result = fenceRenderer(tokens, idx, options, env, self);
+
+    return result.replace("<code", '<code tabindex="0"');
+  };
+
+  return markdown;
   // .use(iterator, 'url_new_win', 'link_open', function (tokens, idx) {
   //   const aIndex = tokens[idx].attrIndex('target');
   //   const href = tokens[idx].attrs.find(attr => attr[0] === "href")[1];
