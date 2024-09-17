@@ -1,6 +1,6 @@
 ---
 title: "« Toxic Data » : la menace de l'intermédiation algorithmique"
-slug: "toxic-data-la-menace-de-l-intermediation-algorithmique.html"
+slug: "toxic-data-la-menace-de-l-intermediation-algorithmique"
 description: "Comment les diverses plateformes que nous utilisons ont entrepris de modeler nos relations à autrui, favorisant repli sur soi, polarisation et complotisme."
 date: 2023-09-26
 tags:

@@ -106,7 +106,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.png");
-  // eleventyConfig.addPassthroughCopy("blog/**/*.webm");
+  eleventyConfig.addPassthroughCopy({"blog/**/*.webm": "webm"});
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
