@@ -1,5 +1,6 @@
 ---
 title: Connaît-on vraiment CSS lorsqu'on utilise un framework CSS ?
+permalink: connait-on-vraiment-css-lorsqu-on-utilise-un-framework-css
 description: D'après ces données, celles et ceux ayant essayé puis abandonné Bootstrap ou Tailwind auraient la meilleure connaissance du CSS natif.
 date: 2022-12-09
 tags:

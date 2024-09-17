@@ -1,5 +1,6 @@
 ---
 title: "Layout CSS : empêchez les frameworks d'englober vos composants"
+permalink: layout-css-empechez-les-frameworks-d-englober-vos-composants
 description: L'astuce des marges automatiques offre une grande flexibilité dans le cadre d'un composant flex.
 date: 2019-06-26
 tags:

@@ -1,5 +1,6 @@
 ---
 title: Une musique de jeu évolutive grâce à JavaScript
+permalink: une-musique-de-jeu-evolutive-grace-a-javascript
 description: Comment JavaScript transforme une simple boucle de 4 accords en musique réactive aux événements d'une partie.
 date: 2022-04-07
 tags:
