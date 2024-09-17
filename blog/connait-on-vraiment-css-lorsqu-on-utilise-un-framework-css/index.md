@@ -42,13 +42,39 @@ Bootsrap a déjà été utilisé par 81% des devs ayant répondu à ce sondage. 
 
 Définissons quelques catégories :
 
-|       	| Opinion  	| Nom de code 	|
-|-------	|-------	|------	
-| 51.7% 	| Ont utilisé, mais ne l'utiliseront plus	| Les exs |
-| 29% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
-| 16.3% | Connaissent mais ne souhaitent pas essayer | Les « non merci » |
-| 2.7% | Connaissent et souhaitent essayer | Les « pourquoi pas » |
-| 0.5% | Ne connaissent pas | Les késako |
+<table>
+  <caption>Relation des devs à Bootstrap</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Opinion</th>
+    <th scope="col">Nom de code</th>
+  </tr>
+  <tr>
+    <th scope="row">51.7%</td>
+    <td> Ont utilisé, mais ne l'utiliseront plus</td>
+    <td>Les exs</td>
+  </tr>
+  <tr>
+    <th scope="row">29%</td>
+    <td>Ont utilisé et utiliseront de nouveau</td>
+    <td>Les fans</td>
+  </tr>
+  <tr>
+    <th scope="row">16.3%</td>
+    <td>Connaissent mais ne souhaitent pas essayer</td>
+    <td>Les « non merci »</td>
+  </tr>
+  <tr>
+    <th scope="row">2.7%</td>
+    <td>Connaissent et souhaitent essayer</td>
+    <td>Les « pourquoi pas »</td>
+  </tr>
+  <tr>
+    <th scope="row">0.5%</td>
+    <td>Ne connaissent pas</td>
+    <td>Les késako</td>
+  </tr>
+</table>
 
 Qui selon vous aura la meilleure connaissance du CSS natif ?
 
@@ -64,13 +90,37 @@ Voici donc ce que j'ai entrepris : dans un horrible document, j'ai répertorié 
 
 Et voici nos 5 profils, du moins familier avec le CSS natif au plus familier :
 
-|     | Variation de connaissance du CSS natif  	| 
-|-------	|-------	|
-| Les késako | 🔴&nbsp;-11&nbsp;points |
-| Les « pourquoi pas » | 🔴&nbsp;-9&nbsp;points |
-| Les fans | 🟠 -2&nbsp;points |
-| Les « non merci » | Pas de variation |
-| Les exs | 🟢&nbsp;+2&nbsp;points |
+<table>
+
+</table>
+
+<table>
+  <caption>Variation de connaissance du CSS natif en fonction de l'usage de Bootstrap</caption>
+  <tr>
+    <td></td>
+    <th scole="col">Variation de connaissance du CSS natif</th>
+  </tr>
+  <tr>
+    <th scope="row">Les késako</th>
+    <td>🔴&nbsp;-11&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les « pourquoi pas »</th>
+    <td>🔴&nbsp;-9&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les fans</th>
+    <td>🟠&nbsp;-2&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les « non merci »</th>
+    <td>Pas de variation</td>
+  </tr>
+  <tr>
+    <th scope="row">Les exs</th>
+    <td>🟢&nbsp;+2&nbsp;points</td>
+  </tr>
+</table>
 
 ### Les késako
 
@@ -118,13 +168,39 @@ Parlons maintenant du nouveau roi de la récré.
 
 D'abord, nos 5 profils :
 
-|       	| Opinion  	| Nom de code 	|
-|-------	|-------	|------	|
-| 36.4% 	| Ont utilisé et utiliseront de nouveau   	| Les fans |
-| 25% | Connaissent mais ne souhaitent pas essayer | Les « non merci » |
-| 25% | Connaissent et souhaitent essayer | Les « pourquoi pas » |
-| 9.8% 	| Ont utilisé, mais ne l'utiliseront plus	| Les exs |
-| 4.1% | Ne connaissent pas | Les késako |
+<table>
+  <caption>Relation des devs à Tailwind</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Opinion</th>
+    <th scope="col">Nom de code</th>
+  </tr>
+  <tr>
+    <th scope="row">36.4%</th>
+    <td>Ont utilisé et utiliseront de nouveau</td>
+    <td>Les fans</td>
+  </tr>
+  <tr>
+    <th scope="row">25%</th>
+    <td>Connaissent mais ne souhaitent pas essayer</td>
+    <td>Les « non merci »</td>
+  </tr>
+  <tr>
+    <th scope="row">25%</th>
+    <td>Connaissent et souhaitent essayer</td>
+    <td>Les « pourquoi pas »</td>
+  </tr>
+  <tr>
+    <th scope="row">9.8%</th>
+    <td>Ont utilisé, mais ne l'utiliseront plus</td>
+    <td>Les exs</td>
+  </tr>
+  <tr>
+    <th scope="row">4.1%</th>
+    <td>Ne connaissent pas</td>
+    <td>Les késako</td>
+  </tr>
+</table>
 
 D'après-vous, qui aura le meilleur score cette fois-ci ?
 
@@ -134,13 +210,34 @@ L'ordre a changé ! En effet, les fans obtiennent maintenant un meilleur résult
 
 Et les résultats eux-même ont aussi fortement changé.
 
-|      | Variation de connaissance du CSS natif  	| 
-|-------	|-------	|
-| Les késako | 🔴&nbsp;-9&nbsp;points |
-| Les « pourquoi pas » | 🔴&nbsp;-5&nbsp;points |
-| Les « non merci » | 🟢&nbsp;+1&nbsp;point |
-| Les fans | 🟢&nbsp;+2&nbsp;points |
-| Les exs | 🔥&nbsp;+6&nbsp;points |
+<table>
+  <caption>Variation de connaissance du CSS natif en fonction de l'usage de Tailwind</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Variation de connaissance du CSS natif</th>
+  </tr>
+  <tr>
+    <th scope="row">Les késako</th>
+    <td>🔴&nbsp;-9&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les « pourquoi pas »</th>
+    <td>🔴&nbsp;-5&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les « non merci »</th>
+    <td>🟢&nbsp;+1&nbsp;point</td>
+  </tr>
+  <tr>
+    <th scope="row">Les fans</th>
+    <td>🟢&nbsp;+2&nbsp;points</td>
+  </tr>
+  <tr>
+    <th scope="row">Les exs</th>
+    <td>🔥&nbsp;+6&nbsp;points</td>
+  </tr>
+</table>
+
 
 ## Les késako
 

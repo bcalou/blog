@@ -8,16 +8,25 @@ table {
   @media (min-width: 30em) {
     width: auto;
   }
+
+  caption {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
 }
 
 th {
   text-align: left;
   font-family: Euclid, sans-serif;
-
-  &:first-child {
-    border-top: none;
-    border-left: none;
-  }
 }
 
 td,
@@ -34,4 +43,9 @@ th {
 td:first-child {
   font-weight: bold;
   font-family: Euclid, sans-serif;
+
+  tr:first-child & {
+    border-top: none;
+    border-left: none;
+  }
 }
