@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use "../config/medias.scss" as *;
 
 .postList {
@@ -128,7 +129,7 @@
   &:hover,
   &:focus {
     box-shadow: none;
-    background-color: darken(hsl(195, 53%, 79%), 8%);
+    background-color: color.scale(hsl(195, 53%, 79%), $lightness: -8%);
     color: hsl(0, 0%, 12%);
   }
 }
