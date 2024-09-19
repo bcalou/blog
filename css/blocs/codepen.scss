@@ -6,11 +6,6 @@
   box-shadow: var(--shadow);
   background: var(--blue-darkest);
   overflow: hidden;
-
-  @include medium {
-    border: 0.125rem solid var(--blue-darkest);
-    border-radius: var(--border-radius);
-  }
 }
 
 .codepen {

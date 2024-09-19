@@ -13,6 +13,7 @@ function codepen(url) {
     class="codepen"
     data-height="415"
     data-default-tab="result"
+    data-theme-id="dark"
     data-slug-hash="${data_slug_hash}"
     data-user="${username}"
     style="
@@ -26,9 +27,9 @@ function codepen(url) {
     "
   >
     <span>
-      <a href="${url}">See the pen</a>
+      <a href="${url}">Voir le code</a>
       (<a href="${user_profile}">@${username}</a>)
-      on
+      sur
       <a href="https://codepen.io">CodePen</a>.
     </span>
   </p>
