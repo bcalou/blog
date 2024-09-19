@@ -24,6 +24,8 @@
     <link rel="icon" href="/favicon.png"/>
   </head>
   <body>
+    <a href="#main" class="skipLink">Aller directement au contenu</a>
+
     <header class="header" id="header">
       <a href="/" {% if page.url === "/" %} aria-current="page" {% endif %}>
         <div class="header__image" id="headerImage">
@@ -43,7 +45,7 @@
         </div>
       </a>
     </header>
-    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <main {% if templateClass %} class="{{ templateClass }}" {% endif %} id="main">
       {{ content | safe }}</main>
     <footer class="footer">
       <ul class="footer__social">
