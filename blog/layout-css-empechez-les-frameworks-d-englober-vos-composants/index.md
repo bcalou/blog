@@ -147,7 +147,7 @@ my-component {
 }
 ```
 
-<aside>Note : En réalité, certaines propriétés CSS (<code>font-size</code>, <code>color</code>...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.</aside>
+{% aside %}Note : En réalité, certaines propriétés CSS (<code>font-size</code>, <code>color</code>...) appliquées à l'élément impactent toujours ses enfants. Donc commenter l'élément n'est pas strictement équivalent, mais vous avez l'idée.{% endaside %}
 
 Donc... Cela signifie-t-il que du point de vue de flexbox, `main` et `footer` sont de nouveau des enfants directs du `body` ? Oui ! `my-component` n'a plus besoin d'être un conteneur flex lui-même. La propriété `justify-content: space-between` appliquée au `body` fonctionne de nouveau.
 
@@ -163,7 +163,7 @@ Bien que j'aime la belle simplicité de cette solution, `display: contents` poss
 
 Ce n'est pas un problème dans notre cas, cependant, puisque `my-component` ne véhicule pas de sens sémantique particulier. Mais l'on pourrait toutefois se méfier du **support navigateur**, qui est dans cette zone grise que j'appelerai la zone <q>meh...</q>.
 
-<aside>Mise à jour 2024 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.</aside>
+{% aside %}Mise à jour 2024 : <code>display: contents</code> est désormais largement supporté, bien que <a href="https://caniuse.com/?search=display%3A%20contents">caniuse.com</a> rapporte toujours de nombreux problèmes d'accessibilité. À juger au cas par cas, donc.{% endaside %}
 
 ## Une méthode encore plus propre
 
@@ -175,7 +175,7 @@ Quatre ans plus tard, je ne suis pas sûr qu'il soit bien connu. Mais vous pouve
 
 Voyez plutôt ce Codepen. L'élément de prix possède la propriété `margin-left: auto`.
 
-{% codepen "https://codepen.io/samserif/pen/GpwyOg" %}
+{% codepen "https://codepen.io/bcalou/pen/YzomaaP" %}
 
 C'est extrèmement utile ! Avec cette technique, il devient possible de pousser un élément dans n'importe quelle direction, horizontale ou verticale.
 
@@ -192,7 +192,7 @@ Ainsi, le « secret » fonctionne aussi avec plusieurs marges `auto`.
 
 Et la voici donc, cette merveilleuse solution à notre problème : faire de `my-component` un conteneur flex de nouveau, et utiliser `margin: auto 0` sur l'élément `main`.
 
-<aside>Mise à jour 2024 : Utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...</aside>
+{% aside %}Mise à jour 2024 : Utiliser la propriété logique <code>margin-block: auto</code> nous éviterait d'avoir à spécifier le <code>0</code>, qui m'a toujours un peu gêné...{% endaside %}
 
 ```css
 my-component {

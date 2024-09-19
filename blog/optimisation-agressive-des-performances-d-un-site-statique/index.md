@@ -46,7 +46,7 @@ L'impact sera faible sur mes images de taille moyenne, mais ça ne mange pas de 
 
 Pour les couvertures, trois formats d'image cohabitent : `avif`, actuellement supporté par [Chrome & Opera](https://caniuse.com/avif), `webp`, désormais [très bien supporté](https://caniuse.com/webp), et `jpeg`, pour les navigateurs un peu à la traîne.
 
-<aside>Mise à jour 2024 : Le format <code>avif</code> est désormais supporté par tous les navigateurs majeurs !</aside>
+{% aside %}Mise à jour 2024 : Le format <code>avif</code> est désormais supporté par tous les navigateurs majeurs !{% endaside %}
 
 Le navigateur peut choisir son format préféré grâce au tag `picture`, qui contient un tag `source` pour chacun des trois formats d'image. Il contient également un tag `img` qui sera le seul interprété si le navigateur ne comprend pas `picture`. On tire ici parti de la solidité du HTML, qui va simplement ignorer ce qui n'a pas de sens pour lui.
 
@@ -90,10 +90,27 @@ Grâce à toutes les informations à sa disposition, le navigateur peut finaleme
 
 Voici le poids des dix images en fonction du format et de la dimension :
 
-|       | avif   | webp | jpeg |
-| ----- | ------ | ---- | ---- |
-| 350px | 🌟&nbsp;147k | 252k | 321k |
-| 700px | 249k   | 459k | 624k |
+<table>
+  <caption>Poids des images en fonction de leur format et dimension</caption>
+  <tr>
+    <td></td>
+    <th scope="col">avif</th>
+    <th scope="col">webp</th>
+    <th scope="col">jpeg</th>
+  <tr>
+  <tr>
+    <th scope="row">350px</th>
+    <td>🌟&nbsp;147Ko</td>
+    <td>252Ko</td>
+    <td>321Ko</td>
+  </tr>
+  <tr>
+    <th scope="row">700px</th>
+    <td>249Ko</td>
+    <td>459Ko</td>
+    <td>624Ko</td>
+  </tr>
+</table>
 
 On varie donc du simple au quadruple ! Avec des images plus grandes, la différence sera encore plus importante.
 

@@ -34,7 +34,7 @@ Pour améliorer l'accessibilité, je veux appliquer le même effet lorsque le bo
 
 Cela est possible grâce à la nouvelle pseudo-classe `:focus-visible`. À l'heure où j'écris ces lignes, elle est supportée sans préfixe par [Chrome et Edge](https://caniuse.com/?search=focus-visible).
 
-<aside>Mise à jour 2024 : La pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉.</aside>
+{% aside %}Mise à jour 2024 : La pseudo-classe est désormais supportée par tous les navigateurs majeurs 🎉.{% endaside %}
 
 ```css
 button:active,

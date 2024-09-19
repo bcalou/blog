@@ -43,8 +43,12 @@
     color: var(--grey-light);
     padding: 0.25rem var(--main-content-margin);
     font-style: normal;
-    font-size: 1rem;
+    font-size: .9375rem;
     letter-spacing: 0.02em;
+
+    @include small {
+      font-size: 1rem;
+    }
 
     @include large {
       padding-inline: 0.25rem;

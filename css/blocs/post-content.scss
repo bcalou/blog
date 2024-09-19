@@ -5,7 +5,7 @@
     margin-inline: var(--main-content-margin);
   }
 
-  aside {
+  .postAside {
     @extend .aside !optional;
     margin-block: 2.5rem;
     font-style: italic;

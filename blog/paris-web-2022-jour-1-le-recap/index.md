@@ -26,7 +26,7 @@ J'ai mis des petites étoiles pour faire ressortir mes conférences préférées
 
 {% blockquote "Je ne sais pas qui fait 35h par semaine dans la salle, mais moi cela m'est tout à fait insupportable." %}
 
-<aside>Note : Les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.</aside>
+{% aside %}Note : Les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.{% endaside %}
 
 Au-delà des phrases (et du titre) chocs, Maïtané et Thomas ont créé toute une série de visualisations astucieuses pour créer le débat et comparer différentes formes d'activités : salariat, portage salarial, micro-entreprise, coopérative d'activité et d'emploi...
 

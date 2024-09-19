@@ -18,7 +18,7 @@ Tant de sites ne sont pas si complexes que ça ! Portfolios, sites vitrines, doc
 
 Une des ces nombreuses alternatives s'appelle [Eleventy](https://www.11ty.dev/). Il s'agit un générateur de site statique, dont je suis totalement tombé sous le charme pour sa simplicité et son efficacité.
 
-<aside>Le site sur lequel vous lisez cet article est fait lui aussi avec Eleventy !</aside>
+{% aside %}Le site sur lequel vous lisez cet article est fait lui aussi avec Eleventy !{% endaside %}
 
 ## Ça sert à quoi ?
 
@@ -74,7 +74,7 @@ description: Ce pavé a la réputation d'être un peu chiant, et oui, bon, peut-
 
 Les trois tirets au début et à la fin permettent de définir une table. Le reste est assez direct.
 
-<aside>Note : Il serait formidable de pouvoir typer les objets, avec chaque type de champ et des champs optionnels...</aside>
+{% aside %}Note : Il serait formidable de pouvoir typer les objets, avec chaque type de champ et des champs optionnels...{% endaside %}
 
 Voici donc ma belle liste de livres :
 
@@ -106,7 +106,7 @@ Un peu de travail manuel, certes, mais en contrepartie, une grande liberté.
 
 Je pourrais trier par année, par auteur, ou même créer une sous-collection contenant uniquement les livres de moins de 100 pages, pour les moins motivés. Après tout, ce n'est que du JavaScript : on fait exactement ce qu'on veut.
 
-<aside>Important : Ce JavaScript n'est pas exécuté côté client, mais bien lors de la génération du HTML statique, que je détaille ensuite.</aside>
+{% aside %}Important : Ce JavaScript n'est pas exécuté côté client, mais bien lors de la génération du HTML statique, que je détaille ensuite.{% endaside %}
 
 ### Templating
 

@@ -9,7 +9,7 @@ layout: layouts/post.njk
 originalPost: https://dev.to/bcalou/flexbox-when-negative-margins-save-the-day-h4i
 ---
 
-<aside>Mise à jour 2024 : Bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.</aside>
+{% aside %}Mise à jour 2024 : Bonne nouvelle, la technique décrite dans cet article est devenue pratiquement obsolète grâce au <a href="https://caniuse.com/flexbox-gap">large support de la propriété gap</a> par les navigateurs modernes.{% endaside %}
 
 La gestion des espaces avec flexbox n'est pas aussi simple qu'elle en a l'air. Voici une simple astuce que j'ai beaucoup utilisée ces derniers temps.
 
@@ -123,7 +123,7 @@ Un tel sélecteur hypothétique pourrait causer une _dépendance circulaire_. Pa
 
 Les dépendances circulaires sont une des raisons principales pour lesquelles nous n'avons pas encore accès aux <a href="https://css-tricks.com/lets-not-forget-about-container-queries/">container queries</a>. Mais c'est une autre histoire.
 
-<aside>Mise à jour 2024 : Après des années d'effort, les <i>containers queries</i> sont désormais <a href="https://caniuse.com/css-container-queries">bien supportées !</a></aside>
+{% aside %}Mise à jour 2024 : Après des années d'effort, les <i>containers queries</i> sont désormais <a href="https://caniuse.com/css-container-queries">bien supportées !</a>{% endaside %}
 
 ## L'astuce de la marge négative
 
@@ -215,7 +215,7 @@ Les articles tels que celui-ci deviendront obsolète lorsque la propriété CSS 
 
 Mais ce n'est pas encore le cas. À l'heure où j'écris ces lignes, le [support navigateur est de 70%](https://caniuse.com/flexbox-gap). Pas super, comparé au support à 99% de flexblox lui-même – Safari serait-il devenu le nouvel Internet Explorer ?
 
-<aside>Mise à jour 2024 : Après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.</aside>
+{% aside %}Mise à jour 2024 : Après ce qui a semblé être une petite période de flottement, Safari s'est repris en main et a rattrapé une bonne partie de son retard sur ses concurrents. Ce cliché n'a plus lieu d'être.{% endaside %}
 
 Tous les autres navigateurs modernes devraient vous montrer le même résultat avec le code suivant, sans astuce !
 
@@ -312,7 +312,7 @@ Le pouvoir des variables CSS nous permet de définir des espaces différents pou
 
 Ainsi, nous n'avons besoin de changer les variables localement que si nous souhaitons une valeur différente.
 
-<aside>Mise à jour 2024 : Plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <code>var(--row-gap, 1em);</code></aside>
+{% aside %}Mise à jour 2024 : Plutôt que des variables à la racine, l'utilisation d'une valeur par défaut serait plus appropriée, par exemple : <code>var(--row-gap, 1em);</code>{% endaside %}
 
 ## Mauvaises pratiques
 

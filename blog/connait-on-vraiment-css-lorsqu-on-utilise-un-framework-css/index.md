@@ -128,7 +128,7 @@ Le profil **késako** (qui ne sait pas ce qu'est Bootstrap) est corrélé avec u
 
 Théorie personnelle : Bootstrap est tant utilisé que si vous ne le connaissez pas (seulement 0,5% des réponses), vous êtes probablement en train de découvrir CSS. Il est donc logique que vous ayez encore une connaissance du CSS lacunaire.
 
-<aside>Note : Merci de garder à l'esprit que les théories personnelles sont des théories... et qu'elles sont personnelles.</aside>
+{% aside %}Note : Merci de garder à l'esprit que les théories personnelles sont des théories... et qu'elles sont personnelles.{% endaside %}
 
 ### Les « pourquoi pas »
 

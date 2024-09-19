@@ -71,7 +71,9 @@ La variable `offset`, si elle est présente, permet d'ajouter une classe supplé
 
 Les 3 autres variables sont passées grâce à l'attribut `style`, et sont maintenant disponibles pour chaque élément `.book`.
 
-<aside>Note : Les variables CSS sont scopées. Chaque élément <code>.book</code> possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants.</aside>
+{% aside %}
+Note : Les variables CSS sont scopées. Chaque élément <code>.book</code> possède désormais ces 3 variables qui ne sont accessibles qu'à lui-même et ses enfants.
+{% endaside %}
 
 {% figure
   "dom.png",
@@ -147,7 +149,7 @@ Je peux ensuite utiliser ce booléen pour obtenir d'autres valeurs.
 
 Quelle devrait être la hauteur d'un livre s'il est en portrait ? La hauteur du conteneur, soit `--base-size-rem`. S'il est en paysage, au contraire, cela devrait être dépendant de largeur, qui elle sera `--base-size-rem`.
 
-<aside>Note : L'usage de <code>object-fit: contain</code> pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes.</aside>
+{% aside %}Note : L'usage de <code>object-fit: contain</code> pour contenir l'image n'est pas suffisante ici, car d'autres éléments et pseudo-éléments constitutifs de l'effet final ont besoin de connaître les dimensions exactes.{% endaside %}
 
 Et c'est ainsi que l'on parvient à des atrocités de ce genre :
 
@@ -221,7 +223,7 @@ Pour reprendre notre calcul du dessus, on l'utilise ainsi :
 
 Si `clamp` n'est pas supporté, le navigateur utilisera la première ligne et ignorera tout le reste. Pour quelques utilisateurs, le rendu sera un peu moins subtil, mais le contenu reste lisible et c'est l'essentiel.
 
-<aside>Mise à jour 2024 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.</aside>
+{% aside %}Mise à jour 2024 : <code>clamp</code> est désormais supporté par tous les navigateurs majeurs.{% endaside %}
 
 ## Vers un CSS plus adapté aux calculs visuels ?
 

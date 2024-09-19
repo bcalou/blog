@@ -3,9 +3,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.42;
-  font-size: 1.0625rem;
+  font-size: .9375rem;
   color: var(--black);
   background: var(--white);
+
+  @include small {
+    font-size: 1.0625rem;
+  }
 
   @include large {
     font-size: 1.25rem;
@@ -36,7 +40,7 @@ h1 a {
 }
 
 p a,
-aside a {
+.postAside a {
   @extend .postTag !optional;
 }
 
@@ -82,7 +86,7 @@ h3 {
 p,
 ul,
 ol,
-aside {
+.postAside {
   margin: 0.75em 0;
   letter-spacing: 0.025em;
   line-height: 1.5;

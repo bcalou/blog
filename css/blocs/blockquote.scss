@@ -22,8 +22,12 @@
   figcaption {
     font-style: normal;
     font-family: euclid, sans-serif;
-    font-size: 1rem;
     margin: 1rem 1.5rem 0;
+    font-size: .9375rem;
+
+    @include small {
+      font-size: 1rem;
+    }
 
     &,
     a {

@@ -24,7 +24,7 @@ Une première présentation donnée par deux personnes : une voyante et une non-
 
 {% blockquote "Nous sommes collègues. Il nous arrive souvent de regarder le même site mais de ne pas voir la même chose." %}
 
-<aside>Note : Les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.</aside>
+{% aside %}Note : Les citations sont basées sur ma prise de notes. Elle reflètent le propos mais la formulation exacte peut varier.{% endaside %}
 
 Sophie et Bart définissent ARIA comme un moyen permettant de modifier l'<i>accessibility tree</i> (que vous pouvez voir dans le dev tools au même titre que le <i>DOM tree</i>).
 

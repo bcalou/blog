@@ -7,6 +7,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSass = require("eleventy-sass");
 const criticalCss = require("eleventy-critical-css");
 
+const aside = require("./11ty/shortcodes/aside");
 const blockquote = require("./11ty/shortcodes/blockquote");
 const codepen = require("./11ty/shortcodes/codepen");
 const figure = require("./11ty/shortcodes/figure");
@@ -64,6 +65,7 @@ module.exports = function (eleventyConfig) {
   }
 
   // Add shortcodes
+  eleventyConfig.addPairedShortcode("aside", aside);
   eleventyConfig.addShortcode("blockquote", blockquote);
   eleventyConfig.addShortcode("codepen", codepen);
   eleventyConfig.addNunjucksAsyncShortcode("figure", figure);
