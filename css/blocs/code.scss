@@ -93,21 +93,6 @@ pre {
   }
 }
 
-pre.language-html {
-  &::before,
-  &::after {
-    content: "</> html";
-  }
-}
-
-pre.language-html,
-pre.language-liquid {
-  &::before,
-  &::after {
-    content: "</> html";
-  }
-}
-
 pre {
   .tag,
   .rule,
@@ -160,10 +145,19 @@ pre.language-liquid {
   }
 }
 
+pre.language-html {
+  &::before,
+  &::after {
+    content: "</> html";
+    content: "</> html" / "";
+  }
+}
+
 pre.language-css {
   &::before,
   &::after {
     content: "{ } css";
+    content: "{ } css" / "";
   }
 }
 
@@ -171,6 +165,7 @@ pre.language-scss {
   &::before,
   &::after {
     content: "{ } scss";
+    content: "{ } scss" / "";
   }
 }
 
@@ -178,6 +173,7 @@ pre.language-js {
   &::before,
   &::after {
     content: "( ) JS";
+    content: "( ) JS" / "";
   }
 }
 
@@ -185,6 +181,7 @@ pre.language-yaml {
   &::before,
   &::after {
     content: "# MD";
+    content: "# MD" / "";
   }
 }
 
@@ -192,6 +189,7 @@ pre.language-liquid {
   &::before,
   &::after {
     content: "{%} liquid";
+    content: "{%} liquid" / "";
   }
 }
 

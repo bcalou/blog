@@ -5,6 +5,7 @@
   &::after {
     position: absolute;
     content: "#";
+    content: "#" / "";
     text-decoration: none;
     color: var(--blue);
     opacity: 1;
