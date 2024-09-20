@@ -13,7 +13,7 @@ Je sors de la lecture de <a href="https://editions.flammarion.com/toxic-data/978
 
 {% figure
     "cover.webp",
-    "Les livres pivotent au survol avec un effet 3D.",
+    "Couverture du livre Toxic Data",
     "On aime ce jaune bien agressif.",
     false,
     false
