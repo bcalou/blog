@@ -38,7 +38,7 @@ async function getPictureTag(options) {
     .join("\n");
 
   const ratio = referenceImg.at(-1).width / referenceImg.at(-1).height;
-  const width = Math.min(referenceImg.at(-1).width / 2, 780)
+  const width = Math.min(Math.round(referenceImg.at(-1).width) / 2, 780)
   const height = Math.round(width / ratio);
 
   // Setting an empty string instead of loading="" does not work
