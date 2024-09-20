@@ -2,14 +2,14 @@
   {% if postslistTitle %}
     <h3>{{ postslistTitle }}</h3>
   {% endif %}
-  <ul reversed>
+  <ol reversed>
     {% for year in collections.postsByYear %}
       {% if tag == "all" or tag in year.tags %}
         <li>
           {% if (loop.index > 1) %}
             <div class="postList__year">{{ year.posts[0].date.getFullYear() }}</div>
           {% endif %}
-          <ul class="postList__group">
+          <ol class="postList__group">
             {% for post in year.posts %}
               {% if tag == "all" or tag in post.data.tags %}
                 <li class="postList__item{% if post.url == url %} postList__item--active{% endif %}">
@@ -34,11 +34,11 @@
                 </li>
               {% endif %}
             {% endfor %}
-          </ul>
+          </ol>
         </li>
       {% endif %}
     {% endfor %}
-  </ul>
+  </ol>
 </div>
 
 <div class="postContent">
