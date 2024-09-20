@@ -41,7 +41,7 @@ function getFigCaptionTag(author, source, href) {
 // Generate a <cite> tag with an optional url associated
 function getCiteTag(source, href) {
   if (href) {
-    return `<cite>${link(source, href)}<cite>`
+    return `<cite>${link(source, href)}</cite>`
   }
 
   return `<cite>${source}</cite>`
