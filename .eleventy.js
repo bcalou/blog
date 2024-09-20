@@ -6,6 +6,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSass = require("eleventy-sass");
 const criticalCss = require("eleventy-critical-css");
+const EleventyPluginOgImage = require("eleventy-plugin-og-image");
 
 const aside = require("./11ty/shortcodes/aside");
 const blockquote = require("./11ty/shortcodes/blockquote");
@@ -31,8 +32,6 @@ const getPostsByYearCollection = require("./11ty/collections/posts-by-year");
 
 const getMarkdownLibrary = require("./11ty/librairies/markdown");
 
-const EleventyPluginOgImage = require("eleventy-plugin-og-image");
-
 const browserConfig = require("./11ty/browser-config");
 
 module.exports = function (eleventyConfig) {
@@ -46,13 +45,15 @@ module.exports = function (eleventyConfig) {
     },
   });
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    generateHTML: (outputUrl) =>
+      `<meta property="og:image" content="https://bastiencalou.fr${outputUrl}" />`,
     satoriOptions: {
       fonts: [
         {
           name: "Euclid",
           data: fs.readFileSync(
             "./assets/fonts/EuclidCircularB-Semibold-WebS.ttf"
-          ),
+          )
         },
       ],
     },
