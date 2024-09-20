@@ -97,7 +97,7 @@ Voici le poids des dix images en fonction du format et de la dimension :
     <th scope="col">avif</th>
     <th scope="col">webp</th>
     <th scope="col">jpeg</th>
-  <tr>
+  </tr>
   <tr>
     <th scope="row">350px</th>
     <td>🌟&nbsp;147Ko</td>
