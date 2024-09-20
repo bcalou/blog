@@ -4,7 +4,7 @@ function video(src, figcaption) {
       class="picture"
       controls
       playsinline
-      data-src="/webm/${src}"
+      src="/webm/${src}"
     ></video>
     <figcaption>
       Vidéo : ${figcaption.charAt(0).toLowerCase() + figcaption.slice(1)}
