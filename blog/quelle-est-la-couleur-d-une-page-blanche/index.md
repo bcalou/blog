@@ -167,7 +167,7 @@ On apprend également que l'élément racine peut être le `body` ou le `html` :
 {% blockquote
   "Il est recommandé aux auteurs de documents HTML de spécifier le fond du canvas sur l'élément <code>body</code> plutôt que sur l'élement <code>html</code>.",
   "W3C",
-  "The Canvas Background and the HTML <body> Element",
+  "The Canvas Background and the HTML &lt;body&gt; Element",
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
 %}
 
@@ -285,7 +285,7 @@ Encore une fois, le W3C nous donne la réponse :
 {% blockquote
   "Si l'arrière-plan du canvas n'est pas opaque, ce qui est visible en dessous dépendra de l'agent utilisateur.",
   "W3C",
-  "The Canvas Background and the HTML <body> Element",
+  "The Canvas Background and the HTML &lt;body&gt; Element",
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
 %}
 

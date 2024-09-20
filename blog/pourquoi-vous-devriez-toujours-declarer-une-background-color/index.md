@@ -75,7 +75,7 @@ Rappelons-nous de ce qu'explique le W3C :
 {% blockquote
   "Si l'arrière-plan du canvas n'est pas opaque, ce qui est visible en dessous dépendra de l'agent utilisateur.",
   "W3C",
-  "The Canvas Background and the HTML <body> Element",
+  "The Canvas Background and the HTML &lt;body&gt; Element",
   "https://www.w3.org/TR/css-backgrounds-3/#body-background"
 %}
 

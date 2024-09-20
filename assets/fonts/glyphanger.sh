@@ -1,1 +1,1 @@
-glyphhanger --subset=euclid-circular-semibold-simple.woff2 --whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀàÂâÇçÉéÈèÊêÎîÏïÔôÙùÛû\(\)0123456789\'\’\!\?\-\#\.\…\—\«\»\,\;\:\%\€\@
+glyphhanger --subset=euclid-circular-semibold-complete.woff2 --whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀàÂâÇçÉéÈèÊêÎîÏïÔôÙùÛû\(\)0123456789\'\’\!\?\-\#\.\…\—\«\»\,\;\:\%\€\@\<\>
