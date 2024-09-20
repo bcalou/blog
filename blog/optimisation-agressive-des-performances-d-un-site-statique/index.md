@@ -1,7 +1,7 @@
 ---
 title: Optimisation agressive des performances d'un site statique
 slug: optimisation-agressive-des-performances-d-un-site-statique
-description: "Gestion des tailles et formats d'images, <i>lazy-loading</i>, CSS critique inline… tout est bon pour une optimisation maximale."
+description: "Gestion des tailles et formats d'images, lazy-loading, CSS critique inline… tout est bon pour une optimisation maximale."
 date: 2021-06-16
 tags:
   - Performance

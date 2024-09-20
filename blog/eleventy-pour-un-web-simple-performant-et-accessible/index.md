@@ -1,7 +1,7 @@
 ---
 title: Eleventy — Pour un web simple, performant et accessible
 slug: eleventy-pour-un-web-simple-performant-et-accessible
-description: Grâce au <i>pre-rendering</i>, Eleventy génère à l'avance un contenu statique, offrant ainsi de grands avantages sur une <i>Single-Page App</i>.
+description: Grâce au pre-rendering, Eleventy génère à l'avance un contenu statique, offrant ainsi de grands avantages sur une Single-Page App.
 date: 2021-06-14
 tags:
   - Eleventy
