@@ -50,27 +50,27 @@ Définissons quelques catégories :
     <th scope="col">Nom de code</th>
   </tr>
   <tr>
-    <th scope="row">51.7%</td>
+    <th scope="row">51.7%</th>
     <td> Ont utilisé, mais ne l'utiliseront plus</td>
     <td>Les exs</td>
   </tr>
   <tr>
-    <th scope="row">29%</td>
+    <th scope="row">29%</th>
     <td>Ont utilisé et utiliseront de nouveau</td>
     <td>Les fans</td>
   </tr>
   <tr>
-    <th scope="row">16.3%</td>
+    <th scope="row">16.3%</th>
     <td>Connaissent mais ne souhaitent pas essayer</td>
     <td>Les « non merci »</td>
   </tr>
   <tr>
-    <th scope="row">2.7%</td>
+    <th scope="row">2.7%</th>
     <td>Connaissent et souhaitent essayer</td>
     <td>Les « pourquoi pas »</td>
   </tr>
   <tr>
-    <th scope="row">0.5%</td>
+    <th scope="row">0.5%</th>
     <td>Ne connaissent pas</td>
     <td>Les késako</td>
   </tr>
@@ -98,7 +98,7 @@ Et voici nos 5 profils, du moins familier avec le CSS natif au plus familier :
   <caption>Variation de connaissance du CSS natif en fonction de l'usage de Bootstrap</caption>
   <tr>
     <td></td>
-    <th scole="col">Variation de connaissance du CSS natif</th>
+    <th scope="col">Variation de connaissance du CSS natif</th>
   </tr>
   <tr>
     <th scope="row">Les késako</th>
