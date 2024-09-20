@@ -27,10 +27,7 @@ function codepen(url) {
     "
   >
     <span>
-      <a href="${url}">Voir le code</a>
-      (<a href="${user_profile}">@${username}</a>)
-      sur
-      <a href="https://codepen.io">CodePen</a>.
+      <a href="${url}">Voir le code sur CodePen</a>.
     </span>
   </p>
 
