@@ -20,6 +20,7 @@ const youtube = require("./11ty/shortcodes/youtube");
 
 const addNbsp = require("./11ty/filters/add-nbsp");
 const apostrophes = require("./11ty/filters/apostrophes");
+const codeLanguage = require("./11ty/filters/code-language");
 const filterTagList = require("./11ty/filters/filter-tag-list");
 const getSeries = require("./11ty/filters/get-series");
 const head = require("./11ty/filters/head");
@@ -91,6 +92,7 @@ module.exports = function (eleventyConfig) {
   // Add filters
   eleventyConfig.addFilter("addNbsp", addNbsp);
   eleventyConfig.addFilter("apostrophes", apostrophes);
+  eleventyConfig.addFilter("codeLanguage", codeLanguage);
   eleventyConfig.addFilter("filterTagList", filterTagList);
   eleventyConfig.addFilter("getSeries", getSeries);
   eleventyConfig.addFilter("head", head);

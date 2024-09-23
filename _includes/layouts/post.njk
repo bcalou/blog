@@ -16,7 +16,7 @@ templateClass: tmpl-post
   {% if not noDate %}
     <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
   {% endif %}
-  {{ content | addNbsp | apostrophes | safe }}
+  {{ content | addNbsp | apostrophes | codeLanguage | safe }}
   {% include "../components/series.njk" %}
   {% if originalPost %}
     <p class="originalPost">Cet article a été initialement publié sur
