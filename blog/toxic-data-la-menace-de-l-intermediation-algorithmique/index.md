@@ -31,7 +31,7 @@ Mais David Chavalarias le dit mieux que moi :
     [...] Les algorithmes ne font pas la distinction entre vos différents cercles relationnels et traitent indifférement vos sujets de préoccupation. [...] Facebook peut très bien vous bombarder de messages que l'une de vos connaissances a appréciés alors même que vous n'abordez jamais ce type de sujets avec elle. Ce bombardement intempestif vous amènera peut-être à adopter un point de vue auquel vous ne vous seriez pas exposé naturellement ou, au contraire, à rompre un lien social par overdose de contenus dissonants, alors que vous auriez très bien pu continuer à sympathiser sur d'autres sujets avec cette personne.
     [Il en résulte que] la structure de vos cercles sociaux est brouillée. [...] Vous êtes privé(e) des filtres contextuels que vous appliquiez dans vos interactions quotidiennes.", "David Chavalarias", "Toxic Data" %}
 
-Les effets vont bien au-delà de l'impact sur l'individu lui-même :
+Les effets vont bien au-delà de l'impact sur les personnes elles-mêmes :
 
 {% blockquote
     "Plus un réseau social se densifie avec l'ajout de liens, plus le nombre moyen d'intermédiaires entre deux personnes se réduit. Or les contenus négatifs ont tendance à se propager, de proche en proche, plus facilement que d'autres types de contenus. Dès lors qu'un certain seuil de densification est atteint, ces contenus négatifs sont donc les premiers à pouvoir toucher une très large fraction du réseau, même s'ils sont produits par un très petit nombre de personnes.

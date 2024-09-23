@@ -267,7 +267,7 @@ Théorie personnelle : contrairement à ce que l'on lit parfois, aimer Tailwind 
 
 Le profil des **exs** (ayant utilisé Tailwind mais ne souhaitant plus l'utiliser) fait bien mieux que la moyenne : 🔥&nbsp;**+6&nbsp;points**.
 
-Théorie personnelle : bien que les devs utilisant Tailwind fassent partie de l'écosystème moderne et connaissent leur CSS, les devs ayant tourné leur dos à Tailwind semblent en savoir plus. Premièrement, Tailwind ne résoud pas (et ne prétend pas résoudre) et ne couvre pas tout. Certains fonctionnalités modernes, comme `:has`, les _container queries_, les _cascade layers_, les `@supports` _queries_... nécessitent de les connaître nativement pour les utiliser à leur plein potentiel. Cela ne signifie pas que les fans de Tailwind ne les connaissent pas et ne peuvent pas utiliser les deux, mais les personnes déçues par l'approche de Tailwind semblent simplement investir plus de temps dans la compréhension du CSS natif. Cela n'en fait pas de meilleures personnes, mais leur boîte à outil semble un peu plus étendue.
+Théorie personnelle : bien que les devs utilisant Tailwind fassent partie de l'écosystème moderne et connaissent leur CSS, les devs ayant tourné leur dos à Tailwind semblent en savoir plus. Premièrement, Tailwind ne résoud pas et ne couvre pas tout (ni ne prétend le faire). Certains fonctionnalités modernes, comme `:has`, les _container queries_, les _cascade layers_, les `@supports` _queries_... nécessitent de les connaître nativement pour les utiliser à leur plein potentiel. Cela ne signifie pas que les fans de Tailwind ne les connaissent pas et ne peuvent pas utiliser les deux, mais les personnes déçues par l'approche de Tailwind semblent simplement investir plus de temps dans la compréhension du CSS natif. Cela n'en fait pas de meilleures personnes, mais leur boîte à outil semble un peu plus étendue.
 
 Voici le détail des résultats par catégories de fonctionnalités :
 
@@ -279,7 +279,7 @@ Encore une fois, il y a un gros écart au rayon accessibilité : si les personne
 
 ## Conclusion
 
-J'espère que cette petite expérience vous a intéressé. Ce n'est pas une publication scientifique revue par les pairs, alors prenez-là avec du recul, mais j'ai fait de mon mieux avec ce que j'avais. N'oublions pas le biais d'échantillonnage : les personnes répondant à un sondage sur CSS ne peuvent pas représenter tout le monde.
+J'espère que cette petite expérience était intéressante. Ce n'est pas une publication scientifique revue par les pairs, alors prenez-là avec du recul, mais j'ai fait de mon mieux avec ce que j'avais. N'oublions pas le biais d'échantillonnage : les personnes répondant à un sondage sur CSS ne peuvent pas représenter tout le monde.
 
 Voici quelques conclusions que je vous soumets :
 
@@ -297,8 +297,8 @@ Cependant, elles devraient être conscientes que maîtriser Tailwind n'est pas e
 
 ### À propos du CSS natif
 
-[2022 a été une excellente année pour CSS](https://bastiencalou.fr/blog/l-ere-du-no-hacks-css) et je pense que connaître ces capacités natives est un atout puissant. Bien sûr, cela ne remplace pas une compréhension profonde de la logique CSS, qui n'est pas juste une liste de propriétés, mais cela fournit une vaste boîte à outil dans laquelle piocher pour faire face à divers obstacles.
+[2022 a été une excellente année pour CSS](https://bastiencalou.fr/blog/l-ere-du-no-hacks-css) et je pense que connaître ses capacités natives est un atout puissant. Bien sûr, cela ne remplace pas une compréhension profonde de la logique CSS, qui n'est pas juste une liste de propriétés, mais cela fournit une vaste boîte à outil dans laquelle piocher pour faire face à divers obstacles.
 
-Pour Bootstrap et Tailwind, les personnes connaissant le plus de CSS natif étaient celles qui avaient testé le framework. Alors ne rejetez pas forcément tous ces outils sur un principe de pureté : découvrir de nouvelles façons d'écrire du CSS – même pour réaliser qu'elles ne vous conviennent pas au final – est potentiellement précieux et pourrait donner un nouvel éclairage à la façon dont vous écrivez du CSS natif.
+Pour Bootstrap et Tailwind, les personnes connaissant le plus de CSS natif étaient celles qui avaient testé le framework. Alors ne rejetez pas forcément tous ces outils par idéologie : découvrir de nouvelles façons d'écrire du CSS – même pour réaliser qu'elles ne vous conviennent pas au final – est potentiellement précieux et pourrait donner un nouvel éclairage à la façon dont vous écrivez du CSS natif.
 
 Que pensez-vous de tout cela ? Si vous parvenez à des conclusions différentes, n'hésitez pas à les partager (en respectant tout le monde, ce n'est que du CSS !).

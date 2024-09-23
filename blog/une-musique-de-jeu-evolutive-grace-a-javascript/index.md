@@ -59,7 +59,7 @@ Puisque mes cycles font 15 secondes, c'est assez facile à calculer.
 
 Si je suis au cycle 2 et que je souhaite avancer au cycle 3, je peux calculer qu'il faut avancer à 30 secondes dans le morceau (le cycle 1 commençant à 0 seconde, et le cycle 2 à 15 secondes).
 
-C'est exactement ce que fait cette première démo. À chaque fois que vous cliquerez sur le bouton « Sauter », vous serez emmené au début de la section suivante :
+C'est exactement ce que fait cette première démo. À chaque fois que vous cliquerez sur le bouton « Sauter », vous sauterez au début de la section suivante :
 
 {% codepen "https://codepen.io/bcalou/pen/XWVZJKR" %}
 

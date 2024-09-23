@@ -11,9 +11,9 @@ originalPost: https://dev.to/bcalou/je-ne-suis-pas-artisan-developpeur-2hc2
 
 Il y a quelques jours, j'ai reçu un message dans ma boîte de réception LinkedIn. Cette fois, pas d'offre sous forme de poème, pas de blagounette pseudo-disruptive. Même pas de _Ninja_ ou de _Rockstar developer_ à l'horizon. Mais un terme que je ne connaissais pas : celui de **software craftsmanship** (comprenez « artisanat du développement »).
 
-Après m'être imaginé quelques instants artisan développeur, accueillant les touristes dans ma petite boutique à Saint-Paul-de-Vence (<q>Entrez messieurs dames, attention ou vous mettez les pieds, il y a des frameworks un peu partout je n'ai pas encore eu le temps de ranger !</q>), j'ai quand même demandé à Google ce qu'il en pensait.
+Après m'être imaginé quelques instants artisan développeur, accueillant les touristes dans ma petite boutique à Saint-Paul-de-Vence (<q>Entrez messieurs dames, attention où vous mettez les pieds, il y a des frameworks un peu partout je n'ai pas encore eu le temps de ranger !</q>), j'ai quand même demandé à Google ce qu'il en pensait.
 
-Et là, il y avait une fiche Wikipédia. Et si c'est sur Wikipédia, c'est bien que ça existe et que ça n'est pas une invention de RH dépressif. Quand on remonte à la source, on trouve un [manifeste](http://manifesto.softwarecraftsmanship.org/#/fr-fr) : celui des artisans du logiciel.
+Et là, il y avait une fiche Wikipédia. Et si c'est sur Wikipédia, c'est bien que ça existe et que ça n'est pas une invention de RH en manque de sensations fortes. Quand on remonte à la source, on trouve un [manifeste](http://manifesto.softwarecraftsmanship.org/#/fr-fr) : celui des artisans du logiciel.
 
 {% figure
   "manifeste.png",
@@ -72,7 +72,7 @@ Le projet n'a pas explosé quand je suis parti, même si j'ai fait quelques inca
 
 ## Des fois, ça se passe moins bien
 
-J'ai travaillé sur un projet (comprendre : plusieurs projets) où les contraintes étaient telles que tout cela n'avait aucune chance d'émerger, alors que les règles métier n'étaient pas plus complexes. Où chaque deadline était remplacée par une autre, où tout ce qui ne contribuait pas à facturer le client au plus vite était vu comme un mal au mieux nécessaire, au pire dispensable.
+J'ai travaillé sur un projet (comprendre : plusieurs projets) où les contraintes étaient telles que tout cela n'avait aucune chance d'émerger. Où chaque deadline était remplacée par une autre, où tout ce qui ne contribuait pas à facturer le client au plus vite était vu comme un mal au mieux nécessaire, au pire dispensable.
 
 Ce genre de situation où, vous le savez bien, les tests sont les premiers sacrifiés. Où mentionner la possibilité d'en écrire, bien que ce soit notre responsabilité professionnelle, semble blasphématoire, et nous poserait presque en ennemi du livrable, en ayatollah de la qualité, en fauteur de troubles.
 
@@ -117,7 +117,7 @@ Non.
 
 Le projet, il est peut-être réalisé dans des conditions apocalyptiques, mais c'est notre travail. C'est notre protégé, c'est ce PNJ qu'on doit amener en sécurité, même s'il se prend un coup de sniper toutes les 30 secondes, même si on a envie de lui tirer dessus nous-même.
 
-Je ne suis pas fier de tous les projets que j'ai réalisés, mais je n'ai pas à rougir de l'effort que j'y ai mis, et des objectifs de qualité que j'ai toujours gardé près de moi (sauf une fois mais j'avais mal dormi).
+Je ne suis pas fier de tous les projets que j'ai réalisés, mais je n'ai pas à rougir de l'effort que j'y ai mis et des objectifs de qualité que j'ai toujours gardé près de moi (sauf une fois mais j'avais mal dormi).
 
 Peut-être que l'industrie va mal – je n'en sais rien, j'ai peu de repères. Mais tant qu'il y aura des articles de blog, des discussions à la machine à café pour savoir quel est le meilleur design pattern qu'on n'utilisera jamais, des sondages Twitter pour connaître la meilleure convention de codage, des conversations à rallonge sur Github, bref, tant que cette industrie continuera à employer des gens qui veulent bien faire parce qu'ils aiment cela, il y aura de l'espoir.
 

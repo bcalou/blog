@@ -109,7 +109,7 @@ Dieu merci, nous sommes passés à côté de cela.
 
 Bien sûr, pour qu'HTML soit un si bon langage, vous devez le connaître. Je veux dire, _vraiment_ le connaître.
 
-La sémantique, l'accessibilité, le référencement, les compatibilités navigateurs et les styles par défaut, les nouvelles balises, et les balises obsolètes, les attributs spécifiques liés au langage et au temps, les formulaires, l'optimisation des performances, les métadonnées, les médias...
+La sémantique, l'accessibilité, le référencement, les compatibilités navigateurs et les styles par défaut, les nouvelles balises et les balises obsolètes, les attributs spécifiques liés au langage et au temps, les formulaires, l'optimisation des performances, les métadonnées, les médias...
 
 Même sans parler des « soupes de balise » générées par certains frameworks, il y a une grande différence entre un bon code HTML et un code HTML excellent.
 
@@ -134,7 +134,7 @@ La permissivité d'HTML a donné l'opportunité à beaucoup de personnes de cont
 
 La manière dont nous nommons les choses est importante. Il est très frustrant de voir la partie HTML/CSS d'un projet dévaluée si souvent lorsqu'on en connaît l'aspect critique. Il est insoutenable d'entendre des développeurs déclarer qu'ils ne se <q>préoccupent pas du CSS</q>, alors qu'**afficher des pixels sur un écran** est quasiment la définition de notre métier.
 
-Peut-être qu'appeler HTML un langage de programmation le rend plus digne d'attention pour certaines personnes ? Il serait naïf d'ignorer les biais salariaux et même le sexisme lié à cette affaire. Car oui, HTML/CSS est la partie présentation et cela est plus... féminin ?
+Peut-être qu'appeler HTML un langage de programmation le rend plus digne d'attention pour certaines personnes ? Il serait naïf d'ignorer les biais salariaux et même le sexisme liés à cette affaire. Car oui, HTML/CSS est la partie présentation et cela est plus... féminin ?
 
 {% img
 "headhache.jpg",

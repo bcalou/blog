@@ -76,7 +76,7 @@ Une conférence drôle et passionnante pour répondre à une question très sér
 
 Pour reprendre en main le système d'information des pompiers, Julien s'est immergé dans le métier, et après son témoignage, vous ne pourrez plus dire que la recherche UX est trop difficile à mettre en œuvre dans votre secteur.
 
-Le monde de l'urgence est fait de contraintes physiques et mentales imprédictibles. Sous le choc d'un accident, même une interface applicative d'apparence simple (« êtes-vous témoin ou victime ? ») n'a plus rien d'évident.
+Le monde de l'urgence est fait de contraintes physiques et mentales imctibles. Sous le choc d'un accident, même une interface applicative d'apparence simple (« êtes-vous témoin ou victime ? ») n'a plus rien d'évident.
 
 L'occasion également de tordre le cou au mythe du « produit minimum viable » (MVP). Une méthode excellente dans nombre de cas, mais tout simplement inapplicable lors de la refonte d'un service aussi critique : quand on sauve des vies, on ne peut pas commencer par la « version simple ».
 

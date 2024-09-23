@@ -68,7 +68,7 @@ On perd aussi les styles de la pseudo-classe `:active` !
 
 Les styles associés à la pseudo-classe <code>:active</code> ne s'appliquent pas sur Firefox, bien que ce navigateur comprenne parfaitement ce sélecteur. Tristesse infinie.
 
-Le problème vous paraît peut-être évident si vous le connaissez, mais lorsque j'ai du le débugger au sein d'un fichier CSS bien plus complexe, il m'a ennuyé pour quelques bonnes minutes. Et je ne pense pas que ce soit un fait très connu des débutants.
+Le problème vous paraît peut-être évident si vous le connaissez, mais lorsque j'ai dû le débugger au sein d'un fichier CSS bien plus complexe, il m'a ennuyé pour quelques bonnes minutes. Et je ne pense pas que ce soit un fait très connu des débutants.
 
 Comment dire ?
 
@@ -158,4 +158,4 @@ h1 {
 
 Tadaa, le `h1` sera rouge seulement si le navigateur comprend `:not`.
 
-Avec la bonne combinaison de sélecteurs, vous pourriez cibler ou exclure n'importe quelle version spécifique d'un navigateur. Ce qui, bien entendu, est très sale, et je l'espère plus nécessaire aujourd'hui 🙏
+Avec la bonne combinaison de sélecteurs, vous pourriez cibler ou exclure n'importe quelle version spécifique d'un navigateur. Ce qui, bien entendu, est très sale, et je l'espère plus nécessaire aujourd'hui 🙏.

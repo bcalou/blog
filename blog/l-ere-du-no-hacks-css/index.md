@@ -19,7 +19,7 @@ Mais la réalité est la suivante :
 
 ## Nous n'aimons pas les hacks CSS
 
-Personnellement, je les déteste. Ils peuvent être amusants à montrer à un étudiant ou à un collègue qui se débat face à un étrange comportement de mise en page (tadaaaa !), mais je les méprise, car ce ne sont que des contournements, ou d'horribles façon non-standards d'utiliser des propriétés qui n'ont jamais été faites pour cela. Ces codes sont énigmatiques, un cauchemar de maintenance, et, probablement le pire, ils créent une méfiance envers CSS qui au bout du compte fait du mal à l'ensemble de l'écosystème.
+Personnellement, je les déteste. Ils peuvent être amusants à montrer à quelqu'un qui se débat face à un étrange comportement de mise en page (tadaaaa !), mais je les méprise, car ce ne sont que des contournements, ou d'horribles façon non-standards d'utiliser des propriétés qui n'ont jamais été faites pour cela. Ces codes sont énigmatiques, un cauchemar de maintenance, et, probablement le pire, ils créent une méfiance envers CSS qui au bout du compte fait du mal à l'ensemble de l'écosystème.
 
 Et c'est ainsi que naissent les memes de Petter Griffin se battant contre le CSS, les blagues sur l'alignement vertical... Fichtre, j'ai même l'ironique mug <q>CSS is awesome</q> comme bannière Twitter.
 

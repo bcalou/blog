@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi vous devriez toujours déclarer une background-color"
 slug: pourquoi-vous-devriez-toujours-declarer-une-background-color
-description: Le fond d'un par défaut site n'est pas blanc mais transparent, et cela peut impacter le rendu de la page dans certains contextes.
+description: Le fond d'un site par défaut n'est pas blanc mais transparent, et cela peut impacter le rendu de la page dans certains contextes.
 date: 2020-06-03
 tags:
   - CSS
@@ -46,7 +46,7 @@ Ce n'est pas une option secrète de développeur : toutes les options mentionné
   "Le panneau de configuration des couleurs sous Firefox."
 %}
 
-Tous les navigateurs ne gèrent pas cela de la même façon : Chrome, par exemple, vous encourage à utiliser des [extensions et des thèmes](https://support.google.com/chrome/answer/7040464?hl=en). Dans tous les cas, voici l'idée : l'utilisateur n'aura pas nécessairement un arrière-plan de navigateur blanc. Comme toujours, nos pré-suppositions sont nos ennemies. Nous ne savons rien.
+Tous les navigateurs ne gèrent pas cela de la même façon : Chrome, par exemple, vous encourage à utiliser des [extensions et des thèmes](https://support.google.com/chrome/answer/7040464?hl=en). Dans tous les cas, voici l'idée : l'utilisateur n'aura pas nécessairement un arrière-plan de navigateur blanc. Comme toujours, nos présuppositions sont nos ennemies. Nous ne savons rien.
 
 ## Que se passe-t-il lorsque l'arrière-plan du navigateur n'est pas blanc ?
 
@@ -133,7 +133,7 @@ Bien que cela ne soit pas représentatif du « web », j'ai testé les 100 sites
 
 Parmi eux : le Wall Street Journal, Paypal, Vimeo, AOL, la BBC...
 
-Cela fait quelques jours que je garde cet horrible fond jaune comme arrière-plan, et ce chiffre de 14% me semble cohérent avec ma navigation quotidienne. Je peux vous assurer que lire du texte sur ce fond est une excellente motivation pour terminer cet article.
+Cela fait quelques jours que je garde cet horrible fond jaune comme arrière-plan et ce chiffre de 14% me semble cohérent avec ma navigation quotidienne. Je peux vous assurer que lire du texte sur ce fond est une excellente motivation pour terminer cet article.
 
 ## Et l'utilisateur, alors ?
 
@@ -246,7 +246,7 @@ Quand les couleurs par défaut de Firefox sont imposées, on voit du pur noir po
 
 En fait, c'est ce que fait automatiquement Windows si vous activez le mode « contraste élevé » du système d'exploitation. Aucune manipulation sur le navigateur n'est nécessaire.
 
-Ceci étant dit, **cela ne peut pas remplacer un design pensé pour l'accessibilité**. On pourrait dire que c'est _parce que_ le web n'est pas très acccessible que de telles options sont nécessaires.
+Ceci étant dit, **cela ne peut pas remplacer un design pensé pour l'accessibilité**. On pourrait dire que c'est _parce que_ le web n'est pas très accessible que de telles options sont nécessaires.
 
 ## Montrez toujours votre vraie couleur
 

@@ -226,7 +226,7 @@ Non, il n'est pas blanc. Il est transparent.
 
 {% img "smart.jpg", "Bien vu !" %}
 
-La différence entre vert est transparent est vert, et c'est pour cela que la couleur du titre reste inchangée.
+La différence entre vert et transparent est vert, et c'est pour cela que la couleur du titre reste inchangée.
 
 Récapitulons :
 
@@ -369,6 +369,6 @@ Oh, et j'ai essayé d'en faire un dessin :
   "It's a small <em>Hello World</em> after all."
 %}
 
-C'était sympa, ce petit voyage. Et oui, j'ai une vie. Si vous avez plus d'informations à propos de tout cela, laissez un commentaire !
+C'était sympa, ce petit voyage. Et oui, j'ai une vie.
 
 CSS tourne beaucoup autour de ce que l'on voit, mais aussi beaucoup autour de ce que l'on ne voit pas.

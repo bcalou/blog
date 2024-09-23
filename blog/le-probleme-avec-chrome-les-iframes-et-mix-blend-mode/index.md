@@ -10,6 +10,10 @@ originalPost: https://dev.to/bcalou/the-trouble-with-chrome-iframes-and-mix-blen
 series: Aventures CSS au pays du canvas
 ---
 
+{% aside %}
+Mise à jour 2024 : le bug décrit dans cet article semble ne plus exister. La probabilité que cet article soit d'un quelconque intérêt s'approche donc dangereusement de zéro. Adieu petit bug.
+{% endaside %}
+
 Dans cet article, je vais décrire un bug très spécifique de Chrome, et explorer ce qu'il nous apprend sur le comportement du canvas, que j'ai décrit dans l'article initial.
 
 Si vous le pouvez, je vous recommande d'utiliser Chrome pour la lecture de cet article, afin de voir ce qu'il se passe.
@@ -109,7 +113,7 @@ Voici donc ce qui se passe :
   <li>le canvas est blanc (valeur récupérée du <code>html</code>).</li>
 </ol>
 
-En quelque sorte, nous posons un appât avec la couleur du fond du `html`, pour que le `body` puisse conserver son propre arrière-plan, et que le titre puisse se mélanger correctement.
+En quelque sorte, nous posons un appât avec la couleur du fond du `html`, pour que le `body` puisse conserver son propre arrière-plan et que le titre puisse se mélanger correctement.
 
 Un point contre-intuitif est que n'importe quel fond fera l'affaire, même un fond quasiment invisible :
 
@@ -178,7 +182,7 @@ Il peut paraître exagéré de se pré-occuper de situations si extrêmes. Ce n'
 - utiliser `mix-blend-mode` ;
 - l'utiliser sur un élément dont tous les parents sont dépourvus d'arrière-plan ;
 - l'utiliser sur un élément en position `absolute` ;
-- travailler avec un `body` suffisamment petit pout que l'élément en position `absolute` passe en-dehors.
+- travailler avec un `body` suffisamment petit pour que l'élément en position `absolute` passe en-dehors.
 
 Eh bien, croyez-le ou non, c'est exactement ce qui m'est arrivé il y a quelques temps.
 
@@ -201,8 +205,6 @@ Bien que le correctif de la couleur de fond sur l'élément `html` soit simple, 
 En réalité, il s'agissait même d'un bug qui se produisait en dehors des `iframes` ! Un [ticket Chromium a été ouvert en 2017](https://bugs.chromium.org/p/chromium/issues/detail?id=711955). Il a été marqué comme résolu en 2020.
 
 Réalisant que le bug se produisait toujours dans les `iframes`, je me suis permis de le signaler dans [un commentaire](https://bugs.chromium.org/p/chromium/issues/detail?id=711955#c16), ce qui a conduit à la création d'un [ticket dédié](https://bugs.chromium.org/p/chromium/issues/detail?id=711955).
-
-{% aside %}Mise à jour 2024 : Le bug, qui ne doit pas empêcher de dormir grand monde, n'a toujours pas été résolu.{% endaside %}
 
 ## Méfiez-vous de vos habitudes de test
 

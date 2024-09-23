@@ -139,7 +139,7 @@ li {
 
 Nous devons maintenant nous débarrasser de l'espace à gauche du premier élément, et nous pouvons faire cela à l'aide de marges négatives.
 
-Les marges négatives ne sont pas considérées comme faisant partie des bonnes pratiques, et je pense qu'il faut les éviter autant que possible, car elle peuvent rendre la logique de votre code plus difficile à comprendre.
+Les marges négatives ne sont pas considérées comme faisant partie des bonnes pratiques, et je pense qu'il faut les éviter autant que possible, car elles peuvent rendre la logique de votre code plus difficile à comprendre.
 
 Ceci étant dit, elles sont [autorisées par le w3c](https://www.w3.org/TR/CSS2/box.html#margin-properties) et offrent un très bon support navigateur.
 
@@ -194,8 +194,6 @@ Il serait possible de retirer la propriété `margin-bottom: 1em` du titre pour 
 
 Mais j'essaie de toujours **garder mes éléments indépendants du contexte**. La liste pourrait apparaître sous un autre élément quelque part ailleurs. Ou le titre pourrait être suivi par autre chose que cette liste.
 
-Vous voyez, le _component driven development_, les _design system_ et toutes ces choses-là...
-
 Nous devons donc utiliser la même astuce et appliquer une marge négative à notre liste :
 
 ```css
@@ -241,7 +239,7 @@ Le point embêtant est qu'il n'est pas possible de détecter le support de cette
 
 La syntaxe `@supports` permet d'appliquer des règles uniquement si le navigateur comprend ce qui se trouve entre les parenthèses.
 
-Le problème est que `gap` est également un propriété utilisée pour les grilles CSS, avec un bien meilleur support de 92%. Mais cela ne signifie pas que la propriété fonctionnera pour flexbox.
+Le problème est que `gap` est également une propriété utilisée pour les grilles CSS, avec un bien meilleur support de 92%. Mais cela ne signifie pas que la propriété fonctionnera pour flexbox.
 
 [Le problème est étudié](https://github.com/w3c/csswg-drafts/issues/3559) par le _CSS Working Group_.
 
@@ -278,7 +276,7 @@ Voici donc notre classe utilitaire :
 }
 ```
 
-J'aime utiliser le sélecteur d'enfant direct (`> *`) avec flexbox et grid. Il s'accorde très bien avec la relation parent/enfant de ces fonctionnalités et fonctionnera à tous les coups.
+J'aime utiliser le sélecteur d'enfant direct (`> *`) avec flexbox et grid. Il s'accorde très bien avec la relation parent/enfants de ces fonctionnalités et fonctionnera à tous les coups.
 
 Et voici comment je l'utiliserai :
 

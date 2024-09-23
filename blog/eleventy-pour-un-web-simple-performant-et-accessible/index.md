@@ -104,7 +104,7 @@ eleventyConfig.addCollection("itemsAscending", (collection) =>
 
 Un peu de travail manuel, certes, mais en contrepartie, une grande liberté.
 
-Je pourrais trier par année, par auteur, ou même créer une sous-collection contenant uniquement les livres de moins de 100 pages, pour les moins motivés. Après tout, ce n'est que du JavaScript : on fait exactement ce qu'on veut.
+Je pourrais trier par année, par auteur, ou même créer une sous-collection contenant uniquement les livres de moins de 100 pages. Après tout, ce n'est que du JavaScript : on fait exactement ce qu'on veut.
 
 {% aside %}Important : Ce JavaScript n'est pas exécuté côté client, mais bien lors de la génération du HTML statique, que je détaille ensuite.{% endaside %}
 
@@ -206,7 +206,7 @@ En revanche, nous avons désormais un site :
 - **performant**, le CPU n'étant pas sollicité par une montagne de JavaScript ;
 - **accessible**, pour peu que le HTML soit écrit correctement bien sûr ;
 - **explorable** par les moteurs de recherche ;
-- **prédictif**, dans le sens où la complexité se situe côté serveur ;
+- **prédictible**, dans le sens où la complexité se situe côté serveur ;
 - aisément **modifiable** et rapidement **déployable**.
 
 Bref, des objectifs parfois mis à mal lorsqu'on utilise des outils inadaptés, mais des objectifs essentiels...
