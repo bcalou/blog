@@ -21,8 +21,10 @@ const youtube = require("./11ty/shortcodes/youtube");
 const addNbsp = require("./11ty/filters/add-nbsp");
 const apostrophes = require("./11ty/filters/apostrophes");
 const codeLanguage = require("./11ty/filters/code-language");
+const countComments = require("./11ty/filters/count-comments");
 const comment = require("./11ty/filters/comment");
 const filterTagList = require("./11ty/filters/filter-tag-list");
+const getAnswers = require("./11ty/filters/get-answers");
 const getComments = require("./11ty/filters/get-comments");
 const getSeries = require("./11ty/filters/get-series");
 const head = require("./11ty/filters/head");
@@ -56,7 +58,7 @@ module.exports = function (eleventyConfig) {
           name: "Euclid",
           data: fs.readFileSync(
             "./assets/fonts/EuclidCircularB-Semibold-WebS.ttf"
-          )
+          ),
         },
       ],
     },
@@ -64,7 +66,7 @@ module.exports = function (eleventyConfig) {
   if (prod) {
     eleventyConfig.addPlugin(criticalCss, {
       height: 1080,
-      width: 1920
+      width: 1920,
     });
   }
 
@@ -96,7 +98,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("apostrophes", apostrophes);
   eleventyConfig.addFilter("codeLanguage", codeLanguage);
   eleventyConfig.addFilter("comment", comment);
+  eleventyConfig.addFilter("countComments", countComments);
   eleventyConfig.addFilter("filterTagList", filterTagList);
+  eleventyConfig.addFilter("getAnswers", getAnswers);
   eleventyConfig.addFilter("getComments", getComments);
   eleventyConfig.addFilter("getSeries", getSeries);
   eleventyConfig.addFilter("head", head);
@@ -115,7 +119,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.png");
-  eleventyConfig.addPassthroughCopy({"blog/**/*.webm": "webm"});
+  eleventyConfig.addPassthroughCopy({ "blog/**/*.webm": "webm" });
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);

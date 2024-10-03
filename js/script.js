@@ -195,7 +195,7 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
     $comments.scrollIntoView();
     setTimeout(() => {
       $form.querySelector("input").focus();
-    }, 500);
+    }, 1000);
   })
 );
 
@@ -203,6 +203,6 @@ document
   .querySelector(".comments__answeringCancel")
   .addEventListener("click", (event) => {
     event.preventDefault();
-    $answeringInput.value = undefined;
+    $answeringInput.value = "";
     $comments.classList.remove("comments--answering");
   });
