@@ -174,6 +174,35 @@ const handleSubmit = (event) => {
     .catch((error) => alert(error));
 };
 
+const $form = document.querySelector("form");
+$form.addEventListener("submit", handleSubmit);
+
+const $comments = document.querySelector(".comments");
+const $answeringContent = document.querySelector(".comments__answeringContent");
+const $answeringInput = $form.querySelector('[name="answering"]');
+
+document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
+  $answerButton.addEventListener("click", () => {
+    let comment = $answerButton.previousElementSibling.textContent;
+    if (comment.length > 50) {
+      comment = comment.slice(0, 50) + "...";
+    }
+    $answeringContent.innerHTML = comment;
+
+    $answeringInput.value = $answerButton.getAttribute("data-answer-to");
+    $comments.classList.add("comments--answering");
+
+    $comments.scrollIntoView();
+    setTimeout(() => {
+      $form.querySelector("input").focus();
+    }, 500);
+  })
+);
+
 document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+  .querySelector(".comments__answeringCancel")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+    $answeringInput.value = undefined;
+    $comments.classList.remove("comments--answering");
+  });

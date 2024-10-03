@@ -1,12 +1,14 @@
-function readableDate(date) {
+function readableDate(date, hour) {
   if (!date) {
     return;
   }
 
-  return new Date(date).toLocaleDateString('fr-FR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
+  return new Date(date).toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: hour ? "numeric" : undefined,
+    minute: hour ? "numeric" : undefined,
   });
 }
 

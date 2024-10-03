@@ -25,13 +25,25 @@ templateClass: tmpl-post
     {% set postComments = comments | getComments(page) %}
     <div class="comments">
       <h2>
-        <span aria-hidden="true">✍️</span>
+        <span aria-hidden="true" class="comments__emoji">✍️</span>
         {% if postComments.length === 0 %}Aucun commentaire pour le moment
         {% else %}
           {{ postComments.length }} commentaire{% if postComments.length > 1 %}s{% endif %}
         {% endif %}
       </h2>
       <form name="comment" method="POST" data-netlify="true">
+        <div class="comments__answering">
+          <button class="comments__answeringCancel">
+            <svg id="icon-cancel-circle" viewBox="-2 -2 34 34">
+              <title>Désactiver le mode réponse</title>
+              <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13
+                13 5.82 13 13-5.82 13-13 13z"></path>
+              <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+            </svg>
+          </button>
+          En réponse à&nbsp;
+          <q class="comments__answeringContent"></q>
+        </div>
         <div class="comments__inputs">
           <label>
             <span>Votre nom / pseudo (requis)</span><input name="name" required/></label>
@@ -42,10 +54,13 @@ templateClass: tmpl-post
           <span>Votre commentaire (requis)</span>
           <textarea rows="5" name="comment" required></textarea>
         </label>
-        {# <div class="comments__formFooter">
-          <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small>
-        </div> #}
-          <button>Envoyer</button>
+        <input hidden name="answering"/>
+        <div class="comments__formFooter">
+          <small>En soumettant ce commentaire, vous acceptez les conditions TODO
+          </small>
+          {# <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small> #}
+          <button class="comments__submit">Envoyer</button>
+        </div>
       </form>
       {% if postComments.length > 0 %}
         <ol>
@@ -54,7 +69,9 @@ templateClass: tmpl-post
               <div class="comments__header">
                 <span class="comments__author">
                   {% if comment.human_fields.Url %}
-                    <a href="{{ comment.human_fields.Url }}"><span>{{ comment.human_fields.Name }}</span><svg id="icon-link" viewBox="0 0 32 32">
+                    <a href="{{ comment.human_fields.Url }}">
+                      <span>{{ comment.human_fields.Name }}</span>
+                      <svg viewBox="0 0 32 32">
                         <path d="M13.757 19.868c-0.416 0-0.832-0.159-1.149-0.476-2.973-2.973-2.973-7.81 0-10.783l6-6c1.44-1.44 3.355-2.233
                           5.392-2.233s3.951 0.793 5.392 2.233c2.973 2.973 2.973 7.81 0 10.783l-2.743 2.743c-0.635 0.635-1.663 0.635-2.298
                           0s-0.635-1.663 0-2.298l2.743-2.743c1.706-1.706 1.706-4.481 0-6.187-0.826-0.826-1.925-1.281-3.094-1.281s-2.267 0.455-3.094
@@ -69,9 +86,18 @@ templateClass: tmpl-post
                     {{ comment.human_fields.Name }}
                   {% endif %}
                 </span>
-                <time date="{{ comment.created_at }}">{{ comment.created_at | readableDate }}</time>
+                <time date="{{ comment.created_at }}">{{ comment.created_at | readableDate(true) }}</time>
               </div>
               <div class="comments__content">{{ comment.human_fields.Comment | comment | addNbsp | apostrophes | safe }}</div>
+              <button class="comments__answer" data-answer-to="{{ comment.id }}">Répondre
+                <svg id="icon-comment-o" viewBox="0 0 28 28">
+                  <path d="M14 6c-6.5 0-12 3.656-12 8 0 2.328 1.563 4.547 4.266 6.078l1.359 0.781-0.422 1.5c-0.297 1.109-0.688 1.969-1.094 2.688
+                    1.578-0.656 3.016-1.547 4.297-2.672l0.672-0.594 0.891 0.094c0.672 0.078 1.359 0.125 2.031 0.125 6.5 0 12-3.656
+                    12-8s-5.5-8-12-8zM28 14c0 5.531-6.266 10-14 10-0.766 0-1.531-0.047-2.266-0.125-2.047 1.813-4.484 3.094-7.187 3.781-0.562
+                    0.156-1.172 0.266-1.781 0.344h-0.078c-0.313 0-0.594-0.25-0.672-0.594v-0.016c-0.078-0.391 0.187-0.625 0.422-0.906
+                    0.984-1.109 2.109-2.047 2.844-4.656-3.219-1.828-5.281-4.656-5.281-7.828 0-5.531 6.266-10 14-10v0c7.734 0 14 4.469 14 10z"></path>
+                </svg>
+              </button>
             </li>
           {% endfor %}
         </ol>
