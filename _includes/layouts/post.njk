@@ -25,34 +25,53 @@ templateClass: tmpl-post
     {% set postComments = comments | getComments(page) %}
     <div class="comments">
       <h2>
-        {% if postComments.length === 0 %}Aucun commentaire
+        <span aria-hidden="true">✍️</span>
+        {% if postComments.length === 0 %}Aucun commentaire pour le moment
         {% else %}
           {{ postComments.length }} commentaire{% if postComments.length > 1 %}s{% endif %}
         {% endif %}
       </h2>
       <form name="comment" method="POST" data-netlify="true">
         <div class="comments__inputs">
-          <label><span>Votre nom / pseudo (requis)</span><input name="name" required/></label>
-          <label><span>Une URL où vous suivre ?</span><input type="url" name="url" /></label>
+          <label>
+            <span>Votre nom / pseudo (requis)</span><input name="name" required/></label>
+          <label>
+            <span>Une URL où vous suivre ?</span><input type="url" name="url"/></label>
         </div>
-        <label><span>Votre commentaire (requis)</span>
+        <label>
+          <span>Votre commentaire (requis)</span>
           <textarea rows="5" name="comment" required></textarea>
         </label>
-        <div class="comments__formFooter">
+        {# <div class="comments__formFooter">
           <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small>
+        </div> #}
           <button>Envoyer</button>
-        </div>
       </form>
-
       {% if postComments.length > 0 %}
         <ol>
           {% for comment in postComments %}
             <li>
               <div class="comments__header">
-                <span class="comments__author">{{ comment.human_fields.Name }}</span>
+                <span class="comments__author">
+                  {% if comment.human_fields.Url %}
+                    <a href="{{ comment.human_fields.Url }}"><span>{{ comment.human_fields.Name }}</span><svg id="icon-link" viewBox="0 0 32 32">
+                        <path d="M13.757 19.868c-0.416 0-0.832-0.159-1.149-0.476-2.973-2.973-2.973-7.81 0-10.783l6-6c1.44-1.44 3.355-2.233
+                          5.392-2.233s3.951 0.793 5.392 2.233c2.973 2.973 2.973 7.81 0 10.783l-2.743 2.743c-0.635 0.635-1.663 0.635-2.298
+                          0s-0.635-1.663 0-2.298l2.743-2.743c1.706-1.706 1.706-4.481 0-6.187-0.826-0.826-1.925-1.281-3.094-1.281s-2.267 0.455-3.094
+                          1.281l-6 6c-1.706 1.706-1.706 4.481 0 6.187 0.635 0.635 0.635 1.663 0 2.298-0.317 0.317-0.733 0.476-1.149 0.476z"></path>
+                        <path d="M8 31.625c-2.037 0-3.952-0.793-5.392-2.233-2.973-2.973-2.973-7.81 0-10.783l2.743-2.743c0.635-0.635 1.664-0.635 2.298
+                          0s0.635 1.663 0 2.298l-2.743 2.743c-1.706 1.706-1.706 4.481 0 6.187 0.826 0.826 1.925 1.281 3.094 1.281s2.267-0.455
+                          3.094-1.281l6-6c1.706-1.706 1.706-4.481 0-6.187-0.635-0.635-0.635-1.663 0-2.298s1.663-0.635 2.298 0c2.973 2.973 2.973
+                          7.81 0 10.783l-6 6c-1.44 1.44-3.355 2.233-5.392 2.233z"></path>
+                      </svg>
+                    </a>
+                  {% else %}
+                    {{ comment.human_fields.Name }}
+                  {% endif %}
+                </span>
                 <time date="{{ comment.created_at }}">{{ comment.created_at | readableDate }}</time>
               </div>
-              <div class="comments__content">{{ comment.human_fields.Comment }}</div>
+              <div class="comments__content">{{ comment.human_fields.Comment | comment | addNbsp | apostrophes | safe }}</div>
             </li>
           {% endfor %}
         </ol>
