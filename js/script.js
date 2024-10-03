@@ -175,11 +175,13 @@ const handleSubmit = (event) => {
 };
 
 const $form = document.querySelector("form");
-$form.addEventListener("submit", handleSubmit);
+if ($form) {
+  $form.addEventListener("submit", handleSubmit);
+}
 
 const $comments = document.querySelector(".comments");
 const $answeringContent = document.querySelector(".comments__answeringContent");
-const $answeringInput = $form.querySelector('[name="answering"]');
+const $answeringInput = document.querySelector('[name="answering"]');
 
 document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
   $answerButton.addEventListener("click", () => {
@@ -192,18 +194,15 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
     $answeringInput.value = $answerButton.getAttribute("data-answer-to");
     $comments.classList.add("comments--answering");
 
-    $comments.scrollIntoView();
-    setTimeout(() => {
-      console.log($form.querySelector('[name="name"]'));
-      $form.querySelector('[name="name"]').focus();
-    }, 1000);
+    $form.querySelector('[name="name"]').focus();
   })
 );
 
-document
-  .querySelector(".comments__answeringCancel")
-  .addEventListener("click", (event) => {
+const $answeringCancel = document.querySelector(".comments__answeringCancel");
+if ($answeringCancel) {
+  $answeringCancel.addEventListener("click", (event) => {
     event.preventDefault();
     $answeringInput.value = "";
     $comments.classList.remove("comments--answering");
   });
+}
