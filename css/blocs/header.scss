@@ -110,11 +110,6 @@
     border-radius: 0.5rem;
     background: var(--blue-lightest);
     border: 0.125rem solid var(--blue);
-    position: relative;
-    top: 0;
-    left: 0;
-    transition-property: top, left, box-shadow;
-    transition-duration: 0.2s;
     box-shadow: 0.5008px 1px 0 0 var(--blue), 1.5008px 2px 0 0 var(--blue),
       2.5008px 3px 0 0 var(--blue), 3.5008px 4px 0 0 var(--blue),
       4.5008px 5px 0 0 var(--blue), 5.5px 6px 0 0 var(--blue);
