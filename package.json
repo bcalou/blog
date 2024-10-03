@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "My blog",
   "scripts": {
-    "build": "ELEVENTY_ENV=prod npx @11ty/eleventy",
-    "comments": "curl -H \"User-Agent: MyApp (bastien.calou@gmail.com)\" -H \"Authorization: Bearer nfp_1TXhZAHSKUGHcvY6aTtT1d4qPnVQrzGa52d1\" https://api.netlify.com/api/v1/sites/95a61b0d-bc40-45ad-bfd0-ec97b8859398/submissions -o comments.json",
+    "build": "npm run comments && ELEVENTY_ENV=prod npx @11ty/eleventy",
+    "comments": "dotenv cross-var 'curl -H \"User-Agent: MyApp (bastien.calou@gmail.com)\" -H \"%NETLIFY_BEARER%\" https://api.netlify.com/api/v1/sites/95a61b0d-bc40-45ad-bfd0-ec97b8859398/submissions -o _data/comments.json'",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "serve": "npx @11ty/eleventy --serve",
@@ -32,6 +32,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "dotenv-cli": "^7.4.2",
     "eleventy-critical-css": "^2.0.2",
     "eleventy-plugin-embed-twitter": "^1.4.0",
     "eleventy-plugin-og-image": "^2.1.3",

@@ -22,6 +22,7 @@ const addNbsp = require("./11ty/filters/add-nbsp");
 const apostrophes = require("./11ty/filters/apostrophes");
 const codeLanguage = require("./11ty/filters/code-language");
 const filterTagList = require("./11ty/filters/filter-tag-list");
+const getComments = require("./11ty/filters/get-comments");
 const getSeries = require("./11ty/filters/get-series");
 const head = require("./11ty/filters/head");
 const htmlDateString = require("./11ty/filters/html-date-string");
@@ -94,6 +95,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("apostrophes", apostrophes);
   eleventyConfig.addFilter("codeLanguage", codeLanguage);
   eleventyConfig.addFilter("filterTagList", filterTagList);
+  eleventyConfig.addFilter("getComments", getComments);
   eleventyConfig.addFilter("getSeries", getSeries);
   eleventyConfig.addFilter("head", head);
   eleventyConfig.addFilter("htmlDateString", htmlDateString);

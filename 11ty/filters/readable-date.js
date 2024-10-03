@@ -3,7 +3,7 @@ function readableDate(date) {
     return;
   }
 
-  return date.toLocaleDateString('fr-FR', {
+  return new Date(date).toLocaleDateString('fr-FR', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'

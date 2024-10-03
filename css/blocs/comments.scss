@@ -1,0 +1,90 @@
+.comments {
+  margin-top: 2rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: .0625rem solid var(--grey);
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    padding: 0.5rem;
+  }
+
+  input {
+    border: .0625rem solid var(--grey);
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    span {
+      font-size: .9375rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    field-sizing: content;
+    min-height: 6rem;
+  }
+
+  button {
+    @extend .postList__read !optional;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: end;
+  }
+
+  ol {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li {
+    border: .0625rem solid var(--grey);
+    padding: 1rem;
+  }
+
+  time {
+    font-size: 1rem;
+    font-family: Arial;
+    color: var(--grey-dark);
+    margin-left: 0.5rem;
+  }
+}
+
+.comments__inputs {
+  display: flex;
+  gap: 1rem;
+
+  & > * {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
+.comments__formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments__author {
+  font-weight: bold;
+}
+
+.comments__content {
+  white-space: pre-line;
+}

@@ -14,7 +14,7 @@ templateClass: tmpl-post
     {%- endfor %}
   </div>
   {% if not noDate %}
-    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    <time class="postContent__date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
   {% endif %}
   {{ content | addNbsp | apostrophes | codeLanguage | safe }}
   {% include "../components/series.njk" %}
@@ -22,4 +22,40 @@ templateClass: tmpl-post
     <p class="originalPost">Cet article a été initialement publié sur
       <a href="{{ originalPost }}">dev.to</a>
     {% endif %}
+    {% set postComments = comments | getComments(page) %}
+    <div class="comments">
+      <h2>
+        {% if postComments.length === 0 %}Aucun commentaire
+        {% else %}
+          {{ postComments.length }} commentaire{% if postComments.length > 1 %}s{% endif %}
+        {% endif %}
+      </h2>
+      <form name="comment" method="POST" data-netlify="true">
+        <div class="comments__inputs">
+          <label><span>Votre nom / pseudo (requis)</span><input name="name" required/></label>
+          <label><span>Une URL où vous suivre ? (optionel)</span><input type="url" name="name" /></label>
+        </div>
+        <label><span>Votre commentaire (requis)</span>
+          <textarea rows="5" name="comment" required></textarea>
+        </label>
+        <div class="comments__formFooter">
+          <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small>
+          <button>Envoyer</button>
+        </div>
+      </form>
+
+      {% if postComments.length > 0 %}
+        <ol>
+          {% for comment in postComments %}
+            <li>
+              <div class="comments__header">
+                <span class="comments__author">{{ comment.human_fields.Name }}</span>
+                <time date="{{ comment.created_at }}">{{ comment.created_at | readableDate }}</time>
+              </div>
+              <div class="comments__content">{{ comment.human_fields.Comment }}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+    </div>
   </div>

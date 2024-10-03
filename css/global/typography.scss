@@ -3,7 +3,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.42;
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   color: var(--black);
   background: var(--white);
 
@@ -122,13 +122,6 @@ ol {
   list-style-type: numeric;
 }
 
-time {
-  font-family: euclid, sans-serif;
-  color: hsl(0, 0%, 53%);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 q {
   font-style: italic;
 }
@@ -141,4 +134,8 @@ blockquote p::before {
 q::after,
 blockquote p::after {
   content: "\00a0»";
+}
+
+small {
+  font-size: .75rem;
 }
