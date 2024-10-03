@@ -194,6 +194,7 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
 
     $comments.scrollIntoView();
     setTimeout(() => {
+      console.log($form.querySelector("input"));
       $form.querySelector("input").focus();
     }, 1000);
   })
