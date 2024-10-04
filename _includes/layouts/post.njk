@@ -33,6 +33,7 @@ templateClass: tmpl-post
         {% endif %}
       </h2>
       <form name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
+        <input type="hidden" name="form-name" value="comment"/>
         <div class="comments__answering" aria-live="assertive">
           <button class="comments__answeringCancel">
             <svg id="icon-cancel-circle" viewBox="-2 -2 34 34">
