@@ -36,7 +36,11 @@
         </button>
       </li>
       {% set coms = comments | getAnswers(comment.id) %}
-      {% include "./comments.njk" %}
+      {% if coms.length > 0 %}
+        <li class="comments__answers">
+          {% include "./comments.njk" %}
+        </li>
+      {% endif %}
     {% endfor %}
   </ol>
 {% endif %}

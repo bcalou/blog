@@ -32,7 +32,7 @@ templateClass: tmpl-post
           {{ commentsCount }} commentaire{% if commentsCount > 1 %}s{% endif %}
         {% endif %}
       </h2>
-      <form name="comment" method="POST" data-netlify="true">
+      <form name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
         <div class="comments__answering">
           <button class="comments__answeringCancel">
             <svg id="icon-cancel-circle" viewBox="-2 -2 34 34">
@@ -50,6 +50,10 @@ templateClass: tmpl-post
             <span>Votre nom / pseudo (requis)</span><input name="name" required/></label>
           <label>
             <span>Une URL où vous suivre ?</span><input type="url" name="url"/></label>
+          <label class="comments__emptyField">
+            <span>Laissez ce champ vide</span>
+            <input name="test"/>
+          </label>
         </div>
         <label>
           <span>Votre commentaire (requis)</span>
@@ -57,7 +61,9 @@ templateClass: tmpl-post
         </label>
         <input hidden name="answering"/>
         <div class="comments__formFooter">
-          <small>En soumettant ce commentaire, vous acceptez les conditions TODO
+          <small>En validant, vous acceptez que
+            <a href="https://www.netlify.com/gdpr-ccpa/">Netlify</a>
+            stocke les données liées à votre commentaire.
           </small>
           {# <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small> #}
           <button class="comments__submit">Envoyer</button>

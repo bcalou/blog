@@ -54,6 +54,10 @@
     }
   }
 
+  small a {
+    color: currentColor;
+  }
+
   ol {
     list-style: none;
     display: flex;
@@ -67,7 +71,7 @@
     }
   }
 
-  li {
+  li:not(.comments__answers) {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     border: 0.0625rem solid var(--blue-light);
@@ -130,6 +134,10 @@
   }
 }
 
+.comments__emptyField {
+  display: none !important;
+}
+
 .comments__submit {
   @extend .postList__read !optional;
   cursor: pointer;
@@ -141,7 +149,6 @@
 .comments__formFooter {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .comments__header {
@@ -213,4 +220,8 @@
     position: relative;
     top: -0.0625rem;
   }
+}
+
+.comments__answers ol {
+  margin-block: 0;
 }
