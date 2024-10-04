@@ -180,8 +180,8 @@ const handleSubmit = (event) => {
 
       console.log("Form successfully submitted");
       $comments.classList.add("comments--success");
-      $form
-        .querySelectorAll("input, textarea")
+      Array.from($form.querySelectorAll("input, textarea"))
+        .filter((input) => !["test", "form-name"].includes(input.name))
         .forEach((input) => (input.value = ""));
     })
     .catch((error) => {
