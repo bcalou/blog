@@ -117,11 +117,6 @@
   padding-bottom: 1rem;
   margin-right: 0.125rem;
 
-  .comments--success,
-  .comments--error & {
-    display: flex;
-  }
-
   svg {
     width: 1.375rem;
     fill: var(--blue-darker);
@@ -131,6 +126,11 @@
   a {
     color: currentColor;
   }
+}
+
+.comments--success .comments__status--success,
+.comments--error .comments__status--error {
+  display: flex;
 }
 
 .comments__answeringCancel {

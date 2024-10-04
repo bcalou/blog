@@ -173,7 +173,11 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => {
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+
       console.log("Form successfully submitted");
       $comments.classList.add("comments--success");
       $form
