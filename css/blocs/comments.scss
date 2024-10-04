@@ -8,9 +8,14 @@
     padding: 1.75rem 2rem 2rem;
     border-radius: 0.5rem;
     background: var(--blue-lightest);
+    transition: opacity 0.2s;
 
     & + ol {
       margin-top: 2rem;
+    }
+
+    &[inert] {
+      opacity: 0.6;
     }
   }
 
@@ -94,12 +99,31 @@
 .comments__answering {
   display: none;
   font-size: 1.125rem;
-  border-bottom: 0.0625rem solid var(--blue);
-  padding-bottom: 0.5rem;
-  gap: 0.25rem;
+  border-bottom: 0.0625rem solid var(--blue-darker);
+  padding-bottom: 0.75rem;
+  gap: 0.5rem;
 
   .comments--answering & {
     display: flex;
+  }
+}
+
+.comments__status {
+  display: none;
+  font-size: 1.125rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 0.0625rem solid var(--blue-darker);
+  padding-bottom: 1rem;
+  margin-right: 0.125rem;
+
+  .comments--status & {
+    display: flex;
+  }
+
+  svg {
+    width: 1.375rem;
+    fill: var(--blue-darker);
   }
 }
 
@@ -118,7 +142,7 @@
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    fill: var(--black);
+    fill: var(--blue-darker);
     position: relative;
     top: -0.0625rem;
   }

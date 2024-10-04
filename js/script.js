@@ -162,6 +162,9 @@ if ($mail) {
 const handleSubmit = (event) => {
   event.preventDefault();
 
+  $form.setAttribute("aria-busy", "true");
+  $form.setAttribute("inert", "true");
+
   const myForm = event.target;
   const formData = new FormData(myForm);
 
@@ -170,16 +173,25 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Form successfully submitted"))
+    .then(() => {
+      console.log("Form successfully submitted");
+      $comments.classList.add("comments--status");
+      $comments.classList.remove("comments--answering");
+      $form
+        .querySelectorAll("input, textarea")
+        .forEach((input) => (input.value = ""));
+      $form.removeAttribute("aria-busy");
+      $form.removeAttribute("inert");
+    })
     .catch((error) => alert(error));
 };
 
+const $comments = document.querySelector(".comments");
 const $form = document.querySelector("form");
 if ($form) {
   $form.addEventListener("submit", handleSubmit);
 }
 
-const $comments = document.querySelector(".comments");
 const $answeringContent = document.querySelector(".comments__answeringContent");
 const $answeringInput = document.querySelector('[name="answering"]');
 
@@ -193,6 +205,7 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
 
     $answeringInput.value = $answerButton.getAttribute("data-answer-to");
     $comments.classList.add("comments--answering");
+    $comments.classList.remove("comments--status");
 
     $form.querySelector('[name="name"]').focus();
   })

@@ -33,7 +33,7 @@ templateClass: tmpl-post
         {% endif %}
       </h2>
       <form name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
-        <div class="comments__answering">
+        <div class="comments__answering" aria-live="assertive">
           <button class="comments__answeringCancel">
             <svg id="icon-cancel-circle" viewBox="-2 -2 34 34">
               <title>Désactiver le mode réponse</title>
@@ -42,8 +42,15 @@ templateClass: tmpl-post
               <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
             </svg>
           </button>
-          En réponse à&nbsp;
+          En réponse à
           <q class="comments__answeringContent"></q>
+        </div>
+        <div class="comments__status" aria-live="assertive">
+          <svg id="icon-check" viewBox="0 0 24 24">
+            <path d="M19.293 5.293l-10.293 10.293-4.293-4.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l5 5c0.391 0.391 1.024
+              0.391 1.414 0l11-11c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0z"></path>
+          </svg>
+          Merci ! Votre commentaire a bien été enregistré et apparaîtra prochainement.
         </div>
         <div class="comments__inputs">
           <label>
