@@ -175,15 +175,20 @@ const handleSubmit = (event) => {
   })
     .then(() => {
       console.log("Form successfully submitted");
-      $comments.classList.add("comments--status");
-      $comments.classList.remove("comments--answering");
+      $comments.classList.add("comments--success");
       $form
         .querySelectorAll("input, textarea")
         .forEach((input) => (input.value = ""));
+    })
+    .catch((error) => {
+      console.error(error);
+      $comments.classList.add("comments--error");
+    })
+    .finally(() => {
       $form.removeAttribute("aria-busy");
       $form.removeAttribute("inert");
-    })
-    .catch((error) => alert(error));
+      $comments.classList.remove("comments--answering");
+    });
 };
 
 const $comments = document.querySelector(".comments");
@@ -205,7 +210,8 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
 
     $answeringInput.value = $answerButton.getAttribute("data-answer-to");
     $comments.classList.add("comments--answering");
-    $comments.classList.remove("comments--status");
+    $comments.classList.remove("comments--success");
+    $comments.classList.remove("comments--error");
 
     $form.querySelector('[name="name"]').focus();
   })
