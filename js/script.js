@@ -164,48 +164,22 @@ function isValidURL(url) {
   return regex.test(url);
 }
 
+let submitted = false;
+
 const handleSubmit = (event) => {
   event.preventDefault();
+  submitted = true;
 
   const myForm = event.target;
   const formData = new FormData(myForm);
 
-  let valid = true;
+  const [name, comment, url] = [
+    validateRequired(myForm.querySelector("[name=name]")),
+    validateRequired(myForm.querySelector("[name=comment]")),
+    validateUrl(myForm.querySelector("[name=url]")),
+  ];
 
-  const $name = $form.querySelector("[name=name]");
-  if (formData.get("name").trim().length === 0) {
-    valid = false;
-    $name.setAttribute("aria-invalid", "true");
-    $name.setAttribute("aria-describedby", "name-required");
-  } else {
-    $name.removeAttribute("aria-invalid");
-    $name.removeAttribute("aria-describedby");
-  }
-
-  const $url = $form.querySelector("[name=url]");
-  if (
-    formData.get("url").trim().length > 0 &&
-    !isValidURL(formData.get("url").trim())
-  ) {
-    valid = false;
-    $url.setAttribute("aria-invalid", "true");
-    $url.setAttribute("aria-describedby", "url-format");
-  } else {
-    $url.removeAttribute("aria-invalid");
-    $url.removeAttribute("aria-describedby");
-  }
-
-  const $comment = $form.querySelector("[name=comment]");
-  if (formData.get("comment").trim().length === 0) {
-    valid = false;
-    $comment.setAttribute("aria-invalid", "true");
-    $comment.setAttribute("aria-describedby", "comment-required");
-  } else {
-    $comment.removeAttribute("aria-invalid");
-    $comment.removeAttribute("aria-describedby");
-  }
-
-  if (!valid) {
+  if (!name || !comment || !url) {
     $form.querySelector("[aria-invalid=true]").focus();
 
     return false;
@@ -238,13 +212,57 @@ const handleSubmit = (event) => {
       $form.removeAttribute("aria-busy");
       $form.removeAttribute("inert");
       $comments.classList.remove("comments--answering");
+      submitted = false;
     });
+};
+
+const validateRequired = (input, errorId) => {
+  if (input.value.trim().length === 0) {
+    input.setAttribute("aria-invalid", "true");
+    input.setAttribute("aria-describedby", errorId);
+    return false;
+  } else {
+    input.removeAttribute("aria-invalid");
+    input.removeAttribute("aria-describedby");
+    return true;
+  }
+};
+
+const validateUrl = (input) => {
+  if (!submitted) return true;
+
+  if (input.value.trim().length > 0 && !isValidURL(input.value.trim())) {
+    input.setAttribute("aria-invalid", "true");
+    input.setAttribute("aria-describedby", "url-format");
+    return false;
+  } else {
+    input.removeAttribute("aria-invalid");
+    input.removeAttribute("aria-describedby");
+    return true;
+  }
 };
 
 const $comments = document.querySelector(".comments");
 const $form = document.querySelector("form");
+
 if ($form) {
   $form.addEventListener("submit", handleSubmit);
+
+  $form
+    .querySelector("[name=name]")
+    .addEventListener("input", (event) =>
+      validateRequired(event.target, "name-required")
+    );
+
+  $form
+    .querySelector("[name=comment]")
+    .addEventListener("input", (event) =>
+      validateRequired(event.target, "comment-required")
+    );
+
+  $form
+    .querySelector("[name=url]")
+    .addEventListener("input", (event) => validateUrl(event.target));
 }
 
 const $answeringContent = document.querySelector(".comments__answeringContent");
