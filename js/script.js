@@ -159,14 +159,60 @@ if ($mail) {
 //******************//
 // from https://docs.netlify.com/forms/setup/#submit-html-forms-with-ajax
 
+function isValidURL(url) {
+  const regex = /^(http:\/\/|https:\/\/)[^\s/$.?#].[^\s]*$/i;
+  return regex.test(url);
+}
+
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  $form.setAttribute("aria-busy", "true");
-  $form.setAttribute("inert", "true");
-
   const myForm = event.target;
   const formData = new FormData(myForm);
+
+  let valid = true;
+
+  const $name = $form.querySelector("[name=name]");
+  if (formData.get("name").trim().length === 0) {
+    valid = false;
+    $name.setAttribute("aria-invalid", "true");
+    $name.setAttribute("aria-describedby", "name-required");
+  } else {
+    $name.removeAttribute("aria-invalid");
+    $name.removeAttribute("aria-describedby");
+  }
+
+  const $url = $form.querySelector("[name=url]");
+  if (
+    formData.get("url").trim().length > 0 &&
+    !isValidURL(formData.get("url").trim())
+  ) {
+    valid = false;
+    $url.setAttribute("aria-invalid", "true");
+    $url.setAttribute("aria-describedby", "url-format");
+  } else {
+    $url.removeAttribute("aria-invalid");
+    $url.removeAttribute("aria-describedby");
+  }
+
+  const $comment = $form.querySelector("[name=comment]");
+  if (formData.get("comment").trim().length === 0) {
+    valid = false;
+    $comment.setAttribute("aria-invalid", "true");
+    $comment.setAttribute("aria-describedby", "comment-required");
+  } else {
+    $comment.removeAttribute("aria-invalid");
+    $comment.removeAttribute("aria-describedby");
+  }
+
+  if (!valid) {
+    $form.querySelector("[aria-invalid=true]").focus();
+
+    return false;
+  }
+
+  $form.setAttribute("aria-busy", "true");
+  $form.setAttribute("inert", "true");
 
   fetch("/", {
     method: "POST",

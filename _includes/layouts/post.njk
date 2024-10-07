@@ -32,7 +32,7 @@ templateClass: tmpl-post
           {{ commentsCount }} commentaire{% if commentsCount > 1 %}s{% endif %}
         {% endif %}
       </h2>
-      <form name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
+      <form novalidate name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
         <input type="hidden" name="form-name" value="comment"/>
         <div class="comments__answering" aria-live="assertive">
           <button class="comments__answeringCancel">
@@ -65,9 +65,15 @@ templateClass: tmpl-post
         </div>
         <div class="comments__inputs">
           <label>
-            <span>Votre nom / pseudo (requis)</span><input name="name" required autocomplete="name"/></label>
+            <span>Votre nom / pseudo (requis)</span>
+            <input name="name" required autocomplete="name"/>
+            <p id="name-required" class="comments__error">Ce champ est obligatoire</p>
+          </label>
           <label>
-            <span>Une URL où vous suivre ?</span><input type="url" name="url"/></label>
+            <span>Une URL où vous suivre ?</span>
+            <input type="url" name="url"/>
+            <p id="url-format" class="comments__error">Le format attendu est une URL (commençant par http:// ou https://)</p>
+          </label>
           <label class="comments__emptyField">
             <span>Laissez ce champ vide</span>
             <input name="test"/>
@@ -76,6 +82,7 @@ templateClass: tmpl-post
         <label>
           <span>Votre commentaire (requis)</span>
           <textarea rows="5" name="comment" required></textarea>
+          <p id="comment-required" class="comments__error">Ce champ est obligatoire</p>
         </label>
         <input hidden name="answering"/>
         <div class="comments__formFooter">
