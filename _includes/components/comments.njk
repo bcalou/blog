@@ -22,11 +22,11 @@
               {{ comment.data.name }}
             {% endif %}
           </span>
-          <time date="{{ comment.created_at }}">{{ comment.created_at | readableDate(true) }}</time>
+          <time datetime="{{ comment.created_at }}">{{ comment.created_at | readableDate(true) }}</time>
         </div>
         <div class="comments__content">{{ comment.data.comment | comment | addNbsp | apostrophes | safe }}</div>
         <button aria-label="Répondre à {{ comment.data.name }}" class="comments__answer" data-answer-to="{{ comment.id }}">Répondre
-          <svg id="icon-comment-o" viewBox="0 0 28 28">
+          <svg viewBox="0 0 28 28">
             <path d="M14 6c-6.5 0-12 3.656-12 8 0 2.328 1.563 4.547 4.266 6.078l1.359 0.781-0.422 1.5c-0.297 1.109-0.688 1.969-1.094 2.688
               1.578-0.656 3.016-1.547 4.297-2.672l0.672-0.594 0.891 0.094c0.672 0.078 1.359 0.125 2.031 0.125 6.5 0 12-3.656
               12-8s-5.5-8-12-8zM28 14c0 5.531-6.266 10-14 10-0.766 0-1.531-0.047-2.266-0.125-2.047 1.813-4.484 3.094-7.187 3.781-0.562
