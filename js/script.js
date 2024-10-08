@@ -212,6 +212,7 @@ const handleSubmit = (event) => {
       $form.removeAttribute("aria-busy");
       $form.removeAttribute("inert");
       $comments.classList.remove("comments--answering");
+      $comments.scrollIntoView();
       submitted = false;
     });
 };

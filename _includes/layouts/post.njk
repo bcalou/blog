@@ -34,7 +34,7 @@ templateClass: tmpl-post
       </h2>
       <form novalidate name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
         <input type="hidden" name="form-name" value="comment"/>
-        <div class="comments__answering" aria-live="assertive">
+        <div class="comments__answering" role="status">
           <button class="comments__answeringCancel">
             <svg id="icon-cancel-circle" viewBox="-2 -2 34 34">
               <title>Désactiver le mode réponse</title>
@@ -43,17 +43,16 @@ templateClass: tmpl-post
               <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
             </svg>
           </button>
-          En réponse à
-          <q class="comments__answeringContent"></q>
+          <span>En réponse à <q class="comments__answeringContent"></q></span>
         </div>
-        <div class="comments__status comments__status--success" aria-live="assertive">
+        <div class="comments__status comments__status--success" role="status">
           <svg id="icon-check" viewBox="0 0 24 24">
             <path d="M19.293 5.293l-10.293 10.293-4.293-4.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l5 5c0.391 0.391 1.024
               0.391 1.414 0l11-11c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0z"></path>
           </svg>
           Merci ! Votre commentaire a bien été enregistré et apparaîtra prochainement.
         </div>
-        <div class="comments__status comments__status--error" aria-live="assertive">
+        <div class="comments__status comments__status--error" role="alert">
           <svg id="icon-error_outline" viewBox="0 0 24 24">
             <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12
               2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93zM11.016
@@ -66,7 +65,7 @@ templateClass: tmpl-post
         <div class="comments__inputs">
           <label>
             <span>Votre nom / pseudo (requis)</span>
-            <input name="name" required autocomplete="name"/>
+            <input name="name" required autocomplete="name" maxlength="100" />
             <p id="name-required" class="comments__error">Ce champ est obligatoire</p>
           </label>
           <label>
@@ -81,16 +80,15 @@ templateClass: tmpl-post
         </div>
         <label>
           <span>Votre commentaire (requis)</span>
-          <textarea rows="5" name="comment" required></textarea>
+          <textarea rows="5" name="comment" required maxlength="10000"></textarea>
           <p id="comment-required" class="comments__error">Ce champ est obligatoire</p>
         </label>
-        <input hidden name="answering"/>
+        <input hidden name="answering" />
         <div class="comments__formFooter">
           <small>En validant, vous acceptez que
             <a href="https://www.netlify.com/gdpr-ccpa/">Netlify</a>
             stocke les données liées à votre commentaire.
           </small>
-          {# <small>Ce blog est généré statiquement via Eleventy. Votre commentaire y sera visible très prochainement !</small> #}
           <button class="comments__submit">Envoyer</button>
         </div>
       </form>
