@@ -247,7 +247,9 @@ const $comments = document.querySelector(".comments");
 const $form = document.querySelector("form");
 
 if ($form) {
+  $form.setAttribute("novalidate", "novalidate");
   $form.addEventListener("submit", handleSubmit);
+  $comments.classList.add("comments--canAnswer");
 
   $form
     .querySelector("[name=name]")

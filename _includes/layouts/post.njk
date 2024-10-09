@@ -32,7 +32,7 @@ templateClass: tmpl-post
           {{ commentsCount }} commentaire{% if commentsCount > 1 %}s{% endif %}
         {% endif %}
       </h2>
-      <form novalidate name="comment" method="POST" data-netlify="true" netlify-honeypot="test">
+      <form name="comment" method="POST" data-netlify="true" netlify-honeypot="test" action="/confirmation">
         <input type="hidden" name="form-name" value="comment"/>
         <div class="comments__answering" role="status">
           <button class="comments__answeringCancel">
@@ -43,7 +43,9 @@ templateClass: tmpl-post
               <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
             </svg>
           </button>
-          <span>En réponse à <q class="comments__answeringContent"></q></span>
+          <span>En réponse à
+            <q class="comments__answeringContent"></q>
+          </span>
         </div>
         <div class="comments__status comments__status--success" role="status">
           <svg id="icon-check" viewBox="0 0 24 24">
@@ -65,7 +67,7 @@ templateClass: tmpl-post
         <div class="comments__inputs">
           <label>
             <span>Votre nom / pseudo (requis)</span>
-            <input name="name" required autocomplete="name" maxlength="100" />
+            <input name="name" required autocomplete="name" maxlength="100"/>
             <span id="name-required" class="comments__error">Ce champ est obligatoire</span>
           </label>
           <label>
@@ -83,7 +85,7 @@ templateClass: tmpl-post
           <textarea rows="5" name="comment" required maxlength="10000"></textarea>
           <span id="comment-required" class="comments__error">Ce champ est obligatoire</span>
         </label>
-        <input hidden name="answering" />
+        <input hidden name="answering"/>
         <div class="comments__formFooter">
           <small>En validant, vous acceptez que
             <a href="https://www.netlify.com/gdpr-ccpa/">Netlify</a>

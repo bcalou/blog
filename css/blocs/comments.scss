@@ -261,7 +261,7 @@
 }
 
 .comments__answer {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.5rem;
   color: var(--grey-dark);
@@ -273,6 +273,10 @@
   cursor: pointer;
   height: 1.5rem;
   transition: color 0.2s;
+
+  .comments--canAnswer & {
+    display: flex;
+  }
 
   &:hover,
   &:focus {
