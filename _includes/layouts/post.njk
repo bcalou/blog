@@ -47,23 +47,6 @@ templateClass: tmpl-post
             <q class="comments__answeringContent"></q>
           </span>
         </div>
-        <div class="comments__status comments__status--success" role="status">
-          <svg id="icon-check" viewBox="0 0 24 24">
-            <path d="M19.293 5.293l-10.293 10.293-4.293-4.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l5 5c0.391 0.391 1.024
-              0.391 1.414 0l11-11c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0z"></path>
-          </svg>
-          Merci ! Votre commentaire a bien été enregistré et apparaîtra prochainement.
-        </div>
-        <div class="comments__status comments__status--error" role="alert">
-          <svg id="icon-error_outline" viewBox="0 0 24 24">
-            <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12
-              2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93zM11.016
-              6.984h1.969v6h-1.969v-6zM11.016 15h1.969v2.016h-1.969v-2.016z"></path>
-          </svg>
-          <span>Désolé... Il semble y avoir eu un problème. Je vous saurai reconnaissant de
-            <a href="https://piaille.fr/@bcalou">m'en alerter</a>
-            et de réessayer plus tard !</span>
-        </div>
         <div class="comments__inputs">
           <label>
             <span>Votre nom / pseudo (requis)</span>
@@ -92,6 +75,23 @@ templateClass: tmpl-post
             stocke les données liées à votre commentaire.
           </small>
           <button class="comments__submit">Envoyer</button>
+        </div>
+        <div class="comments__status comments__status--success" role="status">
+          <svg id="icon-check" viewBox="0 0 24 24">
+            <path d="M19.293 5.293l-10.293 10.293-4.293-4.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414l5 5c0.391 0.391 1.024
+              0.391 1.414 0l11-11c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0z"></path>
+          </svg>
+          Merci ! Votre commentaire a bien été enregistré et apparaîtra prochainement.
+        </div>
+        <div class="comments__status comments__status--error" role="alert">
+          <svg id="icon-error_outline" viewBox="0 0 24 24">
+            <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12
+              2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93zM11.016
+              6.984h1.969v6h-1.969v-6zM11.016 15h1.969v2.016h-1.969v-2.016z"></path>
+          </svg>
+          <span>Désolé... Il semble y avoir eu un problème. Je vous saurai reconnaissant de
+            <a href="https://piaille.fr/@bcalou">m'en alerter</a>
+            et de réessayer plus tard !</span>
         </div>
       </form>
       {% include "../components/comments.njk" %}
