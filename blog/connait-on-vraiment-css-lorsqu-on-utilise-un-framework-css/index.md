@@ -297,7 +297,7 @@ Cependant, elles devraient être conscientes que maîtriser Tailwind n'est pas e
 
 ### À propos du CSS natif
 
-[2022 a été une excellente année pour CSS](https://bastiencalou.fr/blog/l-ere-du-no-hacks-css) et je pense que connaître ses capacités natives est un atout puissant. Bien sûr, cela ne remplace pas une compréhension profonde de la logique CSS, qui n'est pas juste une liste de propriétés, mais cela fournit une vaste boîte à outil dans laquelle piocher pour faire face à divers obstacles.
+[2022 a été une excellente année pour CSS](https://bastiencalou.fr/l-ere-du-no-hacks-css) et je pense que connaître ses capacités natives est un atout puissant. Bien sûr, cela ne remplace pas une compréhension profonde de la logique CSS, qui n'est pas juste une liste de propriétés, mais cela fournit une vaste boîte à outil dans laquelle piocher pour faire face à divers obstacles.
 
 Pour Bootstrap et Tailwind, les personnes connaissant le plus de CSS natif étaient celles qui avaient testé le framework. Alors ne rejetez pas forcément tous ces outils par idéologie : découvrir de nouvelles façons d'écrire du CSS – même pour réaliser qu'elles ne vous conviennent pas au final – est potentiellement précieux et pourrait donner un nouvel éclairage à la façon dont vous écrivez du CSS natif.
 
