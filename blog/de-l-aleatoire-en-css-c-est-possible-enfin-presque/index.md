@@ -2,7 +2,7 @@
 title: De l'aléatoire en CSS, c'est possible ! Enfin, presque...
 slug: de-l-aleatoire-en-css-c-est-possible-enfin-presque
 description: Sauf à vouloir s'aventurer en eaux troubles, JavaScript est plus indiqué... Mais pour combien de temps ?
-date: 2024-10-07
+date: 2024-10-14
 tags:
   - CSS
   - JavaScript
