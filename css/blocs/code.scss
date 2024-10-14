@@ -51,6 +51,8 @@ pre {
     line-height: 1.5;
     overflow-x: auto;
     min-width: 100%;
+    outline-color: var(--black);
+    outline-offset: 0.25rem;
 
     @include medium {
       border-radius: 0.5em;
@@ -149,7 +151,7 @@ pre.language-html {
   &::before,
   &::after {
     content: "</> html";
-    content: "</> html" / "";
+    content: "</> html" / "html";
   }
 }
 
@@ -157,7 +159,7 @@ pre.language-css {
   &::before,
   &::after {
     content: "{ } css";
-    content: "{ } css" / "";
+    content: "{ } css" / "css";
   }
 }
 
@@ -165,7 +167,7 @@ pre.language-scss {
   &::before,
   &::after {
     content: "{ } scss";
-    content: "{ } scss" / "";
+    content: "{ } scss" / "scss";
   }
 }
 
@@ -173,7 +175,7 @@ pre.language-js {
   &::before,
   &::after {
     content: "( ) JS";
-    content: "( ) JS" / "";
+    content: "( ) JS" / "javascript";
   }
 }
 
@@ -181,7 +183,7 @@ pre.language-yaml {
   &::before,
   &::after {
     content: "# MD";
-    content: "# MD" / "";
+    content: "# MD" / "markdown";
   }
 }
 
@@ -189,7 +191,7 @@ pre.language-liquid {
   &::before,
   &::after {
     content: "{%} liquid";
-    content: "{%} liquid" / "";
+    content: "{%} liquid" / "liquid";
   }
 }
 
