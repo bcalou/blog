@@ -255,5 +255,7 @@ div {
 Encore une très bonne nouvelle pour CSS, donc.
 
 Quand cela sera-t-il disponible ? Pour nous autres mortels, cela aussi relève du domaine de l'aléatoire...
-<!-- 
-<iframe src="https://piaille.fr/@bcalou/113163065917919388/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://piaille.fr/embed.js" async="async"></script> -->
+
+### Cet article lance ce nouveau site !
+
+Et vous pourrez suivre ses futures publications principalement via ce bon vieux <a href="/feed/feed.xml">flux RSS</a> ou mon compte <a href="https://piaille.fr/@bcalou">Mastodon</a>.
