@@ -16,8 +16,6 @@ series: Paris Web 2022
 
 Suite et fin de mes aventures chez Paris Web, avec les 8 conférences du deuxième jour (et toujours des petites étoiles **subjectives** pour démarquer mes préférées).
 
-Voir [le programme complet du jour 2](https://www.paris-web.fr/2022/07.php).
-
 ## 1. Bien doser l'utilisation d'ARIA pour éviter les catastrophes&nbsp;⭐⭐
 
 Une première présentation donnée par deux personnes : une voyante et une non-voyante (utilisant pour la présentation une barette braille).

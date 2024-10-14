@@ -14,7 +14,7 @@ originalPost: https://dev.to/bcalou/paris-web-2022-jour-1-le-recap--5c82
 series: Paris Web 2022
 ---
 
-Il y a pile une semaine, c'était mon premier Paris Web, et quelle journée ! 8 conférences ([parmi les 16 proposées](https://www.paris-web.fr/2022/06.php)) passionnantes et variées.
+Il y a pile une semaine, c'était mon premier Paris Web, et quelle journée ! 8 conférences ([parmi les 16 proposées](https://www.paris-web.fr/revoir?range%5Byear%5D=2022%3A2022)) passionnantes et variées.
 
 En voici un récap à chaud, partiel et partial, qui j'espère vous donnera envie pour l'année prochaine !
 
