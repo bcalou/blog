@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     generateHTML: (outputUrl) =>
-      `<meta property="og:image" content="https://bastiencalou.fr${outputUrl}" /><meta name="twitter:image" content="https://bastiencalou.fr${outputUrl}" />`,
+      `<meta property="og:image" content="https://bastiencalou.fr${outputUrl}" />`,
     satoriOptions: {
       fonts: [
         {
