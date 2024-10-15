@@ -6,6 +6,7 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
+    <meta name="twitter:card" content="summary_large_image"/>
     {% if tags %}
       {% ogImage "_includes/layouts/og_post.njk", { title: title, date: date, tags: tags } %}
     {% else %}
