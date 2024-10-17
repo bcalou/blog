@@ -99,6 +99,10 @@ Une fraction en diminution des navigateurs ne supporte pas cette fonctionnalité
 
 J'ai commencé à faire la paix avec le fait qu'une petite fraction (et encore une fois, en diminution) des utilisateurs n'aura pas les espaces. Tant que le contenu est parfaitement lisible, cela ne me dérange pas.
 
+{% aside %}
+Mise à jour 2024 : la propriété <code>gap</code> est désormais supportée pour flexbox sur l'ensemble des navigateurs majeurs. 🎉
+{% endaside %}
+
 ## Adieux les hacks
 
 Bien sûr, j'utilise toujours des hacks, de temps en temps. Mais j'ai cessé de les considérer comme du CSS commun.
