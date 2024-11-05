@@ -2,4 +2,11 @@
 
 .baseline {
   @extend .postElement;
+
+  baseline-status {
+    --baseline-status-color-outline: var(--blue);
+    --baseline-status-color-newly: var(--blue-dark);
+    --baseline-status-color-widely: var(--green-dark);
+    --baseline-status-color-link: var(--blue-darker);
+  }
 }
