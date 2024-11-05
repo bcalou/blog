@@ -1,0 +1,5 @@
+@use "../blocs/post-element.scss";
+
+.baseline {
+  @extend .postElement;
+}

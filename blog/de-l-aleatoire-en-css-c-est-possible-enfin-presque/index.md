@@ -54,9 +54,9 @@ div::before {
 }
 ```
 
-{% aside %}
-Note : la syntaxe <code>content: "🎉" / ""</code> permet de définir, dans la seconde string, le texte alternatif pour ce pseudo-élément, qui pourra être lu par les technologies d'assistance. Quand on utilise un pseudo-élément à des fins décoratives, il est donc recommandé d'utiliser une chaîne vide pour éviter que le contenu de l'émoji ne soit interprété, par exemple par un lecteur d'écran.
-{% endaside %}
+La syntaxe <code>content: "🎉" / ""</code> permet de définir, dans la seconde string, le texte alternatif pour ce pseudo-élément, qui pourra être lu par les technologies d'assistance. Quand on utilise un pseudo-élément à des fins décoratives, il est donc recommandé d'utiliser une chaîne vide pour éviter que le contenu de l'émoji ne soit interprété, par exemple par un lecteur d'écran.
+
+{% baseline "alt-text-generated-content" %}
 
 Et voici le résultat :
 
@@ -213,6 +213,8 @@ div:hover {
 ```
 
 Sympathique, car on laisse le navigateur s'occuper de la logique de survol, et les possibilités ouvertes par Houdini sont bien plus vastes que mon simple exemple.
+
+{% baseline "paint" %}
 
 Malheureusement, ni Firefox ni Safari ne supportent cette API à l'heure actuelle. Si vous êtes sur un navigateur compatible, vous pourrez voir le résultat en survolant le composant ci-dessous :
 

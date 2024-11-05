@@ -9,6 +9,7 @@ const criticalCss = require("eleventy-critical-css");
 const EleventyPluginOgImage = require("eleventy-plugin-og-image");
 
 const aside = require("./11ty/shortcodes/aside");
+const baseline = require("./11ty/shortcodes/baseline");
 const blockquote = require("./11ty/shortcodes/blockquote");
 const codepen = require("./11ty/shortcodes/codepen");
 const figure = require("./11ty/shortcodes/figure");
@@ -72,6 +73,7 @@ module.exports = function (eleventyConfig) {
 
   // Add shortcodes
   eleventyConfig.addPairedShortcode("aside", aside);
+  eleventyConfig.addShortcode("baseline", baseline);
   eleventyConfig.addShortcode("blockquote", blockquote);
   eleventyConfig.addShortcode("codepen", codepen);
   eleventyConfig.addNunjucksAsyncShortcode("figure", figure);
@@ -120,6 +122,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.png");
   eleventyConfig.addPassthroughCopy({ "blog/**/*.webm": "webm" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/baseline-status/baseline-status.min.js":
+      "js/baseline-status.min.js",
+  });
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
