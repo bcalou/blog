@@ -1,7 +1,7 @@
 ---
 title: Comment j'ai cassé la prod avec un innocent sélecteur CSS
 slug: comment-j-ai-casse-la-prod-avec-un-innocent-selecteur-css
-description: Sur mon ordi, ça fonctionnait, je vous jure... Mais il ne faut pas confondre CSS et un sélecteur CSS utilisé par JavaScript.
+description: Sur mon ordi, ça fonctionnait, je vous jure... Mais il ne faut pas confondre un sélecteur CSS et un sélecteur CSS utilisé par JavaScript.
 date: 2024-11-12
 tags:
   - CSS
@@ -10,7 +10,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-On passe toutes et tous par là, non ? Transformer une application en page blanche, en prod de préférence ? Non ? Ça viendra, je vous le souhaite. Ce sont de belles sensations lors desquelles on vit intensément l'instant présent.
+On passe toutes et tous par là, non ? Transformer une application en page blanche, en prod de préférence ? Non ? Ça viendra, je vous le souhaite. Ce sont de belles sensations grâce auxquelles on vit intensément l'instant présent.
 
 Je vous raconte.
 
@@ -33,12 +33,12 @@ Aujourd'hui, `:has` est bien supporté par la plupart des navigateurs. Si un vie
 Ce mécanisme est essentiel à l'adoption rapide des nouvelles fonctionnalités CSS. À moins que les styles à appliquer ne soient absolument critiques, on peut admettre qu'une petite partie (en décroissance) des navigateurs n'en bénéficient pas. Tant que la page est lisible et utilisable, ce n'est généralement pas un problème.
 
 {% aside %}
-Il en va de même pour HTML : une balise moderne telle que <code>&lt;search&gt;</code> sera interprétée comme une simple <code>&lt;div&gt;</code> sans signification par des navigateurs plus anciens. La sémantique peut être dégradée, mais c'est très différent que de risquer une page blanche...
+Il en va de même pour HTML : une balise moderne telle que <code>&lt;search&gt;</code> sera interprétée comme une simple <code>&lt;div&gt;</code> sans signification par des navigateurs plus anciens. La sémantique peut être dégradée, et ce n'est pas anodin, mais c'est très différent que de risquer une page blanche...
 {% endaside %}
 
 ## Mon erreur : penser que `document.querySelector()` serait aussi sympa...
 
-Tout change quand on entre dans le domaine du JavaScript. Chez lui, ça ne rigole pas, et il n'est pas question « d'échouer silencieusement ».
+Tout change quand on entre dans le domaine de JavaScript. Chez lui, ça ne rigole pas, et il n'est pas question « d'échouer silencieusement ».
 
 Le code suivant présente une faille potentielle :
 
@@ -86,7 +86,7 @@ Et cette erreur, si on la catche pas, elle va tout bonnement planter notre JS et
 
 Conditionné que j'étais à penser que CSS ne me trahirait pas, j'ai passé un sélecteur contenant `:has` à la librairie <a href="https://react-joyride.com/">React Joyride</a>.
 
-Son but est de générer un « parcours pas à pas » de bienvenue. Pour cela, il faut lui passer les sélecteurs qui lui permettront de cibler les éléments à mettre en valeur.
+Le but de cette librairie est de générer un « parcours pas à pas » de bienvenue. Pour cela, il faut lui passer les sélecteurs qui lui permettront de cibler les éléments à mettre en valeur.
 
 {% figure
   "joyride.png",
