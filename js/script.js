@@ -303,15 +303,40 @@ if ($answeringCancel) {
 // CHRISTMAS CHRISTMASING //
 //************************//
 
+const $snowflakesCheckbox = document.getElementById("snowflakes-checkbox");
+
 if (
   new Date().getMonth() === 11 &&
   window.matchMedia("(prefers-reduced-motion: no-preference)").matches
 ) {
+  document.body.classList.add("snowflakes");
+
   const $script = document.createElement("script");
   $script.src = "/js/snow-fall.js";
   $script.type = "text/javascript";
   document.head.appendChild($script);
 
+  if (localStorage.getItem("snowflakes") !== "false") {
+    $snowflakesCheckbox.checked = true;
+    addSnowflakes();
+  }
+
+  $snowflakesCheckbox.addEventListener("change", (event) => {
+    localStorage.setItem("snowflakes", event.target.checked);
+
+    if (event.target.checked) {
+      addSnowflakes();
+    } else {
+      removeSnowflakes();
+    }
+  });
+}
+
+function addSnowflakes() {
   const $snowFall = document.createElement("snow-fall");
   document.body.appendChild($snowFall);
+}
+
+function removeSnowflakes() {
+  document.querySelector("snow-fall").remove();
 }

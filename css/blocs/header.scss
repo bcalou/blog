@@ -41,6 +41,28 @@
       text-decoration: underline;
     }
   }
+
+  label {
+    display: none;
+    font-size: 1rem;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--blue-darker);
+    font-size: 0.75em;
+    accent-color: var(--blue-darker);
+    height: 1.5rem;
+    position: relative;
+    left: -0.1875rem;
+
+    @include large {
+      justify-content: flex-end;
+      left: 0;
+    }
+  }
+}
+
+body.snowflakes .header label {
+  display: flex;
 }
 
 .header__image {
@@ -94,6 +116,10 @@
     left: 48.5%;
   }
 
+  & > div {
+    position: relative;
+  }
+
   & > div::before {
     content: "";
     display: block;
@@ -127,7 +153,7 @@
     font-size: 1.5rem;
   }
 
-  @media (min-width: 23.75em) {
+  @media (min-width: 24em) {
     font-size: 1.75rem;
   }
 
@@ -142,6 +168,7 @@
   margin-right: 0.125rem;
   font-size: 0.875rem;
   letter-spacing: 0.001em;
+  margin-bottom: 0.125rem;
 
   @include small {
     font-size: 1rem;
@@ -149,5 +176,6 @@
 
   @include large {
     margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 }
