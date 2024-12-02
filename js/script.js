@@ -298,3 +298,20 @@ if ($answeringCancel) {
     $comments.classList.remove("comments--answering");
   });
 }
+
+//************************//
+// CHRISTMAS CHRISTMASING //
+//************************//
+
+if (
+  new Date().getMonth() === 11 &&
+  window.matchMedia("(prefers-reduced-motion: no-preference)").matches
+) {
+  const $script = document.createElement("script");
+  $script.src = "/js/snow-fall.js";
+  $script.type = "text/javascript";
+  document.head.appendChild($script);
+
+  const $snowFall = document.createElement("snow-fall");
+  document.body.appendChild($snowFall);
+}
