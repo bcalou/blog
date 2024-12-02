@@ -126,6 +126,9 @@ module.exports = function (eleventyConfig) {
     "node_modules/baseline-status/baseline-status.min.js":
       "js/baseline-status.min.js",
   });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@zachleat/snow-fall/snow-fall.js": "js/snow-fall.js",
+  });
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
