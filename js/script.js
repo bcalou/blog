@@ -309,12 +309,15 @@ if (
   new Date().getMonth() === 11 &&
   window.matchMedia("(prefers-reduced-motion: no-preference)").matches
 ) {
-  document.body.classList.add("snowflakes");
-
   const $script = document.createElement("script");
   $script.src = "/js/snow-fall.js";
   $script.type = "text/javascript";
   document.head.appendChild($script);
+  $script.addEventListener("load", initSnowflakes);
+}
+
+function initSnowflakes() {
+  document.body.classList.add("snowflakes");
 
   if (localStorage.getItem("snowflakes") !== "false") {
     $snowflakesCheckbox.checked = true;
