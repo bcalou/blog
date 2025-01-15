@@ -39,7 +39,7 @@ Essayons voir.
 - La capture d'écran du site HTTP Archive qui introduit l'article. Elle est affichée avec une largeur de `780px`, mais si vous êtes sur un écran à haute densité de pixels, le fichier original est deux fois plus grand (`1560px`) pour le plaisir des yeux. Le format `.avif`, désormais très bien supporté, permet de limiter son poids à **22 Ko (3,3 %)**.
 - Un favicon, le petit truc bleu dans l'onglet du navigateur, la haut. C'est important. Il représente **5 Ko (0,7 %)**.
 
-{% aside %}Le nombre de requête compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page s'en tient à 24. L'inclusion de codepen en ajoute beaucoup en cascade...{% endaside %}
+{% aside %}Le nombre de requête compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page s'en tient à 24 — codepen déclenche une bonne moitiée d'entre elles...{% endaside %}
 
 ## Seulement 84 Ko ???
 
@@ -51,13 +51,13 @@ Ci-dessous, voici un web component qui me permet de présenter les compatibilit�
 
 {% baseline "avif" %}
 
-Son inclusion et l'appel API associé représentent **71 Ko (1,9%)**. On continue !
+Son inclusion et l'appel API associé représentent **24 Ko (3,6 %)**. On continue !
 
-Une iframe codepen ? Chapeau pour cet outil : il nous en coûte seulement **75 Ko (6,1%)**. Une grosse partie de notre budget, certes, mais pour une grande plus-value.
+Une iframe codepen ? Ce sera une des ressources les plus coûteuses avec un poids de **108 Ko (16,1 %)**. Cela reste raisonnable compte tenu du service apporté.
 
 {% codepen "https://codepen.io/bcalou/pen/zYBWzdo" %}
 
-Une vidéo ? Puisqu'il le faut. **79 Ko (6,4%)**.
+Une vidéo ? Puisqu'il le faut. **79 Ko (11,8 %)**.
 
 {% video
   "lazy.webm",
@@ -115,3 +115,47 @@ Un tableau ? Voici la répartition du poids des ressources sur une page web (les
 </table>
 
 Source : [Web Almanac 2024](https://almanac.httparchive.org/en/2024/page-weight#content-type-and-file-formats).
+
+## Ça devient lourd... mais pas assez
+
+Seulement **300 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
+
+Pas le choix, on va jusqu'au bout : il va falloir remplir !
+
+Une autre image ?
+
+{% img
+  "joyride.png",
+  "Une démonstration de la librairie React Joyride"
+%}
+
+Un autre codepen, peut-être ?
+
+{% codepen "https://codepen.io/bcalou/pen/zYvJJzY" %}
+
+On dira que ma vidéo était trop courte. En voici une autre !
+
+{% video
+  "blobby.webm",
+  "Démonstration du jeu Blobby Zombie. Lorsqu'un ennemi est touché, la musique progresse en intensité."
+%}
+
+## Ce que ne contient pas cette page
+
+Ça y est, nous y sommes parvenus... Cette page fait enfin **un quart du poids médian actuel**. Pas mal, non ?
+
+C'est que cette page fait aussi de son mieux pour éviter quelques « gouffres » de ressources, qui sont malheureusement communs sur bon nombre de sites :
+- `iframe` très gourmandes comme celle de *Youtube* ;
+- images mal optimisées ;
+- multiples typographies et variantes (ici, il n'y a qu'un seul fichier `.woff2`) ;
+- gros framework JavaScript ;
+- videos longues et HD ;
+- scripts de tracking ;
+- widgets de réseaux sociaux ;
+- immense librarie d'icônes utilisée à 0,1%...
+
+Souvent, une seule de ces erreurs suffit à plomber le poids d'un projet entier. Mais tant que vous gardez un oeil vigilant sur ce que mobilise votre page, je pense en avoir fait la démonstration : **vous avez de la marge**.
+
+Le web est de plus en plus lourd, mais ce n'est pas une fatalité. Vous choisissez ce qui rentre dans votre page.
+
+En attendant, vous pouvez faire grimper de quelques octets le poids de celle-ci en laissant un commentaire. Mais je ne pense pas que cela puisse rendre le titre de cet article mensonger : la médiane ne va-t-elle pas continuer à monter, elle aussi ?
