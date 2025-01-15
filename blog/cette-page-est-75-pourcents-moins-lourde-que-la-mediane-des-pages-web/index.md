@@ -50,7 +50,7 @@ Son inclusion et l'appel API associé représentent **71 Ko (1,9%)**. On continu
 
 Une iframe codepen ? Chapeau pour cet outil : il nous en coûte seulement **75 Ko (6,1%)**. Une grosse partie de notre budget, certes, mais pour une grande plus-value.
 
-{% codepen "https://codepen.io/bcalou/pen/QWeWmop" %}
+{% codepen "https://codepen.io/bcalou/pen/zYBWzdo" %}
 
 Une vidéo ? Puisqu'il le faut. **79 Ko (6,4%)**.
 
