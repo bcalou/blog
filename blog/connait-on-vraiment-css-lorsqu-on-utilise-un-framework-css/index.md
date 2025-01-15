@@ -50,27 +50,27 @@ Définissons quelques catégories :
     <th scope="col">Nom de code</th>
   </tr>
   <tr>
-    <th scope="row">51.7%</th>
+    <th scope="row">51,7&nbsp;%</th>
     <td> Ont utilisé, mais ne l'utiliseront plus</td>
     <td>Les exs</td>
   </tr>
   <tr>
-    <th scope="row">29%</th>
+    <th scope="row">29&nbsp;%</th>
     <td>Ont utilisé et utiliseront de nouveau</td>
     <td>Les fans</td>
   </tr>
   <tr>
-    <th scope="row">16.3%</th>
+    <th scope="row">16,3&nbsp;%</th>
     <td>Connaissent mais ne souhaitent pas essayer</td>
     <td>Les « non merci »</td>
   </tr>
   <tr>
-    <th scope="row">2.7%</th>
+    <th scope="row">2,7&nbsp;%</th>
     <td>Connaissent et souhaitent essayer</td>
     <td>Les « pourquoi pas »</td>
   </tr>
   <tr>
-    <th scope="row">0.5%</th>
+    <th scope="row">0,5&nbsp;%</th>
     <td>Ne connaissent pas</td>
     <td>Les késako</td>
   </tr>
@@ -176,27 +176,27 @@ D'abord, nos 5 profils :
     <th scope="col">Nom de code</th>
   </tr>
   <tr>
-    <th scope="row">36.4%</th>
+    <th scope="row">36,4&nbsp;%</th>
     <td>Ont utilisé et utiliseront de nouveau</td>
     <td>Les fans</td>
   </tr>
   <tr>
-    <th scope="row">25%</th>
+    <th scope="row">25&nbsp;%</th>
     <td>Connaissent mais ne souhaitent pas essayer</td>
     <td>Les « non merci »</td>
   </tr>
   <tr>
-    <th scope="row">25%</th>
+    <th scope="row">25&nbsp;%</th>
     <td>Connaissent et souhaitent essayer</td>
     <td>Les « pourquoi pas »</td>
   </tr>
   <tr>
-    <th scope="row">9.8%</th>
+    <th scope="row">9,8&nbsp;%</th>
     <td>Ont utilisé, mais ne l'utiliseront plus</td>
     <td>Les exs</td>
   </tr>
   <tr>
-    <th scope="row">4.1%</th>
+    <th scope="row">4,1&nbsp;%</th>
     <td>Ne connaissent pas</td>
     <td>Les késako</td>
   </tr>

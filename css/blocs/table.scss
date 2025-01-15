@@ -41,9 +41,6 @@ th {
 }
 
 td:first-child {
-  font-weight: bold;
-  font-family: Euclid, sans-serif;
-
   tr:first-child & {
     border-top: none;
     border-left: none;
