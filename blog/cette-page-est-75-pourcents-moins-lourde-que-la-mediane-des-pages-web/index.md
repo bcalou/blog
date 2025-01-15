@@ -48,7 +48,7 @@ Ci-dessous, voici un web component qui me permet de présenter les compatibilit�
 
 Son inclusion et l'appel API associé représentent **71 Ko (1,9%)**. On continue !
 
-Une iframe codepen ? Chapeau pour cet outil : il nous en coûte seulement **75 Ko (6,1%)**. Une grosse partie de notre budget, certes, mais pour un outil très pratique.
+Une iframe codepen ? Chapeau pour cet outil : il nous en coûte seulement **75 Ko (6,1%)**. Une grosse partie de notre budget, certes, mais pour une grande plus-value.
 
 {% codepen "https://codepen.io/bcalou/pen/QWeWmop" %}
 
