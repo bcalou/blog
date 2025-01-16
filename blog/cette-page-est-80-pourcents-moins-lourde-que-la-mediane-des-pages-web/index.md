@@ -1,5 +1,5 @@
 ---
-title: Cette page est 80% moins lourde que la médiane des pages web
+title: Cette page est 80 % moins lourde que la médiane des pages web
 slug: cette-page-est-80-pourcents-moins-lourde-que-la-mediane-des-pages-web
 description: "TODO"
 date: 2025-01-17
