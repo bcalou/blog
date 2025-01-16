@@ -114,7 +114,7 @@ Source : [Web Almanac 2024](https://almanac.httparchive.org/en/2024/page-weight#
 
 ## Ça devient lourd… mais pas assez
 
-Seulement **275 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
+Seulement **272 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
 
 Pas le choix, on va jusqu'au bout : il va falloir remplir !
 
