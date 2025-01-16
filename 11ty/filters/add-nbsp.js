@@ -10,7 +10,9 @@ function addNbsp(text) {
     .replace(new RegExp(/\s\:/, "g"), "&nbsp;:")
     .replace(new RegExp(/\s\;/, "g"), "&nbsp;;")
     .replace(new RegExp(/\«\s/, "g"), "«&nbsp;")
-    .replace(new RegExp(/\s\»/, "g"), "&nbsp;»");
+    .replace(new RegExp(/\s\»/, "g"), "&nbsp;»")
+    .replace(new RegExp(/\s\%/, "g"), "&nbsp;%")
+    .replace(new RegExp(/\s\Ko/, "g"), "&nbsp;Ko");
 }
 
 module.exports = addNbsp;
