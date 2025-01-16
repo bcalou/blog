@@ -39,7 +39,7 @@ Essayons voir.
 - La capture d'écran du site HTTP Archive qui introduit l'article. Elle est affichée avec une largeur de `780px`, mais si vous êtes sur un écran à haute densité de pixels, le fichier original est deux fois plus grand (`1560px`) pour le plaisir des yeux. Le format `.avif`, désormais très bien supporté, permet de limiter son poids à **22 Ko (4,1 %)**.
 - Un favicon, le petit truc bleu dans l'onglet du navigateur, la haut. C'est important. Il représente **5 Ko (0,9 %)**.
 
-{% aside %}Le nombre de requête compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page en génère 34 — l'inclusion de codepen déclenche une bonne moitiée d'entre elles...{% endaside %}
+{% aside %}Le nombre de requête compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page en génère 28 — l'inclusion de codepen déclenche une bonne moitiée d'entre elles...{% endaside %}
 
 ## Seulement 84 Ko ???
 
@@ -112,56 +112,3 @@ Un tableau ? Voici la répartition du poids des ressources sur une page web (les
 
 Source : [Web Almanac 2024](https://almanac.httparchive.org/en/2024/page-weight#content-type-and-file-formats).
 
-## Ça devient lourd... mais pas assez
-
-Seulement **300 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
-
-Pas le choix, on va jusqu'au bout : il va falloir remplir !
-
-Une autre image ? Celle-ci rajoute **11 Ko (2,1%)**.
-
-{% img
-  "joyride.png",
-  "Une démonstration de la librairie React Joyride"
-%}
-
-Un autre codepen, peut-être ? Beaucoup des ressources nécessaires étant déjà chargés par la première iframe, il n'en coûtera que **18 Ko (3,6%)**.
-
-{% codepen "https://codepen.io/bcalou/pen/zYvJJzY" %}
-
-On dira que ma vidéo était trop courte. En voici une autre ! Celle-ci est plus longue et est accompagnée de son. Là ça devient sérieux : **224 Ko (42%)**. Mais n'oublions pas qu'une grande partie des sites ne contient pas de vidéo.
-
-{% video
-  "blobby.webm",
-  "Démonstration du jeu Blobby Zombie. Lorsqu'un ennemi est touché, la musique progresse en intensité."
-%}
-
-Ça y est, nous y sommes parvenus... Cette page fait enfin **20% du poids médian actuel**. Pas mal, non ?
-
-## Ce que ne contient pas cette page
-
-C'est que ce blog fait aussi de son mieux pour éviter quelques « gouffres » de ressources, qui sont malheureusement communs sur bon nombre de sites :
-- `iframe` très gourmandes comme celle de Youtube ;
-- images mal optimisées ;
-- multiples typographies et variantes (ici, il n'y a qu'un seul fichier `.woff2`) ;
-- gros framework JavaScript des familles ;
-- videos longues et HD ;
-- scripts de tracking ;
-- widgets de réseaux sociaux ;
-- immense librarie d'icônes utilisée à 0,1 %...
-
-Souvent, une seule de ces erreurs suffit à plomber le poids d'un projet entier. Mais tant que vous gardez un oeil vigilant sur ce que mobilise votre page, je pense en avoir fait la démonstration : **vous avez de la marge**.
-
-## Idéaliste ? Pas sûr.
-
-La légereté n'est pas réservée aux simples blogs :
-- La page d'accueil de [Wikipédia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal) pèse **355 Ko**, soit 14% de la médiane.
-- La page d'accueil de [Maison Calme](https://maisoncalme.fr/), site que j'ai réalisé pour un studio de yoga, pèse **200 Ko**. 8% de la médiane.
-- La page d'accueil de [Low-tech Lab](https://lowtechlab.org/fr) pèse **157 Ko**. 6% de la médiane.
-- N'oublions pas le fameux [Hacker News](https://news.ycombinator.com/news) et ses **12 Ko**. 0,5% de la médiane.
-
-Les exemples sont nombreux. Malheureusement, le poids standard d'un site classique est aujourd'hui... comment être poli ? _Embarrassant_. La complexité intrinsèque du projet suffit rarement à justifier le manque flagrant d'optimisation des ressources et de **choix** à leur sujet.
-
-Le web est de plus en plus lourd, mais ce n'est pas une fatalité. Vous choisissez ce qui rentre dans votre page.
-
-En attendant, vous pouvez faire grimper de quelques octets le poids de celle-ci en laissant un commentaire. Mais je ne pense pas que cela puisse rendre le titre de cet article mensonger : la médiane ne va-t-elle pas continuer à monter, elle aussi ?
