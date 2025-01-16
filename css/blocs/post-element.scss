@@ -2,7 +2,7 @@
 
 .postElement {
   margin-inline: 0 !important;
-  margin-block: 2.5rem;
+  margin-block: 2.5rem 3rem;
 
   @include medium {
     margin-inline: var(--main-content-margin) !important;
