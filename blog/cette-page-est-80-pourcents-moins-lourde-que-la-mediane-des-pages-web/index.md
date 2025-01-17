@@ -1,7 +1,7 @@
 ---
 title: Cette page est 80 % moins lourde que la médiane des pages web
 slug: cette-page-est-80-pourcents-moins-lourde-que-la-mediane-des-pages-web
-description: "TODO"
+description: "Le web pèse de plus en plus lourd… Mais ce n'est pas une fatalité. Vous choisissez ce qui rentre dans votre page !"
 date: 2025-01-17
 tags:
   - Performance
@@ -18,7 +18,7 @@ C'est une constante depuis des lustres : le poids médian des pages web ne fait 
 
 On pourrait en explorer les causes et en déplorer les conséquences, mais ce n'est pas ce que je souhaite faire ici. Je veux simplement montrer tout ce que peut contenir une page web dont le poids serait **20% du poids médian actuel**.
 
-Le poids médian actuel sur desktop est 2 676 Ko. **Notre objectif est donc 532 Ko**. Moins de 10% des pages web sont aussi « légères ».
+Le poids médian actuel sur desktop est 2 676 Ko. **Notre objectif est donc 532 Ko**. Moins de 10% des pages web sont aussi légères.
 
 Que peut-on bien faire avec « si peu » de data ? Une pauvre page de connexion avec deux champs, peut-être ? Sans doute une page sans image, sans vidéo, sans interactivité, triste comme tout… Les autres pages ne sont pas si lourdes pour rien, si ?
 
@@ -28,22 +28,22 @@ Essayons voir.
 
 ### Les bases : HTML / CSS / JS
 
-- Du texte, déjà. Vous êtes en train de le lire. C'est à la fois le plus important et parmi les ressources les plus légères. Ce texte est structuré au sein d'un document HTML, pour un total de **11 Ko (soit 2,1 % de notre budget)**.
-- Du style : le CSS qui met en forme tout ça et rend votre lecture un peu plus agréable (j'espère !). Il pèse **7 Ko (1,3 %).**
-- Un fichier JavaScript, qui gère quelques interactions basiques et le formulaire pour poster un commentaire. Il fait gentiment ça pour le modeste poids de **3 Ko (0,6 %)**.
+- Du texte, déjà. Vous êtes en train de le lire. C'est à la fois le plus important et l'une des ressources les plus légères. Ce texte est structuré au sein d'un document HTML, pour un total de **11 Ko (soit 2,1 % de notre budget)**.
+- Du style : le CSS qui met en forme tout ça et rend votre lecture un peu plus agréable. Il pèse **7 Ko (1,3 %).**
+- Un fichier JavaScript, qui gère quelques interactions basiques et le formulaire de commentaire. Il fait gentiment ça pour le modeste poids de **3 Ko (0,6 %)**.
 
 ### Fonts et médias
 
-- Une chouette font, « Euclid », pour les titres et sous-titres. Grâce au script [glyphanger](https://github.com/zachleat/glyphhanger), qui permet de ne conserver que les caractères réellement utiles à mon blog, le fichier qui à l'origine pèse 44 Ko ne fait plus que **15 Ko (2,8 %)**.
+- Une chouette font, « Euclid », pour les titres et sous-titres. Grâce au script [glyphanger](https://github.com/zachleat/glyphhanger), qui permet de ne conserver que les caractères réellement utiles à ce blog, le fichier qui à l'origine pèse 44 Ko ne fait plus que **15 Ko (2,8 %)**.
 - Une photo de ma tête, qui communique avec élégance une forme de sympathie professionnelle rendant irrésistible l'envie de me contacter à de riches recruteurs. Elle pèse **4,5 Ko (0,8 %)**.
-- La capture d'écran du site HTTP Archive qui introduit l'article. Elle est affichée avec une largeur de `780px`, mais si vous êtes sur un écran à haute densité de pixels, le fichier original est deux fois plus grand (`1560px`) pour le plaisir des yeux. Le format `.avif`, désormais très bien supporté, permet de limiter son poids à **22 Ko (4,1 %)**.
+- La capture d'écran du site HTTP Archive qui introduit l'article. Elle est affichée avec une largeur de `780px`, mais si votre écran a une haute densité de pixels, le fichier servi est deux fois plus grand (`1560px`) pour le plaisir des yeux. Le format `.avif`, désormais très bien supporté, permet de limiter son poids à **22 Ko (4,1 %)**.
 - Un favicon, le petit truc bleu dans l'onglet du navigateur, là-haut. C'est important. Il représente **5 Ko (0,9 %)**.
 
-{% aside %}Le nombre de requêtes compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page en génère 28 (l'inclusion de CodePen déclenche une bonne moitié d'entre elles…){% endaside %}
+{% aside %}Le nombre de requêtes compte aussi énormément dans la performance d'un site. Aujourd'hui, la médiane est de 76. Cette page en génère 31 (l'inclusion de CodePen déclenche une bonne moitié d'entre elles…){% endaside %}
 
 ## Seulement 84 Ko ???
 
-Ça ne va pas du tout. Ce post est déjà d'une longueur respectable, et pourtant, nous n'avons atteint que **84 Ko**. 32 fois moins que la médiane. C'est intolérable.
+Ça ne va pas du tout. Ce post est déjà d'une longueur respectable, et pourtant, nous n'avons atteint que **84 Ko**. 30 fois moins que la médiane. C'est intolérable.
 
 Dois-je rappeler que l'objectif est **532 Ko** ? Il va falloir se ressaisir. Ajoutons donc d'autres éléments à notre page.
 
@@ -64,7 +64,7 @@ Une vidéo ? Puisqu'il le faut. **79 Ko (14,5 %)**.
   "Un scroll vertical de la page, au fur et à mesure duquel les images sont chargées progressivement."
 %}
 
-Un extrait de code ? En réalité, il ne rajoute que son poids en caractères. En effet, la coloration syntaxique est faite lors du pré-rendu côté serveur. Et les styles sont déjà dans notre unique fichier CSS.
+Un extrait de code ? En réalité, il ne rajoute que son poids en caractères. En effet, la coloration syntaxique est faite lors du pré-rendu côté serveur. Et les styles sont déjà dans l'unique fichier CSS inclus.
 
 ```js
 const images = await Image(`src/img/${fileSlug}.jpg`, {
@@ -97,12 +97,12 @@ Un tableau ? Voici la répartition du poids des ressources sur une page web (les
     <td>23,2 %</td>
   </tr>
   <tr>
-    <td>Fonts 🇦</td>
+    <td>Fonts 🔤</td>
     <td>5 %</td>
   </tr>
   <tr>
     <td>CSS 💄</td>
-    <td>2,96 %</td>
+    <td>3 %</td>
   </tr>
   <tr>
     <td>HTML ✍️</td>
@@ -114,7 +114,7 @@ Source : [Web Almanac 2024](https://almanac.httparchive.org/en/2024/page-weight#
 
 ## Ça devient lourd… mais pas assez
 
-Seulement **272 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
+Me voilà rendu à seulement **272 Ko** malgré tous mes efforts, et tous les types de contenus présents sur le blog sont déjà représentés. Je me demande si ce post était une bonne idée.
 
 Pas le choix, on va jusqu'au bout : il va falloir remplir !
 
@@ -130,7 +130,7 @@ Un autre CodePen, peut-être ? Beaucoup des ressources nécessaires étant déj�
 {% codepen "https://codepen.io/bcalou/pen/zYvJJzY" %}
 
 {% aside %}
-Note : mesurer le poids d'une page n'est pas une science exacte. Utiliser l'option « Désactiver le cache » de l'inspecteur réseau peut être trompeur car certaines sources seront alors chargées deux fois par la page elle-même (par exemple CodePen). Ici, j'utilise Firefox, sans extension. Dans les paramètres, j'efface les « fichiers et pages en cache temporaire », puis je charge la page.
+Note : mesurer le poids d'une page n'est pas une science exacte. Utiliser l'option « désactiver le cache » de l'inspecteur réseau peut être trompeur car certaines sources seront alors chargées (et comptabilisées) deux fois, comme CodePen sur cette page. Pour mes tests, j'utilise Firefox, sans extension. Dans les paramètres, j'efface les « fichiers et pages en cache temporaire ». Puis je charge la page avec l'onglet réseau ouvert, sans cocher « désactiver le cache ». Après l'avoir parcourue en entier, je relève son poids transféré.
 {% endaside %}
 
 On dira que ma vidéo était trop courte. En voici une autre ! Celle-ci est plus longue et est accompagnée de son. Là, ça devient sérieux : **224 Ko (42%)**. Mais n'oublions pas qu'une grande partie des sites ne contient pas de vidéo.
@@ -160,11 +160,11 @@ Souvent, une seule de ces erreurs suffit à plomber le poids d'un projet entier.
 
 La légèreté n'est pas réservée aux simples blogs :
 - La page d'accueil de [Wikipédia](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal) pèse **355 Ko**, soit 14% de la médiane.
-- La page d'accueil de [Maison Calme](https://maisoncalme.fr/), site que j'ai réalisé pour un studio de yoga, pèse **200 Ko**. 8% de la médiane.
+- La page d'accueil de [Maison Calme](https://maisoncalme.fr/), que j'ai réalisé pour un studio de yoga, pèse **200 Ko**. 8% de la médiane.
 - La page d'accueil de [Low-tech Lab](https://lowtechlab.org/fr) pèse **157 Ko**. 6% de la médiane.
 - N'oublions pas le fameux [Hacker News](https://news.ycombinator.com/news) et ses **12 Ko**. 0,5% de la médiane.
 
-Les exemples sont nombreux. Malheureusement, le poids standard d'un site classique est aujourd'hui… comment être poli ? _Embarrassant_. La complexité intrinsèque du projet suffit rarement à justifier le manque flagrant d'optimisation des ressources et de **choix** à leur sujet.
+Les exemples sont nombreux. Malheureusement, le poids standard d'un site classique est aujourd'hui… comment être poli ? _Embarrassant_. La complexité intrinsèque du projet suffit rarement à justifier le manque flagrant d'optimisation des ressources et de **choix de sobriété** à leur sujet.
 
 Le web est de plus en plus lourd, mais ce n'est pas une fatalité. Vous choisissez ce qui rentre dans votre page.
 
