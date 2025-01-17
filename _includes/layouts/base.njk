@@ -47,11 +47,11 @@
         <div>
           <div class="header__name">Bastien Calou</div>
           <p class="header__role">Développeur front-end</p>
-          <label class="header__snowflakes">
-            <input id="snowflakes-checkbox" type="checkbox"> Activer les flocons
-          </label>
         </div>
       </a>
+      <label class="header__snowflakes">
+        <input id="snowflakes-checkbox" type="checkbox"> Activer les flocons
+      </label>
     </header>
     <main {% if templateClass %} class="{{ templateClass }}" {% endif %} id="main">
       {{ content | safe }}
