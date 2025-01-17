@@ -22,7 +22,7 @@ function getMarkdownLibrary(eleventyConfig) {
   markdown.renderer.rules.fence = (tokens, idx, options, env, self) => {
     const result = fenceRenderer(tokens, idx, options, env, self);
 
-    return result.replace("<code", '<code tabindex="0" lang="en"');
+    return result.replace("<code", '<code tabindex="0"');
   };
 
   return markdown;
