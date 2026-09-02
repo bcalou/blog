@@ -4,7 +4,6 @@
   "description": "My blog",
   "scripts": {
     "build": "ELEVENTY_ENV=prod npx @11ty/eleventy",
-    "comments": "dotenv cross-var 'curl -H \"User-Agent: MyApp (bastien.calou@gmail.com)\" -H \"Authorization: Bearer %NETLIFY_BEARER%\" https://api.netlify.com/api/v1/sites/95a61b0d-bc40-45ad-bfd0-ec97b8859398/submissions -o _data/comments.json'",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "serve": "npx @11ty/eleventy --serve",
@@ -34,8 +33,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@zachleat/snow-fall": "^1.0.2",
     "baseline-status": "^1.0.8",
-    "cross-var": "^1.1.0",
-    "dotenv-cli": "^7.4.2",
     "eleventy-critical-css": "^2.0.2",
     "eleventy-plugin-embed-twitter": "^1.4.0",
     "eleventy-plugin-og-image": "^2.1.3",
