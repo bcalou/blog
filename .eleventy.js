@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
         {
           name: "Euclid",
           data: fs.readFileSync(
-            "./assets/fonts/EuclidCircularB-Semibold-WebS.ttf"
+            "./assets/fonts/EuclidCircularB-Semibold-WebS.ttf",
           ),
         },
       ],
@@ -132,6 +132,9 @@ module.exports = function (eleventyConfig) {
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig(browserConfig);
+
+  // Watch blog folder for changes
+  eleventyConfig.addWatchTarget("blog");
 
   return {
     // Control which files Eleventy will process
