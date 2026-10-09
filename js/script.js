@@ -1,3 +1,13 @@
+//************************//
+// WEB COMPONENTS LOADING //
+//************************//
+
+if (document.querySelector("bc-opinion")) {
+  const script = document.createElement("script");
+  script.src = "/js/bc-opinion.js";
+  document.head.appendChild(script);
+}
+
 //**********************//
 // EMOJI BUSINESS LOGIC //
 //**********************//
@@ -120,7 +130,7 @@ function setRandomEmoji() {
 
   $headerImage.style.setProperty(
     "--emoji",
-    `"${emojis[Math.floor(Math.random() * emojis.length)]}" / ""`
+    `"${emojis[Math.floor(Math.random() * emojis.length)]}" / ""`,
   );
 }
 
@@ -256,13 +266,13 @@ if ($form) {
   $form
     .querySelector("[name=name]")
     .addEventListener("input", (event) =>
-      validateRequired(event.target, "name-required")
+      validateRequired(event.target, "name-required"),
     );
 
   $form
     .querySelector("[name=comment]")
     .addEventListener("input", (event) =>
-      validateRequired(event.target, "comment-required")
+      validateRequired(event.target, "comment-required"),
     );
 
   $form
@@ -287,7 +297,7 @@ document.querySelectorAll("[data-answer-to]").forEach(($answerButton) =>
     $comments.classList.remove("comments--error");
 
     $form.querySelector('[name="name"]').focus();
-  })
+  }),
 );
 
 const $answeringCancel = document.querySelector(".comments__answeringCancel");
