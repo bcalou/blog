@@ -1,0 +1,11 @@
+@media print {
+  body {
+    background-color: transparent !important;
+  }
+
+  .skipLink,
+  header,
+  footer {
+    display: none !important;
+  }
+}

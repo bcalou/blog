@@ -22,7 +22,6 @@
 @import "blocs/footer";
 @import "blocs/header";
 @import "blocs/home";
-@import "blocs/original-post";
 @import "blocs/page";
 @import "blocs/post-content";
 @import "blocs/post-element";
@@ -31,3 +30,5 @@
 @import "blocs/series";
 @import "blocs/skipLink";
 @import "blocs/table";
+
+@import "misc/print";

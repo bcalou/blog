@@ -19,8 +19,13 @@ templateClass: tmpl-post
   {{ content | addNbsp | apostrophes | codeLanguage | safe }}
   {% include "../components/series.njk" %}
   {% if originalPost %}
-    <p class="originalPost">Cet article a été initialement publié sur
+    <p class="postAside">Cet article a été initialement publié sur
       <a href="{{ originalPost }}">dev.to</a>
+    </p>
+  {% endif %}
+  {% if mastodonPost %}
+    <p class="postAside">Vous pouvez réagir ou partager cet article à partir de mon
+      <a target="_blank" href="{{ mastodonPost }}">post sur Mastodon</a>.
     </p>
   {% endif %}
 </div>
