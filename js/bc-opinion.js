@@ -10,12 +10,18 @@ class BcOpinion extends HTMLElement {
   connectedCallback() {
     this.alt = this.innerHTML;
     this.attachShadow({ mode: "open" });
+
+    const hasEllipseA =
+      this.getAttribute("ellipse-a-from") && this.getAttribute("ellipse-a-to");
+    const hasEllipseB =
+      this.getAttribute("ellipse-b-from") && this.getAttribute("ellipse-b-to");
+
     this.shadowRoot.innerHTML = `
       <style>
         .container {
           font-family: Euclid;
-          margin-block: ${this.getAttribute("ellipse-a-from") ? "6em" : "4em 5em"};
-          margin-inline: ${this.getAttribute("ellipse-a-from") ? "11.5%" : ""};
+          margin-block: ${this.getAttribute("ellipse-b-from") ? "6em" : "4em 5em"};
+          margin-inline: ${this.getAttribute("ellipse-b-from") ? "11.5%" : ""};
           position: relative;
         }
 
@@ -85,45 +91,46 @@ class BcOpinion extends HTMLElement {
           z-index: -1;
         }
 
-        .ellipse--a {
-          background-color: color-mix(var(--red-light), transparent);
-          border: 1px dashed var(--red-light);
-          left: ${this.getAttribute("ellipse-a-from")}%;
-          right: calc(100% - ${this.getAttribute("ellipse-a-to")}%);
-        }
-
         .ellipse--b {
-          background-color: color-mix(var(--green-dark), transparent);
-          border: 1px dashed var(--green-dark);
+          background-color: color-mix(var(--red-light), transparent 80%);
+          border: 1px dashed var(--red-light);
           left: ${this.getAttribute("ellipse-b-from")}%;
           right: calc(100% - ${this.getAttribute("ellipse-b-to")}%);
         }
 
-        .ellipse__label {
-          text-align: center;
+        .ellipse--a {
+          background-color: color-mix(var(--green-dark), transparent);
+          border: 1px dashed var(--green-dark);
+          left: ${this.getAttribute("ellipse-a-from")}%;
+          right: calc(100% - ${this.getAttribute("ellipse-a-to")}%);
         }
 
-        .ellipse--a .ellipse__label {
-          color: var(--red-dark);
+        .ellipse__label {
+          text-align: center;
+          transform: translateY(-2em);
         }
 
         .ellipse--b .ellipse__label {
-          color: var(--green-dark);
+          color: var(--red);
+        }
+
+        .ellipse--a .ellipse__label {
+          color: var(--green-darker);
         }
       </style>
 
       <div role="img" aria-label="${this.alt}">
-        <div class="container">
+        <div class="container" aria-hidden="true">
           ${
-            this.getAttribute("ellipse-a-from") &&
-            this.getAttribute("ellipse-a-to")
-              ? `<div class="ellipse ellipse--a"><div class="ellipse__label">A</div></div>`
+            hasEllipseB
+              ? `<div class="ellipse ellipse--b">${
+                  hasEllipseA ? `<div class="ellipse__label">B</div>` : ""
+                }</div>`
               : ""
           }
           ${
-            this.getAttribute("ellipse-b-from") &&
-            this.getAttribute("ellipse-b-to")
-              ? `<div class="ellipse ellipse--b"><div class="ellipse__label">B</div></div>`
+            hasEllipseA
+              ? `<div class="ellipse ellipse--a"><div class="ellipse__label">A</div></div>`
               : ""
           }
           <div class="line"></div>
